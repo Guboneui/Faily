@@ -295,9 +295,11 @@
                         <outlet property="emailTextField" destination="QfY-iQ-8cB" id="flw-Pd-zG3"/>
                         <outlet property="passwordBaseView" destination="d2i-zm-F9o" id="RQq-5e-tYh"/>
                         <outlet property="passwordTextField" destination="Ann-Ia-FYk" id="wWM-kG-tuF"/>
+                        <outlet property="personalInfoLabel" destination="wRD-Ok-mGi" id="6xy-Z4-Dfh"/>
                         <outlet property="showCheckPasswordButton" destination="z9H-TT-U41" id="lSN-F4-ULo"/>
                         <outlet property="showPasswordButton" destination="9cK-Kh-vi7" id="BKv-on-m5B"/>
                         <outlet property="signUpButton" destination="66c-PC-9Ge" id="w5q-kT-FoK"/>
+                        <outlet property="useTermsLabel" destination="7jk-zN-rYb" id="wqX-mM-qCT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdj-Kv-FdT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

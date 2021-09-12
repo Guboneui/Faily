@@ -16,13 +16,19 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var showPasswordButton: UIButton!
     
-    
     @IBOutlet weak var checkPasswordBaseView: UIView!
     @IBOutlet weak var checkPasswordTextField: UITextField!
     @IBOutlet weak var showCheckPasswordButton: UIButton!
     
-    
     @IBOutlet weak var signUpButton: UIButton!
+    
+    
+    @IBOutlet weak var useTermsLabel: UILabel!
+    @IBOutlet weak var personalInfoLabel: UILabel!
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,12 +64,32 @@ class SignUpViewController: UIViewController {
         checkPasswordTextField.delegate = self
         checkPasswordTextField.returnKeyType = .done
         
+        let useTermsTapGesture = UITapGestureRecognizer(target: self, action: #selector(useTermsAction))
+        useTermsLabel.isUserInteractionEnabled = true
+        useTermsLabel.addGestureRecognizer(useTermsTapGesture)
+        
+        let personalInfoTapGesture = UITapGestureRecognizer(target: self, action: #selector(personalInfoAction))
+        personalInfoLabel.isUserInteractionEnabled = true
+        personalInfoLabel.addGestureRecognizer(personalInfoTapGesture)
+        
         signUpButton.layer.cornerRadius = 6
         signUpButton.layer.shadowOffset = CGSize(width: 0, height: 4)
         signUpButton.layer.shadowOpacity = 0.25
         
-        
-        
+    }
+    
+    @objc func useTermsAction(sender: UITapGestureRecognizer) {
+        let alert = UIAlertController(title: "서비스 이용약관", message: "", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func personalInfoAction(sender: UITapGestureRecognizer) {
+        let alert = UIAlertController(title: "개인정보 수집 및 이용 동의", message: "", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
     }
 
     
