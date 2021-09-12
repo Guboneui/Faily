@@ -7,4 +7,5 @@ target 'Faily' do
 
   # Pods for Faily
 pod 'Alamofire'
+pod 'IQKeyboardManager'
 end
