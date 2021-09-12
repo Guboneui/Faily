@@ -114,7 +114,7 @@
                                     <constraint firstAttribute="height" constant="24" id="1Wz-Tf-aKD"/>
                                     <constraint firstAttribute="width" constant="24" id="avw-5B-Tdr"/>
                                 </constraints>
-                                <state key="normal" image="check_default"/>
+                                <state key="normal" image="check_Default"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VT-fd-aGg">
                                 <rect key="frame" x="32" y="413" width="350" height="48"/>
@@ -131,7 +131,7 @@
                                             <constraint firstAttribute="width" constant="24" id="2Mn-kz-1e2"/>
                                             <constraint firstAttribute="height" constant="24" id="a3u-S0-CIU"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="check_default"/>
+                                        <state key="normal" title="Button" image="check_Default"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -215,7 +215,7 @@
                                     <constraint firstAttribute="width" constant="24" id="0fv-cF-hMA"/>
                                     <constraint firstAttribute="height" constant="24" id="1Gp-eE-2mX"/>
                                 </constraints>
-                                <state key="normal" image="check_default"/>
+                                <state key="normal" image="check_Default"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[필수] 서비스 이용약관 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jk-zN-rYb">
                                 <rect key="frame" x="72" y="686.5" width="155" height="17"/>
@@ -236,7 +236,7 @@
                                     <constraint firstAttribute="width" constant="24" id="EjP-16-lla"/>
                                     <constraint firstAttribute="height" constant="24" id="g2N-dA-81w"/>
                                 </constraints>
-                                <state key="normal" image="checkBox_default"/>
+                                <state key="normal" image="checkBox_Default"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9O-j3-UoI">
                                 <rect key="frame" x="72" y="615.5" width="60" height="19.5"/>
@@ -317,8 +317,8 @@
     </scenes>
     <resources>
         <image name="background" width="375" height="812"/>
-        <image name="checkBox_default" width="24" height="24"/>
-        <image name="check_default" width="24" height="24"/>
+        <image name="checkBox_Default" width="24" height="24"/>
+        <image name="check_Default" width="24" height="24"/>
         <image name="eye_close" width="24" height="24"/>
         <namedColor name="guideLine_gray">
             <color red="0.8784313725490196" green="0.88235294117647056" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
