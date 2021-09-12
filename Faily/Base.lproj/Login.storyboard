@@ -344,6 +344,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="firstAuthTextFieldAction:" destination="xMO-Nh-8ae" eventType="editingDidEnd" id="MkS-3H-X4E"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPe-Z0-x7i">
                                         <rect key="frame" x="56" y="0.0" width="45" height="45"/>
@@ -354,6 +357,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="secondAuthTextFieldAction:" destination="xMO-Nh-8ae" eventType="editingDidEnd" id="WLv-ON-rC4"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VS5-ri-LxG">
                                         <rect key="frame" x="112" y="0.0" width="45" height="45"/>
@@ -364,6 +370,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="thirdAuthTextFieldAction:" destination="xMO-Nh-8ae" eventType="editingDidEnd" id="PYJ-hi-6xn"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPA-7Y-2TL">
                                         <rect key="frame" x="168" y="0.0" width="45" height="45"/>
@@ -374,6 +383,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="fourthAuthTextFieldAction:" destination="xMO-Nh-8ae" eventType="editingDidEnd" id="Xki-p6-mID"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
