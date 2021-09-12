@@ -152,7 +152,7 @@
                                         <rect key="frame" x="16" y="12" width="284" height="24"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cK-Kh-vi7">
                                         <rect key="frame" x="310" y="12" width="24" height="24"/>
@@ -161,6 +161,9 @@
                                             <constraint firstAttribute="width" constant="24" id="op7-Ah-tiv"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="eye_close"/>
+                                        <connections>
+                                            <action selector="showPasswordButtonAction:" destination="dbr-ai-3Y6" eventType="touchUpInside" id="2b7-0l-AAT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -181,7 +184,7 @@
                                         <rect key="frame" x="16" y="12" width="284" height="24"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9H-TT-U41">
                                         <rect key="frame" x="310" y="12" width="24" height="24"/>
@@ -190,6 +193,9 @@
                                             <constraint firstAttribute="height" constant="24" id="IZY-TU-1SP"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="eye_close"/>
+                                        <connections>
+                                            <action selector="showCheckPasswordButtonAction:" destination="dbr-ai-3Y6" eventType="touchUpInside" id="U9z-eE-dxs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -289,6 +295,8 @@
                         <outlet property="emailTextField" destination="QfY-iQ-8cB" id="flw-Pd-zG3"/>
                         <outlet property="passwordBaseView" destination="d2i-zm-F9o" id="RQq-5e-tYh"/>
                         <outlet property="passwordTextField" destination="Ann-Ia-FYk" id="wWM-kG-tuF"/>
+                        <outlet property="showCheckPasswordButton" destination="z9H-TT-U41" id="lSN-F4-ULo"/>
+                        <outlet property="showPasswordButton" destination="9cK-Kh-vi7" id="BKv-on-m5B"/>
                         <outlet property="signUpButton" destination="66c-PC-9Ge" id="w5q-kT-FoK"/>
                     </connections>
                 </viewController>

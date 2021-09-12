@@ -14,10 +14,12 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var passwordBaseView: UIView!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var showPasswordButton: UIButton!
     
     
     @IBOutlet weak var checkPasswordBaseView: UIView!
     @IBOutlet weak var checkPasswordTextField: UITextField!
+    @IBOutlet weak var showCheckPasswordButton: UIButton!
     
     
     @IBOutlet weak var signUpButton: UIButton!
@@ -37,17 +39,24 @@ class SignUpViewController: UIViewController {
         emailBaseView.layer.borderWidth = 1
         emailBaseView.layer.borderColor = UIColor.FailyColor.viewBorderColor.cgColor
         
+        emailTextField.delegate = self
+        emailTextField.returnKeyType = .next
         
         
         passwordBaseView.layer.cornerRadius = 8
         passwordBaseView.layer.borderWidth = 1
         passwordBaseView.layer.borderColor = UIColor.FailyColor.viewBorderColor.cgColor
         
+        passwordTextField.delegate = self
+        passwordTextField.returnKeyType = .next
        
         
         checkPasswordBaseView.layer.cornerRadius = 8
         checkPasswordBaseView.layer.borderWidth = 1
         checkPasswordBaseView.layer.borderColor = UIColor.FailyColor.viewBorderColor.cgColor
+        
+        checkPasswordTextField.delegate = self
+        checkPasswordTextField.returnKeyType = .done
         
         signUpButton.layer.cornerRadius = 6
         signUpButton.layer.shadowOffset = CGSize(width: 0, height: 4)
@@ -57,6 +66,43 @@ class SignUpViewController: UIViewController {
         
     }
 
+    
+    
+    @IBAction func showPasswordButtonAction(_ sender: Any) {
+        print(1)
+        self.passwordTextField.isSecureTextEntry.toggle()
+        if self.passwordTextField.isSecureTextEntry == true {
+            self.showPasswordButton.setImage(UIImage(named: "eye_close"), for: .normal)
+        } else {
+            self.showPasswordButton.setImage(UIImage(named: "eye_open"), for: .normal)
+        }
+    }
+    
+    @IBAction func showCheckPasswordButtonAction(_ sender: Any) {
+        print(2)
+        self.checkPasswordTextField.isSecureTextEntry.toggle()
+        if self.checkPasswordTextField.isSecureTextEntry == true {
+            self.showCheckPasswordButton.setImage(UIImage(named: "eye_close"), for: .normal)
+        } else {
+            self.showCheckPasswordButton.setImage(UIImage(named: "eye_open"), for: .normal)
+        }
+    }
+    
+    
    
 
+}
+
+
+extension SignUpViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    if textField == emailTextField {
+        passwordTextField.becomeFirstResponder()
+    } else if textField == passwordTextField {
+        checkPasswordTextField.becomeFirstResponder()
+    } else {
+        checkPasswordTextField.resignFirstResponder()
+    }
+    return true
+  }
 }
