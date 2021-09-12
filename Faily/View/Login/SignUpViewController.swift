@@ -45,7 +45,7 @@ class SignUpViewController: UIViewController {
     }
     
     func configUI() {
-        
+        self.navigationItem.backButtonTitle = ""
         self.title = "이메일로 가입하기"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         
@@ -175,17 +175,21 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func signUpButtonAction(_ sender: Any) {
-        if personalInfoState == true && useTermsState == true {
-            let alert = UIAlertController(title: "정보 맞음", message: "", preferredStyle: .alert)
-            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
-            alert.addAction(okButton)
-            self.present(alert, animated: true, completion: nil)
-        } else {
-            let alert = UIAlertController(title: "약관을 동의 해주세요", message: "", preferredStyle: .alert)
-            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
-            alert.addAction(okButton)
-            self.present(alert, animated: true, completion: nil)
-        }
+//        if personalInfoState == true && useTermsState == true {
+//            let alert = UIAlertController(title: "정보 맞음", message: "", preferredStyle: .alert)
+//            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+//            alert.addAction(okButton)
+//            self.present(alert, animated: true, completion: nil)
+//        } else {
+//            let alert = UIAlertController(title: "약관을 동의 해주세요", message: "", preferredStyle: .alert)
+//            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+//            alert.addAction(okButton)
+//            self.present(alert, animated: true, completion: nil)
+//        }
+        
+        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+        let authEmailVC = storyBoard.instantiateViewController(withIdentifier: "AuthEmailViewController") as! AuthEmailViewController
+        self.navigationController?.pushViewController(authEmailVC, animated: true)
     }
     
 }
