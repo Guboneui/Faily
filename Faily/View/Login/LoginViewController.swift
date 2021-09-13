@@ -78,8 +78,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func reSettingPasswordButtonAction(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-        let authEmailVC = storyBoard.instantiateViewController(withIdentifier: "AuthEmailViewController") as! AuthEmailViewController
-        self.navigationController?.pushViewController(authEmailVC, animated: true)
+        let changePasswordVC = storyBoard.instantiateViewController(withIdentifier: "ChangePasswordCheckEmailViewController") as! ChangePasswordCheckEmailViewController
+        self.navigationController?.pushViewController(changePasswordVC, animated: true)
     }
     
     
