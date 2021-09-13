@@ -77,15 +77,27 @@ class SignUpViewController: UIViewController {
         checkPasswordTextField.returnKeyType = .done
         checkPasswordTextField.keyboardType = .alphabet
         
+        let labelString = "보기"
+        let textColor = UIColor.FailyColor.grayscale_2
+        let underLineColor = UIColor.FailyColor.grayscale_2
+        let underLineStyle = NSUnderlineStyle.single.rawValue
+
+        let labelAtributes:[NSAttributedString.Key : Any]  = [
+            NSAttributedString.Key.foregroundColor: textColor,
+            NSAttributedString.Key.underlineStyle: underLineStyle,
+            NSAttributedString.Key.underlineColor: underLineColor
+        ]
+        let underlineAttributedString = NSAttributedString(string: labelString, attributes: labelAtributes)
+
         let useTermsTapGesture = UITapGestureRecognizer(target: self, action: #selector(useTermsAction))
         showUseTermsLabel.isUserInteractionEnabled = true
         showUseTermsLabel.addGestureRecognizer(useTermsTapGesture)
-        showUseTermsLabel.attributedText = NSAttributedString(string: "보기", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        showUseTermsLabel.attributedText = underlineAttributedString
         
         let personalInfoTapGesture = UITapGestureRecognizer(target: self, action: #selector(personalInfoAction))
         showPersonalInfoLabel.isUserInteractionEnabled = true
         showPersonalInfoLabel.addGestureRecognizer(personalInfoTapGesture)
-        showPersonalInfoLabel.attributedText = NSAttributedString(string: "보기", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        showPersonalInfoLabel.attributedText = underlineAttributedString
         
         signUpButton.layer.cornerRadius = 6
         signUpButton.layer.shadowOffset = CGSize(width: 0, height: 4)
