@@ -358,6 +358,7 @@
                                         <state key="normal" title="Button" image="eye_close"/>
                                         <connections>
                                             <action selector="showPasswordButtonAction:" destination="dbr-ai-3Y6" eventType="touchUpInside" id="EE5-Ae-mJd"/>
+                                            <action selector="showPasswordButtonAction:" destination="rru-rR-FES" eventType="touchUpInside" id="vTV-R9-NdN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -372,17 +373,6 @@
                                     <constraint firstItem="dNt-3t-NNf" firstAttribute="leading" secondItem="qdr-TU-Dib" secondAttribute="trailing" constant="10" id="yUf-3U-LiK"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY2-QR-DxX">
-                                <rect key="frame" x="32" y="694.5" width="350" height="50"/>
-                                <color key="backgroundColor" name="secondary_pink"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="zxc-bL-aSc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="비밀번호 변경">
-                                    <color key="titleColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hb-H6-2qw">
                                 <rect key="frame" x="32" y="603" width="350" height="48"/>
                                 <subviews>
@@ -400,6 +390,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="eye_close"/>
                                         <connections>
+                                            <action selector="showCheckPasswordButtonAction:" destination="rru-rR-FES" eventType="touchUpInside" id="e1l-pG-QXF"/>
                                             <action selector="showPasswordButtonAction:" destination="dbr-ai-3Y6" eventType="touchUpInside" id="ApL-2t-a9t"/>
                                         </connections>
                                     </button>
@@ -415,6 +406,17 @@
                                     <constraint firstAttribute="bottom" secondItem="HYI-g1-Xej" secondAttribute="bottom" constant="12" id="xge-qT-UuF"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY2-QR-DxX">
+                                <rect key="frame" x="32" y="694.5" width="350" height="50"/>
+                                <color key="backgroundColor" name="secondary_pink"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zxc-bL-aSc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="비밀번호 변경">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tZ8-oO-rk9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -434,6 +436,15 @@
                             <constraint firstItem="FY2-QR-DxX" firstAttribute="top" secondItem="3hb-H6-2qw" secondAttribute="bottom" constant="43.5" id="z4S-Et-qV1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="changePasswordButton" destination="FY2-QR-DxX" id="wyJ-IM-AmW"/>
+                        <outlet property="checkPasswordBaseView" destination="3hb-H6-2qw" id="fof-tc-25Q"/>
+                        <outlet property="checkPasswordTextField" destination="HYI-g1-Xej" id="YfR-8j-utf"/>
+                        <outlet property="passwordBaseView" destination="sJN-hu-t3T" id="x2M-Er-ZcP"/>
+                        <outlet property="passwordTextField" destination="qdr-TU-Dib" id="wAV-lC-qTk"/>
+                        <outlet property="showCheckPasswordButton" destination="zcI-uu-VNW" id="Hem-k5-4nm"/>
+                        <outlet property="showPasswordButton" destination="dNt-3t-NNf" id="bHi-jP-RPX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqD-XV-LqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
