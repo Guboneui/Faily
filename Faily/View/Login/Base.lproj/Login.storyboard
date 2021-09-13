@@ -111,7 +111,7 @@
                                             <constraint firstAttribute="height" constant="20" id="GD8-I9-MXt"/>
                                             <constraint firstAttribute="width" constant="20" id="KrU-RF-AyG"/>
                                         </constraints>
-                                        <state key="normal" image="delete_Text"/>
+                                        <state key="normal" image="delete_Text_Default"/>
                                         <connections>
                                             <action selector="deleteEmailButtonAction:" destination="R4a-Qc-hMh" eventType="touchUpInside" id="IU4-Mr-RnQ"/>
                                         </connections>
@@ -285,7 +285,7 @@
                                             <constraint firstAttribute="width" constant="20" id="axa-If-igX"/>
                                             <constraint firstAttribute="height" constant="20" id="pmS-AF-U0J"/>
                                         </constraints>
-                                        <state key="normal" image="delete_Text"/>
+                                        <state key="normal" image="delete_Text_Default"/>
                                         <connections>
                                             <action selector="deleteEmailButtonAction:" destination="R4a-Qc-hMh" eventType="touchUpInside" id="rKh-GU-sVC"/>
                                             <action selector="deleteEmailTextButtonAction:" destination="chW-KN-kdw" eventType="touchUpInside" id="SoG-Kk-wYd"/>
@@ -769,7 +769,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-vR-4mG">
-                                <rect key="frame" x="32" y="733" width="350" height="50"/>
+                                <rect key="frame" x="32" y="767" width="350" height="50"/>
                                 <color key="backgroundColor" name="secondary_pink"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7sD-ZK-MX1"/>
@@ -786,7 +786,7 @@
                             <constraint firstItem="kd2-vR-4mG" firstAttribute="leading" secondItem="Vah-AJ-K1V" secondAttribute="leading" constant="32" id="62D-oW-ERT"/>
                             <constraint firstItem="AkZ-ee-zWX" firstAttribute="centerY" secondItem="ojx-yl-rkB" secondAttribute="centerY" id="8Pf-Vx-T15"/>
                             <constraint firstItem="yd7-WH-DJ1" firstAttribute="trailing" secondItem="Vah-AJ-K1V" secondAttribute="trailing" id="BJQ-7K-NFo"/>
-                            <constraint firstItem="Vah-AJ-K1V" firstAttribute="bottom" secondItem="kd2-vR-4mG" secondAttribute="bottom" constant="79" id="O4b-57-XyD"/>
+                            <constraint firstItem="Vah-AJ-K1V" firstAttribute="bottom" secondItem="kd2-vR-4mG" secondAttribute="bottom" constant="45" id="O4b-57-XyD"/>
                             <constraint firstItem="Vah-AJ-K1V" firstAttribute="trailing" secondItem="kd2-vR-4mG" secondAttribute="trailing" constant="32" id="RZr-7k-u9J"/>
                             <constraint firstAttribute="bottom" secondItem="yd7-WH-DJ1" secondAttribute="bottom" id="eGf-dy-Wf2"/>
                             <constraint firstItem="AkZ-ee-zWX" firstAttribute="centerX" secondItem="ojx-yl-rkB" secondAttribute="centerX" id="eLv-JH-5VF"/>
@@ -955,7 +955,7 @@
         <image name="camera" width="24" height="24"/>
         <image name="checkBox_Default" width="24" height="24"/>
         <image name="check_Default" width="24" height="24"/>
-        <image name="delete_Text" width="24" height="24"/>
+        <image name="delete_Text_Default" width="24" height="24"/>
         <image name="emailCheck_Fill" width="24" height="24"/>
         <image name="eye_close" width="24" height="24"/>
         <namedColor name="grayscale_1">
