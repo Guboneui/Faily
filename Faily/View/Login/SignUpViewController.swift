@@ -29,9 +29,13 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var useTermsButton: UIButton!
     @IBOutlet weak var useTermsLabel: UILabel!
+    @IBOutlet weak var showUseTermsLabel: UILabel!
+    
     
     @IBOutlet weak var personalInfoButton: UIButton!
     @IBOutlet weak var personalInfoLabel: UILabel!
+    @IBOutlet weak var showPersonalInfoLabel: UILabel!
+    
     
     
     var agreeAllState = false
@@ -74,12 +78,14 @@ class SignUpViewController: UIViewController {
         checkPasswordTextField.keyboardType = .alphabet
         
         let useTermsTapGesture = UITapGestureRecognizer(target: self, action: #selector(useTermsAction))
-        useTermsLabel.isUserInteractionEnabled = true
-        useTermsLabel.addGestureRecognizer(useTermsTapGesture)
+        showUseTermsLabel.isUserInteractionEnabled = true
+        showUseTermsLabel.addGestureRecognizer(useTermsTapGesture)
+        showUseTermsLabel.attributedText = NSAttributedString(string: "보기", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         
         let personalInfoTapGesture = UITapGestureRecognizer(target: self, action: #selector(personalInfoAction))
-        personalInfoLabel.isUserInteractionEnabled = true
-        personalInfoLabel.addGestureRecognizer(personalInfoTapGesture)
+        showPersonalInfoLabel.isUserInteractionEnabled = true
+        showPersonalInfoLabel.addGestureRecognizer(personalInfoTapGesture)
+        showPersonalInfoLabel.attributedText = NSAttributedString(string: "보기", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         
         signUpButton.layer.cornerRadius = 6
         signUpButton.layer.shadowOffset = CGSize(width: 0, height: 4)
