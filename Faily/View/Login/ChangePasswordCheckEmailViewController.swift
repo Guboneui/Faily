@@ -45,7 +45,9 @@ class ChangePasswordCheckEmailViewController: UIViewController {
     }
     
     @IBAction func configButtonAction(_ sender: Any) {
-        
+        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+        let changePasswordVC = storyBoard.instantiateViewController(withIdentifier: "ChangePasswordViewController") as! ChangePasswordViewController
+        self.navigationController?.pushViewController(changePasswordVC, animated: true)
     }
     
 }
