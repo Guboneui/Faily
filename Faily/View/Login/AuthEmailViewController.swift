@@ -71,13 +71,29 @@ class AuthEmailViewController: UIViewController {
 }
 
 extension AuthEmailViewController: UITextFieldDelegate{
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == firstAuthTextField {
+            textField.layer.borderWidth = 3
+        }
+    }
+    
+    
     func textFieldDidChangeSelection(_ textField: UITextField) {
         
         if textField == firstAuthTextField {
             if textField.text!.count >= 1 {
                 secondAuthTextField.isEnabled = true
                 secondAuthTextField.becomeFirstResponder()
+                
+                if textField.text == "3" {
+                    textField.layer.borderColor = UIColor.green.cgColor
+                } else {
+                    textField.layer.borderColor = UIColor.red.cgColor
+                }
             }
+            
+            
         } else if textField == secondAuthTextField {
             if textField.text!.count >= 1 {
                 thirdAuthTextField.isEnabled = true
