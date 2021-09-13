@@ -15,6 +15,7 @@
 		2CC5AEA726EFA8C10096D818 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA626EFA8C10096D818 /* String.swift */; };
 		2CC5AEB026EFD15D0096D818 /* ChangePasswordCheckEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEAF26EFD15D0096D818 /* ChangePasswordCheckEmailViewController.swift */; };
 		2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEB126EFD16D0096D818 /* ChangePasswordViewController.swift */; };
+		2CC5AEB426EFDC600096D818 /* AgreeAuthorityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEB326EFDC600096D818 /* AgreeAuthorityViewController.swift */; };
 		2CC9C37E26E2A27600936BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9C37D26E2A27600936BCD /* AppDelegate.swift */; };
 		2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9C37F26E2A27600936BCD /* SceneDelegate.swift */; };
 		2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9C38126E2A27600936BCD /* IntroViewController.swift */; };
@@ -33,6 +34,7 @@
 		2CC5AEA626EFA8C10096D818 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2CC5AEAF26EFD15D0096D818 /* ChangePasswordCheckEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordCheckEmailViewController.swift; sourceTree = "<group>"; };
 		2CC5AEB126EFD16D0096D818 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		2CC5AEB326EFDC600096D818 /* AgreeAuthorityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeAuthorityViewController.swift; sourceTree = "<group>"; };
 		2CC9C37A26E2A27600936BCD /* Faily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC9C37D26E2A27600936BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CC9C37F26E2A27600936BCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				2CC5AEA226EF95780096D818 /* LoginViewController.swift */,
 				2CC5AEAF26EFD15D0096D818 /* ChangePasswordCheckEmailViewController.swift */,
 				2CC5AEB126EFD16D0096D818 /* ChangePasswordViewController.swift */,
+				2CC5AEB326EFDC600096D818 /* AgreeAuthorityViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */,
 				2CB0B50F26EEC15000F10964 /* AuthEmailViewController.swift in Sources */,
 				2CC9C37E26E2A27600936BCD /* AppDelegate.swift in Sources */,
+				2CC5AEB426EFDC600096D818 /* AgreeAuthorityViewController.swift in Sources */,
 				2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */,
 				2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */,
 			);
