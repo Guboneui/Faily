@@ -38,14 +38,17 @@ class IntroViewController: UIViewController {
     
     @objc func loginAction(sender: UITapGestureRecognizer) {
         print("로그인 클릭")
+        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
     @IBAction func signupButtonAction(_ sender: Any) {
         print("회원가입 버튼 클릭")
         
         let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-        let loginVC = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
-        self.navigationController?.pushViewController(loginVC, animated: true)
+        let signUpVC = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
     
