@@ -11,6 +11,8 @@
 		2CB0B50D26EE9F1D00F10964 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50C26EE9F1D00F10964 /* AppColor.swift */; };
 		2CB0B50F26EEC15000F10964 /* AuthEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */; };
 		2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA226EF95780096D818 /* LoginViewController.swift */; };
+		2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA426EFA8450096D818 /* UIViewController.swift */; };
+		2CC5AEA726EFA8C10096D818 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA626EFA8C10096D818 /* String.swift */; };
 		2CC9C37E26E2A27600936BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9C37D26E2A27600936BCD /* AppDelegate.swift */; };
 		2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9C37F26E2A27600936BCD /* SceneDelegate.swift */; };
 		2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9C38126E2A27600936BCD /* IntroViewController.swift */; };
@@ -25,6 +27,8 @@
 		2CB0B50C26EE9F1D00F10964 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEmailViewController.swift; sourceTree = "<group>"; };
 		2CC5AEA226EF95780096D818 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2CC5AEA426EFA8450096D818 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		2CC5AEA626EFA8C10096D818 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2CC9C37A26E2A27600936BCD /* Faily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC9C37D26E2A27600936BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CC9C37F26E2A27600936BCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,12 +65,32 @@
 		2CB0B50926EE906B00F10964 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2CC9C38326E2A27600936BCD /* Login.storyboard */,
 				2CC9C38126E2A27600936BCD /* IntroViewController.swift */,
 				2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */,
 				2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */,
 				2CC5AEA226EF95780096D818 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		2CC5AEA826EFA8E00096D818 /* DefaultFile */ = {
+			isa = PBXGroup;
+			children = (
+				2CC9C37D26E2A27600936BCD /* AppDelegate.swift */,
+				2CC9C37F26E2A27600936BCD /* SceneDelegate.swift */,
+			);
+			path = DefaultFile;
+			sourceTree = "<group>";
+		};
+		2CC5AEA926EFA8ED0096D818 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2CB0B50C26EE9F1D00F10964 /* AppColor.swift */,
+				2CC5AEA426EFA8450096D818 /* UIViewController.swift */,
+				2CC5AEA626EFA8C10096D818 /* String.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		2CC9C37126E2A27500936BCD = {
@@ -90,11 +114,9 @@
 		2CC9C37C26E2A27600936BCD /* Faily */ = {
 			isa = PBXGroup;
 			children = (
-				2CC9C37D26E2A27600936BCD /* AppDelegate.swift */,
-				2CC9C37F26E2A27600936BCD /* SceneDelegate.swift */,
-				2CB0B50C26EE9F1D00F10964 /* AppColor.swift */,
+				2CC5AEA826EFA8E00096D818 /* DefaultFile */,
+				2CC5AEA926EFA8ED0096D818 /* Extension */,
 				2CB0B50826EE906500F10964 /* View */,
-				2CC9C38326E2A27600936BCD /* Login.storyboard */,
 				2CC9C38626E2A27600936BCD /* Assets.xcassets */,
 				2CC9C38826E2A27600936BCD /* LaunchScreen.storyboard */,
 				2CC9C38B26E2A27600936BCD /* Info.plist */,
@@ -236,9 +258,11 @@
 				2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */,
 				2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */,
 				2CB0B50D26EE9F1D00F10964 /* AppColor.swift in Sources */,
+				2CC5AEA726EFA8C10096D818 /* String.swift in Sources */,
 				2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */,
 				2CB0B50F26EEC15000F10964 /* AuthEmailViewController.swift in Sources */,
 				2CC9C37E26E2A27600936BCD /* AppDelegate.swift in Sources */,
+				2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */,
 				2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

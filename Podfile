@@ -8,4 +8,5 @@ target 'Faily' do
   # Pods for Faily
 pod 'Alamofire'
 pod 'IQKeyboardManager'
+pod 'SnapKit'
 end
