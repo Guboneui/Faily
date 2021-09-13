@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var showPasswordButton: UIButton!
     
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class LoginViewController: UIViewController {
     }
     
     func configUI() {
+        self.navigationItem.backButtonTitle = ""
         self.title = "로그인"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         
@@ -48,6 +50,17 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 6
         loginButton.layer.shadowOffset = CGSize(width: 0, height: 4)
         loginButton.layer.shadowOpacity = 0.25
+        
+        let signUpTapGesture = UITapGestureRecognizer(target: self, action: #selector(signUpAction))
+        signUpLabel.isUserInteractionEnabled = true
+        signUpLabel.addGestureRecognizer(signUpTapGesture)
+    }
+    
+    @objc func signUpAction(sender: UITapGestureRecognizer) {
+        print("로그인 클릭")
+        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
     @IBAction func showPasswordButtonAction(_ sender: Any) {
@@ -58,6 +71,18 @@ class LoginViewController: UIViewController {
             showPasswordButton.setImage(UIImage(named: "eye_open"), for: .normal)
         }
     }
+    
+    @IBAction func deleteEmailButtonAction(_ sender: Any) {
+        emailTextField.text = ""
+    }
+    
+    @IBAction func reSettingPasswordButtonAction(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+        let authEmailVC = storyBoard.instantiateViewController(withIdentifier: "AuthEmailViewController") as! AuthEmailViewController
+        self.navigationController?.pushViewController(authEmailVC, animated: true)
+    }
+    
+    
     
 }
 

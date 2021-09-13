@@ -16,6 +16,7 @@ class AuthEmailViewController: UIViewController {
     @IBOutlet weak var fourthAuthTextField: UITextField!
     
     
+    @IBOutlet weak var checkEmailAuthNumButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class AuthEmailViewController: UIViewController {
     }
     
     func configUI() {
+        self.navigationItem.backButtonTitle = ""
         self.title = "이메일로 가입하기"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         
@@ -48,6 +50,10 @@ class AuthEmailViewController: UIViewController {
         fourthAuthTextField.keyboardType = .numberPad
         fourthAuthTextField.tintColor = UIColor.FailyColor.mainPinkColor
         fourthAuthTextField.isEnabled = false
+        
+        checkEmailAuthNumButton.layer.cornerRadius = 6
+        checkEmailAuthNumButton.layer.shadowOffset = CGSize(width: 0, height: 4)
+        checkEmailAuthNumButton.layer.shadowOpacity = 0.25
     }
     
     
@@ -72,12 +78,7 @@ class AuthEmailViewController: UIViewController {
 
 extension AuthEmailViewController: UITextFieldDelegate{
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == firstAuthTextField {
-            textField.layer.borderWidth = 3
-        }
-    }
-    
+
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         
@@ -85,12 +86,7 @@ extension AuthEmailViewController: UITextFieldDelegate{
             if textField.text!.count >= 1 {
                 secondAuthTextField.isEnabled = true
                 secondAuthTextField.becomeFirstResponder()
-                
-                if textField.text == "3" {
-                    textField.layer.borderColor = UIColor.green.cgColor
-                } else {
-                    textField.layer.borderColor = UIColor.red.cgColor
-                }
+            
             }
             
             
