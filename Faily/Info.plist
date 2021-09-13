@@ -63,6 +63,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>카메라 권한 설정</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>겔러리 권한 설정</string>
 </dict>
 </plist>

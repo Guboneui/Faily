@@ -267,7 +267,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입시 등록한 이메일 주소를 입력해주세요. 이후 비밀번호를 재설정해주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkx-YY-zBB">
                                 <rect key="frame" x="20" y="552.5" width="374" height="38.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="dark"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zr6-O2-9ub">
@@ -927,7 +927,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7GF-Ha-C0s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3157.971014492754" y="-216.29464285714286"/>
+            <point key="canvasLocation" x="2993" y="-214"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HJS-pF-V9E">
@@ -958,6 +958,9 @@
         <image name="delete_Text_Default" width="24" height="24"/>
         <image name="emailCheck_Fill" width="24" height="24"/>
         <image name="eye_close" width="24" height="24"/>
+        <namedColor name="dark">
+            <color red="0.15686274509803921" green="0.15294117647058825" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="grayscale_1">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

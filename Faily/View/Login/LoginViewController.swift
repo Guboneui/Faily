@@ -86,7 +86,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonAction(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "Login", bundle: nil)
         let agreeAuthorityVC = storyBoard.instantiateViewController(withIdentifier: "AgreeAuthorityViewController") as! AgreeAuthorityViewController
-        agreeAuthorityVC.modalPresentationStyle = .overCurrentContext
+        //agreeAuthorityVC.modalPresentationStyle = .overCurrentContext
         self.present(agreeAuthorityVC, animated: true, completion: nil)
     }
     
