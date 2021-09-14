@@ -21,9 +21,7 @@ class AgreeAuthorityViewController: UIViewController {
     }
     
     func configUI() {
-        agreeButton.layer.cornerRadius = 6
-        agreeButton.layer.shadowOffset = CGSize(width: 0, height: 4)
-        agreeButton.layer.shadowOpacity = 0.25
+        
     }
     
     @IBAction func agreeButtonAction(_ sender: Any) {

@@ -31,25 +31,14 @@ class LoginViewController: UIViewController {
         self.title = "로그인"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         
-        emailBaseView.layer.cornerRadius = 8
-        emailBaseView.layer.borderWidth = 1
-        emailBaseView.layer.borderColor = UIColor.FailyColor.viewBorderColor.cgColor
-        
+      
         emailTextField.delegate = self
         emailTextField.returnKeyType = .next
         emailTextField.keyboardType = .alphabet
         
-        passwordBaseView.layer.cornerRadius = 8
-        passwordBaseView.layer.borderWidth = 1
-        passwordBaseView.layer.borderColor = UIColor.FailyColor.viewBorderColor.cgColor
-        
         passwordTextField.delegate = self
         passwordTextField.returnKeyType = .done
         passwordTextField.keyboardType = .alphabet
-        
-        loginButton.layer.cornerRadius = 6
-        loginButton.layer.shadowOffset = CGSize(width: 0, height: 4)
-        loginButton.layer.shadowOpacity = 0.25
         
         let signUpTapGesture = UITapGestureRecognizer(target: self, action: #selector(signUpAction))
         signUpLabel.isUserInteractionEnabled = true

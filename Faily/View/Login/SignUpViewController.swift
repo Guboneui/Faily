@@ -13,7 +13,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var emailCheckImage: UIImageView!
     
-    
     @IBOutlet weak var passwordBaseView: UIView!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var showPasswordButton: UIButton!
@@ -23,8 +22,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var showCheckPasswordButton: UIButton!
     
     @IBOutlet weak var signUpButton: UIButton!
-    
-    
     @IBOutlet weak var agreeAllButton: UIButton!
     
     @IBOutlet weak var useTermsButton: UIButton!
@@ -35,8 +32,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var personalInfoButton: UIButton!
     @IBOutlet weak var personalInfoLabel: UILabel!
     @IBOutlet weak var showPersonalInfoLabel: UILabel!
-    
-    
     
     var agreeAllState = false
     var useTermsState = false
@@ -53,25 +48,13 @@ class SignUpViewController: UIViewController {
         self.title = "이메일로 가입하기"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         
-        emailBaseView.layer.cornerRadius = 8
-        emailBaseView.layer.borderWidth = 1
-        emailBaseView.layer.borderColor = UIColor.FailyColor.viewBorderColor.cgColor
-        
         emailTextField.delegate = self
         emailTextField.returnKeyType = .next
         emailTextField.keyboardType = .alphabet
         
-        passwordBaseView.layer.cornerRadius = 8
-        passwordBaseView.layer.borderWidth = 1
-        passwordBaseView.layer.borderColor = UIColor.FailyColor.viewBorderColor.cgColor
-        
         passwordTextField.delegate = self
         passwordTextField.returnKeyType = .next
         passwordTextField.keyboardType = .alphabet
-        
-        checkPasswordBaseView.layer.cornerRadius = 8
-        checkPasswordBaseView.layer.borderWidth = 1
-        checkPasswordBaseView.layer.borderColor = UIColor.FailyColor.viewBorderColor.cgColor
         
         checkPasswordTextField.delegate = self
         checkPasswordTextField.returnKeyType = .done
@@ -98,11 +81,7 @@ class SignUpViewController: UIViewController {
         showPersonalInfoLabel.isUserInteractionEnabled = true
         showPersonalInfoLabel.addGestureRecognizer(personalInfoTapGesture)
         showPersonalInfoLabel.attributedText = underlineAttributedString
-        
-        signUpButton.layer.cornerRadius = 6
-        signUpButton.layer.shadowOffset = CGSize(width: 0, height: 4)
-        signUpButton.layer.shadowOpacity = 0.25
-        
+
     }
     
     @objc func useTermsAction(sender: UITapGestureRecognizer) {

@@ -37,7 +37,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-cs-XHq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-cs-XHq" customClass="PinkMainButton" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="700.5" width="350" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.66666666666666663" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -96,7 +96,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="FAA-Ym-pHs">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-8h-51c">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-8h-51c" customClass="BaseView" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="557" width="350" height="48"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gW3-bh-bGc">
@@ -128,7 +128,7 @@
                                     <constraint firstAttribute="height" constant="48" id="xC3-EI-PnX"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5Z-dA-QkV">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5Z-dA-QkV" customClass="BaseView" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="615" width="350" height="48"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lWm-wi-yie">
@@ -160,7 +160,7 @@
                                     <constraint firstItem="0b6-Kn-T2n" firstAttribute="centerY" secondItem="O5Z-dA-QkV" secondAttribute="centerY" id="tox-sB-K9H"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eni-VL-YPl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eni-VL-YPl" customClass="PinkMainButton" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="697" width="350" height="50"/>
                                 <color key="backgroundColor" name="secondary_pink"/>
                                 <constraints>
@@ -250,7 +250,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="HJb-1A-vNH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGz-9k-tl8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGz-9k-tl8" customClass="PinkMainButton" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="694.5" width="350" height="50"/>
                                 <color key="backgroundColor" name="secondary_pink"/>
                                 <constraints>
@@ -270,7 +270,7 @@
                                 <color key="textColor" name="dark"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zr6-O2-9ub">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zr6-O2-9ub" customClass="BaseView" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="606" width="350" height="48"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WV4-GW-xf7">
@@ -343,10 +343,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="uSI-6h-lQo">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-hu-t3T">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-hu-t3T" customClass="BaseView" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="540" width="350" height="48"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qdr-TU-Dib">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qdr-TU-Dib" customClass="ba">
                                         <rect key="frame" x="16" y="12" width="288" height="24"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -376,7 +376,7 @@
                                     <constraint firstItem="dNt-3t-NNf" firstAttribute="leading" secondItem="qdr-TU-Dib" secondAttribute="trailing" constant="10" id="yUf-3U-LiK"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hb-H6-2qw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hb-H6-2qw" customClass="BaseView" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="603" width="350" height="48"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HYI-g1-Xej">
@@ -409,7 +409,7 @@
                                     <constraint firstAttribute="bottom" secondItem="HYI-g1-Xej" secondAttribute="bottom" constant="12" id="xge-qT-UuF"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY2-QR-DxX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY2-QR-DxX" customClass="PinkMainButton" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="694.5" width="350" height="50"/>
                                 <color key="backgroundColor" name="secondary_pink"/>
                                 <constraints>
@@ -464,7 +464,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="cvC-gr-ffF">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66c-PC-9Ge">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66c-PC-9Ge" customClass="PinkMainButton" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="767" width="350" height="50"/>
                                 <color key="backgroundColor" name="secondary_pink"/>
                                 <constraints>
@@ -490,7 +490,7 @@
                                     <action selector="personalInfoButtonAction:" destination="dbr-ai-3Y6" eventType="touchUpInside" id="Xc3-dO-P9D"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VT-fd-aGg">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VT-fd-aGg" customClass="BaseView" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="413" width="350" height="48"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QfY-iQ-8cB">
@@ -518,7 +518,7 @@
                                     <constraint firstItem="mud-oq-rKd" firstAttribute="leading" secondItem="QfY-iQ-8cB" secondAttribute="trailing" constant="10" id="qrz-3e-u33"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2i-zm-F9o">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2i-zm-F9o" customClass="BaseView" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="469" width="350" height="48"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ann-Ia-FYk">
@@ -550,7 +550,7 @@
                                     <constraint firstItem="9cK-Kh-vi7" firstAttribute="leading" secondItem="Ann-Ia-FYk" secondAttribute="trailing" constant="10" id="vjT-ES-WpA"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NyL-go-hWg">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NyL-go-hWg" customClass="BaseView" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="525" width="350" height="48"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5yt-qy-92y">
@@ -730,7 +730,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="yIi-iL-xSP">
                                         <rect key="frame" x="0.0" y="77.5" width="213" height="45"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9D4-OM-p9K">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9D4-OM-p9K" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                                                 <color key="backgroundColor" name="grayscale_5"/>
                                                 <constraints>
@@ -743,7 +743,7 @@
                                                     <action selector="firstAuthTextFieldAction:" destination="xMO-Nh-8ae" eventType="editingDidEnd" id="MkS-3H-X4E"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPe-Z0-x7i">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPe-Z0-x7i" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
                                                 <rect key="frame" x="56" y="0.0" width="45" height="45"/>
                                                 <color key="backgroundColor" name="grayscale_5"/>
                                                 <constraints>
@@ -756,7 +756,7 @@
                                                     <action selector="secondAuthTextFieldAction:" destination="xMO-Nh-8ae" eventType="editingDidEnd" id="WLv-ON-rC4"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VS5-ri-LxG">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VS5-ri-LxG" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
                                                 <rect key="frame" x="112" y="0.0" width="45" height="45"/>
                                                 <color key="backgroundColor" name="grayscale_5"/>
                                                 <constraints>
@@ -769,7 +769,7 @@
                                                     <action selector="thirdAuthTextFieldAction:" destination="xMO-Nh-8ae" eventType="editingDidEnd" id="PYJ-hi-6xn"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPA-7Y-2TL">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPA-7Y-2TL" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
                                                 <rect key="frame" x="168" y="0.0" width="45" height="45"/>
                                                 <color key="backgroundColor" name="grayscale_5"/>
                                                 <constraints>
@@ -786,7 +786,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-vR-4mG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-vR-4mG" customClass="PinkMainButton" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="767" width="350" height="50"/>
                                 <color key="backgroundColor" name="secondary_pink"/>
                                 <constraints>
@@ -876,7 +876,7 @@
                                     <constraint firstAttribute="width" constant="24" id="ruD-2O-TJV"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2H2-vA-7SU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2H2-vA-7SU" customClass="PinkMainButton" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="603.5" width="350" height="50"/>
                                 <color key="backgroundColor" name="secondary_pink"/>
                                 <constraints>

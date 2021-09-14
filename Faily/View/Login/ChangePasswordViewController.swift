@@ -30,26 +30,14 @@ class ChangePasswordViewController: UIViewController {
         self.title = "비밀번호 재설정"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         
-        passwordBaseView.layer.cornerRadius = 8
-        passwordBaseView.layer.borderWidth = 1
-        passwordBaseView.layer.borderColor = UIColor.FailyColor.viewBorderColor.cgColor
-        
+     
         passwordTextField.delegate = self
         passwordTextField.returnKeyType = .next
         passwordTextField.keyboardType = .alphabet
-        
-        checkPasswordBaseView.layer.cornerRadius = 8
-        checkPasswordBaseView.layer.borderWidth = 1
-        checkPasswordBaseView.layer.borderColor = UIColor.FailyColor.viewBorderColor.cgColor
-        
+    
         checkPasswordTextField.delegate = self
         checkPasswordTextField.returnKeyType = .done
         checkPasswordTextField.keyboardType = .alphabet
-        
-        changePasswordButton.layer.cornerRadius = 6
-        changePasswordButton.layer.shadowOffset = CGSize(width: 0, height: 4)
-        changePasswordButton.layer.shadowOpacity = 0.25
-        
     }
     
     

@@ -32,28 +32,11 @@ class AuthEmailViewController: UIViewController {
         self.title = "이메일로 가입하기"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         
-        firstAuthTextField.layer.cornerRadius = firstAuthTextField.frame.height / 2
-        firstAuthTextField.keyboardType = .numberPad
-        firstAuthTextField.tintColor = UIColor.FailyColor.mainPinkColor
-        
-        secondAuthTextField.layer.cornerRadius = secondAuthTextField.frame.height / 2
-        secondAuthTextField.keyboardType = .numberPad
-        secondAuthTextField.tintColor = UIColor.FailyColor.mainPinkColor
         secondAuthTextField.isEnabled = false
-        
-        thirdAuthTextField.layer.cornerRadius = thirdAuthTextField.frame.height / 2
-        thirdAuthTextField.keyboardType = .numberPad
-        thirdAuthTextField.tintColor = UIColor.FailyColor.mainPinkColor
         thirdAuthTextField.isEnabled = false
-        
-        fourthAuthTextField.layer.cornerRadius = fourthAuthTextField.frame.height / 2
-        fourthAuthTextField.keyboardType = .numberPad
-        fourthAuthTextField.tintColor = UIColor.FailyColor.mainPinkColor
         fourthAuthTextField.isEnabled = false
         
-        checkEmailAuthNumButton.layer.cornerRadius = 6
-        checkEmailAuthNumButton.layer.shadowOffset = CGSize(width: 0, height: 4)
-        checkEmailAuthNumButton.layer.shadowOpacity = 0.25
+       
     }
     
     
