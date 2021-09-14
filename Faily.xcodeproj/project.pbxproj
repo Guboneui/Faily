@@ -23,6 +23,7 @@
 		2CC5AEC626F0FA450096D818 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEC526F0FA450096D818 /* OnBoardingViewController.swift */; };
 		2CC5AECD26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AECB26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift */; };
 		2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC5AECC26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib */; };
+		2CC5AED026F106920096D818 /* UserDefaultKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AECF26F106920096D818 /* UserDefaultKey.swift */; };
 		2CC9C37E26E2A27600936BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9C37D26E2A27600936BCD /* AppDelegate.swift */; };
 		2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9C37F26E2A27600936BCD /* SceneDelegate.swift */; };
 		2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9C38126E2A27600936BCD /* IntroViewController.swift */; };
@@ -49,6 +50,7 @@
 		2CC5AEC526F0FA450096D818 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		2CC5AECB26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		2CC5AECC26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingCollectionViewCell.xib; sourceTree = "<group>"; };
+		2CC5AECF26F106920096D818 /* UserDefaultKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKey.swift; sourceTree = "<group>"; };
 		2CC9C37A26E2A27600936BCD /* Faily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC9C37D26E2A27600936BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CC9C37F26E2A27600936BCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				2CC9C37D26E2A27600936BCD /* AppDelegate.swift */,
 				2CC9C37F26E2A27600936BCD /* SceneDelegate.swift */,
+				2CC5AECF26F106920096D818 /* UserDefaultKey.swift */,
 			);
 			path = DefaultFile;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				2CC5AEB426EFDC600096D818 /* AgreeAuthorityViewController.swift in Sources */,
 				2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */,
 				2CC5AEC126F0F67C0096D818 /* PinkMainButton.swift in Sources */,
+				2CC5AED026F106920096D818 /* UserDefaultKey.swift in Sources */,
 				2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

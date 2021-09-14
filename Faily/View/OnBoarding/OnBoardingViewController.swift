@@ -43,6 +43,14 @@ class OnBoardingViewController: UIViewController {
         pageControl.pageIndicatorTintColor = UIColor.FailyColor.grayscale_5
         pageControl.backgroundColor = UIColor.clear
     }
+    
+    @IBAction func startButtonAction(_ sender: Any) {
+        UserDefaults.standard.set(true, forKey: UserDefaultKey.showOnBoarding)
+        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+        let loginNav = storyBoard.instantiateViewController(identifier: "LoginNav")
+        self.changeRootViewController(loginNav)
+    }
+    
 
 }
 

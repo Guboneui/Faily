@@ -950,7 +950,7 @@
         <!--Navigation Controller-->
         <scene sceneID="HJS-pF-V9E">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZSo-bf-xyX" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="LoginNav" storyboardIdentifier="LoginNav" automaticallyAdjustsScrollViewInsets="NO" id="ZSo-bf-xyX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OVX-ha-RkF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
