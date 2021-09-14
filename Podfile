@@ -9,4 +9,7 @@ target 'Faily' do
 pod 'Alamofire'
 pod 'IQKeyboardManager'
 pod 'SnapKit'
+pod 'RxCocoa'
+pod 'RxRelay'
+pod 'RxSwift'
 end
