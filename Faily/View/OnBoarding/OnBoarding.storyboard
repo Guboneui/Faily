@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -41,12 +42,26 @@
                                 <rect key="frame" x="137.5" y="804" width="139" height="28"/>
                                 <color key="backgroundColor" red="1" green="0.66666666669999997" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxT-rl-r2j" customClass="PinkMainButton" customModule="Faily" customModuleProvider="target">
+                                <rect key="frame" x="32" y="782" width="350" height="50"/>
+                                <color key="backgroundColor" name="secondary_pink"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1sw-ff-bGh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="시작하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3dJ-g1-aux" secondAttribute="bottom" constant="30" id="Bcj-MS-ooF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="uxT-rl-r2j" secondAttribute="bottom" constant="30" id="Doq-vk-Fjb"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gCL-Nw-3yq" secondAttribute="trailing" id="WLM-99-LbJ"/>
+                            <constraint firstItem="uxT-rl-r2j" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="jgo-os-iIn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uxT-rl-r2j" secondAttribute="trailing" constant="32" id="lev-Ls-9QR"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gCL-Nw-3yq" secondAttribute="bottom" id="lyq-KM-ajU"/>
                             <constraint firstItem="gCL-Nw-3yq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="mPW-Sk-Y7Q"/>
                             <constraint firstItem="3dJ-g1-aux" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="nDd-bn-0VP"/>
@@ -56,14 +71,18 @@
                     <connections>
                         <outlet property="onBoardingCollectionView" destination="gCL-Nw-3yq" id="wfT-em-Aqx"/>
                         <outlet property="pageControl" destination="3dJ-g1-aux" id="kk4-e3-k1A"/>
+                        <outlet property="startButton" destination="uxT-rl-r2j" id="7ng-lW-5nz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="97"/>
+            <point key="canvasLocation" x="131.8840579710145" y="96.428571428571431"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="secondary_pink">
+            <color red="1" green="0.66699999570846558" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

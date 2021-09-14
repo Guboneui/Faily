@@ -11,11 +11,17 @@ class OnBoardingViewController: UIViewController {
 
     @IBOutlet weak var onBoardingCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var startButton: PinkMainButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configUI()
         setCollectionView()
         setPageControl()
+    }
+    
+    func configUI() {
+        startButton.isHidden = true
     }
     
     func setCollectionView() {
@@ -51,8 +57,10 @@ extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDa
             print("page: 1")
         }else if(indexPath.item == 1){
             print("page: 2")
-        }else{
+        }else if(indexPath.item == 2){
             print("page: 3")
+        } else {
+            print("page: 4")
         }
         cell.configure(index: indexPath.item)
         return cell
@@ -61,7 +69,12 @@ extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDa
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let x = targetContentOffset.pointee.x
         pageControl.currentPage = Int(x / view.frame.width)
-        print(x, view.frame.width, x/view.frame.width)
+        if pageControl.currentPage == 3 {
+            startButton.isHidden = false
+        } else {
+            startButton.isHidden = true
+        }
+        
        
     }
     
