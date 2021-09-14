@@ -15,7 +15,6 @@ class AuthEmailViewController: UIViewController {
     @IBOutlet weak var thirdAuthTextField: UITextField!
     @IBOutlet weak var fourthAuthTextField: UITextField!
     
-    
     @IBOutlet weak var checkEmailAuthNumButton: UIButton!
     
     override func viewDidLoad() {

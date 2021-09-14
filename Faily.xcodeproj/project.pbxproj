@@ -19,6 +19,10 @@
 		2CC5AEBB26F0D8920096D818 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEBA26F0D8920096D818 /* BaseView.swift */; };
 		2CC5AEBF26F0F4FC0096D818 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEBE26F0F4FC0096D818 /* RoundTextField.swift */; };
 		2CC5AEC126F0F67C0096D818 /* PinkMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEC026F0F67C0096D818 /* PinkMainButton.swift */; };
+		2CC5AEC426F0F9120096D818 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC5AEC326F0F9120096D818 /* OnBoarding.storyboard */; };
+		2CC5AEC626F0FA450096D818 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEC526F0FA450096D818 /* OnBoardingViewController.swift */; };
+		2CC5AECD26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AECB26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift */; };
+		2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC5AECC26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib */; };
 		2CC9C37E26E2A27600936BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9C37D26E2A27600936BCD /* AppDelegate.swift */; };
 		2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9C37F26E2A27600936BCD /* SceneDelegate.swift */; };
 		2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9C38126E2A27600936BCD /* IntroViewController.swift */; };
@@ -41,6 +45,10 @@
 		2CC5AEBA26F0D8920096D818 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		2CC5AEBE26F0F4FC0096D818 /* RoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		2CC5AEC026F0F67C0096D818 /* PinkMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkMainButton.swift; sourceTree = "<group>"; };
+		2CC5AEC326F0F9120096D818 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		2CC5AEC526F0FA450096D818 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		2CC5AECB26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		2CC5AECC26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingCollectionViewCell.xib; sourceTree = "<group>"; };
 		2CC9C37A26E2A27600936BCD /* Faily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC9C37D26E2A27600936BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CC9C37F26E2A27600936BCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +77,7 @@
 		2CB0B50826EE906500F10964 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2CC5AEC226F0F8FC0096D818 /* OnBoarding */,
 				2CB0B50926EE906B00F10964 /* Login */,
 			);
 			path = View;
@@ -116,6 +125,17 @@
 				2CC5AEC026F0F67C0096D818 /* PinkMainButton.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		2CC5AEC226F0F8FC0096D818 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				2CC5AEC326F0F9120096D818 /* OnBoarding.storyboard */,
+				2CC5AEC526F0FA450096D818 /* OnBoardingViewController.swift */,
+				2CC5AECB26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift */,
+				2CC5AECC26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib */,
+			);
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 		2CC9C37126E2A27500936BCD = {
@@ -227,8 +247,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CC9C38A26E2A27600936BCD /* LaunchScreen.storyboard in Resources */,
+				2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */,
 				2CC9C38726E2A27600936BCD /* Assets.xcassets in Resources */,
 				2CC9C38526E2A27600936BCD /* Login.storyboard in Resources */,
+				2CC5AEC426F0F9120096D818 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CC5AECD26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift in Sources */,
 				2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */,
 				2CC5AEBB26F0D8920096D818 /* BaseView.swift in Sources */,
 				2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */,
@@ -292,6 +315,7 @@
 				2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */,
 				2CB0B50F26EEC15000F10964 /* AuthEmailViewController.swift in Sources */,
 				2CC9C37E26E2A27600936BCD /* AppDelegate.swift in Sources */,
+				2CC5AEC626F0FA450096D818 /* OnBoardingViewController.swift in Sources */,
 				2CC5AEB426EFDC600096D818 /* AgreeAuthorityViewController.swift in Sources */,
 				2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */,
 				2CC5AEC126F0F67C0096D818 /* PinkMainButton.swift in Sources */,
