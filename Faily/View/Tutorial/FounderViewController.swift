@@ -22,6 +22,20 @@ class FounderViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
     }
     
+    @IBAction func shareInviteCodeButtonAction(_ sender: Any) {
+        var objectsToShare = [String]()
+        if let text = inviteCodeLabel.text {
+            objectsToShare.append(text)
+            print("공유할 텍스트는 [\(text)]입니다.")
+        }
+        
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func copyInviteCodeButtonAction(_ sender: Any) {
         print("초대코드가 복사되었습니다.")
         let alert = UIAlertController(title: "초대코드를 가족에게 공유 해보세요.", message: "", preferredStyle: .alert)

@@ -245,6 +245,9 @@
                                             <constraint firstAttribute="height" constant="35" id="adJ-LE-ycU"/>
                                         </constraints>
                                         <state key="normal" image="share"/>
+                                        <connections>
+                                            <action selector="shareInviteCodeButtonAction:" destination="hFY-CV-NO2" eventType="touchUpInside" id="Qio-2J-dlj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVY-LC-e9o">
                                         <rect key="frame" x="55" y="0.0" width="35" height="35"/>
