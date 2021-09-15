@@ -11,6 +11,8 @@
 		2CB0B50D26EE9F1D00F10964 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50C26EE9F1D00F10964 /* AppColor.swift */; };
 		2CB0B50F26EEC15000F10964 /* AuthEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */; };
 		2CC092BA26F268E3009E69D0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC092B926F268E3009E69D0 /* Home.storyboard */; };
+		2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */; };
+		2CC092BE26F26F53009E69D0 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092BD26F26F53009E69D0 /* HapticManager.swift */; };
 		2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA226EF95780096D818 /* LoginViewController.swift */; };
 		2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA426EFA8450096D818 /* UIViewController.swift */; };
 		2CC5AEA726EFA8C10096D818 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA626EFA8C10096D818 /* String.swift */; };
@@ -39,6 +41,8 @@
 		2CB0B50C26EE9F1D00F10964 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEmailViewController.swift; sourceTree = "<group>"; };
 		2CC092B926F268E3009E69D0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		2CC092BD26F26F53009E69D0 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		2CC5AEA226EF95780096D818 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2CC5AEA426EFA8450096D818 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		2CC5AEA626EFA8C10096D818 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				2CC092B926F268E3009E69D0 /* Home.storyboard */,
+				2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				2CB0B50C26EE9F1D00F10964 /* AppColor.swift */,
 				2CC5AEA426EFA8450096D818 /* UIViewController.swift */,
 				2CC5AEA626EFA8C10096D818 /* String.swift */,
+				2CC092BD26F26F53009E69D0 /* HapticManager.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -352,9 +358,11 @@
 			files = (
 				2CC5AECD26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift in Sources */,
 				2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */,
+				2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */,
 				2CC5AEBB26F0D8920096D818 /* BaseView.swift in Sources */,
 				2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */,
 				2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */,
+				2CC092BE26F26F53009E69D0 /* HapticManager.swift in Sources */,
 				2CB0B50D26EE9F1D00F10964 /* AppColor.swift in Sources */,
 				2CC5AEB026EFD15D0096D818 /* ChangePasswordCheckEmailViewController.swift in Sources */,
 				2CC5AEBF26F0F4FC0096D818 /* RoundTextField.swift in Sources */,

@@ -78,9 +78,6 @@ class LoginViewController: UIViewController {
         agreeAuthorityVC.modalPresentationStyle = .overCurrentContext
         self.present(agreeAuthorityVC, animated: true, completion: nil)
     }
-    
-    
-    
 }
 
 
