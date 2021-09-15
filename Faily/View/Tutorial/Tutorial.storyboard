@@ -119,44 +119,44 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ZBr-GX-fc1">
                                 <rect key="frame" x="100.5" y="582" width="213" height="45"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPa-IX-5gv" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPa-IX-5gv" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                                         <color key="backgroundColor" name="grayscale_5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="FX9-Up-Te7"/>
                                             <constraint firstAttribute="height" constant="45" id="SOY-ra-rgF"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qTR-cW-zZ3" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qTR-cW-zZ3" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
                                         <rect key="frame" x="56" y="0.0" width="45" height="45"/>
                                         <color key="backgroundColor" name="grayscale_5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="O7o-t6-XJl"/>
                                             <constraint firstAttribute="width" constant="45" id="Vvq-Le-yB5"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="paC-24-tIf" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="paC-24-tIf" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
                                         <rect key="frame" x="112" y="0.0" width="45" height="45"/>
                                         <color key="backgroundColor" name="grayscale_5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="QyY-Bk-x3Q"/>
                                             <constraint firstAttribute="width" constant="45" id="zmh-3N-WXw"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xXr-hv-ywt" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xXr-hv-ywt" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
                                         <rect key="frame" x="168" y="0.0" width="45" height="45"/>
                                         <color key="backgroundColor" name="grayscale_5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="Doe-96-WDH"/>
                                             <constraint firstAttribute="height" constant="45" id="GhN-Wd-Ntz"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -195,6 +195,13 @@
                             <constraint firstItem="0rp-8a-BAC" firstAttribute="bottom" secondItem="QJX-5A-XeK" secondAttribute="bottom" constant="115" id="yF0-Lc-yj1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstAuthTextField" destination="EPa-IX-5gv" id="FUl-YL-QfR"/>
+                        <outlet property="fourthAuthTextField" destination="xXr-hv-ywt" id="aDh-FT-9Mw"/>
+                        <outlet property="goMainButton" destination="QJX-5A-XeK" id="KF7-T7-PCH"/>
+                        <outlet property="secondAuthTextField" destination="qTR-cW-zZ3" id="fhy-ha-Hdz"/>
+                        <outlet property="thirdAuthTextField" destination="paC-24-tIf" id="Ya5-2B-ktg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="at8-T6-dOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -106,7 +106,15 @@ class AuthEmailViewController: UIViewController {
         button.isEnabled = enabled
         button.alpha = enabled ? 1.0 : 0.25
     }
-        
+    
+    
+    @IBAction func checkAuthNumButtonAction(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+        let agreeAuthorityVC = storyBoard.instantiateViewController(withIdentifier: "AgreeAuthorityViewController") as! AgreeAuthorityViewController
+        agreeAuthorityVC.modalPresentationStyle = .overCurrentContext
+        self.present(agreeAuthorityVC, animated: true, completion: nil)
+    }
+    
         
 //      RXSwift 사용을 위한 주석 처리
 //    @IBAction func firstAuthTextFieldAction(_ sender: Any) {

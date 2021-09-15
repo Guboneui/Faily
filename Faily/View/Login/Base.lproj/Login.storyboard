@@ -857,7 +857,7 @@
                                                     <constraint firstAttribute="width" constant="45" id="ePR-7c-Zp6"/>
                                                     <constraint firstAttribute="height" constant="45" id="o1s-cN-jOw"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPe-Z0-x7i" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
@@ -867,7 +867,7 @@
                                                     <constraint firstAttribute="height" constant="45" id="3Rc-hM-2XM"/>
                                                     <constraint firstAttribute="width" constant="45" id="bpX-Hf-e4w"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VS5-ri-LxG" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
@@ -877,7 +877,7 @@
                                                     <constraint firstAttribute="width" constant="45" id="kJ0-G6-igy"/>
                                                     <constraint firstAttribute="height" constant="45" id="nDZ-lJ-7sd"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPA-7Y-2TL" customClass="RoundTextField" customModule="Faily" customModuleProvider="target">
@@ -887,7 +887,7 @@
                                                     <constraint firstAttribute="height" constant="45" id="IaB-d7-2oJ"/>
                                                     <constraint firstAttribute="width" constant="45" id="MUs-W0-ZM3"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -904,6 +904,9 @@
                                 <state key="normal" title="인증번호 확인">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkAuthNumButtonAction:" destination="xMO-Nh-8ae" eventType="touchUpInside" id="3lX-hM-h39"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vah-AJ-K1V"/>
