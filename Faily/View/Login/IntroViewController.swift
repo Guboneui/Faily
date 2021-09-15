@@ -40,7 +40,7 @@ class IntroViewController: UIViewController {
         print("회원가입 버튼 클릭")
         
         let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-        let signUpVC = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        let signUpVC = storyBoard.instantiateViewController(withIdentifier: "SignUpWithUserInfoViewController") as! SignUpWithUserInfoViewController
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
 }

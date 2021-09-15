@@ -14,6 +14,7 @@
 		2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */; };
 		2CC092BE26F26F53009E69D0 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092BD26F26F53009E69D0 /* HapticManager.swift */; };
 		2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC092C026F27048009E69D0 /* Tutorial.storyboard */; };
+		2CC092C326F286DE009E69D0 /* SignUpWithUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092C226F286DE009E69D0 /* SignUpWithUserInfoViewController.swift */; };
 		2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA226EF95780096D818 /* LoginViewController.swift */; };
 		2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA426EFA8450096D818 /* UIViewController.swift */; };
 		2CC5AEA726EFA8C10096D818 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA626EFA8C10096D818 /* String.swift */; };
@@ -45,6 +46,7 @@
 		2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		2CC092BD26F26F53009E69D0 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		2CC092C026F27048009E69D0 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		2CC092C226F286DE009E69D0 /* SignUpWithUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithUserInfoViewController.swift; sourceTree = "<group>"; };
 		2CC5AEA226EF95780096D818 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2CC5AEA426EFA8450096D818 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		2CC5AEA626EFA8C10096D818 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				2CC9C38326E2A27600936BCD /* Login.storyboard */,
 				2CC9C38126E2A27600936BCD /* IntroViewController.swift */,
+				2CC092C226F286DE009E69D0 /* SignUpWithUserInfoViewController.swift */,
 				2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */,
 				2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */,
 				2CC5AEA226EF95780096D818 /* LoginViewController.swift */,
@@ -386,6 +389,7 @@
 				2CC5AEB426EFDC600096D818 /* AgreeAuthorityViewController.swift in Sources */,
 				2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */,
 				2CC5AEC126F0F67C0096D818 /* PinkMainButton.swift in Sources */,
+				2CC092C326F286DE009E69D0 /* SignUpWithUserInfoViewController.swift in Sources */,
 				2CC5AED026F106920096D818 /* UserDefaultKey.swift in Sources */,
 				2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */,
 			);

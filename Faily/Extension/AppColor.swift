@@ -16,6 +16,7 @@ extension UIColor {
         static var baseBackGroundColor = UIColor(red: 247/255, green: 248/255, blue: 249/255, alpha: 1)
         static var grayscale_2 = UIColor(red: 88/255, green: 87/255, blue: 87/255, alpha: 1)
         static var grayscale_5 = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1)
+        static var coral = UIColor(red: 248/255, green: 66/255, blue: 66/255, alpha: 1)
         
     }
 }
