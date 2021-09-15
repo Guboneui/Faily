@@ -51,6 +51,15 @@ class AgreeAuthorityViewController: UIViewController {
                     default:
                         break
                     }
+                    
+                    DispatchQueue.main.async {
+                        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+                        let homeNav = storyBoard.instantiateViewController(identifier: "HomeNav")
+                        self.changeRootViewController(homeNav)
+                    }
+                    
+                    
+                    
                 })
             })
         })
