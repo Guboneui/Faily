@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tutorial View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController restorationIdentifier="TutorialViewController" storyboardIdentifier="TutorialViewController" id="Y6W-OH-hqX" customClass="TutorialViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,6 +33,9 @@
                                         <state key="normal" title="있습니다">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goParticipantVCButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BcE-9q-Ih2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLv-Az-Zj5" customClass="PinkMainButton" customModule="Faily" customModuleProvider="target">
                                         <rect key="frame" x="191" y="0.0" width="159" height="50"/>
@@ -44,6 +47,9 @@
                                         <state key="normal" title="없습니다">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goFounderVCButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="D8c-5V-yDa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -85,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="96.428571428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Participant View Controller-->
         <scene sceneID="MJ6-Zm-6Ak">
             <objects>
-                <viewController id="ejG-tq-qMm" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ParticipantViewController" storyboardIdentifier="ParticipantViewController" id="ejG-tq-qMm" customClass="ParticipantViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K7d-fP-fLM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,6 +112,9 @@
                                 <state key="normal" title="확인">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="goMainHomeButtonAction:" destination="ejG-tq-qMm" eventType="touchUpInside" id="ZWg-YV-uXI"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ZBr-GX-fc1">
                                 <rect key="frame" x="100.5" y="582" width="213" height="45"/>
@@ -189,12 +198,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="at8-T6-dOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785.5072463768117" y="96.428571428571431"/>
+            <point key="canvasLocation" x="1745" y="-172"/>
         </scene>
-        <!--View Controller-->
+        <!--Founder View Controller-->
         <scene sceneID="K4Z-7x-6JS">
             <objects>
-                <viewController id="hFY-CV-NO2" sceneMemberID="viewController">
+                <viewController restorationIdentifier="FounderViewController" storyboardIdentifier="FounderViewController" id="hFY-CV-NO2" customClass="FounderViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JC6-7k-XCB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,6 +221,9 @@
                                 <state key="normal" title="확인">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="goMainHomeButtonAction:" destination="hFY-CV-NO2" eventType="touchUpInside" id="4rO-Fj-XxY"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadowRECT" translatesAutoresizingMaskIntoConstraints="NO" id="yOu-db-DYf">
                                 <rect key="frame" x="76.5" y="477" width="261" height="150"/>
@@ -225,7 +237,7 @@
                                             <constraint firstAttribute="width" constant="35" id="Qw3-0X-88e"/>
                                             <constraint firstAttribute="height" constant="35" id="adJ-LE-ycU"/>
                                         </constraints>
-                                        <state key="normal" image="copy"/>
+                                        <state key="normal" image="share"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVY-LC-e9o">
                                         <rect key="frame" x="55" y="0.0" width="35" height="35"/>
@@ -249,7 +261,7 @@
                                 <color key="textColor" name="secondary_pink"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가족 공간을 만들어보세요. 초대코드를 발급해드립니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-RC-RUu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가족 공간을 만들어보세요. 초대코드를 발급해드립니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-RC-RUu">
                                 <rect key="frame" x="119.5" y="413" width="175.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -283,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTA-2e-bXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2508.6956521739135" y="96.428571428571431"/>
+            <point key="canvasLocation" x="1745" y="495"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cif-pu-EJo">
@@ -309,6 +321,7 @@
         <image name="copy" width="43" height="43"/>
         <image name="heart" width="45" height="37"/>
         <image name="shadowRECT" width="266" height="150"/>
+        <image name="share" width="43" height="43"/>
         <namedColor name="grayscale_2">
             <color red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

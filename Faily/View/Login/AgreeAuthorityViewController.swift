@@ -21,7 +21,9 @@ class AgreeAuthorityViewController: UIViewController {
     }
     
     func configUI() {
-        
+        self.navigationItem.backButtonTitle = ""
+        self.title = "이메일로 가입하기"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
     }
     
     @IBAction func agreeButtonAction(_ sender: Any) {

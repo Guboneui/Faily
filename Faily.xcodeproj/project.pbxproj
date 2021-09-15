@@ -15,6 +15,9 @@
 		2CC092BE26F26F53009E69D0 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092BD26F26F53009E69D0 /* HapticManager.swift */; };
 		2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC092C026F27048009E69D0 /* Tutorial.storyboard */; };
 		2CC092C326F286DE009E69D0 /* SignUpWithUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092C226F286DE009E69D0 /* SignUpWithUserInfoViewController.swift */; };
+		2CC092C526F2903F009E69D0 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092C426F2903F009E69D0 /* TutorialViewController.swift */; };
+		2CC092C726F2905B009E69D0 /* ParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092C626F2905B009E69D0 /* ParticipantViewController.swift */; };
+		2CC092C926F29077009E69D0 /* FounderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092C826F29077009E69D0 /* FounderViewController.swift */; };
 		2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA226EF95780096D818 /* LoginViewController.swift */; };
 		2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA426EFA8450096D818 /* UIViewController.swift */; };
 		2CC5AEA726EFA8C10096D818 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA626EFA8C10096D818 /* String.swift */; };
@@ -47,6 +50,9 @@
 		2CC092BD26F26F53009E69D0 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		2CC092C026F27048009E69D0 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		2CC092C226F286DE009E69D0 /* SignUpWithUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithUserInfoViewController.swift; sourceTree = "<group>"; };
+		2CC092C426F2903F009E69D0 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		2CC092C626F2905B009E69D0 /* ParticipantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantViewController.swift; sourceTree = "<group>"; };
+		2CC092C826F29077009E69D0 /* FounderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FounderViewController.swift; sourceTree = "<group>"; };
 		2CC5AEA226EF95780096D818 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2CC5AEA426EFA8450096D818 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		2CC5AEA626EFA8C10096D818 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -154,6 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				2CC092C026F27048009E69D0 /* Tutorial.storyboard */,
+				2CC092C426F2903F009E69D0 /* TutorialViewController.swift */,
+				2CC092C826F29077009E69D0 /* FounderViewController.swift */,
+				2CC092C626F2905B009E69D0 /* ParticipantViewController.swift */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -371,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CC092C926F29077009E69D0 /* FounderViewController.swift in Sources */,
 				2CC5AECD26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift in Sources */,
 				2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */,
 				2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */,
@@ -385,12 +395,14 @@
 				2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */,
 				2CB0B50F26EEC15000F10964 /* AuthEmailViewController.swift in Sources */,
 				2CC9C37E26E2A27600936BCD /* AppDelegate.swift in Sources */,
+				2CC092C726F2905B009E69D0 /* ParticipantViewController.swift in Sources */,
 				2CC5AEC626F0FA450096D818 /* OnBoardingViewController.swift in Sources */,
 				2CC5AEB426EFDC600096D818 /* AgreeAuthorityViewController.swift in Sources */,
 				2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */,
 				2CC5AEC126F0F67C0096D818 /* PinkMainButton.swift in Sources */,
 				2CC092C326F286DE009E69D0 /* SignUpWithUserInfoViewController.swift in Sources */,
 				2CC5AED026F106920096D818 /* UserDefaultKey.swift in Sources */,
+				2CC092C526F2903F009E69D0 /* TutorialViewController.swift in Sources */,
 				2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
