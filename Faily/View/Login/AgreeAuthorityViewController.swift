@@ -53,8 +53,8 @@ class AgreeAuthorityViewController: UIViewController {
                     }
                     
                     DispatchQueue.main.async {
-                        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-                        let homeNav = storyBoard.instantiateViewController(identifier: "HomeNav")
+                        let storyBoard = UIStoryboard(name: "Tutorial", bundle: nil)
+                        let homeNav = storyBoard.instantiateViewController(identifier: "TutorialNav")
                         self.changeRootViewController(homeNav)
                     }
                     

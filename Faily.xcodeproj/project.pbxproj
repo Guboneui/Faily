@@ -13,6 +13,7 @@
 		2CC092BA26F268E3009E69D0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC092B926F268E3009E69D0 /* Home.storyboard */; };
 		2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */; };
 		2CC092BE26F26F53009E69D0 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092BD26F26F53009E69D0 /* HapticManager.swift */; };
+		2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC092C026F27048009E69D0 /* Tutorial.storyboard */; };
 		2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA226EF95780096D818 /* LoginViewController.swift */; };
 		2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA426EFA8450096D818 /* UIViewController.swift */; };
 		2CC5AEA726EFA8C10096D818 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5AEA626EFA8C10096D818 /* String.swift */; };
@@ -43,6 +44,7 @@
 		2CC092B926F268E3009E69D0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		2CC092BD26F26F53009E69D0 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		2CC092C026F27048009E69D0 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		2CC5AEA226EF95780096D818 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2CC5AEA426EFA8450096D818 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		2CC5AEA626EFA8C10096D818 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				2CC5AEC226F0F8FC0096D818 /* OnBoarding */,
 				2CB0B50926EE906B00F10964 /* Login */,
+				2CC092BF26F27037009E69D0 /* Tutorial */,
 				2CC092B826F268AA009E69D0 /* Home */,
 			);
 			path = View;
@@ -142,6 +145,14 @@
 				2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		2CC092BF26F27037009E69D0 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				2CC092C026F27048009E69D0 /* Tutorial.storyboard */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		2CC5AEA826EFA8E00096D818 /* DefaultFile */ = {
@@ -299,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CC9C38A26E2A27600936BCD /* LaunchScreen.storyboard in Resources */,
+				2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */,
 				2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */,
 				2CC9C38726E2A27600936BCD /* Assets.xcassets in Resources */,
 				2CC092BA26F268E3009E69D0 /* Home.storyboard in Resources */,
