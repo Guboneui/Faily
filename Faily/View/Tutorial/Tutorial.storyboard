@@ -253,6 +253,9 @@
                                             <constraint firstAttribute="height" constant="35" id="MYy-VS-YxU"/>
                                         </constraints>
                                         <state key="normal" image="copy"/>
+                                        <connections>
+                                            <action selector="copyInviteCodeButtonAction:" destination="hFY-CV-NO2" eventType="touchUpInside" id="Flu-l9-R2B"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -299,6 +302,9 @@
                             <constraint firstItem="mhb-RC-RUu" firstAttribute="centerX" secondItem="JC6-7k-XCB" secondAttribute="centerX" id="yui-MW-Wxr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inviteCodeLabel" destination="BdV-c5-C7W" id="gP2-B6-EUi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTA-2e-bXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
