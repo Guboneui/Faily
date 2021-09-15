@@ -108,10 +108,6 @@ class AuthEmailViewController: UIViewController {
     }
         
         
-    
-
-
-    
 //      RXSwift 사용을 위한 주석 처리
 //    @IBAction func firstAuthTextFieldAction(_ sender: Any) {
 //        checkMaxLength(firstAuthTextField, maxLength: 1)

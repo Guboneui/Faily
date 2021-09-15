@@ -100,6 +100,34 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		2CC092B326F241DA009E69D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2CC092B426F241E2009E69D0 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2CC092B526F241EC009E69D0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2CC092B626F241FA009E69D0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2CC5AEA826EFA8E00096D818 /* DefaultFile */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,10 +193,14 @@
 				2CC5AEA826EFA8E00096D818 /* DefaultFile */,
 				2CC5AEA926EFA8ED0096D818 /* Extension */,
 				2CC5AEB926F0D8420096D818 /* Custom */,
+				2CC092B326F241DA009E69D0 /* Model */,
+				2CC092B426F241E2009E69D0 /* Repository */,
+				2CC092B526F241EC009E69D0 /* Service */,
 				2CB0B50826EE906500F10964 /* View */,
-				2CC9C38626E2A27600936BCD /* Assets.xcassets */,
+				2CC092B626F241FA009E69D0 /* ViewModel */,
 				2CC9C38826E2A27600936BCD /* LaunchScreen.storyboard */,
 				2CC9C38B26E2A27600936BCD /* Info.plist */,
+				2CC9C38626E2A27600936BCD /* Assets.xcassets */,
 			);
 			path = Faily;
 			sourceTree = "<group>";

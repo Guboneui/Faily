@@ -39,7 +39,6 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configUI()
     }
     
@@ -184,10 +183,37 @@ class SignUpViewController: UIViewController {
 //            self.present(alert, animated: true, completion: nil)
 //        }
         
-        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-        let authEmailVC = storyBoard.instantiateViewController(withIdentifier: "AuthEmailViewController") as! AuthEmailViewController
-        self.navigationController?.pushViewController(authEmailVC, animated: true)
+//        비밀번호 정규식 설정
+//        let checkPassword = isValidPassword(password: passwordTextField.text!)
+//        if checkPassword == true {
+//            print("유효성 검사 통과")
+//        } else {
+//            print("유효성 검사 실패")
+//            return
+//        }
+//
+//        if passwordTextField.text! == checkPasswordTextField.text! {
+//            print("비밀번호 일치")
+//        } else {
+//            print("비밀번호 불일치")
+//        }
+//
+//
+        
+        
+        
+//        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+//        let authEmailVC = storyBoard.instantiateViewController(withIdentifier: "AuthEmailViewController") as! AuthEmailViewController
+//        self.navigationController?.pushViewController(authEmailVC, animated: true)
     }
+    
+    func isValidPassword(password: String) -> Bool {
+           let passwordRegEx = "^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=-]).{8,16}"
+           let passwordCheck = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
+           return passwordCheck.evaluate(with: password)
+    }
+    
+    
     
 }
 
@@ -206,7 +232,7 @@ extension SignUpViewController: UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if textField == emailTextField {
-            let emailAccurate = isValidEmail(testStr: textField.text!)
+            let emailAccurate = isValidEmail(email: textField.text!)
             if emailAccurate == true {
                 emailCheckImage.image = UIImage(named: "check_Fill")
             } else {
@@ -215,9 +241,9 @@ extension SignUpViewController: UITextFieldDelegate {
         }
     }
     
-    func isValidEmail(testStr:String) -> Bool {
-           let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-           let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-           return emailTest.evaluate(with: testStr)
-            }
+    func isValidEmail(email:String) -> Bool {
+       let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+       let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+       return emailTest.evaluate(with: email)
+    }
 }
