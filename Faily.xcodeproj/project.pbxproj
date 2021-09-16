@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4B7BB126F2E0470083576A /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB026F2E0470083576A /* QuestionViewController.swift */; };
+		2C4B7BB526F2E0C30083576A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB426F2E0C30083576A /* HomeViewController.swift */; };
+		2C4B7BB726F2E0D90083576A /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */; };
+		2C4B7BB926F2E0EF0083576A /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB826F2E0EF0083576A /* UserSettingViewController.swift */; };
+		2C4B7BC026F2E12E0083576A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BBF26F2E12E0083576A /* CalendarViewController.swift */; };
+		2C4B7BC226F2E4040083576A /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BC126F2E4040083576A /* MainTabBar.swift */; };
 		2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */; };
 		2CB0B50D26EE9F1D00F10964 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50C26EE9F1D00F10964 /* AppColor.swift */; };
 		2CB0B50F26EEC15000F10964 /* AuthEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */; };
@@ -42,6 +48,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C4B7BB026F2E0470083576A /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		2C4B7BB426F2E0C30083576A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		2C4B7BB826F2E0EF0083576A /* UserSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingViewController.swift; sourceTree = "<group>"; };
+		2C4B7BBF26F2E12E0083576A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		2C4B7BC126F2E4040083576A /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2CB0B50C26EE9F1D00F10964 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEmailViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +104,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C4B7BBA26F2E0F30083576A /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				2C4B7BB026F2E0470083576A /* QuestionViewController.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		2C4B7BBB26F2E0FA0083576A /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				2C4B7BBF26F2E12E0083576A /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		2C4B7BBC26F2E1030083576A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2C4B7BB426F2E0C30083576A /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2C4B7BBD26F2E1070083576A /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		2C4B7BBE26F2E10C0083576A /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				2C4B7BB826F2E0EF0083576A /* UserSettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		2CB0B50826EE906500F10964 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +204,12 @@
 			children = (
 				2CC092B926F268E3009E69D0 /* Home.storyboard */,
 				2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */,
+				2C4B7BC126F2E4040083576A /* MainTabBar.swift */,
+				2C4B7BBA26F2E0F30083576A /* Question */,
+				2C4B7BBB26F2E0FA0083576A /* Calendar */,
+				2C4B7BBC26F2E1030083576A /* Home */,
+				2C4B7BBD26F2E1070083576A /* Gallery */,
+				2C4B7BBE26F2E10C0083576A /* Setting */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -381,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CC092C926F29077009E69D0 /* FounderViewController.swift in Sources */,
+				2C4B7BB726F2E0D90083576A /* GalleryViewController.swift in Sources */,
 				2CC5AECD26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift in Sources */,
 				2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */,
 				2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */,
@@ -391,19 +450,24 @@
 				2CB0B50D26EE9F1D00F10964 /* AppColor.swift in Sources */,
 				2CC5AEB026EFD15D0096D818 /* ChangePasswordCheckEmailViewController.swift in Sources */,
 				2CC5AEBF26F0F4FC0096D818 /* RoundTextField.swift in Sources */,
+				2C4B7BB126F2E0470083576A /* QuestionViewController.swift in Sources */,
 				2CC5AEA726EFA8C10096D818 /* String.swift in Sources */,
 				2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */,
+				2C4B7BB526F2E0C30083576A /* HomeViewController.swift in Sources */,
 				2CB0B50F26EEC15000F10964 /* AuthEmailViewController.swift in Sources */,
 				2CC9C37E26E2A27600936BCD /* AppDelegate.swift in Sources */,
+				2C4B7BC226F2E4040083576A /* MainTabBar.swift in Sources */,
 				2CC092C726F2905B009E69D0 /* ParticipantViewController.swift in Sources */,
 				2CC5AEC626F0FA450096D818 /* OnBoardingViewController.swift in Sources */,
 				2CC5AEB426EFDC600096D818 /* AgreeAuthorityViewController.swift in Sources */,
 				2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */,
 				2CC5AEC126F0F67C0096D818 /* PinkMainButton.swift in Sources */,
+				2C4B7BC026F2E12E0083576A /* CalendarViewController.swift in Sources */,
 				2CC092C326F286DE009E69D0 /* SignUpWithUserInfoViewController.swift in Sources */,
 				2CC5AED026F106920096D818 /* UserDefaultKey.swift in Sources */,
 				2CC092C526F2903F009E69D0 /* TutorialViewController.swift in Sources */,
 				2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */,
+				2C4B7BB926F2E0EF0083576A /* UserSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

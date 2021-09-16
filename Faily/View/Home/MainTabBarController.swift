@@ -12,6 +12,10 @@ class MainTabBarController: UITabBarController {
     
     var homeButton: UIButton!
     var goChatView: UIView!
+    
+    
+    private var shapeLayer: CALayer?
+    
     private var shouldAllowPan: Bool = false
     private var isLongPressed: Bool = false
     
@@ -27,9 +31,24 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         self.selectedIndex = 2
         self.goChatView.isHidden = true
+        
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+   
+    
     private func configUI() {
+    
+        
+        
         self.homeButton = UIButton(frame: CGRect(x: (self.view.bounds.width / 2) - 30, y: -20, width: 60, height: 60))
         homeButton.backgroundColor = .orange
         self.tabBar.addSubview(homeButton)
