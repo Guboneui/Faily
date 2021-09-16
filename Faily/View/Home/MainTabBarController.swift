@@ -12,7 +12,7 @@ class MainTabBarController: UITabBarController {
     
     var homeButton: UIButton!
     var goChatView: UIView!
-    
+    var backgroundImg: UIImageView!
     
     private var shapeLayer: CALayer?
     
@@ -47,7 +47,10 @@ class MainTabBarController: UITabBarController {
     
     private func configUI() {
     
-        
+        self.backgroundImg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
+        backgroundImg.image = UIImage(named: "background")
+        backgroundImg.contentMode = UIView.ContentMode.scaleAspectFill
+        self.tabBar.addSubview(backgroundImg)
         
         self.homeButton = UIButton(frame: CGRect(x: (self.view.bounds.width / 2) - 30, y: -20, width: 60, height: 60))
         homeButton.backgroundColor = .orange
@@ -72,6 +75,8 @@ class MainTabBarController: UITabBarController {
         self.goChatView = UIView(frame: CGRect(x: (self.view.frame.width / 2) - 40, y: height - k, width: 80, height: 80))
         goChatView.backgroundColor = .black
         self.view.addSubview(goChatView)
+        
+        self.tabBar.sendSubviewToBack(self.backgroundImg)
     }
     
     @objc func panGesture(_ recognizer: UIPanGestureRecognizer) {

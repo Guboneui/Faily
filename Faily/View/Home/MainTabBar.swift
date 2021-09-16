@@ -12,7 +12,7 @@ class MainTabBar: UITabBar {
     private var shapeLayer: CALayer?
     private func addShape() {
         let shapeLayer = CAShapeLayer()
-
+        
         if let oldShapeLayer = self.shapeLayer {
             self.layer.replaceSublayer(oldShapeLayer, with: shapeLayer)
         } else {
@@ -25,18 +25,17 @@ class MainTabBar: UITabBar {
     override func draw(_ rect: CGRect) {
         self.addShape()
         self.unselectedItemTintColor = .black
-        self.tintColor = .green
         
         let clipPath = UIBezierPath(roundedRect: rect, cornerRadius: 6.0).cgPath
-
-          let ctx = UIGraphicsGetCurrentContext()!
-          ctx.addPath(clipPath)
-          ctx.setFillColor(UIColor.red.cgColor)
-
-          ctx.closePath()
-          ctx.fillPath()
+        
+        let ctx = UIGraphicsGetCurrentContext()!
+        ctx.addPath(clipPath)
+        ctx.setFillColor(UIColor.clear.cgColor)
+        
+        ctx.closePath()
+        ctx.fillPath()
     }
     
     
-  
+    
 }
