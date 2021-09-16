@@ -39,14 +39,16 @@ class MainTabBarController: UITabBarController {
         self.panGesture(panGesture)
         homeButton.addGestureRecognizer(panGesture)
         
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longGesture(_:)))
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longGesture))
         homeButton.addGestureRecognizer(longPressGesture)
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGesture))
+        homeButton.addGestureRecognizer(tapGesture)
         
         let bounds: CGRect = UIScreen.main.bounds
         let height: CGFloat = bounds.size.height
         let k = height * 0.7
-
+        
         
         self.goChatView = UIView(frame: CGRect(x: (self.view.frame.width / 2) - 40, y: height - k, width: 80, height: 80))
         goChatView.backgroundColor = .black
@@ -65,7 +67,8 @@ class MainTabBarController: UITabBarController {
                 now = maxValue
             }
             
-            var newScale: CGFloat = 1 - ((now / maxValue) * 0.2)
+            //홈화면 버튼 크기 변경 코드
+            var newScale: CGFloat = 1 //- ((now / maxValue) * 0.2)
             
             if let previousScale = view?.transform.d {
                 newScale = CGFloat.minimum(newScale, previousScale)
@@ -82,14 +85,13 @@ class MainTabBarController: UITabBarController {
             
             let isOn = isOnY && isOnX
             
+            //뷰가 안에 들어가게 되었을 때 원으로 변경
             let color: UIColor = (isOn) ? .black : .green
             let radius: CGFloat = isOn ? self.goChatView.frame.height / 2 : 0
             UIView.animate(withDuration: 0.5) {
                 //self.middleLabel.textColor = .white
                 self.goChatView.backgroundColor = color
                 self.goChatView.layer.cornerRadius = radius
-                
-                
             }
             
         case .ended:
@@ -105,7 +107,7 @@ class MainTabBarController: UITabBarController {
                 }
             }
             
-            
+            //뷰 원래 자리로 이동
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
                 view?.transform = .identity
                 self.goChatView.backgroundColor = .green
@@ -116,7 +118,7 @@ class MainTabBarController: UITabBarController {
             
         default:
             break
-        
+            
         }
     }
     
@@ -135,7 +137,7 @@ class MainTabBarController: UITabBarController {
             UIView.animate(withDuration: 0.4) {
                 recognizer.view?.alpha = 1
             }
-        
+            
         case .changed:
             shouldAllowPan = true
             
@@ -153,11 +155,15 @@ class MainTabBarController: UITabBarController {
                 view.layer.zPosition = -(view.layer.zPosition)
             }
             
-           
+            
             
         default:
             break
         }
+    }
+    
+    @objc func tapGesture(_ recognizer: UITapGestureRecognizer) {
+        self.selectedIndex = 2
     }
 }
 
@@ -168,9 +174,9 @@ extension MainTabBarController: UIGestureRecognizerDelegate {
     
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if((gestureRecognizer is UIPanGestureRecognizer) && (shouldAllowPan == false)) {
-                 return false
-             }
-             return true
+            return false
+        }
+        return true
     }
-
+    
 }

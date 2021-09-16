@@ -25,7 +25,7 @@ class FounderViewController: UIViewController {
     @IBAction func shareInviteCodeButtonAction(_ sender: Any) {
         var objectsToShare = [String]()
         if let text = inviteCodeLabel.text {
-            objectsToShare.append(text)
+            objectsToShare.append("🥳Faily 가족 인증코드를 보내드려요\n\(text)")
             print("공유할 텍스트는 [\(text)]입니다.")
         }
         
