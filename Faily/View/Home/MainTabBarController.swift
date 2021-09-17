@@ -47,9 +47,11 @@ class MainTabBarController: UITabBarController {
     
     private func configUI() {
     
+        print(self.tabBar.frame.size.width)
+        print(self.tabBar.frame.size.height)
         self.backgroundImg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
         backgroundImg.image = UIImage(named: "background")
-        backgroundImg.contentMode = UIView.ContentMode.scaleAspectFill
+        backgroundImg.contentMode = UIView.ContentMode.scaleAspectFit
         self.tabBar.addSubview(backgroundImg)
         
         self.homeButton = UIButton(frame: CGRect(x: (self.view.bounds.width / 2) - 30, y: -20, width: 60, height: 60))
