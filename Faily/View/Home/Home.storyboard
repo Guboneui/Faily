@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="-420" y="863"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="TDk-g3-6hV">
             <objects>
-                <viewController id="q74-sU-dye" sceneMemberID="viewController">
+                <viewController id="q74-sU-dye" customClass="ChatViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A11-nI-yzh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -988,7 +988,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2H2-vA-7SU" customClass="PinkMainButton" customModule="Faily" customModuleProvider="target">
-                                <rect key="frame" x="32" y="603.5" width="350" height="50"/>
+                                <rect key="frame" x="32" y="536.5" width="350" height="50"/>
                                 <color key="backgroundColor" name="secondary_pink"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hIP-gi-UCs"/>
@@ -1001,30 +1001,6 @@
                                     <action selector="agreeButtonAction:" destination="rIb-45-k1N" eventType="touchUpInside" id="hZi-25-qze"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="dtw-qm-ofg">
-                                <rect key="frame" x="75" y="538.5" width="24" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="DaA-Br-2Jk"/>
-                                    <constraint firstAttribute="width" constant="24" id="bGW-Yb-TYU"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="OYO-I2-8MP">
-                                <rect key="frame" x="114" y="527.5" width="192.5" height="46"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사진/카메라 (선택)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17g-At-Cf2">
-                                        <rect key="frame" x="0.0" y="0.0" width="119" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사진촬영 및 앨범사진 가져오기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfT-0s-2YQ">
-                                        <rect key="frame" x="0.0" y="26.5" width="192.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" name="grayscale_2"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Ai-AU-mXA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1032,14 +1008,9 @@
                             <constraint firstItem="qME-n7-opP" firstAttribute="centerX" secondItem="gbO-pC-ubt" secondAttribute="centerX" id="3R0-is-Zwq"/>
                             <constraint firstItem="geX-NQ-4k0" firstAttribute="centerY" secondItem="ajs-xK-5OO" secondAttribute="centerY" id="9Aw-kZ-ILc"/>
                             <constraint firstItem="geX-NQ-4k0" firstAttribute="leading" secondItem="6Ai-AU-mXA" secondAttribute="leading" constant="75" id="ERr-gc-uEG"/>
-                            <constraint firstItem="dtw-qm-ofg" firstAttribute="centerY" secondItem="OYO-I2-8MP" secondAttribute="centerY" id="LRs-GC-UgP"/>
                             <constraint firstItem="ajs-xK-5OO" firstAttribute="leading" secondItem="geX-NQ-4k0" secondAttribute="trailing" constant="15" id="NCp-rc-glD"/>
-                            <constraint firstItem="OYO-I2-8MP" firstAttribute="top" secondItem="ajs-xK-5OO" secondAttribute="bottom" constant="20.699999999999999" id="OUd-HN-h7w"/>
                             <constraint firstItem="2Ip-di-03g" firstAttribute="centerX" secondItem="gbO-pC-ubt" secondAttribute="centerX" id="P70-HX-X2N"/>
-                            <constraint firstItem="dtw-qm-ofg" firstAttribute="leading" secondItem="6Ai-AU-mXA" secondAttribute="leading" constant="75" id="RgH-hb-8Gn"/>
-                            <constraint firstItem="OYO-I2-8MP" firstAttribute="leading" secondItem="dtw-qm-ofg" secondAttribute="trailing" constant="15" id="Unm-nu-QCe"/>
                             <constraint firstItem="2H2-vA-7SU" firstAttribute="leading" secondItem="6Ai-AU-mXA" secondAttribute="leading" constant="32" id="b86-yn-gd5"/>
-                            <constraint firstItem="2H2-vA-7SU" firstAttribute="top" secondItem="OYO-I2-8MP" secondAttribute="bottom" constant="30" id="bJz-WJ-fqL"/>
                             <constraint firstItem="DCf-wu-MbB" firstAttribute="centerX" secondItem="gbO-pC-ubt" secondAttribute="centerX" id="gTj-4x-nYG"/>
                             <constraint firstItem="2Ip-di-03g" firstAttribute="top" secondItem="qME-n7-opP" secondAttribute="bottom" constant="26" id="gzt-zO-VFb"/>
                             <constraint firstItem="6Ai-AU-mXA" firstAttribute="trailing" secondItem="2H2-vA-7SU" secondAttribute="trailing" constant="32" id="hOF-6U-t8F"/>
@@ -1048,6 +1019,7 @@
                             <constraint firstItem="ajs-xK-5OO" firstAttribute="top" secondItem="DCf-wu-MbB" secondAttribute="bottom" constant="12.199999999999999" id="pPA-oc-nJ6"/>
                             <constraint firstItem="DCf-wu-MbB" firstAttribute="top" secondItem="2Ip-di-03g" secondAttribute="bottom" constant="12.199999999999999" id="qQn-FA-aah"/>
                             <constraint firstItem="6Ai-AU-mXA" firstAttribute="trailing" secondItem="DCf-wu-MbB" secondAttribute="trailing" constant="65" id="wh2-kO-mMp"/>
+                            <constraint firstItem="2H2-vA-7SU" firstAttribute="top" secondItem="ajs-xK-5OO" secondAttribute="bottom" constant="30" id="x04-nD-ay6"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1081,7 +1053,6 @@
         <image name="alert" width="24" height="24"/>
         <image name="authority" width="52" height="52"/>
         <image name="background" width="375" height="812"/>
-        <image name="camera" width="24" height="24"/>
         <image name="checkBox_Default" width="18" height="18"/>
         <image name="check_Default" width="24" height="24"/>
         <image name="delete_Text_Default" width="24" height="24"/>
