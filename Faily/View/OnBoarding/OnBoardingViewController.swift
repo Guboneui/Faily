@@ -37,6 +37,8 @@ class OnBoardingViewController: UIViewController {
     }
     
     func setPageControl() {
+        pageControl.isUserInteractionEnabled = false
+        pageControl.isSelected = false
         pageControl.currentPage = 0
         pageControl.numberOfPages = 4
         pageControl.currentPageIndicatorTintColor = UIColor.FailyColor.mainPinkColor
