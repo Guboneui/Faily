@@ -32,6 +32,7 @@ class MainTabBarController: UITabBarController {
         self.selectedIndex = 2
         self.goChatView.isHidden = true
         
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -46,12 +47,14 @@ class MainTabBarController: UITabBarController {
    
     
     private func configUI() {
-    
+//
         print(self.tabBar.frame.size.width)
         print(self.tabBar.frame.size.height)
         self.backgroundImg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
         backgroundImg.image = UIImage(named: "background")
         backgroundImg.contentMode = UIView.ContentMode.scaleAspectFit
+        backgroundImg.layer.cornerRadius = 15
+        backgroundImg.clipsToBounds = true
         self.tabBar.addSubview(backgroundImg)
         
         self.homeButton = UIButton(frame: CGRect(x: (self.view.bounds.width / 2) - 30, y: -20, width: 60, height: 60))
@@ -79,6 +82,7 @@ class MainTabBarController: UITabBarController {
         self.view.addSubview(goChatView)
         
         self.tabBar.sendSubviewToBack(self.backgroundImg)
+        self.tabBar.backgroundColor = .clear
     }
     
     @objc func panGesture(_ recognizer: UIPanGestureRecognizer) {
