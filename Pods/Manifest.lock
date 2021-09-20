@@ -2,6 +2,8 @@ PODS:
   - Alamofire (5.4.3)
   - FSCalendar (2.8.2)
   - IQKeyboardManager (6.5.6)
+  - MKColorPicker (1.2)
+  - MKMagneticProgress (1.4)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
@@ -14,6 +16,8 @@ DEPENDENCIES:
   - Alamofire
   - FSCalendar
   - IQKeyboardManager
+  - MKColorPicker
+  - MKMagneticProgress
   - RxCocoa
   - RxRelay
   - RxSwift
@@ -24,6 +28,8 @@ SPEC REPOS:
     - Alamofire
     - FSCalendar
     - IQKeyboardManager
+    - MKColorPicker
+    - MKMagneticProgress
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -33,11 +39,13 @@ SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  MKColorPicker: 8998b2ab977e4f240fdf254db27a18b810da3cfc
+  MKMagneticProgress: 006b8c763d62986661bcde03794a3dcf56cd084a
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 5e49e3ef98c40654dba222c71481cdb127c33449
+PODFILE CHECKSUM: 1aef1f175a034d9cbabef0f3117d9d43acb44860
 
 COCOAPODS: 1.10.1

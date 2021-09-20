@@ -13,4 +13,6 @@ pod 'RxCocoa'
 pod 'RxRelay'
 pod 'RxSwift'
 pod 'FSCalendar'
+pod 'MKMagneticProgress'
+pod 'MKColorPicker'
 end
