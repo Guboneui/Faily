@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -106,7 +107,7 @@
                                 <rect key="frame" x="0.0" y="94" width="414" height="719"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKk-ds-T1f">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="697.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="721.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJ2-ap-azM">
                                                 <rect key="frame" x="32" y="60" width="350" height="163"/>
@@ -201,8 +202,12 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5X-Ve-zsH" userLabel="BMBaseView">
-                                                <rect key="frame" x="32" y="504.5" width="350" height="116"/>
+                                                <rect key="frame" x="32" y="504.5" width="350" height="140"/>
                                                 <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TkE-X5-ek6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="140"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMP-hv-Ft2">
                                                         <rect key="frame" x="321" y="8" width="20" height="20"/>
                                                         <constraints>
@@ -211,11 +216,39 @@
                                                         </constraints>
                                                         <state key="normal" image="present"/>
                                                     </button>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Fo-YB-csA">
+                                                        <rect key="frame" x="0.0" y="32.5" width="350" height="91.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cVK-uO-xcC">
+                                                            <size key="itemSize" width="128" height="67.5"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZfY-rs-5R6">
+                                                                <rect key="frame" x="16" y="12" width="128" height="67.5"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="duo-aM-10p">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="67.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </collectionViewCellContentView>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                    </collectionView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="TkE-X5-ek6" firstAttribute="top" secondItem="O5X-Ve-zsH" secondAttribute="top" id="56k-SX-PAw"/>
+                                                    <constraint firstItem="5Fo-YB-csA" firstAttribute="trailing" secondItem="TkE-X5-ek6" secondAttribute="trailing" id="6vx-qf-9d6"/>
                                                     <constraint firstAttribute="trailing" secondItem="dMP-hv-Ft2" secondAttribute="trailing" constant="9" id="OSg-G2-ZTT"/>
+                                                    <constraint firstAttribute="bottom" secondItem="TkE-X5-ek6" secondAttribute="bottom" id="OeQ-Wg-3qZ"/>
+                                                    <constraint firstItem="5Fo-YB-csA" firstAttribute="leading" secondItem="O5X-Ve-zsH" secondAttribute="leading" id="SC4-8A-7WZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5Fo-YB-csA" secondAttribute="trailing" id="Ztt-MK-sbP"/>
+                                                    <constraint firstAttribute="bottom" secondItem="5Fo-YB-csA" secondAttribute="bottom" constant="16" id="eza-wp-iOO"/>
                                                     <constraint firstItem="dMP-hv-Ft2" firstAttribute="top" secondItem="O5X-Ve-zsH" secondAttribute="top" constant="8" id="fV0-3W-f9U"/>
+                                                    <constraint firstItem="5Fo-YB-csA" firstAttribute="top" secondItem="dMP-hv-Ft2" secondAttribute="bottom" constant="4.7000000000000002" id="o0x-G4-hh4"/>
+                                                    <constraint firstItem="TkE-X5-ek6" firstAttribute="leading" secondItem="O5X-Ve-zsH" secondAttribute="leading" id="poX-5j-Zyj"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -229,7 +262,7 @@
                                             <constraint firstAttribute="trailing" secondItem="aJ2-ap-azM" secondAttribute="trailing" constant="32" id="Tns-mJ-O93"/>
                                             <constraint firstItem="5B9-MR-G9h" firstAttribute="top" secondItem="aJ2-ap-azM" secondAttribute="bottom" constant="35" id="XwA-dH-lNu"/>
                                             <constraint firstItem="T9t-Gr-wDf" firstAttribute="height" secondItem="5B9-MR-G9h" secondAttribute="width" multiplier="0.37" id="YD7-96-7CJ"/>
-                                            <constraint firstItem="O5X-Ve-zsH" firstAttribute="height" secondItem="aJ2-ap-azM" secondAttribute="width" multiplier="0.331412" id="YTO-6v-rRm"/>
+                                            <constraint firstItem="O5X-Ve-zsH" firstAttribute="height" secondItem="aJ2-ap-azM" secondAttribute="width" multiplier="0.4" id="YTO-6v-rRm"/>
                                             <constraint firstItem="T9t-Gr-wDf" firstAttribute="leading" secondItem="AKk-ds-T1f" secondAttribute="leading" constant="32" id="amm-6m-2OQ"/>
                                             <constraint firstItem="aJ2-ap-azM" firstAttribute="top" secondItem="AKk-ds-T1f" secondAttribute="top" constant="60" id="grT-sq-9W4"/>
                                             <constraint firstItem="Qjb-tt-0cZ" firstAttribute="leading" secondItem="AKk-ds-T1f" secondAttribute="leading" constant="32" id="jzb-9m-tNn"/>
@@ -274,7 +307,9 @@
                     <tabBarItem key="tabBarItem" title="" id="GKp-Ct-mh4"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="BusinessBGView" destination="TkE-X5-ek6" id="fQb-s3-pua"/>
                         <outlet property="BusinessBaseView" destination="O5X-Ve-zsH" id="rPB-RX-MGF"/>
+                        <outlet property="BusinessCollectionView" destination="5Fo-YB-csA" id="tMq-ba-UAz"/>
                         <outlet property="homeCalendarBGImageView" destination="yHB-Un-ZKd" id="0Hq-oj-I6u"/>
                         <outlet property="homeCalendarBaseView" destination="Qjb-tt-0cZ" id="0uY-zg-9ea"/>
                         <outlet property="homeCalendarContentsView" destination="xdm-ux-31L" id="06R-xM-YzA"/>

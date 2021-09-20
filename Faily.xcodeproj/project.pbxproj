@@ -14,6 +14,8 @@
 		2C4B7BC026F2E12E0083576A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BBF26F2E12E0083576A /* CalendarViewController.swift */; };
 		2C4B7BC226F2E4040083576A /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BC126F2E4040083576A /* MainTabBar.swift */; };
 		2C5C288B26F4C2DD00217D00 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5C288A26F4C2DD00217D00 /* ChatViewController.swift */; };
+		2CAF2CE226F927C00044C594 /* HomeBusinessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF2CE026F927C00044C594 /* HomeBusinessCollectionViewCell.swift */; };
+		2CAF2CE326F927C00044C594 /* HomeBusinessCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF2CE126F927C00044C594 /* HomeBusinessCollectionViewCell.xib */; };
 		2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */; };
 		2CB0B50D26EE9F1D00F10964 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50C26EE9F1D00F10964 /* AppColor.swift */; };
 		2CB0B50F26EEC15000F10964 /* AuthEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */; };
@@ -56,6 +58,8 @@
 		2C4B7BBF26F2E12E0083576A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		2C4B7BC126F2E4040083576A /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		2C5C288A26F4C2DD00217D00 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		2CAF2CE026F927C00044C594 /* HomeBusinessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBusinessCollectionViewCell.swift; sourceTree = "<group>"; };
+		2CAF2CE126F927C00044C594 /* HomeBusinessCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBusinessCollectionViewCell.xib; sourceTree = "<group>"; };
 		2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2CB0B50C26EE9F1D00F10964 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEmailViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				2C4B7BB426F2E0C30083576A /* HomeViewController.swift */,
+				2CAF2CE026F927C00044C594 /* HomeBusinessCollectionViewCell.swift */,
+				2CAF2CE126F927C00044C594 /* HomeBusinessCollectionViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 				2CC9C38A26E2A27600936BCD /* LaunchScreen.storyboard in Resources */,
 				2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */,
 				2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */,
+				2CAF2CE326F927C00044C594 /* HomeBusinessCollectionViewCell.xib in Resources */,
 				2CC9C38726E2A27600936BCD /* Assets.xcassets in Resources */,
 				2CC092BA26F268E3009E69D0 /* Home.storyboard in Resources */,
 				2CC9C38526E2A27600936BCD /* Login.storyboard in Resources */,
@@ -460,6 +467,7 @@
 				2CC092BE26F26F53009E69D0 /* HapticManager.swift in Sources */,
 				2CB0B50D26EE9F1D00F10964 /* AppColor.swift in Sources */,
 				2CC5AEB026EFD15D0096D818 /* ChangePasswordCheckEmailViewController.swift in Sources */,
+				2CAF2CE226F927C00044C594 /* HomeBusinessCollectionViewCell.swift in Sources */,
 				2CC5AEBF26F0F4FC0096D818 /* RoundTextField.swift in Sources */,
 				2C4B7BB126F2E0470083576A /* QuestionViewController.swift in Sources */,
 				2CC5AEA726EFA8C10096D818 /* String.swift in Sources */,

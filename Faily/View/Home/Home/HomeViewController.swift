@@ -27,6 +27,9 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var BusinessBaseView: UIView!
     
+    @IBOutlet weak var BusinessBGView: UIImageView!
+    @IBOutlet weak var BusinessCollectionView: UICollectionView!
+    
     let progressColorPicker = ColorPickerViewController()
     let backgroundColorPicker = ColorPickerViewController()
     let titleColorPicker = ColorPickerViewController()
@@ -57,17 +60,23 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         configUI()
-        self.navigationController?.navigationBar.isHidden = true
+        setCollectionView()
         
     }
     
+    func setCollectionView() {
+        BusinessCollectionView.delegate = self
+        BusinessCollectionView.dataSource = self
+        BusinessCollectionView.register(UINib(nibName: "HomeBusinessCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeBusinessCollectionViewCell")
+    }
+    
     func configUI() {
+        self.navigationController?.navigationBar.isHidden = true
         navProfileImage.layer.cornerRadius = navProfileImage.frame.height / 2
         totalProgressBaseView.layer.cornerRadius = 20
-        totalProgressBaseView.layer.shadowColor = UIColor.FailyColor.grayscale_4.cgColor
-        totalProgressBaseView.layer.shadowOpacity = 0.33
+        makeShadow(totalProgressBaseView)
+        
         totalProgressBaseImageView.layer.cornerRadius = 20
-        totalProgressBaseView.layer.shadowOffset = CGSize(width: 0, height: 4)
         
         totalProgress.setProgress(progress: 0.6, animated: true)
         totalProgress.progressShapeColor = .yellow
@@ -83,13 +92,8 @@ class HomeViewController: UIViewController {
         totalProgress.progressShapeColor = realColor!
         
         homeCalendarBaseView.layer.cornerRadius = 20
-        homeCalendarBaseView.layer.shadowColor = UIColor.FailyColor.grayscale_4.cgColor
-        homeCalendarBaseView.layer.shadowOpacity = 0.33
-        homeCalendarBaseView.layer.cornerRadius = 20
-        homeCalendarBaseView.layer.shadowOffset = CGSize(width: 0, height: 4)
-        
-        
-        
+        makeShadow(homeCalendarBaseView)
+
         
         homeCalendarBGImageView.layer.cornerRadius = 20
         
@@ -116,8 +120,57 @@ class HomeViewController: UIViewController {
         homeCalendarContentsView.layer.cornerRadius = 20
         
         BusinessBaseView.layer.cornerRadius = 20
-        
+        makeShadow(BusinessBaseView)
+        BusinessBGView.layer.cornerRadius = 20
         
     }
+    
+    func makeShadow(_ view: UIView) {
+        view.layer.shadowColor = UIColor.FailyColor.grayscale_4.cgColor
+        view.layer.shadowOpacity = 0.33
+        view.layer.shadowOffset = CGSize(width: 0, height: 4)
+    }
+    
+}
+
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBusinessCollectionViewCell", for: indexPath) as! HomeBusinessCollectionViewCell
+        
+        
+       
+        return cell
+    }
+    
+    
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let size = self.BusinessCollectionView.frame.height
+        
+        
+        
+        return CGSize(width: size, height: size)
+        
+    }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 30
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 30
+    }
+    
+        
     
 }
