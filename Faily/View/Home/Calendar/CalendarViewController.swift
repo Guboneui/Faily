@@ -12,7 +12,7 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        
+        self.tabBarController?.selectedIndex = 1
     }
     
 

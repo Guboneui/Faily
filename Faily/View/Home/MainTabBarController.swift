@@ -30,8 +30,6 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectedIndex = 2
-        self.goChatView.isHidden = true
-        
         
     }
     
@@ -42,7 +40,16 @@ class MainTabBarController: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        print(selectedIndex)
+    }
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item == (self.tabBar.items!)[2]{
+            homeButton.setBackgroundImage(UIImage(named: "home_tab_selected"), for: .normal)
+            }
+        else {
+            homeButton.setBackgroundImage(UIImage(named: "home_tab_default"), for: .normal)
+        }
     }
    
     
@@ -59,7 +66,16 @@ class MainTabBarController: UITabBarController {
         self.tabBar.addSubview(backgroundImg)
         
         self.homeButton = UIButton(frame: CGRect(x: (self.view.bounds.width / 2) - 30, y: -30, width: 60, height: 60))
-        homeButton.backgroundColor = .orange
+        self.homeButton.layer.cornerRadius = self.homeButton.frame.size.height / 2
+        homeButton.backgroundColor = .clear
+        homeButton.imageView?.contentMode = .scaleAspectFill
+        //homeButton.setImage(UIImage(named: "button_background"), for: .normal)
+        
+        if selectedIndex == 2 {
+            homeButton.setBackgroundImage(UIImage(named: "home_tab_selected"), for: .normal)
+        } else {
+            homeButton.setBackgroundImage(UIImage(named: "home_tab_default"), for: .normal)
+        }
         self.tabBar.addSubview(homeButton)
         
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGesture))
@@ -80,6 +96,7 @@ class MainTabBarController: UITabBarController {
         
         self.goChatView = UIView(frame: CGRect(x: (self.view.frame.width / 2) - 40, y: height - k, width: 80, height: 80))
         goChatView.backgroundColor = .black
+        goChatView.isHidden = true
         self.view.addSubview(goChatView)
         
         self.tabBar.sendSubviewToBack(self.backgroundImg)
@@ -195,6 +212,7 @@ class MainTabBarController: UITabBarController {
     
     @objc func tapGesture(_ recognizer: UITapGestureRecognizer) {
         self.selectedIndex = 2
+        homeButton.setBackgroundImage(UIImage(named: "home_tab_selected"), for: .normal)
     }
 }
 
