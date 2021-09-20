@@ -57,7 +57,7 @@ class MainTabBarController: UITabBarController {
         backgroundImg.clipsToBounds = true
         self.tabBar.addSubview(backgroundImg)
         
-        self.homeButton = UIButton(frame: CGRect(x: (self.view.bounds.width / 2) - 30, y: -20, width: 60, height: 60))
+        self.homeButton = UIButton(frame: CGRect(x: (self.view.bounds.width / 2) - 30, y: -30, width: 60, height: 60))
         homeButton.backgroundColor = .orange
         self.tabBar.addSubview(homeButton)
         

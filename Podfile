@@ -12,4 +12,5 @@ pod 'SnapKit'
 pod 'RxCocoa'
 pod 'RxRelay'
 pod 'RxSwift'
+pod 'FSCalendar'
 end
