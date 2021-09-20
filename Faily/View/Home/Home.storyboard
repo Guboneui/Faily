@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="-2138" y="362"/>
         </scene>
-        <!--홈-->
+        <!--Home View Controller-->
         <scene sceneID="6pJ-qt-kE4">
             <objects>
                 <viewController id="Jj6-DQ-fES" customClass="HomeViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,14 +56,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vuC-qe-Pju">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_Main" translatesAutoresizingMaskIntoConstraints="NO" id="vuC-qe-Pju">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qa-7T-91a">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00님의 가족" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFC-SY-UmS">
-                                        <rect key="frame" x="34" y="10.5" width="120" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="본의님의 가족" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFC-SY-UmS">
+                                        <rect key="frame" x="34" y="10.5" width="130" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -75,7 +75,7 @@
                                             <constraint firstAttribute="height" constant="48" id="mV0-BS-pcX"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hjI-PA-f2u">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noti" translatesAutoresizingMaskIntoConstraints="NO" id="hjI-PA-f2u">
                                         <rect key="frame" x="288" y="7.5" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="P9o-WS-G5u"/>
@@ -91,7 +91,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Z2a-AY-Pk0" firstAttribute="trailing" secondItem="iPq-cE-Gjo" secondAttribute="trailing" id="35c-dx-iR1"/>
                                     <constraint firstAttribute="height" constant="50" id="8AD-Gk-4fp"/>
@@ -110,8 +110,24 @@
                                     <constraint firstItem="uFC-SY-UmS" firstAttribute="centerY" secondItem="9Qa-7T-91a" secondAttribute="centerY" id="uNt-YP-th8"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPt-gO-8cw">
-                                <rect key="frame" x="0.0" y="102" width="414" height="711"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPt-gO-8cw">
+                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKk-ds-T1f">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="719"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="719" id="dFD-4a-cxv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AKk-ds-T1f" firstAttribute="trailing" secondItem="AdP-3n-1wd" secondAttribute="trailing" id="5iW-dC-cjk"/>
+                                    <constraint firstItem="AKk-ds-T1f" firstAttribute="bottom" secondItem="AdP-3n-1wd" secondAttribute="bottom" id="MzP-cy-nNN"/>
+                                    <constraint firstItem="AKk-ds-T1f" firstAttribute="width" secondItem="oCf-2i-mvJ" secondAttribute="width" id="Vyb-bV-SGu"/>
+                                    <constraint firstItem="AKk-ds-T1f" firstAttribute="leading" secondItem="AdP-3n-1wd" secondAttribute="leading" id="a7m-Os-5R1"/>
+                                    <constraint firstItem="AKk-ds-T1f" firstAttribute="top" secondItem="AdP-3n-1wd" secondAttribute="top" id="etA-In-RCM"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="AdP-3n-1wd"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="oCf-2i-mvJ"/>
                             </scrollView>
@@ -132,14 +148,14 @@
                             <constraint firstItem="TPt-gO-8cw" firstAttribute="top" secondItem="9Qa-7T-91a" secondAttribute="bottom" id="sLm-Dh-6Dh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" id="GKp-Ct-mh4"/>
+                    <tabBarItem key="tabBarItem" title="" id="GKp-Ct-mh4"/>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rdo-aP-0Kf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="350.72463768115944" y="361.60714285714283"/>
         </scene>
-        <!--설정-->
+        <!--User Setting View Controller-->
         <scene sceneID="G7v-se-fTJ">
             <objects>
                 <viewController id="iEU-0h-gDS" customClass="UserSettingViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,13 +165,13 @@
                         <viewLayoutGuide key="safeArea" id="zY2-fk-ryO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="설정" id="UET-tl-EBb"/>
+                    <tabBarItem key="tabBarItem" title="" image="setting_default" selectedImage="setting_selected" id="UET-tl-EBb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ee-CA-jLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1362" y="1140"/>
         </scene>
-        <!--갤러리-->
+        <!--Gallery View Controller-->
         <scene sceneID="GhZ-L4-7Hr">
             <objects>
                 <viewController id="idU-D7-40y" customClass="GalleryViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
@@ -165,7 +181,7 @@
                         <viewLayoutGuide key="safeArea" id="2eV-2s-aSj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="갤러리" id="tjq-5B-cmL"/>
+                    <tabBarItem key="tabBarItem" title="" image="gallery_default" selectedImage="galley_selected" id="tjq-5B-cmL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u18-HX-qot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,7 +202,7 @@
             </objects>
             <point key="canvasLocation" x="1361" y="364"/>
         </scene>
-        <!--질문-->
+        <!--Question View Controller-->
         <scene sceneID="dqX-1u-9FV">
             <objects>
                 <viewController id="Jd0-th-I4l" customClass="QuestionViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,13 +212,13 @@
                         <viewLayoutGuide key="safeArea" id="Bte-Py-wCG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="질문" id="wTq-RD-fPz"/>
+                    <tabBarItem key="tabBarItem" title="" image="question_default" selectedImage="question_selected" id="wTq-RD-fPz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCb-qh-KNa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1362" y="-494"/>
         </scene>
-        <!--캘린더-->
+        <!--Calendar View Controller-->
         <scene sceneID="FOJ-0s-WvX">
             <objects>
                 <viewController id="R09-it-HVn" customClass="CalendarViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
@@ -286,7 +302,7 @@
                             <constraint firstAttribute="bottom" secondItem="dNP-zL-c75" secondAttribute="bottom" id="x7b-t3-iBF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="캘린더" image="highlighter" catalog="system" id="L58-7j-20P"/>
+                    <tabBarItem key="tabBarItem" title="" image="calendar_default" selectedImage="calendar_selected" id="L58-7j-20P"/>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUR-7j-K7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -295,7 +311,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="highlighter" catalog="system" width="128" height="119"/>
+        <image name="Home_Main" width="414" height="896"/>
+        <image name="calendar_default" width="28" height="28"/>
+        <image name="calendar_selected" width="28" height="28"/>
+        <image name="gallery_default" width="28" height="28"/>
+        <image name="galley_selected" width="28" height="28"/>
+        <image name="noti" width="35" height="35"/>
+        <image name="question_default" width="28" height="28"/>
+        <image name="question_selected" width="28" height="28"/>
+        <image name="setting_default" width="28" height="28"/>
+        <image name="setting_selected" width="28" height="28"/>
         <image name="splash" width="375" height="812"/>
         <namedColor name="primary_pink">
             <color red="1" green="0.54509803921568623" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

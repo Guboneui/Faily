@@ -24,7 +24,7 @@ class MainTabBar: UITabBar {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         self.addShape()
-        self.unselectedItemTintColor = .black
+        self.unselectedItemTintColor = UIColor.FailyColor.secondaryPinkColor
 
         let clipPath = UIBezierPath(roundedRect: rect, cornerRadius: 25.0).cgPath
 

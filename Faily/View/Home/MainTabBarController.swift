@@ -51,8 +51,9 @@ class MainTabBarController: UITabBarController {
         print(self.tabBar.frame.size.width)
         print(self.tabBar.frame.size.height)
         self.backgroundImg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
-        backgroundImg.image = UIImage(named: "background")
-        backgroundImg.contentMode = UIView.ContentMode.scaleAspectFit
+        backgroundImg.image = UIImage(named: "Home_BottomNav")
+        backgroundImg.contentMode = UIView.ContentMode.scaleAspectFill
+        backgroundImg.alpha = 0.7
         backgroundImg.layer.cornerRadius = 15
         backgroundImg.clipsToBounds = true
         self.tabBar.addSubview(backgroundImg)
