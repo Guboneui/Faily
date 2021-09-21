@@ -57,7 +57,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_Main" translatesAutoresizingMaskIntoConstraints="NO" id="vuC-qe-Pju">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_Main" translatesAutoresizingMaskIntoConstraints="NO" id="vuC-qe-Pju">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qa-7T-91a">
@@ -163,7 +163,27 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9t-Gr-wDf" userLabel="todayEmotionView">
                                                 <rect key="frame" x="32" y="258" width="139" height="65"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jVD-e3-H7O">
+                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="65"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntM-XI-ORy" customClass="FSPagerView" customModule="FSPagerView">
+                                                        <rect key="frame" x="27" y="0.0" width="85" height="65"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="jVD-e3-H7O" secondAttribute="bottom" id="D08-P6-bHP"/>
+                                                    <constraint firstItem="ntM-XI-ORy" firstAttribute="leading" secondItem="T9t-Gr-wDf" secondAttribute="leading" constant="27" id="HBm-qF-gsU"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ntM-XI-ORy" secondAttribute="bottom" id="Nvj-3X-XlO"/>
+                                                    <constraint firstItem="jVD-e3-H7O" firstAttribute="leading" secondItem="T9t-Gr-wDf" secondAttribute="leading" id="Ode-4D-ilb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ntM-XI-ORy" secondAttribute="trailing" constant="27" id="VSf-5L-HOZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jVD-e3-H7O" secondAttribute="trailing" id="XBE-1I-bZh"/>
+                                                    <constraint firstItem="jVD-e3-H7O" firstAttribute="top" secondItem="T9t-Gr-wDf" secondAttribute="top" id="czZ-g7-Puk"/>
+                                                    <constraint firstItem="ntM-XI-ORy" firstAttribute="top" secondItem="T9t-Gr-wDf" secondAttribute="top" id="swX-21-MLT"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5B9-MR-G9h">
                                                 <rect key="frame" x="206" y="258" width="176" height="211.5"/>
@@ -346,6 +366,9 @@
                         <outlet property="BusinessBGView" destination="TkE-X5-ek6" id="fQb-s3-pua"/>
                         <outlet property="BusinessBaseView" destination="O5X-Ve-zsH" id="rPB-RX-MGF"/>
                         <outlet property="BusinessCollectionView" destination="5Fo-YB-csA" id="tMq-ba-UAz"/>
+                        <outlet property="emotionBGView" destination="jVD-e3-H7O" id="gjU-8K-iwm"/>
+                        <outlet property="emotionBaseView" destination="T9t-Gr-wDf" id="C8l-VA-bsb"/>
+                        <outlet property="emotionPagerView" destination="ntM-XI-ORy" id="GU9-dg-ytE"/>
                         <outlet property="homeCalendarBGImageView" destination="yHB-Un-ZKd" id="0Hq-oj-I6u"/>
                         <outlet property="homeCalendarBaseView" destination="Qjb-tt-0cZ" id="0uY-zg-9ea"/>
                         <outlet property="homeCalendarContentsView" destination="xdm-ux-31L" id="06R-xM-YzA"/>

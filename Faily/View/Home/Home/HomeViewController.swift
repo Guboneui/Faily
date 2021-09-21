@@ -8,15 +8,35 @@
 import UIKit
 import MKMagneticProgress
 import MKColorPicker
+import FSPagerView
 
 class HomeViewController: UIViewController {
     
+    
+    let imageArr = ["sick_big", "happy_big", "mumu_big", "sad_big", "angry_big"]
     let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     @IBOutlet weak var totalProgressBaseView: UIView!
     @IBOutlet weak var totalProgressBaseImageView: UIImageView!
     
     @IBOutlet weak var totalProgress: MKMagneticProgress!
     
+    
+    
+    @IBOutlet weak var emotionBaseView: UIView!
+    @IBOutlet weak var emotionBGView: UIImageView!
+    
+    @IBOutlet weak var emotionPagerView: FSPagerView! {
+        didSet {
+            self.emotionPagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "emotionPagerViewCell")
+            //self.emotionPagerView.itemSize = FSPagerView.automaticSize
+            let transform = CGAffineTransform(scaleX: 0.45, y: 0.5)
+            self.emotionPagerView.itemSize = self.emotionPagerView.frame.size.applying(transform)
+            self.emotionPagerView.decelerationDistance = 10
+            self.emotionPagerView.isInfinite = true
+            
+            
+        }
+    }
     
     @IBOutlet weak var navTitleLabel: UILabel!
     @IBOutlet weak var navProfileImage: UIImageView!
@@ -72,6 +92,10 @@ class HomeViewController: UIViewController {
     
     func setCollectionView() {
         
+        emotionPagerView.delegate = self
+        emotionPagerView.dataSource = self
+        emotionPagerView.transformer = FSPagerViewTransformer(type: .linear)
+        
         memberProfileCollectionView.delegate = self
         memberProfileCollectionView.dataSource = self
         memberProfileCollectionView.register(UINib(nibName: "FamilyMemberCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FamilyMemberCollectionViewCell")
@@ -105,7 +129,13 @@ class HomeViewController: UIViewController {
         
         homeCalendarBaseView.layer.cornerRadius = 20
         makeShadow(homeCalendarBaseView)
-
+        
+        
+        emotionBaseView.layer.cornerRadius = 20
+        makeShadow(emotionBaseView)
+        emotionBGView.layer.cornerRadius = 20
+        
+        
         
         homeCalendarBGImageView.layer.cornerRadius = 20
         
@@ -135,6 +165,7 @@ class HomeViewController: UIViewController {
         makeShadow(memberProfileBaseView)
         memberProfileBGView.layer.cornerRadius = 20
         memberProfileCollectionView.layer.cornerRadius = 20
+        //memberProfileCollectionView.allowsSelection = false
         
         BusinessBaseView.layer.cornerRadius = 20
         makeShadow(BusinessBaseView)
@@ -171,14 +202,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         } else if collectionView == BusinessCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBusinessCollectionViewCell", for: indexPath) as! HomeBusinessCollectionViewCell
-        
+            
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBusinessCollectionViewCell", for: indexPath) as! HomeBusinessCollectionViewCell
             return cell
         }
-                    
         
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        return false
     }
     
     
@@ -238,9 +273,29 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         } else {
             return 0
         }
-       
+        
     }
     
-        
+    
+    
+}
+
+extension HomeViewController: FSPagerViewDataSource, FSPagerViewDelegate {
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        return imageArr.count
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "emotionPagerViewCell", at: index)
+        cell.imageView?.image = UIImage(named: self.imageArr[index])
+        cell.imageView?.contentMode = .scaleAspectFit
+        //cell.textLabel?.text = ...
+        return cell
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, shouldHighlightItemAt index: Int) -> Bool {
+        return false
+    }
+    
     
 }

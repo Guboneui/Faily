@@ -15,4 +15,5 @@ pod 'RxSwift'
 pod 'FSCalendar'
 pod 'MKMagneticProgress'
 pod 'MKColorPicker'
+pod 'FSPagerView'
 end
