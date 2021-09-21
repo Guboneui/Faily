@@ -233,7 +233,22 @@
                                                     </imageView>
                                                     <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdm-ux-31L">
                                                         <rect key="frame" x="48" y="0.0" width="91" height="111.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="특별한 날로 만들어보세요!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXc-VA-KOn">
+                                                                <rect key="frame" x="8" y="0.0" width="75" height="111.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <color key="textColor" name="grayscale_2"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="LXc-VA-KOn" firstAttribute="leading" secondItem="xdm-ux-31L" secondAttribute="leading" constant="8" id="KZQ-dm-VI7"/>
+                                                            <constraint firstItem="LXc-VA-KOn" firstAttribute="height" relation="greaterThanOrEqual" secondItem="xdm-ux-31L" secondAttribute="height" id="l19-kB-omM"/>
+                                                            <constraint firstItem="LXc-VA-KOn" firstAttribute="centerY" secondItem="xdm-ux-31L" secondAttribute="centerY" id="lvH-gv-Cbi"/>
+                                                            <constraint firstAttribute="trailing" secondItem="LXc-VA-KOn" secondAttribute="trailing" constant="8" id="oZa-yV-FAU"/>
+                                                            <constraint firstItem="LXc-VA-KOn" firstAttribute="centerX" secondItem="xdm-ux-31L" secondAttribute="centerX" id="zrk-yP-LAt"/>
+                                                        </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 월" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNa-EG-MSe">
                                                         <rect key="frame" x="10" y="41" width="30" height="29"/>
@@ -557,6 +572,9 @@
         <image name="setting_default" width="28" height="28"/>
         <image name="setting_selected" width="28" height="28"/>
         <image name="splash" width="375" height="812"/>
+        <namedColor name="grayscale_2">
+            <color red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="primary_pink">
             <color red="1" green="0.54509803921568623" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
