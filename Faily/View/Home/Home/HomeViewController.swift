@@ -208,14 +208,13 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBusinessCollectionViewCell", for: indexPath) as! HomeBusinessCollectionViewCell
             return cell
         }
-        
-        
     }
     
-    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
+   
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("클릭")
+    }
     
 }
 
@@ -289,13 +288,18 @@ extension HomeViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "emotionPagerViewCell", at: index)
         cell.imageView?.image = UIImage(named: self.imageArr[index])
         cell.imageView?.contentMode = .scaleAspectFit
+       
         //cell.textLabel?.text = ...
         return cell
     }
     
     func pagerView(_ pagerView: FSPagerView, shouldHighlightItemAt index: Int) -> Bool {
+        //클릭 로직 해당 부분에 추가 필요
+        print(index)
         return false
     }
     
+    
+   
     
 }
