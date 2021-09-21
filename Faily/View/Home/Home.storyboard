@@ -167,7 +167,43 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5B9-MR-G9h">
                                                 <rect key="frame" x="206" y="258" width="176" height="211.5"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NZl-vF-WJ4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="176" height="211.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cMc-iy-jlE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="176" height="211.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pco-jV-nag">
+                                                            <size key="itemSize" width="128" height="128"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="7" minY="0.0" maxX="7" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="k4V-rt-YKP">
+                                                                <rect key="frame" x="24" y="0.0" width="128" height="128"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="osl-RR-iMr">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </collectionViewCellContentView>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                    </collectionView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="cMc-iy-jlE" firstAttribute="leading" secondItem="5B9-MR-G9h" secondAttribute="leading" id="4i1-Hc-oFh"/>
+                                                    <constraint firstItem="cMc-iy-jlE" firstAttribute="top" secondItem="5B9-MR-G9h" secondAttribute="top" id="LMY-d5-PFi"/>
+                                                    <constraint firstItem="NZl-vF-WJ4" firstAttribute="leading" secondItem="5B9-MR-G9h" secondAttribute="leading" id="Nyz-ye-wBv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="NZl-vF-WJ4" secondAttribute="trailing" id="TP1-qE-2ll"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cMc-iy-jlE" secondAttribute="trailing" id="ZGN-7h-egD"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cMc-iy-jlE" secondAttribute="bottom" id="gCY-l9-8sB"/>
+                                                    <constraint firstItem="NZl-vF-WJ4" firstAttribute="top" secondItem="5B9-MR-G9h" secondAttribute="top" id="vt2-H1-L8u"/>
+                                                    <constraint firstAttribute="bottom" secondItem="NZl-vF-WJ4" secondAttribute="bottom" id="xyj-2a-qid"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjb-tt-0cZ">
                                                 <rect key="frame" x="32" y="358" width="139" height="111.5"/>
@@ -314,6 +350,9 @@
                         <outlet property="homeCalendarBaseView" destination="Qjb-tt-0cZ" id="0uY-zg-9ea"/>
                         <outlet property="homeCalendarContentsView" destination="xdm-ux-31L" id="06R-xM-YzA"/>
                         <outlet property="homeCalendarDateLabel" destination="iNa-EG-MSe" id="Nse-zQ-RUl"/>
+                        <outlet property="memberProfileBGView" destination="NZl-vF-WJ4" id="8l9-Rt-rYJ"/>
+                        <outlet property="memberProfileBaseView" destination="5B9-MR-G9h" id="YXP-kH-IRD"/>
+                        <outlet property="memberProfileCollectionView" destination="cMc-iy-jlE" id="Gsu-2k-rbY"/>
                         <outlet property="navProfileImage" destination="iPq-cE-Gjo" id="3bq-QU-ZtY"/>
                         <outlet property="navTitleLabel" destination="uFC-SY-UmS" id="aVB-13-ceY"/>
                         <outlet property="totalProgress" destination="YGQ-0t-6md" id="moj-Bb-Hfn"/>

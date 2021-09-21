@@ -11,7 +11,7 @@ import MKColorPicker
 
 class HomeViewController: UIViewController {
     
-    
+    let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     @IBOutlet weak var totalProgressBaseView: UIView!
     @IBOutlet weak var totalProgressBaseImageView: UIImageView!
     
@@ -25,8 +25,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homeCalendarBGImageView: UIImageView!
     @IBOutlet weak var homeCalendarDateLabel: UILabel!
     
-    @IBOutlet weak var BusinessBaseView: UIView!
     
+    @IBOutlet weak var memberProfileBaseView: UIView!
+    @IBOutlet weak var memberProfileBGView: UIImageView!
+    @IBOutlet weak var memberProfileCollectionView: UICollectionView!
+    
+    
+    
+    @IBOutlet weak var BusinessBaseView: UIView!
     @IBOutlet weak var BusinessBGView: UIImageView!
     @IBOutlet weak var BusinessCollectionView: UICollectionView!
     
@@ -65,6 +71,12 @@ class HomeViewController: UIViewController {
     }
     
     func setCollectionView() {
+        
+        memberProfileCollectionView.delegate = self
+        memberProfileCollectionView.dataSource = self
+        memberProfileCollectionView.register(UINib(nibName: "FamilyMemberCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FamilyMemberCollectionViewCell")
+        
+        
         BusinessCollectionView.delegate = self
         BusinessCollectionView.dataSource = self
         BusinessCollectionView.register(UINib(nibName: "HomeBusinessCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeBusinessCollectionViewCell")
@@ -119,6 +131,11 @@ class HomeViewController: UIViewController {
         homeCalendarDateLabel.attributedText = attributedString
         homeCalendarContentsView.layer.cornerRadius = 20
         
+        memberProfileBaseView.layer.cornerRadius = 20
+        makeShadow(memberProfileBaseView)
+        memberProfileBGView.layer.cornerRadius = 20
+        memberProfileCollectionView.layer.cornerRadius = 20
+        
         BusinessBaseView.layer.cornerRadius = 20
         makeShadow(BusinessBaseView)
         BusinessBGView.layer.cornerRadius = 20
@@ -136,15 +153,32 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        if collectionView == memberProfileCollectionView {
+            return 6
+        } else if collectionView == BusinessCollectionView {
+            return 10
+        } else {
+            return 0
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBusinessCollectionViewCell", for: indexPath) as! HomeBusinessCollectionViewCell
         
+        if collectionView == memberProfileCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FamilyMemberCollectionViewCell", for: indexPath) as! FamilyMemberCollectionViewCell
+            
+            return cell
+        } else if collectionView == BusinessCollectionView{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBusinessCollectionViewCell", for: indexPath) as! HomeBusinessCollectionViewCell
         
-       
-        return cell
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBusinessCollectionViewCell", for: indexPath) as! HomeBusinessCollectionViewCell
+            return cell
+        }
+                    
+        
     }
     
     
@@ -154,21 +188,57 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let size = self.BusinessCollectionView.frame.height
         
+        if collectionView == memberProfileCollectionView {
+            let width = collectionView.frame.width
+            let height = collectionView.frame.height
+            
+            let itemsPerRow: CGFloat = 2
+            let widthPadding = sectionInsets.left * (itemsPerRow + 1)
+            let itemsPerColumn: CGFloat = 3
+            let heightPadding = sectionInsets.top * (itemsPerColumn + 1)
+            
+            let cellWidth = (width - widthPadding) / itemsPerRow
+            let cellHeight = width * 0.6
+            
+            
+            
+            
+            return CGSize(width: cellWidth, height: cellHeight)
+        } else if collectionView == BusinessCollectionView {
+            let size = self.BusinessCollectionView.frame.height
+            return CGSize(width: size, height: size)
+        } else {
+            return CGSize(width: 0, height: 0)
+        }
         
-        
-        return CGSize(width: size, height: size)
         
     }
     
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 30
+        
+        
+        if collectionView == memberProfileCollectionView {
+            return 7.5
+        } else if collectionView == BusinessCollectionView {
+            return 30
+        } else {
+            return 0
+        }
+        
+        
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 30
+        if collectionView == memberProfileCollectionView {
+            return 7.5
+        } else if collectionView == BusinessCollectionView {
+            return 30
+        } else {
+            return 0
+        }
+       
     }
     
         

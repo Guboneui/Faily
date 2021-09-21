@@ -13,6 +13,7 @@ extension UIColor {
         static var viewBorderColor = UIColor(red: 232/255, green: 233/255, blue: 234/255, alpha: 1)
         static var mainPinkColor = UIColor(red: 255/255, green: 139/255, blue: 148/255, alpha: 1)
         static var secondaryPinkColor = UIColor(red: 255/255, green: 170/255, blue: 165/255, alpha: 1)
+        static var subGradientPinkColor = UIColor(red: 255/255, green: 239/255, blue: 228/255, alpha: 1)
         static var baseBackGroundColor = UIColor(red: 247/255, green: 248/255, blue: 249/255, alpha: 1)
         static var grayscale_2 = UIColor(red: 88/255, green: 87/255, blue: 87/255, alpha: 1)
         static var grayscale_4 = UIColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C35566A26FA466100A1F50B /* FamilyMemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C35566826FA466100A1F50B /* FamilyMemberCollectionViewCell.swift */; };
+		2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C35566926FA466100A1F50B /* FamilyMemberCollectionViewCell.xib */; };
 		2C4B7BB126F2E0470083576A /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB026F2E0470083576A /* QuestionViewController.swift */; };
 		2C4B7BB526F2E0C30083576A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB426F2E0C30083576A /* HomeViewController.swift */; };
 		2C4B7BB726F2E0D90083576A /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C35566826FA466100A1F50B /* FamilyMemberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C35566926FA466100A1F50B /* FamilyMemberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyMemberCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C4B7BB026F2E0470083576A /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		2C4B7BB426F2E0C30083576A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				2C4B7BB426F2E0C30083576A /* HomeViewController.swift */,
 				2CAF2CE026F927C00044C594 /* HomeBusinessCollectionViewCell.swift */,
 				2CAF2CE126F927C00044C594 /* HomeBusinessCollectionViewCell.xib */,
+				2C35566826FA466100A1F50B /* FamilyMemberCollectionViewCell.swift */,
+				2C35566926FA466100A1F50B /* FamilyMemberCollectionViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 			files = (
 				2CC9C38A26E2A27600936BCD /* LaunchScreen.storyboard in Resources */,
 				2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */,
+				2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */,
 				2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */,
 				2CAF2CE326F927C00044C594 /* HomeBusinessCollectionViewCell.xib in Resources */,
 				2CC9C38726E2A27600936BCD /* Assets.xcassets in Resources */,
@@ -484,6 +491,7 @@
 				2C4B7BC026F2E12E0083576A /* CalendarViewController.swift in Sources */,
 				2CC092C326F286DE009E69D0 /* SignUpWithUserInfoViewController.swift in Sources */,
 				2CC5AED026F106920096D818 /* UserDefaultKey.swift in Sources */,
+				2C35566A26FA466100A1F50B /* FamilyMemberCollectionViewCell.swift in Sources */,
 				2CC092C526F2903F009E69D0 /* TutorialViewController.swift in Sources */,
 				2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */,
 				2C4B7BB926F2E0EF0083576A /* UserSettingViewController.swift in Sources */,

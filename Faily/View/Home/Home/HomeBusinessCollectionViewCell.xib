@@ -50,6 +50,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="testBM" width="595" height="595"/>
+        <image name="testBM" width="1155" height="1155"/>
     </resources>
 </document>
