@@ -12,6 +12,12 @@ import Foundation
 
 extension UIViewController {
     
+    func makeShadow(_ view: UIView) {
+        view.layer.shadowColor = UIColor.FailyColor.grayscale_4.cgColor
+        view.layer.shadowOpacity = 0.33
+        view.layer.shadowOffset = CGSize(width: 0, height: 4)
+    }
+    
     // MARK: 취소와 확인이 뜨는 UIAlertController
     func presentAlert(title: String, message: String? = nil,
                       isCancelActionIncluded: Bool = false,

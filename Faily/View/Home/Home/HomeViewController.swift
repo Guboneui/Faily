@@ -173,11 +173,7 @@ class HomeViewController: UIViewController {
         
     }
     
-    func makeShadow(_ view: UIView) {
-        view.layer.shadowColor = UIColor.FailyColor.grayscale_4.cgColor
-        view.layer.shadowOpacity = 0.33
-        view.layer.shadowOffset = CGSize(width: 0, height: 4)
-    }
+    
     
 }
 
