@@ -39,6 +39,12 @@ class CalendarTableViewCell: UITableViewCell {
     func configUI() {
         calendarBaseView.layer.cornerRadius = 20
         calendarBGView.layer.cornerRadius = 20
+        makeShadow(calendarBaseView)
+    }
+    func makeShadow(_ view: UIView) {
+        view.layer.shadowColor = UIColor.FailyColor.grayscale_4.cgColor
+        view.layer.shadowOpacity = 0.33
+        view.layer.shadowOffset = CGSize(width: 0, height: 4)
     }
     
     func scrollCurrentPage(isPrev: Bool) {
