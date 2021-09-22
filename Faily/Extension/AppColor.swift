@@ -20,6 +20,9 @@ extension UIColor {
         static var grayscale_5 = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1)
         static var placeholder_gray = UIColor(red: 199/255, green: 199/255, blue: 205/255, alpha: 1)
         static var coral = UIColor(red: 248/255, green: 66/255, blue: 66/255, alpha: 1)
+        
+        
+        
         static var gradient1 = UIColor(red: 255/255, green: 215/255, blue: 212/255, alpha: 1)
         static var gradient2 = UIColor(red: 255/255, green: 216/255, blue: 209/255, alpha: 1)
         static var gradient3 = UIColor(red: 255/255, green: 200/255, blue: 200/255, alpha: 1)

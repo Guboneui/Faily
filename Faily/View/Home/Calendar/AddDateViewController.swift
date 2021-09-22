@@ -27,6 +27,54 @@ class AddDateViewController: UIViewController {
     }
     
     
+    @IBAction func scheduleDivisionButtonAction(_ sender: Any) {
+//        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+//        let scheduleDivisionVC = storyBoard.instantiateViewController(withIdentifier: "ScheduleDivisionViewController") as! ScheduleDivisionViewController
+//        self.navigationController?.pushViewController(scheduleDivisionVC, animated: true)
+
+
+        let alert = UIAlertController(title: "새로운 일정", message: "일정을 분류 해주세요", preferredStyle: .actionSheet)
+        
+        var birthdayImage = UIImage(named: "birthday_addDate")
+        birthdayImage = birthdayImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
+        let addBirthDay = UIAlertAction(title: "기념일 및 생일", style: .default, handler: nil);
+        addBirthDay.setValue(birthdayImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
+        addBirthDay.setValue(UIColor.black, forKey: "titleTextColor")
+        alert.addAction(addBirthDay)
+        
+        var familyImage = UIImage(named: "family_addDate")
+        familyImage = familyImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
+        let addFamily = UIAlertAction(title: "가족", style: .default, handler: nil);
+        addFamily.setValue(familyImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
+        addFamily.setValue(UIColor.black, forKey: "titleTextColor")
+        alert.addAction(addFamily)
+        
+        var personalImage = UIImage(named: "person_addDate")
+        personalImage = personalImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
+        let addPersonal = UIAlertAction(title: "개인", style: .default, handler: nil);
+        addPersonal.setValue(personalImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
+        addPersonal.setValue(UIColor.black, forKey: "titleTextColor")
+        alert.addAction(addPersonal)
+        
+        var normalImage = UIImage(named: "normal_addDate")
+        normalImage = normalImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
+        let addNormal = UIAlertAction(title: "일반", style: .default, handler: nil);
+        addNormal.setValue(normalImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
+        addNormal.setValue(UIColor.black, forKey: "titleTextColor")
+        alert.addAction(addNormal)
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        cancel.setValue(UIColor.FailyColor.coral, forKey: "titleTextColor")
+        alert.addAction(cancel)
+        
+        
+        self.present(alert, animated: true, completion: nil)
+
+
+      
+    }
+    
+    
     @IBAction func cancelButtonAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

@@ -53,6 +53,10 @@
 		2CF3D3B926FB9BCE008C13F3 /* CalendarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3D3B726FB9BCE008C13F3 /* CalendarTableViewCell.xib */; };
 		2CF3D3BB26FBB8D2008C13F3 /* AddDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3BA26FBB8D2008C13F3 /* AddDateViewController.swift */; };
 		2CF3D3BD26FBC180008C13F3 /* AddDateNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3BC26FBC180008C13F3 /* AddDateNavigationController.swift */; };
+		2CF3D3BF26FBCE88008C13F3 /* ScheduleDivisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3BE26FBCE88008C13F3 /* ScheduleDivisionViewController.swift */; };
+		2CF3D3C226FBCF82008C13F3 /* ScheduleDivisionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3C026FBCF82008C13F3 /* ScheduleDivisionTableViewCell.swift */; };
+		2CF3D3C326FBCF82008C13F3 /* ScheduleDivisionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3D3C126FBCF82008C13F3 /* ScheduleDivisionTableViewCell.xib */; };
+		2CF3D3C526FBD3D6008C13F3 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3C426FBD3D6008C13F3 /* UIImage.swift */; };
 		A05B81B4A30E8F6A61D7A10F /* Pods_Faily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FC3DFA6D87C8B4AA9F3E63 /* Pods_Faily.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +109,10 @@
 		2CF3D3B726FB9BCE008C13F3 /* CalendarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarTableViewCell.xib; sourceTree = "<group>"; };
 		2CF3D3BA26FBB8D2008C13F3 /* AddDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDateViewController.swift; sourceTree = "<group>"; };
 		2CF3D3BC26FBC180008C13F3 /* AddDateNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDateNavigationController.swift; sourceTree = "<group>"; };
+		2CF3D3BE26FBCE88008C13F3 /* ScheduleDivisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDivisionViewController.swift; sourceTree = "<group>"; };
+		2CF3D3C026FBCF82008C13F3 /* ScheduleDivisionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDivisionTableViewCell.swift; sourceTree = "<group>"; };
+		2CF3D3C126FBCF82008C13F3 /* ScheduleDivisionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleDivisionTableViewCell.xib; sourceTree = "<group>"; };
+		2CF3D3C426FBD3D6008C13F3 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		2E533CF25EA02FE2251E259A /* Pods-Faily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faily.debug.xcconfig"; path = "Target Support Files/Pods-Faily/Pods-Faily.debug.xcconfig"; sourceTree = "<group>"; };
 		34496906296E845E2EC955FB /* Pods-Faily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faily.release.xcconfig"; path = "Target Support Files/Pods-Faily/Pods-Faily.release.xcconfig"; sourceTree = "<group>"; };
 		99FC3DFA6D87C8B4AA9F3E63 /* Pods_Faily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Faily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +146,9 @@
 				2CF3D3B726FB9BCE008C13F3 /* CalendarTableViewCell.xib */,
 				2CF3D3BA26FBB8D2008C13F3 /* AddDateViewController.swift */,
 				2CF3D3BC26FBC180008C13F3 /* AddDateNavigationController.swift */,
+				2CF3D3BE26FBCE88008C13F3 /* ScheduleDivisionViewController.swift */,
+				2CF3D3C026FBCF82008C13F3 /* ScheduleDivisionTableViewCell.swift */,
+				2CF3D3C126FBCF82008C13F3 /* ScheduleDivisionTableViewCell.xib */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -277,6 +288,7 @@
 				2CC5AEA426EFA8450096D818 /* UIViewController.swift */,
 				2CC5AEA626EFA8C10096D818 /* String.swift */,
 				2CC092BD26F26F53009E69D0 /* HapticManager.swift */,
+				2CF3D3C426FBD3D6008C13F3 /* UIImage.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -419,6 +431,7 @@
 				2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */,
 				2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */,
 				2CAF2CE326F927C00044C594 /* HomeBusinessCollectionViewCell.xib in Resources */,
+				2CF3D3C326FBCF82008C13F3 /* ScheduleDivisionTableViewCell.xib in Resources */,
 				2CC9C38726E2A27600936BCD /* Assets.xcassets in Resources */,
 				2CC092BA26F268E3009E69D0 /* Home.storyboard in Resources */,
 				2CF3D3B926FB9BCE008C13F3 /* CalendarTableViewCell.xib in Resources */,
@@ -493,11 +506,14 @@
 				2C4B7BB126F2E0470083576A /* QuestionViewController.swift in Sources */,
 				2CC5AEA726EFA8C10096D818 /* String.swift in Sources */,
 				2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */,
+				2CF3D3BF26FBCE88008C13F3 /* ScheduleDivisionViewController.swift in Sources */,
 				2C4B7BB526F2E0C30083576A /* HomeViewController.swift in Sources */,
 				2CB0B50F26EEC15000F10964 /* AuthEmailViewController.swift in Sources */,
 				2CC9C37E26E2A27600936BCD /* AppDelegate.swift in Sources */,
+				2CF3D3C226FBCF82008C13F3 /* ScheduleDivisionTableViewCell.swift in Sources */,
 				2C4B7BC226F2E4040083576A /* MainTabBar.swift in Sources */,
 				2CC092C726F2905B009E69D0 /* ParticipantViewController.swift in Sources */,
+				2CF3D3C526FBD3D6008C13F3 /* UIImage.swift in Sources */,
 				2CC5AEC626F0FA450096D818 /* OnBoardingViewController.swift in Sources */,
 				2CC5AEB426EFDC600096D818 /* AgreeAuthorityViewController.swift in Sources */,
 				2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */,

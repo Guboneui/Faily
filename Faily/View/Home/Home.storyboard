@@ -483,7 +483,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="취소">
-                                    <color key="titleColor" name="system_red"/>
+                                    <color key="titleColor" red="0.97254901960784312" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="cancelButtonAction:" destination="1kB-Xn-a5m" eventType="touchUpInside" id="YEE-4y-NAK"/>
@@ -510,6 +510,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AG-md-OaV">
                                 <rect key="frame" x="357" y="172" width="20" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="scheduleDivisionButtonAction:" destination="1kB-Xn-a5m" eventType="touchUpInside" id="fOR-vk-vV2"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하루 종일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0Z-cF-8m4">
                                 <rect key="frame" x="31" y="247" width="60" height="20"/>
@@ -687,6 +690,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EV0-bw-GGi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2288.4057971014495" y="2100"/>
+        </scene>
+        <!--Schedule Division View Controller-->
+        <scene sceneID="w9L-kL-Sop">
+            <objects>
+                <viewController restorationIdentifier="ScheduleDivisionViewController" storyboardIdentifier="ScheduleDivisionViewController" id="Eq8-GD-PWG" customClass="ScheduleDivisionViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xyy-er-5mj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새로운 일정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSz-sD-WPz">
+                                <rect key="frame" x="161.5" y="69" width="91" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9k-gH-taL">
+                                <rect key="frame" x="30" y="69" width="24" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="CUf-3B-UP6"/>
+                                    <constraint firstAttribute="width" constant="24" id="sfM-5O-5MY"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="Eq8-GD-PWG" eventType="touchUpInside" id="UmG-WU-RRq"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kt3-Zm-78N">
+                                <rect key="frame" x="31" y="125" width="352" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="m9i-Dz-rAX"/>
+                                </constraints>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Oi-gm-N1b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kt3-Zm-78N" firstAttribute="top" secondItem="BSz-sD-WPz" secondAttribute="bottom" constant="32" id="20S-I9-rJV"/>
+                            <constraint firstItem="f9k-gH-taL" firstAttribute="centerY" secondItem="BSz-sD-WPz" secondAttribute="centerY" id="2Qo-Tj-4W6"/>
+                            <constraint firstItem="f9k-gH-taL" firstAttribute="leading" secondItem="0Oi-gm-N1b" secondAttribute="leading" constant="30" id="30b-2C-4zi"/>
+                            <constraint firstItem="BSz-sD-WPz" firstAttribute="centerX" secondItem="Xyy-er-5mj" secondAttribute="centerX" id="SjP-H0-fBv"/>
+                            <constraint firstItem="BSz-sD-WPz" firstAttribute="top" secondItem="0Oi-gm-N1b" secondAttribute="top" constant="25" id="UVk-lz-q3w"/>
+                            <constraint firstItem="0Oi-gm-N1b" firstAttribute="trailing" secondItem="Kt3-Zm-78N" secondAttribute="trailing" constant="31" id="eAK-uO-nIl"/>
+                            <constraint firstItem="Kt3-Zm-78N" firstAttribute="leading" secondItem="0Oi-gm-N1b" secondAttribute="leading" constant="31" id="mkH-Zt-JUX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scheduleTableView" destination="Kt3-Zm-78N" id="nqW-4X-TkO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kiw-Pv-tHP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1581.1594202898552" y="2100"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="dqX-1u-9FV">
@@ -868,6 +926,7 @@
     </scenes>
     <resources>
         <image name="Home_Main" width="414" height="896"/>
+        <image name="back" width="24" height="24"/>
         <image name="birthday_addDate" width="20" height="20"/>
         <image name="calendar_default" width="28" height="28"/>
         <image name="calendar_selected" width="28" height="28"/>
@@ -899,9 +958,6 @@
         </namedColor>
         <namedColor name="secondary_pink">
             <color red="1" green="0.66699999570846558" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="system_red">
-            <color red="0.89803921568627454" green="0.25490196078431371" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
