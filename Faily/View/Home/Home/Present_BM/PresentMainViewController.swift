@@ -61,13 +61,15 @@ extension PresentMainViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PresentCategoryCollectionViewCell", for: indexPath) as! PresentCategoryCollectionViewCell
-        cell.titleLabel.text = category[indexPath.row]
+        cell.titleLabel.text = category[indexPath.item]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let detailPresentVC = storyBoard.instantiateViewController(withIdentifier: "PresentDetailViewController") as! PresentDetailViewController
+        
+        detailPresentVC.getNaviTitle = category[indexPath.item]
         self.navigationController?.pushViewController(detailPresentVC, animated: true)
         
     }

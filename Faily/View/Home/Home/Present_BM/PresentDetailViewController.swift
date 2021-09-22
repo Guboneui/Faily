@@ -9,10 +9,13 @@ import UIKit
 
 class PresentDetailViewController: UIViewController {
 
+    @IBOutlet weak var naviTitleLabel: UILabel!
+    
+    var getNaviTitle: String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        naviTitleLabel.text = getNaviTitle
     }
     
 

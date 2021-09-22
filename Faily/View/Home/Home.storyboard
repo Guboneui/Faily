@@ -687,13 +687,61 @@
                     <view key="view" contentMode="scaleToFill" id="8To-T4-i9L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_Main" translatesAutoresizingMaskIntoConstraints="NO" id="e1o-SI-TjV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4I-Rk-g1b">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgO-DZ-gK4">
+                                        <rect key="frame" x="172.5" y="10" width="69.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" name="dark"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giu-yw-TDY">
+                                        <rect key="frame" x="11" y="10" width="24" height="24"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="ccq-K0-qHa"/>
+                                            <constraint firstAttribute="width" constant="24" id="eYW-QF-VUX"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonAction:" destination="AyI-hC-IVB" eventType="touchUpInside" id="azY-L3-zx3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="giu-yw-TDY" firstAttribute="leading" secondItem="c4I-Rk-g1b" secondAttribute="leading" constant="11" id="ETz-4K-SEQ"/>
+                                    <constraint firstItem="giu-yw-TDY" firstAttribute="centerY" secondItem="c4I-Rk-g1b" secondAttribute="centerY" id="Ty6-P1-yog"/>
+                                    <constraint firstItem="WgO-DZ-gK4" firstAttribute="centerX" secondItem="c4I-Rk-g1b" secondAttribute="centerX" id="WcD-gR-IDE"/>
+                                    <constraint firstAttribute="height" constant="44" id="tkv-wy-BdW"/>
+                                    <constraint firstItem="WgO-DZ-gK4" firstAttribute="centerY" secondItem="c4I-Rk-g1b" secondAttribute="centerY" id="ypB-go-V7y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZKR-yt-KvQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e1o-SI-TjV" firstAttribute="top" secondItem="8To-T4-i9L" secondAttribute="top" id="4W0-me-5OG"/>
+                            <constraint firstItem="e1o-SI-TjV" firstAttribute="leading" secondItem="ZKR-yt-KvQ" secondAttribute="leading" id="6NE-bZ-cTY"/>
+                            <constraint firstItem="c4I-Rk-g1b" firstAttribute="top" secondItem="ZKR-yt-KvQ" secondAttribute="top" id="C9W-Qi-Aeb"/>
+                            <constraint firstItem="c4I-Rk-g1b" firstAttribute="trailing" secondItem="ZKR-yt-KvQ" secondAttribute="trailing" id="HTS-lR-ihk"/>
+                            <constraint firstItem="ZKR-yt-KvQ" firstAttribute="trailing" secondItem="e1o-SI-TjV" secondAttribute="trailing" id="dEU-Ic-dky"/>
+                            <constraint firstAttribute="bottom" secondItem="e1o-SI-TjV" secondAttribute="bottom" id="l3D-ba-mPu"/>
+                            <constraint firstItem="c4I-Rk-g1b" firstAttribute="leading" secondItem="ZKR-yt-KvQ" secondAttribute="leading" id="qRr-X7-box"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="naviTitleLabel" destination="WgO-DZ-gK4" id="wWP-ww-uJb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="auv-ah-Bj1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2520" y="-220"/>
+            <point key="canvasLocation" x="2518.840579710145" y="-220.3125"/>
         </scene>
         <!--asdfasfd-->
         <scene sceneID="Mrp-Yw-Jsc">
