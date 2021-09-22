@@ -108,6 +108,7 @@ class HomeViewController: UIViewController {
     }
     
     func configUI() {
+        self.navigationItem.backButtonTitle = ""
         self.navigationController?.navigationBar.isHidden = true
         navProfileImage.layer.cornerRadius = navProfileImage.frame.height / 2
         totalProgressBaseView.layer.cornerRadius = 20
@@ -174,6 +175,11 @@ class HomeViewController: UIViewController {
         
     }
     
+    @IBAction func goPresentVCButtonAction(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let mainPresentVC = storyBoard.instantiateViewController(withIdentifier: "PresentMainViewController") as! PresentMainViewController
+        self.navigationController?.pushViewController(mainPresentVC, animated: true)
+    }
     
     
 }
