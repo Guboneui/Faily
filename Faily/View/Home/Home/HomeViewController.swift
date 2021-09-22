@@ -96,6 +96,7 @@ class HomeViewController: UIViewController {
         emotionPagerView.dataSource = self
         emotionPagerView.transformer = FSPagerViewTransformer(type: .linear)
         
+        
         memberProfileCollectionView.delegate = self
         memberProfileCollectionView.dataSource = self
         memberProfileCollectionView.register(UINib(nibName: "FamilyMemberCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FamilyMemberCollectionViewCell")
