@@ -45,6 +45,10 @@ class PresentMainViewController: UIViewController {
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         categoryCollectionView.register(UINib(nibName: "PresentCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PresentCategoryCollectionViewCell")
+        
+        recommentCollectionView.delegate = self
+        recommentCollectionView.dataSource = self
+        recommentCollectionView.register(UINib(nibName: "RecommentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "RecommentCollectionViewCell")
     }
     
     @IBAction func backButtonAction(_ sender: Any) {
@@ -56,21 +60,39 @@ class PresentMainViewController: UIViewController {
 
 extension PresentMainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return category.count
+        
+        if collectionView == categoryCollectionView {
+            return category.count
+        } else {
+            return 10
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PresentCategoryCollectionViewCell", for: indexPath) as! PresentCategoryCollectionViewCell
-        cell.titleLabel.text = category[indexPath.item]
-        return cell
+        
+        if collectionView == categoryCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PresentCategoryCollectionViewCell", for: indexPath) as! PresentCategoryCollectionViewCell
+            cell.titleLabel.text = category[indexPath.item]
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommentCollectionViewCell", for: indexPath) as! RecommentCollectionViewCell
+            return cell
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let detailPresentVC = storyBoard.instantiateViewController(withIdentifier: "PresentDetailViewController") as! PresentDetailViewController
+        if collectionView == categoryCollectionView {
+            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+            let detailPresentVC = storyBoard.instantiateViewController(withIdentifier: "PresentDetailViewController") as! PresentDetailViewController
+            
+            detailPresentVC.getNaviTitle = category[indexPath.item]
+            self.navigationController?.pushViewController(detailPresentVC, animated: true)
+        }
         
-        detailPresentVC.getNaviTitle = category[indexPath.item]
-        self.navigationController?.pushViewController(detailPresentVC, animated: true)
+        
+        
         
     }
     
@@ -80,14 +102,41 @@ extension PresentMainViewController: UICollectionViewDelegate, UICollectionViewD
 extension PresentMainViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 67, height: 43)
+        
+        if collectionView == categoryCollectionView {
+            return CGSize(width: 67, height: 43)
+        } else {
+            
+            let size = recommentCollectionView.frame.height
+            
+            return CGSize(width: size * 0.63, height: size)
+        }
+        
+        
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        
+        
+        
+        if collectionView == categoryCollectionView {
+            return 20
+        } else {
+            return 30
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        
+        
+        if collectionView == categoryCollectionView {
+            return 20
+        } else {
+            return 30
+        }
+        
     }
 }

@@ -61,6 +61,8 @@
 		2CF3D3CB26FBDD59008C13F3 /* PresentCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3C926FBDD59008C13F3 /* PresentCategoryCollectionViewCell.swift */; };
 		2CF3D3CC26FBDD59008C13F3 /* PresentCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3D3CA26FBDD59008C13F3 /* PresentCategoryCollectionViewCell.xib */; };
 		2CF3D3CE26FBE5F4008C13F3 /* PresentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3CD26FBE5F4008C13F3 /* PresentDetailViewController.swift */; };
+		2CF3D3D126FBE850008C13F3 /* RecommentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3CF26FBE850008C13F3 /* RecommentCollectionViewCell.swift */; };
+		2CF3D3D226FBE850008C13F3 /* RecommentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3D3D026FBE850008C13F3 /* RecommentCollectionViewCell.xib */; };
 		A05B81B4A30E8F6A61D7A10F /* Pods_Faily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FC3DFA6D87C8B4AA9F3E63 /* Pods_Faily.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +123,8 @@
 		2CF3D3C926FBDD59008C13F3 /* PresentCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		2CF3D3CA26FBDD59008C13F3 /* PresentCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		2CF3D3CD26FBE5F4008C13F3 /* PresentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentDetailViewController.swift; sourceTree = "<group>"; };
+		2CF3D3CF26FBE850008C13F3 /* RecommentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommentCollectionViewCell.swift; sourceTree = "<group>"; };
+		2CF3D3D026FBE850008C13F3 /* RecommentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommentCollectionViewCell.xib; sourceTree = "<group>"; };
 		2E533CF25EA02FE2251E259A /* Pods-Faily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faily.debug.xcconfig"; path = "Target Support Files/Pods-Faily/Pods-Faily.debug.xcconfig"; sourceTree = "<group>"; };
 		34496906296E845E2EC955FB /* Pods-Faily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faily.release.xcconfig"; path = "Target Support Files/Pods-Faily/Pods-Faily.release.xcconfig"; sourceTree = "<group>"; };
 		99FC3DFA6D87C8B4AA9F3E63 /* Pods_Faily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Faily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -366,6 +370,8 @@
 				2CF3D3C926FBDD59008C13F3 /* PresentCategoryCollectionViewCell.swift */,
 				2CF3D3CA26FBDD59008C13F3 /* PresentCategoryCollectionViewCell.xib */,
 				2CF3D3CD26FBE5F4008C13F3 /* PresentDetailViewController.swift */,
+				2CF3D3CF26FBE850008C13F3 /* RecommentCollectionViewCell.swift */,
+				2CF3D3D026FBE850008C13F3 /* RecommentCollectionViewCell.xib */,
 			);
 			path = Present_BM;
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 				2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */,
 				2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */,
 				2CF3D3CC26FBDD59008C13F3 /* PresentCategoryCollectionViewCell.xib in Resources */,
+				2CF3D3D226FBE850008C13F3 /* RecommentCollectionViewCell.xib in Resources */,
 				2CAF2CE326F927C00044C594 /* HomeBusinessCollectionViewCell.xib in Resources */,
 				2CF3D3C326FBCF82008C13F3 /* ScheduleDivisionTableViewCell.xib in Resources */,
 				2CC9C38726E2A27600936BCD /* Assets.xcassets in Resources */,
@@ -536,6 +543,7 @@
 				2CF3D3C226FBCF82008C13F3 /* ScheduleDivisionTableViewCell.swift in Sources */,
 				2C4B7BC226F2E4040083576A /* MainTabBar.swift in Sources */,
 				2CC092C726F2905B009E69D0 /* ParticipantViewController.swift in Sources */,
+				2CF3D3D126FBE850008C13F3 /* RecommentCollectionViewCell.swift in Sources */,
 				2CF3D3C526FBD3D6008C13F3 /* UIImage.swift in Sources */,
 				2CC5AEC626F0FA450096D818 /* OnBoardingViewController.swift in Sources */,
 				2CC5AEB426EFDC600096D818 /* AgreeAuthorityViewController.swift in Sources */,
