@@ -38,7 +38,14 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CalendarTableViewCell", for: indexPath) as! CalendarTableViewCell
         cell.selectionStyle = .none
+        cell.addDateButton.addTarget(self, action: #selector(addDate), for: .touchUpInside)
         return cell
+    }
+    
+    @objc func addDate() {
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let addDateNAV = storyBoard.instantiateViewController(identifier: "AddDateNavigationController") as! AddDateNavigationController
+        presentPanModal(addDateNAV)
     }
     
     

@@ -51,6 +51,8 @@
 		2CC9C38A26E2A27600936BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC9C38826E2A27600936BCD /* LaunchScreen.storyboard */; };
 		2CF3D3B826FB9BCE008C13F3 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3B626FB9BCE008C13F3 /* CalendarTableViewCell.swift */; };
 		2CF3D3B926FB9BCE008C13F3 /* CalendarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3D3B726FB9BCE008C13F3 /* CalendarTableViewCell.xib */; };
+		2CF3D3BB26FBB8D2008C13F3 /* AddDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3BA26FBB8D2008C13F3 /* AddDateViewController.swift */; };
+		2CF3D3BD26FBC180008C13F3 /* AddDateNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3BC26FBC180008C13F3 /* AddDateNavigationController.swift */; };
 		A05B81B4A30E8F6A61D7A10F /* Pods_Faily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FC3DFA6D87C8B4AA9F3E63 /* Pods_Faily.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +103,8 @@
 		2CC9C38B26E2A27600936BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CF3D3B626FB9BCE008C13F3 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		2CF3D3B726FB9BCE008C13F3 /* CalendarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarTableViewCell.xib; sourceTree = "<group>"; };
+		2CF3D3BA26FBB8D2008C13F3 /* AddDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDateViewController.swift; sourceTree = "<group>"; };
+		2CF3D3BC26FBC180008C13F3 /* AddDateNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDateNavigationController.swift; sourceTree = "<group>"; };
 		2E533CF25EA02FE2251E259A /* Pods-Faily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faily.debug.xcconfig"; path = "Target Support Files/Pods-Faily/Pods-Faily.debug.xcconfig"; sourceTree = "<group>"; };
 		34496906296E845E2EC955FB /* Pods-Faily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faily.release.xcconfig"; path = "Target Support Files/Pods-Faily/Pods-Faily.release.xcconfig"; sourceTree = "<group>"; };
 		99FC3DFA6D87C8B4AA9F3E63 /* Pods_Faily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Faily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +136,8 @@
 				2C4B7BBF26F2E12E0083576A /* CalendarViewController.swift */,
 				2CF3D3B626FB9BCE008C13F3 /* CalendarTableViewCell.swift */,
 				2CF3D3B726FB9BCE008C13F3 /* CalendarTableViewCell.xib */,
+				2CF3D3BA26FBB8D2008C13F3 /* AddDateViewController.swift */,
+				2CF3D3BC26FBC180008C13F3 /* AddDateNavigationController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -471,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CC092C926F29077009E69D0 /* FounderViewController.swift in Sources */,
+				2CF3D3BB26FBB8D2008C13F3 /* AddDateViewController.swift in Sources */,
 				2C4B7BB726F2E0D90083576A /* GalleryViewController.swift in Sources */,
 				2CC5AECD26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift in Sources */,
 				2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */,
@@ -502,6 +509,7 @@
 				2CC092C526F2903F009E69D0 /* TutorialViewController.swift in Sources */,
 				2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */,
 				2CF3D3B826FB9BCE008C13F3 /* CalendarTableViewCell.swift in Sources */,
+				2CF3D3BD26FBC180008C13F3 /* AddDateNavigationController.swift in Sources */,
 				2C4B7BB926F2E0EF0083576A /* UserSettingViewController.swift in Sources */,
 				2C5C288B26F4C2DD00217D00 /* ChatViewController.swift in Sources */,
 			);

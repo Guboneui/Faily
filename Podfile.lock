@@ -5,6 +5,7 @@ PODS:
   - IQKeyboardManager (6.5.6)
   - MKColorPicker (1.2)
   - MKMagneticProgress (1.4)
+  - PanModal (1.2.7)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - MKColorPicker
   - MKMagneticProgress
+  - PanModal
   - RxCocoa
   - RxRelay
   - RxSwift
@@ -33,6 +35,7 @@ SPEC REPOS:
     - IQKeyboardManager
     - MKColorPicker
     - MKMagneticProgress
+    - PanModal
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -45,11 +48,12 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   MKColorPicker: 8998b2ab977e4f240fdf254db27a18b810da3cfc
   MKMagneticProgress: 006b8c763d62986661bcde03794a3dcf56cd084a
+  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 51b86c8bdf6a78b15c5b728f48ece23729fe8cbb
+PODFILE CHECKSUM: d1394d83229aabee69688c2f3b6eb5c3da4b98b7
 
 COCOAPODS: 1.10.1

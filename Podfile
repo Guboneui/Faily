@@ -16,4 +16,5 @@ pod 'FSCalendar'
 pod 'MKMagneticProgress'
 pod 'MKColorPicker'
 pod 'FSPagerView'
+pod 'PanModal'
 end

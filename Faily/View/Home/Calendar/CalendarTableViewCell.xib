@@ -127,6 +127,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="addDateButton" destination="Smw-7d-z6U" id="yBB-6b-CYV"/>
                 <outlet property="calendarBGView" destination="8XO-Mv-Jmm" id="GeG-K4-FyR"/>
                 <outlet property="calendarBaseView" destination="yqf-Ad-HtW" id="VMw-0F-Stb"/>
                 <outlet property="calendarTitleLabel" destination="aTE-FK-vod" id="lrD-ai-cL5"/>
