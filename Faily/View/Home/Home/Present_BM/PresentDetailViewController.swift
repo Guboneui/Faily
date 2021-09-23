@@ -74,6 +74,14 @@ extension PresentDetailViewController: UICollectionViewDelegate, UICollectionVie
        
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == categoryCollectionView {
+            self.getCategoryIndex = indexPath.item
+            self.categoryCollectionView.reloadData()
+        }
+        
+    }
+    
     
 }
 

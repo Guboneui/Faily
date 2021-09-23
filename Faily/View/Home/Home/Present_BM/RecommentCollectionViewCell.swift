@@ -25,7 +25,7 @@ class RecommentCollectionViewCell: UICollectionViewCell {
     }
     
     func configUI() {
-        giftImage.layer.cornerRadius = 20
+        giftImage.layer.cornerRadius = 8
         imageBaseView.layer.cornerRadius = 20
         imageBaseView.layer.shadowOpacity = 0.33
         imageBaseView.layer.shadowOffset = CGSize(width: 0, height: 4)
