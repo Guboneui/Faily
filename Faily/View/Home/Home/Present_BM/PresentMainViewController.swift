@@ -88,6 +88,7 @@ extension PresentMainViewController: UICollectionViewDelegate, UICollectionViewD
             let detailPresentVC = storyBoard.instantiateViewController(withIdentifier: "PresentDetailViewController") as! PresentDetailViewController
             
             detailPresentVC.getNaviTitle = category[indexPath.item]
+            detailPresentVC.getCategoryIndex = indexPath.item
             self.navigationController?.pushViewController(detailPresentVC, animated: true)
         }
         

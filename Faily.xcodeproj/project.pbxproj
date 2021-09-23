@@ -63,6 +63,8 @@
 		2CF3D3CE26FBE5F4008C13F3 /* PresentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3CD26FBE5F4008C13F3 /* PresentDetailViewController.swift */; };
 		2CF3D3D126FBE850008C13F3 /* RecommentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3CF26FBE850008C13F3 /* RecommentCollectionViewCell.swift */; };
 		2CF3D3D226FBE850008C13F3 /* RecommentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3D3D026FBE850008C13F3 /* RecommentCollectionViewCell.xib */; };
+		2CF3D3D526FCEA11008C13F3 /* MainBMCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3D3D326FCEA11008C13F3 /* MainBMCollectionViewCell.swift */; };
+		2CF3D3D626FCEA11008C13F3 /* MainBMCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3D3D426FCEA11008C13F3 /* MainBMCollectionViewCell.xib */; };
 		A05B81B4A30E8F6A61D7A10F /* Pods_Faily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FC3DFA6D87C8B4AA9F3E63 /* Pods_Faily.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +127,8 @@
 		2CF3D3CD26FBE5F4008C13F3 /* PresentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentDetailViewController.swift; sourceTree = "<group>"; };
 		2CF3D3CF26FBE850008C13F3 /* RecommentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommentCollectionViewCell.swift; sourceTree = "<group>"; };
 		2CF3D3D026FBE850008C13F3 /* RecommentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommentCollectionViewCell.xib; sourceTree = "<group>"; };
+		2CF3D3D326FCEA11008C13F3 /* MainBMCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBMCollectionViewCell.swift; sourceTree = "<group>"; };
+		2CF3D3D426FCEA11008C13F3 /* MainBMCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainBMCollectionViewCell.xib; sourceTree = "<group>"; };
 		2E533CF25EA02FE2251E259A /* Pods-Faily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faily.debug.xcconfig"; path = "Target Support Files/Pods-Faily/Pods-Faily.debug.xcconfig"; sourceTree = "<group>"; };
 		34496906296E845E2EC955FB /* Pods-Faily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faily.release.xcconfig"; path = "Target Support Files/Pods-Faily/Pods-Faily.release.xcconfig"; sourceTree = "<group>"; };
 		99FC3DFA6D87C8B4AA9F3E63 /* Pods_Faily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Faily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -372,6 +376,8 @@
 				2CF3D3CD26FBE5F4008C13F3 /* PresentDetailViewController.swift */,
 				2CF3D3CF26FBE850008C13F3 /* RecommentCollectionViewCell.swift */,
 				2CF3D3D026FBE850008C13F3 /* RecommentCollectionViewCell.xib */,
+				2CF3D3D326FCEA11008C13F3 /* MainBMCollectionViewCell.swift */,
+				2CF3D3D426FCEA11008C13F3 /* MainBMCollectionViewCell.xib */,
 			);
 			path = Present_BM;
 			sourceTree = "<group>";
@@ -460,6 +466,7 @@
 				2CF3D3D226FBE850008C13F3 /* RecommentCollectionViewCell.xib in Resources */,
 				2CAF2CE326F927C00044C594 /* HomeBusinessCollectionViewCell.xib in Resources */,
 				2CF3D3C326FBCF82008C13F3 /* ScheduleDivisionTableViewCell.xib in Resources */,
+				2CF3D3D626FCEA11008C13F3 /* MainBMCollectionViewCell.xib in Resources */,
 				2CC9C38726E2A27600936BCD /* Assets.xcassets in Resources */,
 				2CC092BA26F268E3009E69D0 /* Home.storyboard in Resources */,
 				2CF3D3B926FB9BCE008C13F3 /* CalendarTableViewCell.xib in Resources */,
@@ -525,6 +532,7 @@
 				2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */,
 				2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */,
 				2CC5AEBB26F0D8920096D818 /* BaseView.swift in Sources */,
+				2CF3D3D526FCEA11008C13F3 /* MainBMCollectionViewCell.swift in Sources */,
 				2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */,
 				2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */,
 				2CC092BE26F26F53009E69D0 /* HapticManager.swift in Sources */,

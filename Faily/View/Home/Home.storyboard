@@ -734,20 +734,143 @@
                                     <constraint firstItem="Xb8-9c-hh0" firstAttribute="centerY" secondItem="1u7-YW-I4u" secondAttribute="centerY" id="ubD-V6-eXV"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nz0-MR-uPw">
+                                <rect key="frame" x="32" y="128" width="350" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="dO5-zX-P8S"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aF2-ua-16k">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5Lt-nb-sKk">
+                                        <rect key="frame" x="0.0" y="-41.5" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wWp-V6-1zE">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="cej-Cj-hNG">
+                                <rect key="frame" x="32" y="200" width="205.5" height="14"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0f-64-kqb">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="DBq-uQ-Wvk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="추천순">
+                                            <color key="titleColor" name="grayscale_2"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erF-72-0NO">
+                                        <rect key="frame" x="35" y="2.5" width="0.5" height="9.5"/>
+                                        <color key="backgroundColor" name="grayscale_3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="9.5" id="VN3-nC-1F3"/>
+                                            <constraint firstAttribute="width" constant="0.5" id="t6c-fj-gn8"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NY-ZZ-AeE">
+                                        <rect key="frame" x="38.5" y="0.0" width="56" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="yUa-hv-oSL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="낮은 가격순">
+                                            <color key="titleColor" name="grayscale_2"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhD-JM-Rmy">
+                                        <rect key="frame" x="97.5" y="2.5" width="0.5" height="9.5"/>
+                                        <color key="backgroundColor" name="grayscale_3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="9.5" id="7GH-0o-AbM"/>
+                                            <constraint firstAttribute="width" constant="0.5" id="S2i-kQ-tlj"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFE-7o-aN6">
+                                        <rect key="frame" x="101" y="0.0" width="56" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="clY-Wm-1Vs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="높은 가격순">
+                                            <color key="titleColor" name="grayscale_2"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F1G-L2-6Me">
+                                        <rect key="frame" x="160" y="2.5" width="0.5" height="9.5"/>
+                                        <color key="backgroundColor" name="grayscale_3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="0.5" id="do6-vn-6a1"/>
+                                            <constraint firstAttribute="height" constant="9.5" id="hYS-xs-oNh"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTB-lO-g7s">
+                                        <rect key="frame" x="163.5" y="0.0" width="42" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="1iY-vO-Zoj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="판매량순">
+                                            <color key="titleColor" name="grayscale_2"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X9l-ng-uW6">
+                                <rect key="frame" x="32" y="237" width="350" height="625"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6tv-0D-7PZ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0s2-2G-jjt">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zZ8-jm-5Fi">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZKR-yt-KvQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WsX-W8-5SU" firstAttribute="trailing" secondItem="ZKR-yt-KvQ" secondAttribute="trailing" id="0k4-0f-9r5"/>
                             <constraint firstItem="1u7-YW-I4u" firstAttribute="leading" secondItem="ZKR-yt-KvQ" secondAttribute="leading" id="5hy-81-Ecg"/>
+                            <constraint firstItem="X9l-ng-uW6" firstAttribute="leading" secondItem="ZKR-yt-KvQ" secondAttribute="leading" constant="32" id="9Bg-5n-6cJ"/>
                             <constraint firstItem="WsX-W8-5SU" firstAttribute="top" secondItem="8To-T4-i9L" secondAttribute="top" id="Fje-9a-uNK"/>
                             <constraint firstItem="WsX-W8-5SU" firstAttribute="leading" secondItem="ZKR-yt-KvQ" secondAttribute="leading" id="Gfw-aa-zbO"/>
+                            <constraint firstItem="nz0-MR-uPw" firstAttribute="top" secondItem="1u7-YW-I4u" secondAttribute="bottom" constant="40" id="Hck-xx-RVt"/>
                             <constraint firstAttribute="bottom" secondItem="WsX-W8-5SU" secondAttribute="bottom" id="RNT-cM-0aW"/>
+                            <constraint firstItem="cej-Cj-hNG" firstAttribute="leading" secondItem="ZKR-yt-KvQ" secondAttribute="leading" constant="32" id="W0M-Wo-eXX"/>
                             <constraint firstItem="1u7-YW-I4u" firstAttribute="top" secondItem="ZKR-yt-KvQ" secondAttribute="top" id="X7s-2E-QGN"/>
+                            <constraint firstItem="cej-Cj-hNG" firstAttribute="top" secondItem="nz0-MR-uPw" secondAttribute="bottom" constant="27" id="YB0-4o-Vxv"/>
+                            <constraint firstItem="ZKR-yt-KvQ" firstAttribute="trailing" secondItem="X9l-ng-uW6" secondAttribute="trailing" constant="32" id="ajT-Md-Rrv"/>
+                            <constraint firstItem="X9l-ng-uW6" firstAttribute="top" secondItem="cej-Cj-hNG" secondAttribute="bottom" constant="23" id="g9m-oZ-ZVH"/>
+                            <constraint firstItem="X9l-ng-uW6" firstAttribute="bottom" secondItem="ZKR-yt-KvQ" secondAttribute="bottom" id="jtn-8A-qAg"/>
                             <constraint firstAttribute="trailing" secondItem="1u7-YW-I4u" secondAttribute="trailing" id="q8G-1T-grW"/>
+                            <constraint firstItem="ZKR-yt-KvQ" firstAttribute="trailing" secondItem="nz0-MR-uPw" secondAttribute="trailing" constant="32" id="wru-V3-bhf"/>
+                            <constraint firstItem="nz0-MR-uPw" firstAttribute="leading" secondItem="ZKR-yt-KvQ" secondAttribute="leading" constant="32" id="yH1-FS-ATr"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bmCollectionView" destination="X9l-ng-uW6" id="WC0-6Z-BeM"/>
+                        <outlet property="categoryCollectionView" destination="nz0-MR-uPw" id="Nb6-Ab-8KA"/>
                         <outlet property="naviTitleLabel" destination="Xb8-9c-hh0" id="zqZ-4f-Qt7"/>
                     </connections>
                 </viewController>
@@ -1260,6 +1383,9 @@
         </namedColor>
         <namedColor name="grayscale_2">
             <color red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grayscale_3">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="grayscale_4">
             <color red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
