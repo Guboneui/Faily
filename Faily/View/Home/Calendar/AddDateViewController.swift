@@ -14,6 +14,8 @@ class AddDateViewController: UIViewController {
     @IBOutlet weak var startDatePicker: UIDatePicker!
     @IBOutlet weak var endDatePicker: UIDatePicker!
     
+    @IBOutlet weak var scheduleImage: UIImageView!
+    @IBOutlet weak var repeatLabel: UILabel!
     @IBOutlet weak var memoTextView: UITextView!
     
     override func viewDidLoad() {
@@ -33,32 +35,40 @@ class AddDateViewController: UIViewController {
 //        self.navigationController?.pushViewController(scheduleDivisionVC, animated: true)
 
 
-        let alert = UIAlertController(title: "새로운 일정", message: "일정을 분류 해주세요", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "일정 구분", message: "일정을 분류 해주세요", preferredStyle: .actionSheet)
         
         var birthdayImage = UIImage(named: "birthday_addDate")
         birthdayImage = birthdayImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
-        let addBirthDay = UIAlertAction(title: "기념일 및 생일", style: .default, handler: nil);
+        let addBirthDay = UIAlertAction(title: "기념일 및 생일", style: .default, handler: {[self] _ in
+            scheduleImage.image = UIImage(named: "birthday_addDate")
+        })
         addBirthDay.setValue(birthdayImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
         addBirthDay.setValue(UIColor.black, forKey: "titleTextColor")
         alert.addAction(addBirthDay)
         
         var familyImage = UIImage(named: "family_addDate")
         familyImage = familyImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
-        let addFamily = UIAlertAction(title: "가족", style: .default, handler: nil);
+        let addFamily = UIAlertAction(title: "가족", style: .default, handler: {[self] _ in
+            scheduleImage.image = UIImage(named: "family_addDate")
+        })
         addFamily.setValue(familyImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
         addFamily.setValue(UIColor.black, forKey: "titleTextColor")
         alert.addAction(addFamily)
         
         var personalImage = UIImage(named: "person_addDate")
         personalImage = personalImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
-        let addPersonal = UIAlertAction(title: "개인", style: .default, handler: nil);
+        let addPersonal = UIAlertAction(title: "개인", style: .default, handler: {[self] _ in
+            scheduleImage.image = UIImage(named: "person_addDate")
+        })
         addPersonal.setValue(personalImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
         addPersonal.setValue(UIColor.black, forKey: "titleTextColor")
         alert.addAction(addPersonal)
         
         var normalImage = UIImage(named: "normal_addDate")
         normalImage = normalImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
-        let addNormal = UIAlertAction(title: "일반", style: .default, handler: nil);
+        let addNormal = UIAlertAction(title: "일반", style: .default, handler: {[self] _ in
+            scheduleImage.image = UIImage(named: "normal_addDate")
+        })
         addNormal.setValue(normalImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
         addNormal.setValue(UIColor.black, forKey: "titleTextColor")
         alert.addAction(addNormal)
@@ -69,10 +79,43 @@ class AddDateViewController: UIViewController {
         
         
         self.present(alert, animated: true, completion: nil)
-
-
-      
     }
+    
+    @IBAction func repeatButtonAction(_ sender: Any) {
+        let alert = UIAlertController(title: "반복", message: "반복 주기를 선택 해주세요", preferredStyle: .actionSheet)
+        
+        let none = UIAlertAction(title: "안함", style: .default, handler: {[self] _ in
+            repeatLabel.text = "안함"
+        })
+        none.setValue(UIColor.black, forKey: "titleTextColor")
+        alert.addAction(none)
+        
+        let week = UIAlertAction(title: "매주", style: .default, handler: {[self] _ in
+            repeatLabel.text = "매주"
+        })
+        week.setValue(UIColor.black, forKey: "titleTextColor")
+        alert.addAction(week)
+        
+        let month = UIAlertAction(title: "매월", style: .default, handler: {[self] _ in
+            repeatLabel.text = "매월"
+        })
+        month.setValue(UIColor.black, forKey: "titleTextColor")
+        alert.addAction(month)
+        
+        let year = UIAlertAction(title: "매년", style: .default, handler: {[self] _ in
+            repeatLabel.text = "매년"
+        })
+        year.setValue(UIColor.black, forKey: "titleTextColor")
+        alert.addAction(year)
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        cancel.setValue(UIColor.FailyColor.coral, forKey: "titleTextColor")
+        alert.addAction(cancel)
+        
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     
     @IBAction func cancelButtonAction(_ sender: Any) {
