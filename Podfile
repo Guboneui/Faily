@@ -17,4 +17,5 @@ pod 'MKMagneticProgress'
 pod 'MKColorPicker'
 pod 'FSPagerView'
 pod 'PanModal'
+pod 'Cosmos'
 end

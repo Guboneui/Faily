@@ -486,7 +486,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SFImage" translatesAutoresizingMaskIntoConstraints="NO" id="NGl-r1-HDf">
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="164.5"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FImage" translatesAutoresizingMaskIntoConstraints="NO" id="IVd-94-Hlz">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fimage_edit" translatesAutoresizingMaskIntoConstraints="NO" id="IVd-94-Hlz">
                                                         <rect key="frame" x="20" y="20" width="164" height="124.5"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </imageView>
@@ -891,8 +891,8 @@
                                 <color key="textColor" name="grayscale_4"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cKa-YD-UZy">
-                                <rect key="frame" x="368" y="395" width="24" height="20.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next_gray" translatesAutoresizingMaskIntoConstraints="NO" id="cKa-YD-UZy">
+                                <rect key="frame" x="368" y="393" width="24" height="24"/>
                                 <color key="tintColor" name="grayscale_2"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="Bxa-lc-tpi"/>
@@ -1234,16 +1234,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FImage" width="164" height="123"/>
+        <image name="Fimage_edit" width="164" height="123"/>
         <image name="Home_Main" width="414" height="896"/>
         <image name="SFImage" width="347" height="163"/>
         <image name="back" width="24" height="24"/>
         <image name="birthday_addDate" width="20" height="20"/>
         <image name="calendar_default" width="28" height="28"/>
         <image name="calendar_selected" width="28" height="28"/>
-        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="gallery_default" width="28" height="28"/>
         <image name="galley_selected" width="28" height="28"/>
+        <image name="next_gray" width="24" height="24"/>
         <image name="noti" width="35" height="35"/>
         <image name="pink_green_gradient" width="156" height="115"/>
         <image name="present" width="20" height="20"/>

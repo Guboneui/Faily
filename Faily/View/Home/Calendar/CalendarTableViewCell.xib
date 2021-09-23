@@ -39,7 +39,7 @@
                                             <constraint firstAttribute="height" constant="24" id="3GH-DA-2nP"/>
                                             <constraint firstAttribute="width" constant="24" id="fp3-Wv-mJt"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="back"/>
+                                        <state key="normal" title="Button" image="prev_black"/>
                                         <connections>
                                             <action selector="prevMonthButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mwE-ST-yly"/>
                                         </connections>
@@ -51,7 +51,7 @@
                                             <constraint firstAttribute="width" constant="24" id="1ad-GS-gg1"/>
                                             <constraint firstAttribute="height" constant="24" id="W20-mw-gSN"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="back_right"/>
+                                        <state key="normal" title="Button" image="next_black"/>
                                         <connections>
                                             <action selector="nextMonthButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Bnv-pH-RcB"/>
                                         </connections>
@@ -138,7 +138,7 @@
     </objects>
     <resources>
         <image name="add_date" width="24" height="24"/>
-        <image name="back" width="24" height="24"/>
-        <image name="back_right" width="24" height="24"/>
+        <image name="next_black" width="24" height="24"/>
+        <image name="prev_black" width="24" height="24"/>
     </resources>
 </document>
