@@ -18,7 +18,7 @@ class MainBMCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        ratingView.settings.fillMode = .precise
     }
 
 }
