@@ -13,7 +13,8 @@ class FamilyMemberCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var progressBar: MKMagneticProgress!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var memberNameLabel: UILabel!
-    @IBOutlet weak var memberEmotion: UILabel!
+    @IBOutlet weak var emotionImageView: UIImageView!
+    
     
     
  

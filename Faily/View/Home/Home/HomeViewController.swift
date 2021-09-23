@@ -229,19 +229,21 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         if collectionView == memberProfileCollectionView {
             let width = collectionView.frame.width
             let height = collectionView.frame.height
-            
+
             let itemsPerRow: CGFloat = 2
             let widthPadding = sectionInsets.left * (itemsPerRow + 1)
             let itemsPerColumn: CGFloat = 3
             let heightPadding = sectionInsets.top * (itemsPerColumn + 1)
-            
+
             let cellWidth = (width - widthPadding) / itemsPerRow
             let cellHeight = width * 0.6
             
-            
-            
-            
             return CGSize(width: cellWidth, height: cellHeight)
+//
+//            let size = self.memberProfileCollectionView.frame.width / 2 - 11
+//            let height = self.memberProfileCollectionView.frame.height / 2 - 10
+//            return CGSize(width: size, height: height)
+            
         } else if collectionView == BusinessCollectionView {
             let size = self.BusinessCollectionView.frame.height
             return CGSize(width: size, height: size)

@@ -199,11 +199,11 @@
                                                             <size key="itemSize" width="128" height="128"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                            <inset key="sectionInset" minX="7" minY="0.0" maxX="7" maxY="0.0"/>
+                                                            <inset key="sectionInset" minX="7" minY="5" maxX="7" maxY="5"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="k4V-rt-YKP">
-                                                                <rect key="frame" x="24" y="0.0" width="128" height="128"/>
+                                                                <rect key="frame" x="24" y="5" width="128" height="128"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="osl-RR-iMr">
                                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
