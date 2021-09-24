@@ -49,6 +49,8 @@ class PresentMainViewController: UIViewController {
         recommentCollectionView.delegate = self
         recommentCollectionView.dataSource = self
         recommentCollectionView.register(UINib(nibName: "RecommentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "RecommentCollectionViewCell")
+        
+        //categoryCollectionView.collectionViewLayout = 컴포넌트 레이아웃
     }
     
     @IBAction func backButtonAction(_ sender: Any) {
