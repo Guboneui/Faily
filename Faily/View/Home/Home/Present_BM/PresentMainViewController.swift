@@ -114,10 +114,6 @@ extension PresentMainViewController: UICollectionViewDelegateFlowLayout {
             
             return CGSize(width: size * 0.63, height: size)
         }
-        
-        
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -129,7 +125,6 @@ extension PresentMainViewController: UICollectionViewDelegateFlowLayout {
         } else {
             return 30
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -140,6 +135,5 @@ extension PresentMainViewController: UICollectionViewDelegateFlowLayout {
         } else {
             return 30
         }
-        
     }
 }
