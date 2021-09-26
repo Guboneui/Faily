@@ -18,4 +18,5 @@ pod 'MKColorPicker'
 pod 'FSPagerView'
 pod 'PanModal'
 pod 'Cosmos'
+pod 'CollectionViewPagingLayout'
 end
