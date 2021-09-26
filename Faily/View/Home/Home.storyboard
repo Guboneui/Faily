@@ -1239,29 +1239,11 @@
                                     <constraint firstAttribute="trailing" secondItem="VG0-VD-tcv" secondAttribute="trailing" constant="33" id="vjf-bI-Obf"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="odN-e3-oHs">
-                                <rect key="frame" x="0.0" y="94" width="414" height="414"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="odN-e3-oHs" secondAttribute="height" id="U1Z-kF-gl7"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xlm-TF-4Ia">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Sf4-EC-fLC">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xwU-zo-Vi4">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cGX-Me-0pu">
+                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bte-Py-wCG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1269,19 +1251,20 @@
                             <constraint firstItem="YCc-N6-oXT" firstAttribute="leading" secondItem="Bte-Py-wCG" secondAttribute="leading" id="646-dH-R4J"/>
                             <constraint firstAttribute="bottom" secondItem="7b9-CT-kRU" secondAttribute="bottom" id="7c2-CP-HtV"/>
                             <constraint firstItem="YCc-N6-oXT" firstAttribute="top" secondItem="Bte-Py-wCG" secondAttribute="top" id="Fzb-jO-nnf"/>
-                            <constraint firstItem="odN-e3-oHs" firstAttribute="leading" secondItem="Bte-Py-wCG" secondAttribute="leading" id="Hu6-UD-7vA"/>
-                            <constraint firstItem="Bte-Py-wCG" firstAttribute="trailing" secondItem="odN-e3-oHs" secondAttribute="trailing" id="S5W-C5-Pq9"/>
                             <constraint firstItem="7b9-CT-kRU" firstAttribute="leading" secondItem="Bte-Py-wCG" secondAttribute="leading" id="UZX-Ye-jRh"/>
+                            <constraint firstItem="cGX-Me-0pu" firstAttribute="leading" secondItem="Bte-Py-wCG" secondAttribute="leading" id="WAE-4m-Z7h"/>
+                            <constraint firstItem="Bte-Py-wCG" firstAttribute="trailing" secondItem="cGX-Me-0pu" secondAttribute="trailing" id="a7c-H6-9gk"/>
                             <constraint firstItem="7b9-CT-kRU" firstAttribute="top" secondItem="GMb-1e-ZTI" secondAttribute="top" id="cbP-33-Q1H"/>
                             <constraint firstItem="YCc-N6-oXT" firstAttribute="trailing" secondItem="Bte-Py-wCG" secondAttribute="trailing" id="h3A-t5-3pr"/>
+                            <constraint firstItem="cGX-Me-0pu" firstAttribute="top" secondItem="YCc-N6-oXT" secondAttribute="bottom" id="j55-bq-e5P"/>
                             <constraint firstItem="7b9-CT-kRU" firstAttribute="trailing" secondItem="Bte-Py-wCG" secondAttribute="trailing" id="n4m-j9-vud"/>
-                            <constraint firstItem="odN-e3-oHs" firstAttribute="top" secondItem="YCc-N6-oXT" secondAttribute="bottom" id="tad-7O-lgc"/>
+                            <constraint firstItem="Bte-Py-wCG" firstAttribute="bottom" secondItem="cGX-Me-0pu" secondAttribute="bottom" id="vAH-3F-iaO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="question_default" selectedImage="question_selected" id="wTq-RD-fPz"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="mainCollectionView" destination="odN-e3-oHs" id="AqS-t6-FBc"/>
+                        <outlet property="questionMainTableView" destination="cGX-Me-0pu" id="1Pb-50-tW4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCb-qh-KNa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

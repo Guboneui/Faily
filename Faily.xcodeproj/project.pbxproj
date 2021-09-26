@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3306172700F78100E638B1 /* MainQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */; };
+		2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */; };
+		2C33061A2700FA2800E638B1 /* MainQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */; };
+		2C33061C2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C33061B2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib */; };
 		2C35566A26FA466100A1F50B /* FamilyMemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C35566826FA466100A1F50B /* FamilyMemberCollectionViewCell.swift */; };
 		2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C35566926FA466100A1F50B /* FamilyMemberCollectionViewCell.xib */; };
 		2C4B7BB126F2E0470083576A /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB026F2E0470083576A /* QuestionViewController.swift */; };
@@ -69,6 +73,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionTableViewCell.swift; sourceTree = "<group>"; };
+		2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQuestionTableViewCell.xib; sourceTree = "<group>"; };
+		2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C33061B2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQuestionCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C35566826FA466100A1F50B /* FamilyMemberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C35566926FA466100A1F50B /* FamilyMemberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyMemberCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C4B7BB026F2E0470083576A /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +158,10 @@
 			isa = PBXGroup;
 			children = (
 				2C4B7BB026F2E0470083576A /* QuestionViewController.swift */,
+				2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */,
+				2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */,
+				2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */,
+				2C33061B2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -462,10 +474,12 @@
 				2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */,
 				2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */,
 				2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */,
+				2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */,
 				2CF3D3CC26FBDD59008C13F3 /* PresentCategoryCollectionViewCell.xib in Resources */,
 				2CF3D3D226FBE850008C13F3 /* RecommentCollectionViewCell.xib in Resources */,
 				2CAF2CE326F927C00044C594 /* HomeBusinessCollectionViewCell.xib in Resources */,
 				2CF3D3C326FBCF82008C13F3 /* ScheduleDivisionTableViewCell.xib in Resources */,
+				2C33061C2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib in Resources */,
 				2CF3D3D626FCEA11008C13F3 /* MainBMCollectionViewCell.xib in Resources */,
 				2CC9C38726E2A27600936BCD /* Assets.xcassets in Resources */,
 				2CC092BA26F268E3009E69D0 /* Home.storyboard in Resources */,
@@ -536,6 +550,7 @@
 				2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */,
 				2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */,
 				2CC092BE26F26F53009E69D0 /* HapticManager.swift in Sources */,
+				2C3306172700F78100E638B1 /* MainQuestionTableViewCell.swift in Sources */,
 				2CB0B50D26EE9F1D00F10964 /* AppColor.swift in Sources */,
 				2CC5AEB026EFD15D0096D818 /* ChangePasswordCheckEmailViewController.swift in Sources */,
 				2CAF2CE226F927C00044C594 /* HomeBusinessCollectionViewCell.swift in Sources */,
@@ -562,6 +577,7 @@
 				2CC5AED026F106920096D818 /* UserDefaultKey.swift in Sources */,
 				2C35566A26FA466100A1F50B /* FamilyMemberCollectionViewCell.swift in Sources */,
 				2CC092C526F2903F009E69D0 /* TutorialViewController.swift in Sources */,
+				2C33061A2700FA2800E638B1 /* MainQuestionCollectionViewCell.swift in Sources */,
 				2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */,
 				2CF3D3B826FB9BCE008C13F3 /* CalendarTableViewCell.swift in Sources */,
 				2CF3D3BD26FBC180008C13F3 /* AddDateNavigationController.swift in Sources */,
