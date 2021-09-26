@@ -1239,9 +1239,12 @@
                                     <constraint firstAttribute="trailing" secondItem="VG0-VD-tcv" secondAttribute="trailing" constant="33" id="vjf-bI-Obf"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="odN-e3-oHs">
-                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="odN-e3-oHs">
+                                <rect key="frame" x="0.0" y="94" width="414" height="414"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="odN-e3-oHs" secondAttribute="height" id="U1Z-kF-gl7"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xlm-TF-4Ia">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1267,7 +1270,6 @@
                             <constraint firstAttribute="bottom" secondItem="7b9-CT-kRU" secondAttribute="bottom" id="7c2-CP-HtV"/>
                             <constraint firstItem="YCc-N6-oXT" firstAttribute="top" secondItem="Bte-Py-wCG" secondAttribute="top" id="Fzb-jO-nnf"/>
                             <constraint firstItem="odN-e3-oHs" firstAttribute="leading" secondItem="Bte-Py-wCG" secondAttribute="leading" id="Hu6-UD-7vA"/>
-                            <constraint firstItem="Bte-Py-wCG" firstAttribute="bottom" secondItem="odN-e3-oHs" secondAttribute="bottom" id="Oek-Hc-jTD"/>
                             <constraint firstItem="Bte-Py-wCG" firstAttribute="trailing" secondItem="odN-e3-oHs" secondAttribute="trailing" id="S5W-C5-Pq9"/>
                             <constraint firstItem="7b9-CT-kRU" firstAttribute="leading" secondItem="Bte-Py-wCG" secondAttribute="leading" id="UZX-Ye-jRh"/>
                             <constraint firstItem="7b9-CT-kRU" firstAttribute="top" secondItem="GMb-1e-ZTI" secondAttribute="top" id="cbP-33-Q1H"/>

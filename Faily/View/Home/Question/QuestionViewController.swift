@@ -42,21 +42,3 @@ extension QuestionViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
 }
-
-extension QuestionViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        
-        
-        let cellWidth = self.mainCollectionView.frame.width * 0.6
-        let cellHeight = self.mainCollectionView.frame.height * 0.5
-        
-        return CGSize(width: cellWidth, height: cellHeight)
-        
-        
-        
-        
-        
-    }
-}

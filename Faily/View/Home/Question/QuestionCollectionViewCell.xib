@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,30 +12,31 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="QuestionCollectionViewCell" reuseIdentifier="QuestionCollectionViewCell" id="OIC-PE-60Q" customClass="QuestionCollectionViewCell" customModule="Faily" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="196" height="167"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LOI-kv-BCs">
-                <rect key="frame" x="0.0" y="0.0" width="196" height="167"/>
+                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Yhd-VV-4yE">
-                        <rect key="frame" x="48" y="-16.5" width="100" height="200"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="200" id="i7Y-GI-uyc"/>
-                            <constraint firstAttribute="width" constant="100" id="vdl-qM-hFD"/>
-                        </constraints>
-                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzj-mm-M8s">
+                        <rect key="frame" x="30" y="30" width="240" height="240"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Yhd-VV-4yE" firstAttribute="centerY" secondItem="LOI-kv-BCs" secondAttribute="centerY" id="0MN-Du-G0w"/>
-                    <constraint firstItem="Yhd-VV-4yE" firstAttribute="centerX" secondItem="LOI-kv-BCs" secondAttribute="centerX" id="r4i-p5-fsg"/>
+                    <constraint firstItem="bzj-mm-M8s" firstAttribute="width" secondItem="LOI-kv-BCs" secondAttribute="width" multiplier="0.8" id="2jI-BN-x8E"/>
+                    <constraint firstItem="bzj-mm-M8s" firstAttribute="height" secondItem="LOI-kv-BCs" secondAttribute="height" multiplier="0.8" id="4KP-so-DVC"/>
+                    <constraint firstItem="bzj-mm-M8s" firstAttribute="centerX" secondItem="LOI-kv-BCs" secondAttribute="centerX" id="pIi-BC-MVf"/>
+                    <constraint firstItem="bzj-mm-M8s" firstAttribute="centerY" secondItem="LOI-kv-BCs" secondAttribute="centerY" id="v7N-qg-jXQ"/>
                 </constraints>
             </collectionViewCellContentView>
-            <size key="customSize" width="196" height="167"/>
-            <point key="canvasLocation" x="140.57971014492756" y="129.57589285714286"/>
+            <size key="customSize" width="348" height="333"/>
+            <point key="canvasLocation" x="31.884057971014496" y="58.928571428571423"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="background" width="375" height="812"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
