@@ -51,7 +51,7 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             return 300
         } else {
-            return 120
+            return 150
             
         }
     }

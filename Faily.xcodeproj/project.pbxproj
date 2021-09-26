@@ -13,6 +13,8 @@
 		2C33061C2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C33061B2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib */; };
 		2C33061F2700FFF300E638B1 /* AnsweredFamilyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33061D2700FFF300E638B1 /* AnsweredFamilyTableViewCell.swift */; };
 		2C3306202700FFF300E638B1 /* AnsweredFamilyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C33061E2700FFF300E638B1 /* AnsweredFamilyTableViewCell.xib */; };
+		2C330622270101E800E638B1 /* AnsweredFamilyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C330621270101E800E638B1 /* AnsweredFamilyCollectionViewCell.swift */; };
+		2C330624270101EE00E638B1 /* AnsweredFamilyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C330623270101EE00E638B1 /* AnsweredFamilyCollectionViewCell.xib */; };
 		2C35566A26FA466100A1F50B /* FamilyMemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C35566826FA466100A1F50B /* FamilyMemberCollectionViewCell.swift */; };
 		2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C35566926FA466100A1F50B /* FamilyMemberCollectionViewCell.xib */; };
 		2C4B7BB126F2E0470083576A /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB026F2E0470083576A /* QuestionViewController.swift */; };
@@ -81,6 +83,8 @@
 		2C33061B2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQuestionCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C33061D2700FFF300E638B1 /* AnsweredFamilyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsweredFamilyTableViewCell.swift; sourceTree = "<group>"; };
 		2C33061E2700FFF300E638B1 /* AnsweredFamilyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnsweredFamilyTableViewCell.xib; sourceTree = "<group>"; };
+		2C330621270101E800E638B1 /* AnsweredFamilyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsweredFamilyCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C330623270101EE00E638B1 /* AnsweredFamilyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnsweredFamilyCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C35566826FA466100A1F50B /* FamilyMemberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C35566926FA466100A1F50B /* FamilyMemberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyMemberCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C4B7BB026F2E0470083576A /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 				2C33061B2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib */,
 				2C33061D2700FFF300E638B1 /* AnsweredFamilyTableViewCell.swift */,
 				2C33061E2700FFF300E638B1 /* AnsweredFamilyTableViewCell.xib */,
+				2C330621270101E800E638B1 /* AnsweredFamilyCollectionViewCell.swift */,
+				2C330623270101EE00E638B1 /* AnsweredFamilyCollectionViewCell.xib */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -479,6 +485,7 @@
 				2C3306202700FFF300E638B1 /* AnsweredFamilyTableViewCell.xib in Resources */,
 				2CC9C38A26E2A27600936BCD /* LaunchScreen.storyboard in Resources */,
 				2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */,
+				2C330624270101EE00E638B1 /* AnsweredFamilyCollectionViewCell.xib in Resources */,
 				2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */,
 				2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */,
 				2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */,
@@ -564,6 +571,7 @@
 				2CC5AEBF26F0F4FC0096D818 /* RoundTextField.swift in Sources */,
 				2C4B7BB126F2E0470083576A /* QuestionViewController.swift in Sources */,
 				2CC5AEA726EFA8C10096D818 /* String.swift in Sources */,
+				2C330622270101E800E638B1 /* AnsweredFamilyCollectionViewCell.swift in Sources */,
 				2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */,
 				2CF3D3BF26FBCE88008C13F3 /* ScheduleDivisionViewController.swift in Sources */,
 				2CF3D3CE26FBE5F4008C13F3 /* PresentDetailViewController.swift in Sources */,
