@@ -11,6 +11,8 @@
 		2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */; };
 		2C33061A2700FA2800E638B1 /* MainQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */; };
 		2C33061C2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C33061B2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib */; };
+		2C33061F2700FFF300E638B1 /* AnsweredFamilyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33061D2700FFF300E638B1 /* AnsweredFamilyTableViewCell.swift */; };
+		2C3306202700FFF300E638B1 /* AnsweredFamilyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C33061E2700FFF300E638B1 /* AnsweredFamilyTableViewCell.xib */; };
 		2C35566A26FA466100A1F50B /* FamilyMemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C35566826FA466100A1F50B /* FamilyMemberCollectionViewCell.swift */; };
 		2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C35566926FA466100A1F50B /* FamilyMemberCollectionViewCell.xib */; };
 		2C4B7BB126F2E0470083576A /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB026F2E0470083576A /* QuestionViewController.swift */; };
@@ -77,6 +79,8 @@
 		2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C33061B2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQuestionCollectionViewCell.xib; sourceTree = "<group>"; };
+		2C33061D2700FFF300E638B1 /* AnsweredFamilyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsweredFamilyTableViewCell.swift; sourceTree = "<group>"; };
+		2C33061E2700FFF300E638B1 /* AnsweredFamilyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnsweredFamilyTableViewCell.xib; sourceTree = "<group>"; };
 		2C35566826FA466100A1F50B /* FamilyMemberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C35566926FA466100A1F50B /* FamilyMemberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyMemberCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C4B7BB026F2E0470083576A /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */,
 				2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */,
 				2C33061B2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib */,
+				2C33061D2700FFF300E638B1 /* AnsweredFamilyTableViewCell.swift */,
+				2C33061E2700FFF300E638B1 /* AnsweredFamilyTableViewCell.xib */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -470,6 +476,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3306202700FFF300E638B1 /* AnsweredFamilyTableViewCell.xib in Resources */,
 				2CC9C38A26E2A27600936BCD /* LaunchScreen.storyboard in Resources */,
 				2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */,
 				2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */,
@@ -563,6 +570,7 @@
 				2C4B7BB526F2E0C30083576A /* HomeViewController.swift in Sources */,
 				2CB0B50F26EEC15000F10964 /* AuthEmailViewController.swift in Sources */,
 				2CC9C37E26E2A27600936BCD /* AppDelegate.swift in Sources */,
+				2C33061F2700FFF300E638B1 /* AnsweredFamilyTableViewCell.swift in Sources */,
 				2CF3D3C226FBCF82008C13F3 /* ScheduleDivisionTableViewCell.swift in Sources */,
 				2C4B7BC226F2E4040083576A /* MainTabBar.swift in Sources */,
 				2CC092C726F2905B009E69D0 /* ParticipantViewController.swift in Sources */,

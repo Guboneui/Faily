@@ -17,11 +17,13 @@ class QuestionViewController: UIViewController {
         questionMainTableView.delegate = self
         questionMainTableView.dataSource = self
         questionMainTableView.rowHeight = UITableView.automaticDimension
-        questionMainTableView.estimatedRowHeight = 300
+        questionMainTableView.estimatedRowHeight = 75
+        
         
         questionMainTableView.separatorStyle = .none
         
         questionMainTableView.register(UINib(nibName: "MainQuestionTableViewCell", bundle: nil), forCellReuseIdentifier: "MainQuestionTableViewCell")
+        questionMainTableView.register(UINib(nibName: "AnsweredFamilyTableViewCell", bundle: nil), forCellReuseIdentifier: "AnsweredFamilyTableViewCell")
         
     }
 
@@ -29,20 +31,28 @@ class QuestionViewController: UIViewController {
 
 extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainQuestionTableViewCell", for: indexPath) as! MainQuestionTableViewCell
-        cell.selectionStyle = .none
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MainQuestionTableViewCell", for: indexPath) as! MainQuestionTableViewCell
+            cell.selectionStyle = .none
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
+            cell.selectionStyle = .none
+            return cell
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if tableView == questionMainTableView {
-            return self.questionMainTableView.frame.height / 2
+        if indexPath.row == 0 {
+            return 300
         } else {
-            return 20
+            return 120
+            
         }
     }
  
