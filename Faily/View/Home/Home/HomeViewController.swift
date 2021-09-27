@@ -19,9 +19,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var totalProgressBaseImageView: UIImageView!
     
     @IBOutlet weak var totalProgress: MKMagneticProgress!
-    
-    
-    
     @IBOutlet weak var emotionBaseView: UIView!
     @IBOutlet weak var emotionBGView: UIImageView!
     
@@ -33,8 +30,6 @@ class HomeViewController: UIViewController {
             self.emotionPagerView.itemSize = self.emotionPagerView.frame.size.applying(transform)
             self.emotionPagerView.decelerationDistance = 10
             self.emotionPagerView.isInfinite = true
-            
-            
         }
     }
     
@@ -303,8 +298,4 @@ extension HomeViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         print(index)
         return false
     }
-    
-    
-   
-    
 }

@@ -379,7 +379,9 @@
                             <constraint firstItem="TPt-gO-8cw" firstAttribute="top" secondItem="9Qa-7T-91a" secondAttribute="bottom" id="sLm-Dh-6Dh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="GKp-Ct-mh4"/>
+                    <tabBarItem key="tabBarItem" title="" id="GKp-Ct-mh4">
+                        <inset key="imageInsets" minX="0.0" minY="-30" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="BusinessBGView" destination="TkE-X5-ek6" id="fQb-s3-pua"/>
@@ -413,14 +415,25 @@
                     <view key="view" contentMode="scaleToFill" id="zBB-Uv-faU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_Main" translatesAutoresizingMaskIntoConstraints="NO" id="zyU-1F-7zH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zY2-fk-ryO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zyU-1F-7zH" firstAttribute="leading" secondItem="zY2-fk-ryO" secondAttribute="leading" id="Ccl-MK-Sz9"/>
+                            <constraint firstAttribute="bottom" secondItem="zyU-1F-7zH" secondAttribute="bottom" id="IQn-pM-Zs1"/>
+                            <constraint firstItem="zyU-1F-7zH" firstAttribute="trailing" secondItem="zY2-fk-ryO" secondAttribute="trailing" id="gNO-oQ-cFQ"/>
+                            <constraint firstItem="zyU-1F-7zH" firstAttribute="top" secondItem="zBB-Uv-faU" secondAttribute="top" id="qn2-Lm-6kT"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="setting_default" selectedImage="setting_selected" id="UET-tl-EBb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ee-CA-jLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1362" y="1140"/>
+            <point key="canvasLocation" x="-1362.3188405797102" y="1139.7321428571429"/>
         </scene>
         <!--Gallery View Controller-->
         <scene sceneID="GhZ-L4-7Hr">
@@ -429,14 +442,25 @@
                     <view key="view" contentMode="scaleToFill" id="jdq-JT-0SK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_Main" translatesAutoresizingMaskIntoConstraints="NO" id="QoP-3Y-KQG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2eV-2s-aSj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QoP-3Y-KQG" firstAttribute="top" secondItem="jdq-JT-0SK" secondAttribute="top" id="6AC-G6-Ip4"/>
+                            <constraint firstAttribute="bottom" secondItem="QoP-3Y-KQG" secondAttribute="bottom" id="Dxn-XF-ibp"/>
+                            <constraint firstItem="QoP-3Y-KQG" firstAttribute="trailing" secondItem="2eV-2s-aSj" secondAttribute="trailing" id="bey-fS-Adr"/>
+                            <constraint firstItem="QoP-3Y-KQG" firstAttribute="leading" secondItem="2eV-2s-aSj" secondAttribute="leading" id="iC6-ZV-MH5"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="gallery_default" selectedImage="galley_selected" id="tjq-5B-cmL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u18-HX-qot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-420" y="863"/>
+            <point key="canvasLocation" x="-420.28985507246381" y="862.5"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="TDk-g3-6hV">

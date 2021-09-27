@@ -89,6 +89,9 @@ class MainTabBarController: UITabBarController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGesture))
         homeButton.addGestureRecognizer(tapGesture)
         
+        
+        //homeButton.addTarget(self, action: #selector(homeButtonAction), for: .touchUpInside)
+        
         let bounds: CGRect = UIScreen.main.bounds
         let height: CGFloat = bounds.size.height
         let k = height * 0.7
@@ -213,6 +216,10 @@ class MainTabBarController: UITabBarController {
     @objc func tapGesture(_ recognizer: UITapGestureRecognizer) {
         self.selectedIndex = 2
         homeButton.setBackgroundImage(UIImage(named: "home_tab_selected"), for: .normal)
+    }
+    
+    @objc func homeButtonAction() {
+        print(1)
     }
 }
 
