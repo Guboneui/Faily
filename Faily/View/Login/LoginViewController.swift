@@ -48,8 +48,8 @@ class LoginViewController: UIViewController {
     @objc func signUpAction(sender: UITapGestureRecognizer) {
         print("로그인 클릭")
         let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-        let loginVC = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
-        self.navigationController?.pushViewController(loginVC, animated: true)
+        let signUpVC = storyBoard.instantiateViewController(withIdentifier: "SignUpWithUserInfoViewController") as! SignUpWithUserInfoViewController
+        self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
     @IBAction func showPasswordButtonAction(_ sender: Any) {

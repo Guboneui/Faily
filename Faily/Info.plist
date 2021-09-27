@@ -66,5 +66,10 @@
 	<string>(필수) &quot;Faily&quot;는 추억을 공유하기 위해 카메라 접근 권한이 필요합니다.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>(필수) &quot;Faily&quot;는 추억을 공유하기 위해 앨범 접근 권한이 필요합니다.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

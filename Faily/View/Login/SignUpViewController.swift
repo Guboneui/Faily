@@ -23,13 +23,18 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var signUpButton: UIButton!
 
+    var getUserName: String?
+    var getUserBirthDay: String?
     
     var agreeAllState = false
     var useTermsState = false
     var personalInfoState = false
     
+    lazy var viewModel: SignUpViewModel = SignUpViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.signUpView = self
         configUI()
     }
     
@@ -91,40 +96,31 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func signUpButtonAction(_ sender: Any) {
-//        if personalInfoState == true && useTermsState == true {
-//            let alert = UIAlertController(title: "정보 맞음", message: "", preferredStyle: .alert)
-//            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
-//            alert.addAction(okButton)
-//            self.present(alert, animated: true, completion: nil)
-//        } else {
-//            let alert = UIAlertController(title: "약관을 동의 해주세요", message: "", preferredStyle: .alert)
-//            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
-//            alert.addAction(okButton)
-//            self.present(alert, animated: true, completion: nil)
-//        }
+
+        //비밀번호 정규식 설정
+        let checkPassword = isValidPassword(password: passwordTextField.text!)
+        if checkPassword == true {
+            print("유효성 검사 통과")
+        } else {
+            print("유효성 검사 실패")
+            return
+        }
+
+        if passwordTextField.text! == checkPasswordTextField.text! {
+            print("비밀번호 일치")
+        } else {
+            print("비밀번호 불일치")
+            return
+        }
         
-//        비밀번호 정규식 설정
-//        let checkPassword = isValidPassword(password: passwordTextField.text!)
-//        if checkPassword == true {
-//            print("유효성 검사 통과")
-//        } else {
-//            print("유효성 검사 실패")
-//            return
-//        }
-//
-//        if passwordTextField.text! == checkPasswordTextField.text! {
-//            print("비밀번호 일치")
-//        } else {
-//            print("비밀번호 불일치")
-//        }
-//
-//
+        let email = emailTextField.text!
+        let password = checkPasswordTextField.text!
         
+        let param = SignUpRequest(user_email: email, user_pw: password, user_name: self.getUserName!, user_bdate: self.getUserBirthDay!)
+        viewModel.postSignUp(param)
+
+
         
-        
-        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-        let authEmailVC = storyBoard.instantiateViewController(withIdentifier: "AuthEmailViewController") as! AuthEmailViewController
-        self.navigationController?.pushViewController(authEmailVC, animated: true)
     }
     
     func isValidPassword(password: String) -> Bool {
@@ -165,5 +161,23 @@ extension SignUpViewController: UITextFieldDelegate {
        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
        return emailTest.evaluate(with: email)
+    }
+}
+
+
+extension SignUpViewController{
+    func viewModelMethod() {
+        viewModel.showAlert = { [self] message in
+            let alert = UIAlertController(title: message, message: "", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alert.addAction(okButton)
+            present(alert, animated: true, completion: nil)
+        }
+        
+        viewModel.goAuthEmailView = {
+            let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+            let authEmailVC = storyBoard.instantiateViewController(withIdentifier: "AuthEmailViewController") as! AuthEmailViewController
+            self.navigationController?.pushViewController(authEmailVC, animated: true)
+        }
     }
 }

@@ -31,6 +31,11 @@
 		2CB0B50F26EEC15000F10964 /* AuthEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */; };
 		2CB928782702223700BF34DC /* QAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB928772702223700BF34DC /* QAViewController.swift */; };
 		2CB9287B270238A500BF34DC /* ConstantURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9287A270238A500BF34DC /* ConstantURL.swift */; };
+		2CB9287E2702395300BF34DC /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9287D2702395300BF34DC /* SignUpRequest.swift */; };
+		2CB9288027023AB900BF34DC /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9287F27023AB900BF34DC /* SignUpResponse.swift */; };
+		2CB9288227023BAE00BF34DC /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9288127023BAE00BF34DC /* SignUpRepository.swift */; };
+		2CB9288427023D3A00BF34DC /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9288327023D3A00BF34DC /* SignUpService.swift */; };
+		2CB9288627023DEC00BF34DC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9288527023DEC00BF34DC /* SignUpViewModel.swift */; };
 		2CC092BA26F268E3009E69D0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC092B926F268E3009E69D0 /* Home.storyboard */; };
 		2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */; };
 		2CC092BE26F26F53009E69D0 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092BD26F26F53009E69D0 /* HapticManager.swift */; };
@@ -103,6 +108,11 @@
 		2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEmailViewController.swift; sourceTree = "<group>"; };
 		2CB928772702223700BF34DC /* QAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAViewController.swift; sourceTree = "<group>"; };
 		2CB9287A270238A500BF34DC /* ConstantURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantURL.swift; sourceTree = "<group>"; };
+		2CB9287D2702395300BF34DC /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		2CB9287F27023AB900BF34DC /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		2CB9288127023BAE00BF34DC /* SignUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
+		2CB9288327023D3A00BF34DC /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		2CB9288527023DEC00BF34DC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		2CC092B926F268E3009E69D0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		2CC092BD26F26F53009E69D0 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
@@ -270,24 +280,28 @@
 			path = Answer;
 			sourceTree = "<group>";
 		};
-		2CB928792702373900BF34DC /* API */ = {
+		2CB928792702373900BF34DC /* API_Model */ = {
 			isa = PBXGroup;
 			children = (
 				2CB9287A270238A500BF34DC /* ConstantURL.swift */,
+				2CB9287C2702390000BF34DC /* SignUp-Login */,
 			);
-			path = API;
+			path = API_Model;
 			sourceTree = "<group>";
 		};
-		2CC092B326F241DA009E69D0 /* Model */ = {
+		2CB9287C2702390000BF34DC /* SignUp-Login */ = {
 			isa = PBXGroup;
 			children = (
+				2CB9287D2702395300BF34DC /* SignUpRequest.swift */,
+				2CB9287F27023AB900BF34DC /* SignUpResponse.swift */,
 			);
-			path = Model;
+			path = "SignUp-Login";
 			sourceTree = "<group>";
 		};
 		2CC092B426F241E2009E69D0 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				2CB9288127023BAE00BF34DC /* SignUpRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -295,6 +309,7 @@
 		2CC092B526F241EC009E69D0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2CB9288327023D3A00BF34DC /* SignUpService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -302,6 +317,7 @@
 		2CC092B626F241FA009E69D0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2CB9288527023DEC00BF34DC /* SignUpViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -400,12 +416,11 @@
 				2CC5AEA826EFA8E00096D818 /* DefaultFile */,
 				2CC5AEA926EFA8ED0096D818 /* Extension */,
 				2CC5AEB926F0D8420096D818 /* Custom */,
-				2CC092B326F241DA009E69D0 /* Model */,
+				2CB928792702373900BF34DC /* API_Model */,
 				2CC092B426F241E2009E69D0 /* Repository */,
-				2CB928792702373900BF34DC /* API */,
 				2CC092B526F241EC009E69D0 /* Service */,
-				2CB0B50826EE906500F10964 /* View */,
 				2CC092B626F241FA009E69D0 /* ViewModel */,
+				2CB0B50826EE906500F10964 /* View */,
 				2CC9C38826E2A27600936BCD /* LaunchScreen.storyboard */,
 				2CC9C38B26E2A27600936BCD /* Info.plist */,
 				2CC9C38626E2A27600936BCD /* Assets.xcassets */,
@@ -580,8 +595,10 @@
 				2C4B7BB726F2E0D90083576A /* GalleryViewController.swift in Sources */,
 				2CC5AECD26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift in Sources */,
 				2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */,
+				2CB9288227023BAE00BF34DC /* SignUpRepository.swift in Sources */,
 				2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */,
 				2CC5AEBB26F0D8920096D818 /* BaseView.swift in Sources */,
+				2CB9287E2702395300BF34DC /* SignUpRequest.swift in Sources */,
 				2CF3D3D526FCEA11008C13F3 /* MainBMCollectionViewCell.swift in Sources */,
 				2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */,
 				2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */,
@@ -614,9 +631,12 @@
 				2C4B7BC026F2E12E0083576A /* CalendarViewController.swift in Sources */,
 				2CC092C326F286DE009E69D0 /* SignUpWithUserInfoViewController.swift in Sources */,
 				2CC5AED026F106920096D818 /* UserDefaultKey.swift in Sources */,
+				2CB9288627023DEC00BF34DC /* SignUpViewModel.swift in Sources */,
 				2C35566A26FA466100A1F50B /* FamilyMemberCollectionViewCell.swift in Sources */,
+				2CB9288427023D3A00BF34DC /* SignUpService.swift in Sources */,
 				2CC092C526F2903F009E69D0 /* TutorialViewController.swift in Sources */,
 				2C33061A2700FA2800E638B1 /* MainQuestionCollectionViewCell.swift in Sources */,
+				2CB9288027023AB900BF34DC /* SignUpResponse.swift in Sources */,
 				2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */,
 				2CF3D3B826FB9BCE008C13F3 /* CalendarTableViewCell.swift in Sources */,
 				2CB928782702223700BF34DC /* QAViewController.swift in Sources */,

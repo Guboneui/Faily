@@ -100,7 +100,7 @@ class SignUpWithUserInfoViewController: UIViewController {
     
     @objc func doneDatePicker () {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy.MM.dd"
+        formatter.dateFormat = "yyyy-MM-dd"
         birthDayTextField.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
@@ -174,17 +174,19 @@ class SignUpWithUserInfoViewController: UIViewController {
     
     
     @IBAction func nextSignUpViewButton(_ sender: Any) {
-//        if personalInfoState == true && useTermsState == true {
-//           
-//        } else {
-//            let alert = UIAlertController(title: "약관을 동의 해주세요", message: "", preferredStyle: .alert)
-//            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
-//            alert.addAction(okButton)
-//            self.present(alert, animated: true, completion: nil)
-//        }
+        if personalInfoState == true && useTermsState == true {
+           
+        } else {
+            let alert = UIAlertController(title: "약관을 동의 해주세요", message: "", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        }
         
         let storyBoard = UIStoryboard(name: "Login", bundle: nil)
         let signUpVC = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        signUpVC.getUserName = nameTextField.text
+        signUpVC.getUserBirthDay = birthDayTextField.text
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
