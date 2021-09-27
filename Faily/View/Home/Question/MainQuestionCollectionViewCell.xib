@@ -68,6 +68,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -100,6 +101,12 @@
             </collectionViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <size key="customSize" width="366" height="333"/>
+            <connections>
+                <outlet property="answerStackView" destination="aL9-KZ-Fpq" id="Ah1-Qy-PlB"/>
+                <outlet property="dateLabel" destination="cYH-lh-oHz" id="UrZ-Q5-ahb"/>
+                <outlet property="questionBox" destination="Aqf-rF-F9d" id="CCC-tA-USu"/>
+                <outlet property="questionLabel" destination="Qpw-F8-CSQ" id="AOr-ad-Qqu"/>
+            </connections>
             <point key="canvasLocation" x="243.47826086956525" y="96.428571428571431"/>
         </collectionViewCell>
     </objects>
