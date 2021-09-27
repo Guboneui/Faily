@@ -19,8 +19,6 @@ class QAViewController: UIViewController{
         super.viewDidLoad()
         configUI()
         
-       
-        
     }
     
     func configUI() {
