@@ -10,7 +10,6 @@ import CollectionViewPagingLayout
 
 class MainQuestionTableViewCell: UITableViewCell {
 
-    
     var dateArr = ["2021년 9월 24일", "2021년 9월 25일", "2021년 9월 26일", "2021년 9월 27일", "2021년 9월 28일"]
     
     @IBOutlet weak var questionCollectionView: UICollectionView!
@@ -25,10 +24,7 @@ class MainQuestionTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
 }
 
 extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -43,7 +39,6 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy년 M월 d일"
         let current_date_string = formatter.string(from: Date())
-        print(current_date_string)
         if cell.dateLabel.text == current_date_string {
             cell.questionBox.image = UIImage(named: "questionBox_BookMark")
             cell.answerStackView.isHidden = false
@@ -51,11 +46,6 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
             cell.questionBox.image = UIImage(named: "questionBox_noBookMark")
             cell.answerStackView.isHidden = true
         }
-    
-        
         return cell
     }
-    
-    
-    
 }

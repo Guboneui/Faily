@@ -25,16 +25,12 @@ class MainQuestionCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
     }
     
-    
     @objc func goAnswerView(_ recognizer: UITapGestureRecognizer) {
         let alert = UIAlertController(title: "질문 이동", message: "", preferredStyle: .alert)
         let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
         alert.addAction(okButton)
         self.window?.rootViewController?.present(alert, animated: true, completion: nil)
     }
-    
-    
-    
 }
 
 

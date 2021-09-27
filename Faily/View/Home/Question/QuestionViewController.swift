@@ -55,7 +55,4 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             
         }
     }
- 
-    
-    
 }
