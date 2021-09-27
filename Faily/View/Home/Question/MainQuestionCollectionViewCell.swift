@@ -26,10 +26,15 @@ class MainQuestionCollectionViewCell: UICollectionViewCell {
     }
     
     @objc func goAnswerView(_ recognizer: UITapGestureRecognizer) {
-        let alert = UIAlertController(title: "질문 이동", message: "", preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
-        alert.addAction(okButton)
-        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+//        let alert = UIAlertController(title: "질문 이동", message: "", preferredStyle: .alert)
+//        let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+//        alert.addAction(okButton)
+//
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let qaVC = storyBoard.instantiateViewController(withIdentifier: "QAViewController")
+        qaVC.modalPresentationStyle = .overCurrentContext
+        self.window?.rootViewController?.present(qaVC, animated: true, completion: nil)
+        
     }
 }
 
