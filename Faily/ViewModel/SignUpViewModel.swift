@@ -20,7 +20,7 @@ class SignUpViewModel {
             let message = response.message
             let code = response.code
             
-            if response.result == true {
+            if response.isSuccess == true {
                 print("이메일 인증 화면으로 이동합니다")
                 self.goAuthEmailView()
             } else {

@@ -104,6 +104,8 @@
             <size key="customSize" width="366" height="333"/>
             <connections>
                 <outlet property="answerStackView" destination="aL9-KZ-Fpq" id="Ah1-Qy-PlB"/>
+                <outlet property="answerStackViewImage" destination="Lmz-tn-2oe" id="LkV-nd-FcS"/>
+                <outlet property="answerStackViewLabel" destination="pIS-rV-eAg" id="h5F-ys-Hx4"/>
                 <outlet property="dateLabel" destination="cYH-lh-oHz" id="UrZ-Q5-ahb"/>
                 <outlet property="questionBox" destination="Aqf-rF-F9d" id="CCC-tA-USu"/>
                 <outlet property="questionLabel" destination="Qpw-F8-CSQ" id="AOr-ad-Qqu"/>

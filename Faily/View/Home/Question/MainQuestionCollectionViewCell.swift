@@ -14,6 +14,8 @@ class MainQuestionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerStackView: UIStackView!
+    @IBOutlet weak var answerStackViewLabel: UILabel!
+    @IBOutlet weak var answerStackViewImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,11 +32,18 @@ class MainQuestionCollectionViewCell: UICollectionViewCell {
 //        let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
 //        alert.addAction(okButton)
 //
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let qaVC = storyBoard.instantiateViewController(withIdentifier: "QAViewController")
-        qaVC.modalPresentationStyle = .overCurrentContext
-        self.window?.rootViewController?.present(qaVC, animated: true, completion: nil)
+//        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+//        let qaVC = storyBoard.instantiateViewController(withIdentifier: "QAViewController")
+//        qaVC.modalPresentationStyle = .overCurrentContext
+//        self.window?.rootViewController?.present(qaVC, animated: true, completion: nil)
         
+        
+        if answerStackViewLabel.text == "답변하러 가기" {
+            print("답변하러 가기")
+        } else if answerStackViewLabel.text == "답변보러 가기" {
+            print("답변보러 가기")
+        }
+//        
     }
 }
 
