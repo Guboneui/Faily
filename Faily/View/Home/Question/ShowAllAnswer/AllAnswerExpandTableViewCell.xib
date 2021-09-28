@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="188" id="KGk-i7-Jjw" customClass="AllAnswerExpandTableViewCell" customModule="Faily" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="347" height="188"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="347" height="188"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="나의 답변" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXS-is-8Eb">
+                        <rect key="frame" x="0.0" y="10" width="60" height="19.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHh-RY-0XG">
+                        <rect key="frame" x="0.0" y="51.5" width="347" height="126.5"/>
+                        <string key="text">Eleifend sit senectus malesuada fusce sociis nunc. Quis egestas quisque est ipsum sagittis sed dictum. Adipiscing ut augue diam sed aliquam faucibus egestas enim ultricies. Quam nullam amet consectetur ultrice.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="grayscale_2"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YXS-is-8Eb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ohu-ry-S43"/>
+                    <constraint firstItem="YXS-is-8Eb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="OxQ-aX-J06"/>
+                    <constraint firstAttribute="bottom" secondItem="SHh-RY-0XG" secondAttribute="bottom" constant="10" id="d76-ie-CPo"/>
+                    <constraint firstItem="SHh-RY-0XG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ixR-tP-vXD"/>
+                    <constraint firstAttribute="trailing" secondItem="SHh-RY-0XG" secondAttribute="trailing" id="jQB-MC-3eZ"/>
+                    <constraint firstItem="SHh-RY-0XG" firstAttribute="top" secondItem="YXS-is-8Eb" secondAttribute="bottom" constant="22" id="qJ3-Jt-QDE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="112.31884057971016" y="160.71428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="grayscale_2">
+            <color red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

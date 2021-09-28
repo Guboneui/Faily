@@ -10,7 +10,7 @@ import CollectionViewPagingLayout
 
 class MainQuestionTableViewCell: UITableViewCell {
     
-    var dateArr = ["2021년 9월 24일", "2021년 9월 25일", "2021년 9월 26일", "2021년 9월 27일", "2021년 9월 28일"]
+    var dateArr = ["2021년 9월 24일", "2021년 9월 25일", "2021년 9월 26일", "2021년 9월 27일", "2021년 9월 28일", "2021년 9월 29일"]
     
     @IBOutlet weak var questionCollectionView: UICollectionView!
     override func awakeFromNib() {
@@ -54,7 +54,7 @@ class MainQuestionTableViewCell: UITableViewCell {
 
 extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return dateArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
