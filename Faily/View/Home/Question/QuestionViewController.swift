@@ -44,6 +44,7 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
             cell.selectionStyle = .none
+            cell.answeredCollectionView.isHidden = true
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LockTableViewCell", for: indexPath) as! LockTableViewCell
