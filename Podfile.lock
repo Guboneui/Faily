@@ -2,6 +2,7 @@ PODS:
   - Alamofire (5.4.3)
   - CollectionViewPagingLayout (1.0.2)
   - Cosmos (23.0.0)
+  - ExpyTableView (1.2.1)
   - FSCalendar (2.8.2)
   - FSPagerView (0.8.3)
   - IQKeyboardManager (6.5.6)
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - Alamofire
   - CollectionViewPagingLayout
   - Cosmos
+  - ExpyTableView
   - FSCalendar
   - FSPagerView
   - IQKeyboardManager
@@ -36,6 +38,7 @@ SPEC REPOS:
     - Alamofire
     - CollectionViewPagingLayout
     - Cosmos
+    - ExpyTableView
     - FSCalendar
     - FSPagerView
     - IQKeyboardManager
@@ -51,6 +54,7 @@ SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   CollectionViewPagingLayout: 418c8f5fc92cb35673f961196d5e0509ab853667
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  ExpyTableView: 19cf224c2ff04b1ec215ec52bc4ba6f81fa809ed
   FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
@@ -62,6 +66,6 @@ SPEC CHECKSUMS:
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: fa742a0b06c451ee06374f42f84c28a7f839748f
+PODFILE CHECKSUM: 4c6342aa667e9bead362626971d96995a8685770
 
 COCOAPODS: 1.10.1

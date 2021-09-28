@@ -8,5 +8,16 @@
 import UIKit
 
 class AllAnswerProfileCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var familyProfileImage: UIImageView!
+    
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layoutIfNeeded()
+        familyProfileImage.layer.cornerRadius = familyProfileImage.frame.height / 2
+    }
     
 }

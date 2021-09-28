@@ -10,6 +10,9 @@ import UIKit
 class AnsweredFamilyTableViewCell: UITableViewCell {
 
     @IBOutlet weak var answeredCollectionView: UICollectionView!
+    
+    @IBOutlet weak var addFirstAnswerBaseView: UIView!
+    @IBOutlet weak var addFirstAnswerBGImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         answeredCollectionView.delegate = self
@@ -21,6 +24,16 @@ class AnsweredFamilyTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layoutIfNeeded()
+        addFirstAnswerBaseView.layer.cornerRadius = 20
+        addFirstAnswerBaseView.layer.shadowColor = UIColor.FailyColor.grayscale_4.cgColor
+        addFirstAnswerBaseView.layer.shadowOpacity = 0.33
+        addFirstAnswerBaseView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        addFirstAnswerBGImage.layer.cornerRadius = 20
     }
     
 }

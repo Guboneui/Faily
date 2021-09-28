@@ -41,3 +41,23 @@ extension UICollectionView {
         scrollToItem(at: lastIndexPath, at: .left, animated: animated)
     }
 }
+
+extension UITableView {
+    var lastSection: Int {
+        return numberOfSections - 1
+    }
+
+    /// IndexPath of the last item in last section.
+    var lastIndexPath: IndexPath? {
+        guard lastSection >= 0 else {
+            return nil
+        }
+
+        let lastItem = numberOfRows(inSection: lastSection) - 1
+        guard lastItem >= 0 else {
+            return nil
+        }
+
+        return IndexPath(item: lastItem, section: lastSection)
+    }
+}

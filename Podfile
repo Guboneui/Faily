@@ -19,4 +19,5 @@ pod 'FSPagerView'
 pod 'PanModal'
 pod 'Cosmos'
 pod 'CollectionViewPagingLayout'
+pod 'ExpyTableView'
 end

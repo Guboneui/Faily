@@ -6,9 +6,15 @@
 //
 
 import UIKit
+import ExpyTableView
 
-class AllAnswerExpandTableViewCell: UITableViewCell {
+class AllAnswerExpandTableViewCell: UITableViewCell{
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var guideLineView: UIView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

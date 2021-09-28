@@ -12,38 +12,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="AllAnswerBaseTableViewCell" customModule="Faily" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="AllAnswerBaseTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllAnswerBaseTableViewCell" rowHeight="120" id="KGk-i7-Jjw" customClass="AllAnswerBaseTableViewCell" customModule="Faily" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="402" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="402" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="2021년 9월 29일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHC-9R-FAq">
-                        <rect key="frame" x="0.0" y="75.5" width="101.5" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" text="2021년 9월 29일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHC-9R-FAq">
+                        <rect key="frame" x="30" y="78" width="88.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" name="grayscale_2"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6I-pP-zSy">
-                        <rect key="frame" x="44" y="31.5" width="13.5" height="24"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6I-pP-zSy">
+                        <rect key="frame" x="66.5" y="25" width="16" height="29"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                         <color key="textColor" name="secondary_pink"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="당신에게 가장 가족이 필요했던 순간은 언제인가요?당신에게 가장 가족이 ?" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ha4-c8-f8E">
-                        <rect key="frame" x="111.5" y="14" width="290.5" height="59"/>
+                        <rect key="frame" x="128.5" y="14" width="243.5" height="51.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wVl-Ek-VS3">
-                        <rect key="frame" x="111.5" y="74" width="245.5" height="20"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="252" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wVl-Ek-VS3">
+                        <rect key="frame" x="128.5" y="75.5" width="206.5" height="20"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="w5q-Tc-7fu"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y69-OR-Se3">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y69-OR-Se3">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -51,38 +51,58 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question_dropup" translatesAutoresizingMaskIntoConstraints="NO" id="Aws-58-qu8">
-                        <rect key="frame" x="367" y="70.5" width="27" height="27"/>
+                        <rect key="frame" x="345" y="72" width="27" height="27"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="27" id="6gw-Sq-QsM"/>
                             <constraint firstAttribute="width" constant="27" id="cRq-Mp-UfS"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDZ-Mq-wq5">
+                        <rect key="frame" x="30" y="119" width="342" height="1"/>
+                        <color key="backgroundColor" name="grayscale_5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="gup-F0-CwJ"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Ha4-c8-f8E" firstAttribute="centerY" secondItem="C6I-pP-zSy" secondAttribute="centerY" id="0ah-gy-6XO"/>
-                    <constraint firstItem="DHC-9R-FAq" firstAttribute="top" secondItem="C6I-pP-zSy" secondAttribute="bottom" constant="20" id="8LU-q8-5kS"/>
-                    <constraint firstItem="DHC-9R-FAq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IrN-KJ-I1K"/>
+                    <constraint firstItem="oDZ-Mq-wq5" firstAttribute="top" secondItem="DHC-9R-FAq" secondAttribute="bottom" constant="26.5" id="Cpu-2C-yJy"/>
+                    <constraint firstItem="Ha4-c8-f8E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="DlU-vy-stU"/>
+                    <constraint firstItem="DHC-9R-FAq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="IrN-KJ-I1K"/>
+                    <constraint firstAttribute="trailing" secondItem="oDZ-Mq-wq5" secondAttribute="trailing" constant="30" id="KNj-y2-Hjl"/>
+                    <constraint firstItem="Aws-58-qu8" firstAttribute="trailing" secondItem="Ha4-c8-f8E" secondAttribute="trailing" id="L6C-AK-Vmz"/>
+                    <constraint firstItem="wVl-Ek-VS3" firstAttribute="top" secondItem="Ha4-c8-f8E" secondAttribute="bottom" constant="10" id="PaG-6Z-Iem"/>
                     <constraint firstItem="Aws-58-qu8" firstAttribute="centerY" secondItem="DHC-9R-FAq" secondAttribute="centerY" id="Ph5-cg-NgC"/>
-                    <constraint firstAttribute="trailing" secondItem="Ha4-c8-f8E" secondAttribute="trailing" id="Rtg-HE-BEt"/>
-                    <constraint firstItem="Ha4-c8-f8E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="TcV-3W-9z5"/>
+                    <constraint firstAttribute="trailing" secondItem="Ha4-c8-f8E" secondAttribute="trailing" constant="30" id="Rtg-HE-BEt"/>
                     <constraint firstItem="wVl-Ek-VS3" firstAttribute="centerY" secondItem="DHC-9R-FAq" secondAttribute="centerY" id="UNA-N0-cdc"/>
-                    <constraint firstAttribute="bottom" secondItem="DHC-9R-FAq" secondAttribute="bottom" constant="27.5" id="Xlq-Qg-9ZD"/>
-                    <constraint firstAttribute="trailing" secondItem="Aws-58-qu8" secondAttribute="trailing" constant="7.9000000000000004" id="Ybd-ti-cwF"/>
                     <constraint firstItem="Aws-58-qu8" firstAttribute="leading" secondItem="wVl-Ek-VS3" secondAttribute="trailing" constant="10" id="dAz-9P-Mlo"/>
                     <constraint firstItem="wVl-Ek-VS3" firstAttribute="leading" secondItem="DHC-9R-FAq" secondAttribute="trailing" constant="10" id="lir-jr-FAr"/>
                     <constraint firstItem="Ha4-c8-f8E" firstAttribute="leading" secondItem="DHC-9R-FAq" secondAttribute="trailing" constant="10" id="paj-bw-BVj"/>
                     <constraint firstItem="C6I-pP-zSy" firstAttribute="centerX" secondItem="DHC-9R-FAq" secondAttribute="centerX" id="rW4-BP-Nee"/>
                     <constraint firstItem="C6I-pP-zSy" firstAttribute="centerY" secondItem="Ha4-c8-f8E" secondAttribute="centerY" id="soO-Va-T2V"/>
+                    <constraint firstAttribute="bottom" secondItem="oDZ-Mq-wq5" secondAttribute="bottom" id="t4j-uf-j1E"/>
+                    <constraint firstItem="oDZ-Mq-wq5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="xN7-mN-uYC"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="201" y="163"/>
+            <connections>
+                <outlet property="dateLabel" destination="DHC-9R-FAq" id="HeA-Yr-IjG"/>
+                <outlet property="dropdownImage" destination="Aws-58-qu8" id="0s3-oj-BWu"/>
+                <outlet property="familyCollectionVIew" destination="wVl-Ek-VS3" id="XsU-o2-OA1"/>
+                <outlet property="numberLabel" destination="C6I-pP-zSy" id="ord-fi-5bs"/>
+                <outlet property="questionLabel" destination="Ha4-c8-f8E" id="xrA-1b-sub"/>
+            </connections>
+            <point key="canvasLocation" x="31.884057971014496" y="89.732142857142847"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="question_dropup" width="27" height="27"/>
         <namedColor name="grayscale_2">
             <color red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grayscale_5">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondary_pink">
             <color red="1" green="0.66699999570846558" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
