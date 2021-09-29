@@ -48,6 +48,7 @@ class AuthEmailViewController: UIViewController {
     
     func configUI() {
         self.navigationItem.backButtonTitle = ""
+        self.navigationItem.hidesBackButton = true
         self.title = "이메일로 가입하기"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         
