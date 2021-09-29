@@ -12,8 +12,8 @@ class AuthEmailService {
     
     func postAuthEmail(_ parameters: AuthEmailRequest, onCompleted: @escaping (AuthEmailResponse) -> Void, onError: @escaping (String) -> Void) {
         repository.postAuthEmail(parameters, onCompleted: { response in
-            let requestData = AuthEmailResponse(isSuccess: response.isSuccess, code: response.code, message: response.message, VerificationCode: response.VerificationCode)
-            onCompleted(requestData)
+            let responseData = AuthEmailResponse(isSuccess: response.isSuccess, code: response.code, message: response.message, VerificationCode: response.VerificationCode)
+            onCompleted(responseData)
             
         }, onError: onError)
     }
