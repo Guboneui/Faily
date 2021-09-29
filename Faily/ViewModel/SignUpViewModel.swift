@@ -13,10 +13,10 @@ class SignUpViewModel {
     var goAuthEmailView: () -> Void = {}
     var showAlert: (_ message: String) -> Void = {_ in}
     
+    
     func postSignUp(_ parameters: SignUpRequest) {
         useSerVice.postSignUp(parameters, onCompleted: {[weak self] response in
             guard let self = self else {return}
-            
             let message = response.message
             let code = response.code
             
@@ -27,10 +27,8 @@ class SignUpViewModel {
                 print("\(code) Error")
                 self.showAlert(message)
             }
-            
         }, onError: {error in
             print("signUpViewModel - \(error)")
-            
         })
     }
 }

@@ -36,6 +36,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         viewModel.signUpView = self
         configUI()
+        viewModelMethod()
     }
     
     func configUI() {

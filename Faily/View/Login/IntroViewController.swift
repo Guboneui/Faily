@@ -8,18 +8,13 @@
 import UIKit
 
 class IntroViewController: UIViewController {
-
-    
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var loginLabel: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
-        
     }
-    
     
     func configUI() {
         self.navigationItem.backButtonTitle = ""

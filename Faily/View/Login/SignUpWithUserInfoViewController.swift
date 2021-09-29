@@ -15,7 +15,6 @@ class SignUpWithUserInfoViewController: UIViewController {
     @IBOutlet weak var personalInfoButton: UIButton!
     @IBOutlet weak var showPersonalInfoLabel: UILabel!
     
-    
     @IBOutlet weak var nameBaseView: UIView!
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -23,17 +22,14 @@ class SignUpWithUserInfoViewController: UIViewController {
     @IBOutlet weak var birthDayTextField: UITextField!
     
     let datePicker = UIDatePicker()
-    
     var agreeAllState = false
     var useTermsState = false
     var personalInfoState = false
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
         configDatePicker()
-        // Do any additional setup after loading the view.
     }
     
     func configUI() {
@@ -105,8 +101,6 @@ class SignUpWithUserInfoViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    
-    
     @objc func useTermsAction(sender: UITapGestureRecognizer) {
         let alert = UIAlertController(title: "서비스 이용약관", message: "", preferredStyle: .alert)
         let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
@@ -172,7 +166,6 @@ class SignUpWithUserInfoViewController: UIViewController {
         }
     }
     
-    
     @IBAction func nextSignUpViewButton(_ sender: Any) {
         if personalInfoState == true && useTermsState == true {
            
@@ -189,9 +182,7 @@ class SignUpWithUserInfoViewController: UIViewController {
         signUpVC.getUserBirthDay = birthDayTextField.text
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
-    
 }
-
 
 extension SignUpWithUserInfoViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -202,6 +193,4 @@ extension SignUpWithUserInfoViewController: UITextFieldDelegate {
     }
     return true
   }
-    
-
 }
