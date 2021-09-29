@@ -178,6 +178,7 @@ extension SignUpViewController{
         viewModel.goAuthEmailView = {
             let storyBoard = UIStoryboard(name: "Login", bundle: nil)
             let authEmailVC = storyBoard.instantiateViewController(withIdentifier: "AuthEmailViewController") as! AuthEmailViewController
+            authEmailVC.getUserEmail = self.emailTextField.text
             self.navigationController?.pushViewController(authEmailVC, animated: true)
         }
     }

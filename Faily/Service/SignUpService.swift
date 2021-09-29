@@ -11,7 +11,7 @@ class SignUpService {
     let repository: SignUpRepository = SignUpRepository()
     
     func postSignUp(_ parameters: SignUpRequest, onCompleted: @escaping (SignUpResponse) -> Void, onError: @escaping (String) -> Void) {
-        repository.postSignUp(parameters, onCompleted: {[weak self] response in
+        repository.postSignUp(parameters, onCompleted: { response in
             let requestData = SignUpResponse(isSuccess: response.isSuccess, code: response.code, message: response.message, jwt_token: response.jwt_token)
             onCompleted(requestData)
             

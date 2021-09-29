@@ -22,6 +22,8 @@ class SignUpViewModel {
             
             if response.isSuccess == true {
                 print("이메일 인증 화면으로 이동합니다")
+                print("jwtToken이 디바이스에 저장됩니다.")
+                UserDefaults.standard.set(response.jwt_token, forKey: UserDefaultKey.jwtToken)
                 self.goAuthEmailView()
             } else {
                 print("\(code) Error")

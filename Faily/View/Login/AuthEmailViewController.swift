@@ -20,15 +20,26 @@ class AuthEmailViewController: UIViewController {
     @IBOutlet weak var checkEmailAuthNumButton: UIButton!
     
     var digitTextFields: [UITextField] = []
+    var getUserEmail: String?
+    var getAuthEmailNum: String?
     let disposeBag = DisposeBag()
     
+    
     var userInputAuthNum: String = ""
+    
+    lazy var viewModel: AuthEmailViewModel = AuthEmailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
         digitTextFields = [firstAuthTextField, secondAuthTextField, thirdAuthTextField, fourthAuthTextField]
         textCheckWithRXSwift()
+        viewModel.authEmailView = self
+        let param = AuthEmailRequest(user_email: self.getUserEmail!)
+        viewModel.postAuthEmail(param)
+        viewModelMethod()
+        
+        
 //        firstAuthTextField.delegate = self
 //        secondAuthTextField.delegate = self
 //        thirdAuthTextField.delegate = self
@@ -109,10 +120,18 @@ class AuthEmailViewController: UIViewController {
     
     
     @IBAction func checkAuthNumButtonAction(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-        let agreeAuthorityVC = storyBoard.instantiateViewController(withIdentifier: "AgreeAuthorityViewController") as! AgreeAuthorityViewController
-        agreeAuthorityVC.modalPresentationStyle = .overCurrentContext
-        self.present(agreeAuthorityVC, animated: true, completion: nil)
+        if self.getAuthEmailNum == self.userInputAuthNum {
+            let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+            let agreeAuthorityVC = storyBoard.instantiateViewController(withIdentifier: "AgreeAuthorityViewController") as! AgreeAuthorityViewController
+            agreeAuthorityVC.modalPresentationStyle = .overCurrentContext
+            self.present(agreeAuthorityVC, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "인증번호가 일치하지 않습니다.", message: "", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alert.addAction(okButton)
+            present(alert, animated: true, completion: nil)
+        }
+        
     }
     
         
@@ -174,3 +193,14 @@ class AuthEmailViewController: UIViewController {
 //        }
 //    }
 //}
+
+extension AuthEmailViewController {
+    func viewModelMethod() {
+        viewModel.showAlert = { [self] message in
+            let alert = UIAlertController(title: message, message: "", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alert.addAction(okButton)
+            present(alert, animated: true, completion: nil)
+        }
+    }
+}

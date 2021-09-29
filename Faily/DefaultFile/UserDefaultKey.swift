@@ -9,4 +9,5 @@ import Foundation
 
 struct UserDefaultKey {
     static let showOnBoarding: String = "showOnBoarding"
+    static let jwtToken: String = "jwtToken"
 }
