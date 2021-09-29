@@ -8,7 +8,7 @@
 import UIKit
 import CollectionViewPagingLayout
 
-class MainQuestionCollectionViewCell: UICollectionViewCell {
+class MainQuestionCollectionViewCell: UICollectionViewCell, ScaleTransformView {
     
     @IBOutlet weak var questionBox: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
@@ -16,6 +16,18 @@ class MainQuestionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var answerStackView: UIStackView!
     @IBOutlet weak var answerStackViewLabel: UILabel!
     @IBOutlet weak var answerStackViewImage: UIImageView!
+    
+    var scaleOptions = ScaleTransformViewOptions (
+        minScale: 0.68,
+        scaleRatio: 0.35,
+        translationRatio: CGPoint(x: 0.66, y: 0.2),
+        //translationRatio: CGPoint(x: 0.77, y: 0.2),
+        maxTranslationRatio: CGPoint(x: 2, y: 0),
+        keepVerticalSpacingEqual: true,
+        keepHorizontalSpacingEqual: true,
+        scaleCurve: .linear,
+        translationCurve: .linear
+    )
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,8 +57,4 @@ class MainQuestionCollectionViewCell: UICollectionViewCell {
 
 
 
-extension MainQuestionCollectionViewCell: ScaleTransformView {
-    var scaleOptions: ScaleTransformViewOptions {
-        .layout(.linear)
-    }
-}
+
