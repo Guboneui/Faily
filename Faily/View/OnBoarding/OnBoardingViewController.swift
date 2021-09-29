@@ -12,6 +12,7 @@ class OnBoardingViewController: UIViewController {
     @IBOutlet weak var onBoardingCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var startButton: PinkMainButton!
+    @IBOutlet weak var skipButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +54,13 @@ class OnBoardingViewController: UIViewController {
         self.changeRootViewController(loginNav)
     }
     
-
+    @IBAction func skipButtonAction(_ sender: Any) {
+        UserDefaults.standard.set(true, forKey: UserDefaultKey.showOnBoarding)
+        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+        let loginNav = storyBoard.instantiateViewController(identifier: "LoginNav")
+        self.changeRootViewController(loginNav)
+    }
+    
 }
 
 extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -81,8 +88,10 @@ extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDa
         pageControl.currentPage = Int(x / view.frame.width)
         if pageControl.currentPage == 3 {
             startButton.isHidden = false
+            skipButton.isHidden = true
         } else {
             startButton.isHidden = true
+            skipButton.isHidden = false
         }
         
        
@@ -102,7 +111,7 @@ extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDa
 extension OnBoardingViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //return CGSize(width: 50, height: 10)
-        return CGSize(width: UIScreen.main.bounds.width, height: collectionView.frame.height)
+        return CGSize(width: UIScreen.main.bounds.width, height: self.view.frame.height * 0.66)
     }
 
 

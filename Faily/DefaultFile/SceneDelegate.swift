@@ -15,18 +15,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        
         
         
-        if UserDefaults.standard.bool(forKey: UserDefaultKey.showOnBoarding) == true {
-            let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-            let loginVC = storyBoard.instantiateViewController(identifier: "LoginNav")
-            window?.rootViewController = loginVC
-            window?.makeKeyAndVisible()
-        } else {
-            
-            let storyBoard = UIStoryboard(name: "OnBoarding", bundle: nil)
-            let onBoardingVC = storyBoard.instantiateViewController(withIdentifier: "OnBoardingViewController")
-            window?.rootViewController = onBoardingVC
-            window?.makeKeyAndVisible()
-        }
+//        if UserDefaults.standard.bool(forKey: UserDefaultKey.showOnBoarding) == true {
+//            let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+//            let loginVC = storyBoard.instantiateViewController(identifier: "LoginNav")
+//            window?.rootViewController = loginVC
+//            window?.makeKeyAndVisible()
+//        } else {
+//
+//            let storyBoard = UIStoryboard(name: "OnBoarding", bundle: nil)
+//            let onBoardingVC = storyBoard.instantiateViewController(withIdentifier: "OnBoardingViewController")
+//            window?.rootViewController = onBoardingVC
+//            window?.makeKeyAndVisible()
+//        }
         
         guard let _ = (scene as? UIWindowScene) else { return }
     }
