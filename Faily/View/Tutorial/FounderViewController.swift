@@ -11,9 +11,30 @@ class FounderViewController: UIViewController {
 
     
     @IBOutlet weak var inviteCodeLabel: UILabel!
+    var getInviteCode: String = "코드 발급 중"
+    
+    lazy var viewModel: InviteViewModel = InviteViewModel()
+    override func loadView() {
+        super.loadView()
+        inviteCodeLabel.text = getInviteCode
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        viewModel.inviteView = self
+        viewModelMethod()
+        
+        if UserDefaults.standard.bool(forKey: UserDefaultKey.createdGroupCode) == true {
+            print("이미 코드가 발급되었습니다.")
+            inviteCodeLabel.text = UserDefaults.standard.string(forKey: UserDefaultKey.groupCode)
+        } else {
+            print("발급된 코드가 없어서 채팅방 코드가 발급되었습니다.")
+            let param = InviteRequest()
+            viewModel.postGroupCode(param)
+        }
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     func configUI() {
@@ -53,4 +74,21 @@ class FounderViewController: UIViewController {
     }
     
 
+}
+
+
+extension FounderViewController {
+    func viewModelMethod() {
+        viewModel.showCodeLabel = {[self] code in
+            inviteCodeLabel.text = code
+        }
+        
+        
+        viewModel.showAlert = { [self] message in
+            let alert = UIAlertController(title: message, message: "", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alert.addAction(okButton)
+            present(alert, animated: true, completion: nil)
+        }
+    }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AuthEmailResponse: Codable {
+struct AuthEmailResponse: Decodable {
     let isSuccess: Bool
     let code: Int
     let message: String
