@@ -28,6 +28,7 @@ class MainQuestionCollectionViewCell: UICollectionViewCell, ScaleTransformView {
         scaleCurve: .linear,
         translationCurve: .linear
     )
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
