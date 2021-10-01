@@ -39,6 +39,11 @@
 		2C9EAFFD2706167000F507A6 /* InviteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EAFFC2706167000F507A6 /* InviteViewModel.swift */; };
 		2C9EB000270764D400F507A6 /* EachAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EAFFE270764D400F507A6 /* EachAnswerTableViewCell.swift */; };
 		2C9EB001270764D400F507A6 /* EachAnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9EAFFF270764D400F507A6 /* EachAnswerTableViewCell.xib */; };
+		2C9EB0032707798600F507A6 /* EntryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB0022707798600F507A6 /* EntryRequest.swift */; };
+		2C9EB0052707798F00F507A6 /* EntryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB0042707798F00F507A6 /* EntryResponse.swift */; };
+		2C9EB00727077A1A00F507A6 /* EntryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB00627077A1A00F507A6 /* EntryRepository.swift */; };
+		2C9EB00927077B2E00F507A6 /* EntryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB00827077B2E00F507A6 /* EntryService.swift */; };
+		2C9EB00B27077BB400F507A6 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB00A27077BB400F507A6 /* EntryViewModel.swift */; };
 		2CAF2CE226F927C00044C594 /* HomeBusinessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF2CE026F927C00044C594 /* HomeBusinessCollectionViewCell.swift */; };
 		2CAF2CE326F927C00044C594 /* HomeBusinessCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF2CE126F927C00044C594 /* HomeBusinessCollectionViewCell.xib */; };
 		2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */; };
@@ -143,6 +148,11 @@
 		2C9EAFFC2706167000F507A6 /* InviteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewModel.swift; sourceTree = "<group>"; };
 		2C9EAFFE270764D400F507A6 /* EachAnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachAnswerTableViewCell.swift; sourceTree = "<group>"; };
 		2C9EAFFF270764D400F507A6 /* EachAnswerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EachAnswerTableViewCell.xib; sourceTree = "<group>"; };
+		2C9EB0022707798600F507A6 /* EntryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRequest.swift; sourceTree = "<group>"; };
+		2C9EB0042707798F00F507A6 /* EntryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryResponse.swift; sourceTree = "<group>"; };
+		2C9EB00627077A1A00F507A6 /* EntryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRepository.swift; sourceTree = "<group>"; };
+		2C9EB00827077B2E00F507A6 /* EntryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryService.swift; sourceTree = "<group>"; };
+		2C9EB00A27077BB400F507A6 /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 		2CAF2CE026F927C00044C594 /* HomeBusinessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBusinessCollectionViewCell.swift; sourceTree = "<group>"; };
 		2CAF2CE126F927C00044C594 /* HomeBusinessCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBusinessCollectionViewCell.xib; sourceTree = "<group>"; };
 		2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -353,6 +363,8 @@
 			children = (
 				2C9EAFF62706159E00F507A6 /* InviteRequest.swift */,
 				2C9EAFF12706138200F507A6 /* InviteResponse.swift */,
+				2C9EB0022707798600F507A6 /* EntryRequest.swift */,
+				2C9EB0042707798F00F507A6 /* EntryResponse.swift */,
 			);
 			path = Invite;
 			sourceTree = "<group>";
@@ -361,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				2C9EAFF42706142600F507A6 /* InviteRepository.swift */,
+				2C9EB00627077A1A00F507A6 /* EntryRepository.swift */,
 			);
 			path = Invite;
 			sourceTree = "<group>";
@@ -369,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				2C9EAFF9270615E100F507A6 /* InviteService.swift */,
+				2C9EB00827077B2E00F507A6 /* EntryService.swift */,
 			);
 			path = Invite;
 			sourceTree = "<group>";
@@ -377,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				2C9EAFFC2706167000F507A6 /* InviteViewModel.swift */,
+				2C9EB00A27077BB400F507A6 /* EntryViewModel.swift */,
 			);
 			path = Invite;
 			sourceTree = "<group>";
@@ -748,6 +763,7 @@
 				2CC5AECD26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift in Sources */,
 				2C94412E27038811005980D0 /* AllAnswerExpandTableViewCell.swift in Sources */,
 				2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */,
+				2C9EB00B27077BB400F507A6 /* EntryViewModel.swift in Sources */,
 				2CD9D9C62704F3990041A0DB /* LoginRepository.swift in Sources */,
 				2CB9288227023BAE00BF34DC /* SignUpRepository.swift in Sources */,
 				2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */,
@@ -759,6 +775,7 @@
 				2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */,
 				2CC092BE26F26F53009E69D0 /* HapticManager.swift in Sources */,
 				2C3306172700F78100E638B1 /* MainQuestionTableViewCell.swift in Sources */,
+				2C9EB0052707798F00F507A6 /* EntryResponse.swift in Sources */,
 				2CB0B50D26EE9F1D00F10964 /* AppColor.swift in Sources */,
 				2CC5AEB026EFD15D0096D818 /* ChangePasswordCheckEmailViewController.swift in Sources */,
 				2CAF2CE226F927C00044C594 /* HomeBusinessCollectionViewCell.swift in Sources */,
@@ -772,8 +789,11 @@
 				2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */,
 				2CD9D9BA2704EAE40041A0DB /* AuthEmailResponse.swift in Sources */,
 				2CD6F7D727037DC000D1E04E /* AllAnswerViewController.swift in Sources */,
+				2C9EB00727077A1A00F507A6 /* EntryRepository.swift in Sources */,
 				2CB9287B270238A500BF34DC /* ConstantURL.swift in Sources */,
+				2C9EB0032707798600F507A6 /* EntryRequest.swift in Sources */,
 				2CF3D3BF26FBCE88008C13F3 /* ScheduleDivisionViewController.swift in Sources */,
+				2C9EB00927077B2E00F507A6 /* EntryService.swift in Sources */,
 				2CD9D9CA2704F5330041A0DB /* LoginViewModel.swift in Sources */,
 				2CF3D3CE26FBE5F4008C13F3 /* PresentDetailViewController.swift in Sources */,
 				2C4B7BB526F2E0C30083576A /* HomeViewController.swift in Sources */,
