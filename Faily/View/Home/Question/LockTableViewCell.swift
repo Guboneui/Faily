@@ -9,8 +9,7 @@ import UIKit
 
 class LockTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var baseView: UIView!
-    @IBOutlet weak var bgView: UIImageView!
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,11 +19,7 @@ class LockTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         layoutIfNeeded()
-        baseView.layer.cornerRadius = 20
-        baseView.layer.shadowColor = UIColor.FailyColor.grayscale_4.cgColor
-        baseView.layer.shadowOpacity = 0.33
-        baseView.layer.shadowOffset = CGSize(width: 0, height: 4)
-        bgView.layer.cornerRadius = 20
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

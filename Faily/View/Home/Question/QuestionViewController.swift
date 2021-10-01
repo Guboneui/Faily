@@ -25,6 +25,7 @@ class QuestionViewController: UIViewController {
         questionMainTableView.register(UINib(nibName: "MainQuestionTableViewCell", bundle: nil), forCellReuseIdentifier: "MainQuestionTableViewCell")
         questionMainTableView.register(UINib(nibName: "AnsweredFamilyTableViewCell", bundle: nil), forCellReuseIdentifier: "AnsweredFamilyTableViewCell")
         questionMainTableView.register(UINib(nibName: "LockTableViewCell", bundle: nil), forCellReuseIdentifier: "LockTableViewCell")
+        questionMainTableView.register(UINib(nibName: "EachAnswerTableViewCell", bundle: nil), forCellReuseIdentifier: "EachAnswerTableViewCell")
         
         
     }
@@ -33,7 +34,7 @@ class QuestionViewController: UIViewController {
 
 extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,13 +45,17 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
             cell.selectionStyle = .none
-            cell.answeredCollectionView.isHidden = true
+            
             return cell
-        } else {
+        } else if indexPath.row == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "LockTableViewCell", for: indexPath) as! LockTableViewCell
             cell.selectionStyle = .none
             return cell
             
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
+            cell.selectionStyle = .none
+            return cell
         }
         
     }
@@ -59,9 +64,11 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             return self.view.frame.width + 7.5 + 20
         } else if indexPath.row == 1{
-            return 150
+            return 105
+        } else if indexPath.row == 2{
+            return 75
         } else {
-            return 55
+            return UITableView.automaticDimension
         }
     }
 }

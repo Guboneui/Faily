@@ -11,8 +11,7 @@ class AnsweredFamilyTableViewCell: UITableViewCell {
 
     @IBOutlet weak var answeredCollectionView: UICollectionView!
     
-    @IBOutlet weak var addFirstAnswerBaseView: UIView!
-    @IBOutlet weak var addFirstAnswerBGImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         answeredCollectionView.delegate = self
@@ -29,11 +28,7 @@ class AnsweredFamilyTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         layoutIfNeeded()
-        addFirstAnswerBaseView.layer.cornerRadius = 20
-        addFirstAnswerBaseView.layer.shadowColor = UIColor.FailyColor.grayscale_4.cgColor
-        addFirstAnswerBaseView.layer.shadowOpacity = 0.33
-        addFirstAnswerBaseView.layer.shadowOffset = CGSize(width: 0, height: 4)
-        addFirstAnswerBGImage.layer.cornerRadius = 20
+       
     }
     
 }
@@ -57,9 +52,9 @@ extension AnsweredFamilyTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        
+        let cellWidth = self.answeredCollectionView.frame.width
         let cellHeight = self.answeredCollectionView.frame.height
-        return CGSize(width: cellHeight * 0.65, height: cellHeight)
+        return CGSize(width: cellWidth * 0.12, height: cellHeight)
         
         
     }
@@ -69,12 +64,12 @@ extension AnsweredFamilyTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         
-       return 30
+       return 20
         
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 30
+        return 20
         
     }
     

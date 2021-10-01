@@ -50,6 +50,7 @@ class MainQuestionTableViewCell: UITableViewCell {
             self.moveCollectionToFrame(contentOffset: contentOffset)
         }
         questionCollectionView.isPagingEnabled = true
+        
     }
     
     func moveCollectionToFrame(contentOffset : CGFloat) {
@@ -123,6 +124,13 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
         return true
     }
     
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let x = targetContentOffset.pointee.x
+        var currentPage = Int(x / questionCollectionView.frame.width)
+        print("currentpage = \(currentPage)")
+        
+       
+    }
     
 }
 

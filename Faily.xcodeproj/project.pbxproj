@@ -37,6 +37,8 @@
 		2C9EAFF72706159E00F507A6 /* InviteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EAFF62706159E00F507A6 /* InviteRequest.swift */; };
 		2C9EAFFA270615E100F507A6 /* InviteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EAFF9270615E100F507A6 /* InviteService.swift */; };
 		2C9EAFFD2706167000F507A6 /* InviteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EAFFC2706167000F507A6 /* InviteViewModel.swift */; };
+		2C9EB000270764D400F507A6 /* EachAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EAFFE270764D400F507A6 /* EachAnswerTableViewCell.swift */; };
+		2C9EB001270764D400F507A6 /* EachAnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9EAFFF270764D400F507A6 /* EachAnswerTableViewCell.xib */; };
 		2CAF2CE226F927C00044C594 /* HomeBusinessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF2CE026F927C00044C594 /* HomeBusinessCollectionViewCell.swift */; };
 		2CAF2CE326F927C00044C594 /* HomeBusinessCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF2CE126F927C00044C594 /* HomeBusinessCollectionViewCell.xib */; };
 		2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */; };
@@ -139,6 +141,8 @@
 		2C9EAFF62706159E00F507A6 /* InviteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteRequest.swift; sourceTree = "<group>"; };
 		2C9EAFF9270615E100F507A6 /* InviteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteService.swift; sourceTree = "<group>"; };
 		2C9EAFFC2706167000F507A6 /* InviteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewModel.swift; sourceTree = "<group>"; };
+		2C9EAFFE270764D400F507A6 /* EachAnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachAnswerTableViewCell.swift; sourceTree = "<group>"; };
+		2C9EAFFF270764D400F507A6 /* EachAnswerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EachAnswerTableViewCell.xib; sourceTree = "<group>"; };
 		2CAF2CE026F927C00044C594 /* HomeBusinessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBusinessCollectionViewCell.swift; sourceTree = "<group>"; };
 		2CAF2CE126F927C00044C594 /* HomeBusinessCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBusinessCollectionViewCell.xib; sourceTree = "<group>"; };
 		2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +244,8 @@
 				2C330623270101EE00E638B1 /* AnsweredFamilyCollectionViewCell.xib */,
 				2C9441312703A24A005980D0 /* LockTableViewCell.swift */,
 				2C9441322703A24A005980D0 /* LockTableViewCell.xib */,
+				2C9EAFFE270764D400F507A6 /* EachAnswerTableViewCell.swift */,
+				2C9EAFFF270764D400F507A6 /* EachAnswerTableViewCell.xib */,
 				2CB928762702220900BF34DC /* Answer */,
 				2C9441302703889D005980D0 /* ShowAllAnswer */,
 			);
@@ -660,6 +666,7 @@
 			files = (
 				2C3306202700FFF300E638B1 /* AnsweredFamilyTableViewCell.xib in Resources */,
 				2C94412727038475005980D0 /* AllAnswerBaseTableViewCell.xib in Resources */,
+				2C9EB001270764D400F507A6 /* EachAnswerTableViewCell.xib in Resources */,
 				2CC9C38A26E2A27600936BCD /* LaunchScreen.storyboard in Resources */,
 				2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */,
 				2C330624270101EE00E638B1 /* AnsweredFamilyCollectionViewCell.xib in Resources */,
@@ -798,6 +805,7 @@
 				2CB9288427023D3A00BF34DC /* SignUpService.swift in Sources */,
 				2CC092C526F2903F009E69D0 /* TutorialViewController.swift in Sources */,
 				2C33061A2700FA2800E638B1 /* MainQuestionCollectionViewCell.swift in Sources */,
+				2C9EB000270764D400F507A6 /* EachAnswerTableViewCell.swift in Sources */,
 				2CB9288027023AB900BF34DC /* SignUpResponse.swift in Sources */,
 				2CD9D9B82704EAD90041A0DB /* AuthEmailRequest.swift in Sources */,
 				2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */,
