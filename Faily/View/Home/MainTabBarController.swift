@@ -13,6 +13,7 @@ class MainTabBarController: UITabBarController {
     var homeButton: UIButton!
     var goChatView: UIView!
     var backgroundImg: UIImageView!
+    var middleLabel: UILabel!
     
     private var shapeLayer: CALayer?
     
@@ -54,6 +55,35 @@ class MainTabBarController: UITabBarController {
    
     
     private func configUI() {
+        
+        let bounds: CGRect = UIScreen.main.bounds
+        let height: CGFloat = bounds.size.height
+        let k = height * 0.7
+        
+        self.goChatView = UIView(frame: CGRect(x: (self.view.frame.width / 2) - 40, y: height - k, width: 80, height: 80))
+        goChatView.backgroundColor = UIColor.FailyColor.gradient4
+        goChatView.layer.cornerRadius = 20
+        goChatView.isHidden = true
+        self.view.addSubview(goChatView)
+        
+        
+        self.middleLabel = UILabel()
+        middleLabel.translatesAutoresizingMaskIntoConstraints = false
+        middleLabel.text = "채팅"
+        middleLabel.textColor = UIColor.FailyColor.grayscale_4
+        middleLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        middleLabel.textAlignment = .center
+        self.goChatView.addSubview(middleLabel)
+        
+        NSLayoutConstraint.activate([
+            middleLabel.widthAnchor.constraint(equalTo: goChatView.widthAnchor),
+            middleLabel.heightAnchor.constraint(equalTo: goChatView.heightAnchor),
+            middleLabel.topAnchor.constraint(equalTo: goChatView.topAnchor, constant: 0),
+            middleLabel.leadingAnchor.constraint(equalTo: goChatView.leadingAnchor, constant: 0)
+        ])
+        
+        
+        
 //
         print(self.tabBar.frame.size.width)
         print(self.tabBar.frame.size.height)
@@ -92,18 +122,10 @@ class MainTabBarController: UITabBarController {
         
         //homeButton.addTarget(self, action: #selector(homeButtonAction), for: .touchUpInside)
         
-        let bounds: CGRect = UIScreen.main.bounds
-        let height: CGFloat = bounds.size.height
-        let k = height * 0.7
-        
-        
-        self.goChatView = UIView(frame: CGRect(x: (self.view.frame.width / 2) - 40, y: height - k, width: 80, height: 80))
-        goChatView.backgroundColor = .black
-        goChatView.isHidden = true
-        self.view.addSubview(goChatView)
-        
         self.tabBar.sendSubviewToBack(self.backgroundImg)
         self.tabBar.backgroundColor = .clear
+        
+        self.view.bringSubviewToFront(self.homeButton)
     }
     
     @objc func panGesture(_ recognizer: UIPanGestureRecognizer) {
@@ -137,8 +159,8 @@ class MainTabBarController: UITabBarController {
             let isOn = isOnY && isOnX
             
             //뷰가 안에 들어가게 되었을 때 원으로 변경
-            let color: UIColor = (isOn) ? .black : .green
-            let radius: CGFloat = isOn ? self.goChatView.frame.height / 2 : 0
+            let color: UIColor = (isOn) ? UIColor.FailyColor.secondaryPinkColor : UIColor.FailyColor.gradient4
+            let radius: CGFloat = isOn ? self.goChatView.frame.height / 2 : 20
             UIView.animate(withDuration: 0.5) {
                 //self.middleLabel.textColor = .white
                 self.goChatView.backgroundColor = color
@@ -149,7 +171,7 @@ class MainTabBarController: UITabBarController {
             
             self.isLongPressed = false
             
-            if goChatView.backgroundColor == .black {
+            if goChatView.backgroundColor == UIColor.FailyColor.secondaryPinkColor {
                 DispatchQueue.main.async {
                     let alert = UIAlertController(title: "확인", message: "", preferredStyle: .alert)
                     let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
@@ -161,8 +183,9 @@ class MainTabBarController: UITabBarController {
             //뷰 원래 자리로 이동
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
                 view?.transform = .identity
-                self.goChatView.backgroundColor = .green
-                self.goChatView.layer.cornerRadius = 0
+                //self.goChatView.backgroundColor = UIColor.FailyColor.secondaryPinkColor
+                self.goChatView.backgroundColor = UIColor.FailyColor.gradient4
+                self.goChatView.layer.cornerRadius = 20
             }, completion: nil)
             print("End")
             
