@@ -56,6 +56,9 @@
 		2CB9288227023BAE00BF34DC /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9288127023BAE00BF34DC /* SignUpRepository.swift */; };
 		2CB9288427023D3A00BF34DC /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9288327023D3A00BF34DC /* SignUpService.swift */; };
 		2CB9288627023DEC00BF34DC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9288527023DEC00BF34DC /* SignUpViewModel.swift */; };
+		2CBB71D22708E98C008B3E56 /* TodayQuestionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBB71D12708E98C008B3E56 /* TodayQuestionResponse.swift */; };
+		2CBB71D52708E9DA008B3E56 /* TodayQuestionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBB71D42708E9DA008B3E56 /* TodayQuestionRepository.swift */; };
+		2CBB71D82708EABF008B3E56 /* TodayQuestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBB71D72708EABF008B3E56 /* TodayQuestionService.swift */; };
 		2CC092BA26F268E3009E69D0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC092B926F268E3009E69D0 /* Home.storyboard */; };
 		2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */; };
 		2CC092BE26F26F53009E69D0 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC092BD26F26F53009E69D0 /* HapticManager.swift */; };
@@ -165,6 +168,9 @@
 		2CB9288127023BAE00BF34DC /* SignUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
 		2CB9288327023D3A00BF34DC /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		2CB9288527023DEC00BF34DC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		2CBB71D12708E98C008B3E56 /* TodayQuestionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayQuestionResponse.swift; sourceTree = "<group>"; };
+		2CBB71D42708E9DA008B3E56 /* TodayQuestionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayQuestionRepository.swift; sourceTree = "<group>"; };
+		2CBB71D72708EABF008B3E56 /* TodayQuestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayQuestionService.swift; sourceTree = "<group>"; };
 		2CC092B926F268E3009E69D0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		2CC092BD26F26F53009E69D0 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
@@ -437,6 +443,8 @@
 				2CB9287A270238A500BF34DC /* ConstantURL.swift */,
 				2CB9287C2702390000BF34DC /* SignUp-Login */,
 				2C9EAFF02706136800F507A6 /* Invite */,
+				2CBB71D02708E97A008B3E56 /* Question */,
+				2CBB71CC2708E8F4008B3E56 /* Home */,
 			);
 			path = API_Model;
 			sourceTree = "<group>";
@@ -454,11 +462,43 @@
 			path = "SignUp-Login";
 			sourceTree = "<group>";
 		};
+		2CBB71CC2708E8F4008B3E56 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2CBB71D02708E97A008B3E56 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				2CBB71D12708E98C008B3E56 /* TodayQuestionResponse.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		2CBB71D32708E9C4008B3E56 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				2CBB71D42708E9DA008B3E56 /* TodayQuestionRepository.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		2CBB71D62708EAAD008B3E56 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				2CBB71D72708EABF008B3E56 /* TodayQuestionService.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
 		2CC092B426F241E2009E69D0 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
 				2C9EAFED2706101B00F507A6 /* SignUp-Login */,
 				2C9EAFF32706141300F507A6 /* Invite */,
+				2CBB71D32708E9C4008B3E56 /* Question */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -468,6 +508,7 @@
 			children = (
 				2C9EAFEE2706103E00F507A6 /* SignUp-Login */,
 				2C9EAFF8270615D000F507A6 /* Invite */,
+				2CBB71D62708EAAD008B3E56 /* Question */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -764,6 +805,7 @@
 				2C94412E27038811005980D0 /* AllAnswerExpandTableViewCell.swift in Sources */,
 				2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */,
 				2C9EB00B27077BB400F507A6 /* EntryViewModel.swift in Sources */,
+				2CBB71D82708EABF008B3E56 /* TodayQuestionService.swift in Sources */,
 				2CD9D9C62704F3990041A0DB /* LoginRepository.swift in Sources */,
 				2CB9288227023BAE00BF34DC /* SignUpRepository.swift in Sources */,
 				2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */,
@@ -812,8 +854,10 @@
 				2CF3D3C526FBD3D6008C13F3 /* UIImage.swift in Sources */,
 				2CC5AEC626F0FA450096D818 /* OnBoardingViewController.swift in Sources */,
 				2CC5AEB426EFDC600096D818 /* AgreeAuthorityViewController.swift in Sources */,
+				2CBB71D52708E9DA008B3E56 /* TodayQuestionRepository.swift in Sources */,
 				2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */,
 				2CC5AEC126F0F67C0096D818 /* PinkMainButton.swift in Sources */,
+				2CBB71D22708E98C008B3E56 /* TodayQuestionResponse.swift in Sources */,
 				2CD9D9BC2704EC820041A0DB /* AuthEmailRepository.swift in Sources */,
 				2C4B7BC026F2E12E0083576A /* CalendarViewController.swift in Sources */,
 				2C9EAFF72706159E00F507A6 /* InviteRequest.swift in Sources */,

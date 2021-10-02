@@ -24,7 +24,6 @@ class InviteRepository {
                 case .failure(let error):
                     onError("postGroupCode - repository: \(error)")
                 }
-                
             }
     }
 }
