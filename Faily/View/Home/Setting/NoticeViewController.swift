@@ -36,9 +36,16 @@ extension NoticeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoticeTableViewCell", for: indexPath) as! NoticeTableViewCell
-        
+        cell.selectionStyle = .none
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let detailNoticeVC = storyBoard.instantiateViewController(withIdentifier: "DetailNoticeViewController")
+        detailNoticeVC.modalPresentationStyle = .overCurrentContext
+        self.navigationController?.pushViewController(detailNoticeVC, animated: true)
+    }
     
 }

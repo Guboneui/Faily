@@ -15,6 +15,7 @@
 		2C148209270B9F73005C0597 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C148208270B9F73005C0597 /* NoticeViewController.swift */; };
 		2C14820C270B9FE9005C0597 /* NoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14820A270B9FE9005C0597 /* NoticeTableViewCell.swift */; };
 		2C14820D270B9FE9005C0597 /* NoticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C14820B270B9FE9005C0597 /* NoticeTableViewCell.xib */; };
+		2C14820F270BA3B2005C0597 /* DetailNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14820E270BA3B2005C0597 /* DetailNoticeViewController.swift */; };
 		2C3306172700F78100E638B1 /* MainQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */; };
 		2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */; };
 		2C33061A2700FA2800E638B1 /* MainQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */; };
@@ -135,6 +136,7 @@
 		2C148208270B9F73005C0597 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		2C14820A270B9FE9005C0597 /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
 		2C14820B270B9FE9005C0597 /* NoticeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeTableViewCell.xib; sourceTree = "<group>"; };
+		2C14820E270BA3B2005C0597 /* DetailNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoticeViewController.swift; sourceTree = "<group>"; };
 		2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				2C148208270B9F73005C0597 /* NoticeViewController.swift */,
 				2C14820A270B9FE9005C0597 /* NoticeTableViewCell.swift */,
 				2C14820B270B9FE9005C0597 /* NoticeTableViewCell.xib */,
+				2C14820E270BA3B2005C0597 /* DetailNoticeViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -875,6 +878,7 @@
 				2C9EB0032707798600F507A6 /* EntryRequest.swift in Sources */,
 				2CF3D3BF26FBCE88008C13F3 /* ScheduleDivisionViewController.swift in Sources */,
 				2C9EB00927077B2E00F507A6 /* EntryService.swift in Sources */,
+				2C14820F270BA3B2005C0597 /* DetailNoticeViewController.swift in Sources */,
 				2CD9D9CA2704F5330041A0DB /* LoginViewModel.swift in Sources */,
 				2CF3D3CE26FBE5F4008C13F3 /* PresentDetailViewController.swift in Sources */,
 				2C4B7BB526F2E0C30083576A /* HomeViewController.swift in Sources */,
