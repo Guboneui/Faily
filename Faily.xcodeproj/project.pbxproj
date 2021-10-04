@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1481FF270B36E3005C0597 /* TodayQuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1481FE270B36E3005C0597 /* TodayQuestionViewModel.swift */; };
 		2C3306172700F78100E638B1 /* MainQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */; };
 		2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */; };
 		2C33061A2700FA2800E638B1 /* MainQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */; };
@@ -119,6 +120,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C1481FE270B36E3005C0597 /* TodayQuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayQuestionViewModel.swift; sourceTree = "<group>"; };
 		2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -246,6 +248,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C1481FD270B36CD005C0597 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				2C1481FE270B36E3005C0597 /* TodayQuestionViewModel.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
 		2C4B7BBA26F2E0F30083576A /* Question */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +528,7 @@
 			children = (
 				2C9EAFEF2706105B00F507A6 /* SignUp-Login */,
 				2C9EAFFB2706166100F507A6 /* Invite */,
+				2C1481FD270B36CD005C0597 /* Question */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -809,6 +820,7 @@
 				2CD9D9C62704F3990041A0DB /* LoginRepository.swift in Sources */,
 				2CB9288227023BAE00BF34DC /* SignUpRepository.swift in Sources */,
 				2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */,
+				2C1481FF270B36E3005C0597 /* TodayQuestionViewModel.swift in Sources */,
 				2CC5AEBB26F0D8920096D818 /* BaseView.swift in Sources */,
 				2CB9287E2702395300BF34DC /* SignUpRequest.swift in Sources */,
 				2CF3D3D526FCEA11008C13F3 /* MainBMCollectionViewCell.swift in Sources */,
