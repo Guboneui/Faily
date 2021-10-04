@@ -408,6 +408,107 @@
             </objects>
             <point key="canvasLocation" x="350.72463768115944" y="361.60714285714283"/>
         </scene>
+        <!--Setting Family Code View Controller-->
+        <scene sceneID="3H5-DM-dXW">
+            <objects>
+                <viewController restorationIdentifier="SettingFamilyCodeViewController" storyboardIdentifier="SettingFamilyCodeViewController" id="Lda-7a-OHP" customClass="SettingFamilyCodeViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qcd-tJ-klr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vg2-Rg-Kgc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kl9-BN-p7H">
+                                <rect key="frame" x="55" y="373" width="304" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadowRECT" translatesAutoresizingMaskIntoConstraints="NO" id="1kE-Rl-Y4z">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="150"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초대코드" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onK-Mk-qTq">
+                                        <rect key="frame" x="110.5" y="26" width="83.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="secondary_pink"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="kyo3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBm-Cv-hvt">
+                                        <rect key="frame" x="129" y="56" width="46.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" name="grayscale_2"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="LiG-CG-92Y">
+                                        <rect key="frame" x="104.5" y="90" width="95" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vd-KO-GqN">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="HPW-Kq-Lot"/>
+                                                    <constraint firstAttribute="width" constant="35" id="S4U-1D-SYC"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="share"/>
+                                                <connections>
+                                                    <action selector="shareCodeButtonAction:" destination="Lda-7a-OHP" eventType="touchUpInside" id="EPn-W1-vqe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zF5-7M-Hgc">
+                                                <rect key="frame" x="60" y="0.0" width="35" height="35"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="4oh-Ig-wwD"/>
+                                                    <constraint firstAttribute="width" constant="35" id="71b-Hw-98o"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="copy"/>
+                                                <connections>
+                                                    <action selector="copyCodeButtonAction:" destination="Lda-7a-OHP" eventType="touchUpInside" id="53F-l7-rL5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="LiG-CG-92Y" firstAttribute="top" secondItem="XBm-Cv-hvt" secondAttribute="bottom" constant="10" id="GoV-sz-SzT"/>
+                                    <constraint firstItem="onK-Mk-qTq" firstAttribute="top" secondItem="kl9-BN-p7H" secondAttribute="top" constant="26" id="Rep-fV-Mji"/>
+                                    <constraint firstItem="onK-Mk-qTq" firstAttribute="centerX" secondItem="kl9-BN-p7H" secondAttribute="centerX" id="dOi-A4-zIe"/>
+                                    <constraint firstAttribute="bottom" secondItem="1kE-Rl-Y4z" secondAttribute="bottom" id="dwy-Hh-gXp"/>
+                                    <constraint firstItem="XBm-Cv-hvt" firstAttribute="top" secondItem="onK-Mk-qTq" secondAttribute="bottom" id="gb1-Jm-3Ye"/>
+                                    <constraint firstItem="XBm-Cv-hvt" firstAttribute="centerX" secondItem="kl9-BN-p7H" secondAttribute="centerX" id="gpO-RA-W1C"/>
+                                    <constraint firstAttribute="trailing" secondItem="1kE-Rl-Y4z" secondAttribute="trailing" id="hmr-Nl-Xj3"/>
+                                    <constraint firstItem="1kE-Rl-Y4z" firstAttribute="leading" secondItem="kl9-BN-p7H" secondAttribute="leading" id="iwV-lR-qEa"/>
+                                    <constraint firstAttribute="bottom" secondItem="LiG-CG-92Y" secondAttribute="bottom" constant="25" id="odh-Dg-57K"/>
+                                    <constraint firstItem="1kE-Rl-Y4z" firstAttribute="top" secondItem="kl9-BN-p7H" secondAttribute="top" id="saJ-i1-LAQ"/>
+                                    <constraint firstItem="LiG-CG-92Y" firstAttribute="centerX" secondItem="kl9-BN-p7H" secondAttribute="centerX" id="wF9-iJ-9Xa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bVs-TE-e7x"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kl9-BN-p7H" firstAttribute="centerX" secondItem="Qcd-tJ-klr" secondAttribute="centerX" id="2ST-Nr-e6V"/>
+                            <constraint firstItem="bVs-TE-e7x" firstAttribute="trailing" secondItem="kl9-BN-p7H" secondAttribute="trailing" constant="55" id="CdY-Y9-ewe"/>
+                            <constraint firstItem="vg2-Rg-Kgc" firstAttribute="trailing" secondItem="bVs-TE-e7x" secondAttribute="trailing" id="NVT-Fo-1ae"/>
+                            <constraint firstItem="kl9-BN-p7H" firstAttribute="centerY" secondItem="Qcd-tJ-klr" secondAttribute="centerY" id="Rkz-r8-2y7"/>
+                            <constraint firstAttribute="bottom" secondItem="vg2-Rg-Kgc" secondAttribute="bottom" id="c9A-lL-lsj"/>
+                            <constraint firstItem="vg2-Rg-Kgc" firstAttribute="top" secondItem="Qcd-tJ-klr" secondAttribute="top" id="gE4-Rr-pht"/>
+                            <constraint firstItem="vg2-Rg-Kgc" firstAttribute="leading" secondItem="bVs-TE-e7x" secondAttribute="leading" id="h0t-cP-ZyT"/>
+                            <constraint firstItem="kl9-BN-p7H" firstAttribute="leading" secondItem="bVs-TE-e7x" secondAttribute="leading" constant="55" id="rcq-cU-49X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="baseView" destination="Qcd-tJ-klr" id="AZ6-kb-BDU"/>
+                        <outlet property="codeView" destination="kl9-BN-p7H" id="z7p-Sw-8tQ"/>
+                        <outlet property="inviteCodeLabel" destination="XBm-Cv-hvt" id="pbe-dE-wWk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vg2-De-Dru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2886.9565217391305" y="1195.9821428571429"/>
+        </scene>
         <!--User Setting View Controller-->
         <scene sceneID="G7v-se-fTJ">
             <objects>
@@ -1793,6 +1894,7 @@
         <image name="back" width="24" height="24"/>
         <image name="calendar_default" width="28" height="28"/>
         <image name="calendar_selected" width="28" height="28"/>
+        <image name="copy" width="43" height="43"/>
         <image name="emoticon_setting" width="24" height="24"/>
         <image name="gallery_default" width="28" height="28"/>
         <image name="galley_selected" width="28" height="28"/>
@@ -1809,6 +1911,8 @@
         <image name="rainbow_default" width="20" height="20"/>
         <image name="setting_default" width="28" height="28"/>
         <image name="setting_selected" width="28" height="28"/>
+        <image name="shadowRECT" width="266" height="150"/>
+        <image name="share" width="43" height="43"/>
         <namedColor name="coral_red">
             <color red="0.97254901960784312" green="0.25882352941176473" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

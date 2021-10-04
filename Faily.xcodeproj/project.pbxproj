@@ -10,6 +10,7 @@
 		2C1481FF270B36E3005C0597 /* TodayQuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1481FE270B36E3005C0597 /* TodayQuestionViewModel.swift */; };
 		2C148202270B8033005C0597 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C148200270B8033005C0597 /* SettingTableViewCell.swift */; };
 		2C148203270B8033005C0597 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C148201270B8033005C0597 /* SettingTableViewCell.xib */; };
+		2C148205270B908E005C0597 /* SettingFamilyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C148204270B908E005C0597 /* SettingFamilyCodeViewController.swift */; };
 		2C3306172700F78100E638B1 /* MainQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */; };
 		2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */; };
 		2C33061A2700FA2800E638B1 /* MainQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */; };
@@ -125,6 +126,7 @@
 		2C1481FE270B36E3005C0597 /* TodayQuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayQuestionViewModel.swift; sourceTree = "<group>"; };
 		2C148200270B8033005C0597 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		2C148201270B8033005C0597 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		2C148204270B908E005C0597 /* SettingFamilyCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFamilyCodeViewController.swift; sourceTree = "<group>"; };
 		2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				2C4B7BB826F2E0EF0083576A /* UserSettingViewController.swift */,
 				2C148200270B8033005C0597 /* SettingTableViewCell.swift */,
 				2C148201270B8033005C0597 /* SettingTableViewCell.xib */,
+				2C148204270B908E005C0597 /* SettingFamilyCodeViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -879,6 +882,7 @@
 				2CC5AEC126F0F67C0096D818 /* PinkMainButton.swift in Sources */,
 				2CBB71D22708E98C008B3E56 /* TodayQuestionResponse.swift in Sources */,
 				2CD9D9BC2704EC820041A0DB /* AuthEmailRepository.swift in Sources */,
+				2C148205270B908E005C0597 /* SettingFamilyCodeViewController.swift in Sources */,
 				2C4B7BC026F2E12E0083576A /* CalendarViewController.swift in Sources */,
 				2C9EAFF72706159E00F507A6 /* InviteRequest.swift in Sources */,
 				2CC092C326F286DE009E69D0 /* SignUpWithUserInfoViewController.swift in Sources */,

@@ -59,7 +59,7 @@ class FounderViewController: UIViewController {
     
     @IBAction func copyInviteCodeButtonAction(_ sender: Any) {
         print("초대코드가 복사되었습니다.")
-        let alert = UIAlertController(title: "초대코드를 가족에게 공유 해보세요.", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "초대코드가 복사되었습니다.", message: "", preferredStyle: .alert)
         let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)

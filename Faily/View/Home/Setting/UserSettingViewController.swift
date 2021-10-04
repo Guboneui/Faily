@@ -121,7 +121,10 @@ extension UserSettingViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            print("가족 초대코드 확인")
+            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+            let familyCodeVC = storyBoard.instantiateViewController(withIdentifier: "SettingFamilyCodeViewController")
+            familyCodeVC.modalPresentationStyle = .overCurrentContext
+            self.present(familyCodeVC, animated: false, completion: nil)
         } else if indexPath.row == 1 {
             print("공지사항")
         } else if indexPath.row == 2 {
