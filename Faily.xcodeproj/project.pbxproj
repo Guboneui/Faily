@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C1481FF270B36E3005C0597 /* TodayQuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1481FE270B36E3005C0597 /* TodayQuestionViewModel.swift */; };
+		2C148202270B8033005C0597 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C148200270B8033005C0597 /* SettingTableViewCell.swift */; };
+		2C148203270B8033005C0597 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C148201270B8033005C0597 /* SettingTableViewCell.xib */; };
 		2C3306172700F78100E638B1 /* MainQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */; };
 		2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */; };
 		2C33061A2700FA2800E638B1 /* MainQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */; };
@@ -121,6 +123,8 @@
 
 /* Begin PBXFileReference section */
 		2C1481FE270B36E3005C0597 /* TodayQuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayQuestionViewModel.swift; sourceTree = "<group>"; };
+		2C148200270B8033005C0597 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		2C148201270B8033005C0597 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -318,6 +322,8 @@
 			isa = PBXGroup;
 			children = (
 				2C4B7BB826F2E0EF0083576A /* UserSettingViewController.swift */,
+				2C148200270B8033005C0597 /* SettingTableViewCell.swift */,
+				2C148201270B8033005C0597 /* SettingTableViewCell.xib */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -733,6 +739,7 @@
 			files = (
 				2C3306202700FFF300E638B1 /* AnsweredFamilyTableViewCell.xib in Resources */,
 				2C94412727038475005980D0 /* AllAnswerBaseTableViewCell.xib in Resources */,
+				2C148203270B8033005C0597 /* SettingTableViewCell.xib in Resources */,
 				2C9EB001270764D400F507A6 /* EachAnswerTableViewCell.xib in Resources */,
 				2CC9C38A26E2A27600936BCD /* LaunchScreen.storyboard in Resources */,
 				2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */,
@@ -839,6 +846,7 @@
 				2CC5AEA726EFA8C10096D818 /* String.swift in Sources */,
 				2C9441332703A24A005980D0 /* LockTableViewCell.swift in Sources */,
 				2C330622270101E800E638B1 /* AnsweredFamilyCollectionViewCell.swift in Sources */,
+				2C148202270B8033005C0597 /* SettingTableViewCell.swift in Sources */,
 				2CD9D9C82704F49F0041A0DB /* LoginService.swift in Sources */,
 				2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */,
 				2CD9D9BA2704EAE40041A0DB /* AuthEmailResponse.swift in Sources */,
