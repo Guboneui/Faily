@@ -88,6 +88,10 @@ class UserSettingViewController: UIViewController {
     
     @IBAction func goEditProfileButtonAction(_ sender: Any) {
         print("프로필 수정")
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let editProfileVC = storyBoard.instantiateViewController(withIdentifier: "EditProfileViewController")
+        
+        self.navigationController?.pushViewController(editProfileVC, animated: true)
     }
     
     func setTableView() {
