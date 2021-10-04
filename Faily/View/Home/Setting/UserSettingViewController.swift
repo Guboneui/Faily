@@ -43,7 +43,7 @@ class UserSettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
-        // Do any additional setup after loading the view.
+        stackViewAction()
     }
     
     func configUI() {
@@ -57,9 +57,38 @@ class UserSettingViewController: UIViewController {
     }
     
     func stackViewAction() {
+        let presentStackViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(presentStackViewAction))
+        presentStackView.isUserInteractionEnabled = true
+        presentStackView.addGestureRecognizer(presentStackViewTapGesture)
         
+        let emoticonStackViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(emoticonStackViewAction))
+        emoticonStackView.isUserInteractionEnabled = true
+        emoticonStackView.addGestureRecognizer(emoticonStackViewTapGesture)
+        
+        let pointStackViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(pointStackViewAction))
+        pointStackView.isUserInteractionEnabled = true
+        pointStackView.addGestureRecognizer(pointStackViewTapGesture)
     }
     
+    @objc func presentStackViewAction(sender: UITapGestureRecognizer) {
+        print("선물")
+    }
+    
+    @objc func emoticonStackViewAction(sender: UITapGestureRecognizer) {
+        print("이모티콘")
+    }
+    
+    @objc func pointStackViewAction(sender: UITapGestureRecognizer) {
+        let alert = UIAlertController(title: "준비중인 서비스 입니다.", message: "", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func goEditProfileButtonAction(_ sender: Any) {
+        print("프로필 수정")
+    }
     
     func setTableView() {
         self.settingTableView.delegate = self

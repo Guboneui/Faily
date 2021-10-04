@@ -490,6 +490,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="goAnswerNav"/>
+                                        <connections>
+                                            <action selector="goEditProfileButtonAction:" destination="iEU-0h-gDS" eventType="touchUpInside" id="7ir-ee-Lpt"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Kyo-FU-TAi">
                                         <rect key="frame" x="48.5" y="112" width="253.5" height="41.5"/>
