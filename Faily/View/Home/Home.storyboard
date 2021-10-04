@@ -573,54 +573,36 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ifd-hv-aQE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zko-H8-weS" customClass="PinkMainButton" customModule="Faily" customModuleProvider="target">
                                 <rect key="frame" x="32" y="701" width="350" height="50"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JSr-PA-MEs">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zko-H8-weS">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="로그아웃">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="zko-H8-weS" firstAttribute="top" secondItem="Ifd-hv-aQE" secondAttribute="top" id="1bT-sg-cBu"/>
-                                    <constraint firstAttribute="height" constant="50" id="623-pr-N7i"/>
-                                    <constraint firstAttribute="trailing" secondItem="JSr-PA-MEs" secondAttribute="trailing" id="Tq1-Tu-ZKb"/>
-                                    <constraint firstAttribute="bottom" secondItem="zko-H8-weS" secondAttribute="bottom" id="ZA4-O1-INi"/>
-                                    <constraint firstItem="JSr-PA-MEs" firstAttribute="top" secondItem="Ifd-hv-aQE" secondAttribute="top" id="eJr-Sl-TQu"/>
-                                    <constraint firstItem="zko-H8-weS" firstAttribute="leading" secondItem="Ifd-hv-aQE" secondAttribute="leading" id="g9A-xp-bgf"/>
-                                    <constraint firstAttribute="trailing" secondItem="zko-H8-weS" secondAttribute="trailing" id="j4z-nf-V6I"/>
-                                    <constraint firstItem="JSr-PA-MEs" firstAttribute="leading" secondItem="Ifd-hv-aQE" secondAttribute="leading" id="j9o-eE-Agq"/>
-                                    <constraint firstAttribute="bottom" secondItem="JSr-PA-MEs" secondAttribute="bottom" id="nA3-AC-asq"/>
+                                    <constraint firstAttribute="height" constant="50" id="jms-T3-LxJ"/>
                                 </constraints>
-                            </view>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="로그아웃">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zY2-fk-ryO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="F7c-UO-dnu" firstAttribute="leading" secondItem="zY2-fk-ryO" secondAttribute="leading" constant="32" id="4Op-BL-mJU"/>
                             <constraint firstItem="Cxc-xU-RmL" firstAttribute="leading" secondItem="zY2-fk-ryO" secondAttribute="leading" constant="32" id="7zj-2f-rCt"/>
+                            <constraint firstItem="zY2-fk-ryO" firstAttribute="bottom" secondItem="zko-H8-weS" secondAttribute="bottom" constant="62" id="Ajr-po-I6L"/>
+                            <constraint firstItem="zko-H8-weS" firstAttribute="leading" secondItem="zY2-fk-ryO" secondAttribute="leading" constant="32" id="Awj-7d-DW7"/>
                             <constraint firstItem="ddJ-iT-Plc" firstAttribute="leading" secondItem="zY2-fk-ryO" secondAttribute="leading" id="B5R-eM-mlN"/>
                             <constraint firstAttribute="bottom" secondItem="BuW-lS-5L5" secondAttribute="bottom" id="HYs-K9-lGG"/>
-                            <constraint firstItem="Ifd-hv-aQE" firstAttribute="top" secondItem="F7c-UO-dnu" secondAttribute="bottom" constant="20" id="Nrs-bY-LPC"/>
                             <constraint firstItem="zY2-fk-ryO" firstAttribute="trailing" secondItem="Cxc-xU-RmL" secondAttribute="trailing" constant="32" id="RGE-nz-LCu"/>
                             <constraint firstItem="BuW-lS-5L5" firstAttribute="trailing" secondItem="zY2-fk-ryO" secondAttribute="trailing" id="Rrq-DK-tDX"/>
                             <constraint firstItem="zY2-fk-ryO" firstAttribute="trailing" secondItem="F7c-UO-dnu" secondAttribute="trailing" constant="32" id="XLl-dd-ATW"/>
-                            <constraint firstItem="zY2-fk-ryO" firstAttribute="trailing" secondItem="Ifd-hv-aQE" secondAttribute="trailing" constant="32" id="XQ4-3S-NhS"/>
                             <constraint firstItem="ddJ-iT-Plc" firstAttribute="top" secondItem="zY2-fk-ryO" secondAttribute="top" id="bBV-Ia-vMA"/>
                             <constraint firstItem="Cxc-xU-RmL" firstAttribute="top" secondItem="ddJ-iT-Plc" secondAttribute="bottom" constant="38" id="buD-ra-Lf8"/>
                             <constraint firstItem="BuW-lS-5L5" firstAttribute="top" secondItem="zBB-Uv-faU" secondAttribute="top" id="cIe-CX-O3a"/>
-                            <constraint firstItem="zY2-fk-ryO" firstAttribute="bottom" secondItem="Ifd-hv-aQE" secondAttribute="bottom" constant="62" id="fEk-ih-UHi"/>
+                            <constraint firstItem="zY2-fk-ryO" firstAttribute="trailing" secondItem="zko-H8-weS" secondAttribute="trailing" constant="32" id="fXO-pA-rg0"/>
                             <constraint firstItem="F7c-UO-dnu" firstAttribute="top" secondItem="Cxc-xU-RmL" secondAttribute="bottom" constant="20" id="hZi-45-jib"/>
-                            <constraint firstItem="Ifd-hv-aQE" firstAttribute="leading" secondItem="zY2-fk-ryO" secondAttribute="leading" constant="32" id="i7f-c8-u7b"/>
+                            <constraint firstItem="zko-H8-weS" firstAttribute="top" secondItem="F7c-UO-dnu" secondAttribute="bottom" constant="20" id="vm6-ey-cK8"/>
                             <constraint firstItem="ddJ-iT-Plc" firstAttribute="trailing" secondItem="zY2-fk-ryO" secondAttribute="trailing" id="xUP-J5-Vq3"/>
                             <constraint firstItem="BuW-lS-5L5" firstAttribute="leading" secondItem="zY2-fk-ryO" secondAttribute="leading" id="yJk-5G-rfE"/>
                         </constraints>
@@ -629,8 +611,6 @@
                     <connections>
                         <outlet property="emoticonStackView" destination="hVD-xq-1zc" id="6R6-iQ-LC1"/>
                         <outlet property="goEditProfileButton" destination="Z3Y-rI-AYk" id="9WJ-Tf-392"/>
-                        <outlet property="logoutBGView" destination="JSr-PA-MEs" id="cBG-gx-Acv"/>
-                        <outlet property="logoutBaseView" destination="Ifd-hv-aQE" id="XXN-kO-cbG"/>
                         <outlet property="logoutButton" destination="zko-H8-weS" id="hTB-pr-yzD"/>
                         <outlet property="pointStackView" destination="O9w-XR-GZG" id="yhb-1N-hzE"/>
                         <outlet property="presentStackView" destination="Rb1-Ur-yt5" id="6hJ-XN-kXf"/>

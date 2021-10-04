@@ -27,8 +27,6 @@ class UserSettingViewController: UIViewController {
     
     @IBOutlet weak var settingTableView: UITableView!
     
-    @IBOutlet weak var logoutBaseView: UIView!
-    @IBOutlet weak var logoutBGView: UIImageView!
     @IBOutlet weak var logoutButton: UIButton!
     
     var settings = [
@@ -54,10 +52,7 @@ class UserSettingViewController: UIViewController {
         self.profileBGView.layer.cornerRadius = 20
         
         self.profileImageView.layer.cornerRadius = self.profileImageView.frame.height / 2
-        
-        self.logoutBaseView.layer.cornerRadius = 20
-        self.makeShadow(logoutBaseView)
-        self.logoutBGView.layer.cornerRadius = 20
+
         
     }
     
