@@ -18,6 +18,8 @@
 		2C14820F270BA3B2005C0597 /* DetailNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14820E270BA3B2005C0597 /* DetailNoticeViewController.swift */; };
 		2C22F40F270C0C5200580DCF /* DateScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C22F40D270C0C5200580DCF /* DateScheduleTableViewCell.swift */; };
 		2C22F410270C0C5200580DCF /* DateScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C22F40E270C0C5200580DCF /* DateScheduleTableViewCell.xib */; };
+		2C22F413270C297600580DCF /* BottomWhiteLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C22F411270C297600580DCF /* BottomWhiteLabelTableViewCell.swift */; };
+		2C22F414270C297600580DCF /* BottomWhiteLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C22F412270C297600580DCF /* BottomWhiteLabelTableViewCell.xib */; };
 		2C3306172700F78100E638B1 /* MainQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */; };
 		2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */; };
 		2C33061A2700FA2800E638B1 /* MainQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */; };
@@ -141,6 +143,8 @@
 		2C14820E270BA3B2005C0597 /* DetailNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoticeViewController.swift; sourceTree = "<group>"; };
 		2C22F40D270C0C5200580DCF /* DateScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		2C22F40E270C0C5200580DCF /* DateScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateScheduleTableViewCell.xib; sourceTree = "<group>"; };
+		2C22F411270C297600580DCF /* BottomWhiteLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomWhiteLabelTableViewCell.swift; sourceTree = "<group>"; };
+		2C22F412270C297600580DCF /* BottomWhiteLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomWhiteLabelTableViewCell.xib; sourceTree = "<group>"; };
 		2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -569,6 +573,8 @@
 				2CC092B926F268E3009E69D0 /* Home.storyboard */,
 				2CC092BB26F26B84009E69D0 /* MainTabBarController.swift */,
 				2C4B7BC126F2E4040083576A /* MainTabBar.swift */,
+				2C22F411270C297600580DCF /* BottomWhiteLabelTableViewCell.swift */,
+				2C22F412270C297600580DCF /* BottomWhiteLabelTableViewCell.xib */,
 				2C4B7BBA26F2E0F30083576A /* Question */,
 				2C4B7BBB26F2E0FA0083576A /* Calendar */,
 				2C4B7BBC26F2E1030083576A /* Home */,
@@ -774,6 +780,7 @@
 				2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */,
 				2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */,
 				2CF3D3CC26FBDD59008C13F3 /* PresentCategoryCollectionViewCell.xib in Resources */,
+				2C22F414270C297600580DCF /* BottomWhiteLabelTableViewCell.xib in Resources */,
 				2C14820D270B9FE9005C0597 /* NoticeTableViewCell.xib in Resources */,
 				2C9441342703A24A005980D0 /* LockTableViewCell.xib in Resources */,
 				2CF3D3D226FBE850008C13F3 /* RecommentCollectionViewCell.xib in Resources */,
@@ -876,6 +883,7 @@
 				2C148207270B990F005C0597 /* EditProfileViewController.swift in Sources */,
 				2C330622270101E800E638B1 /* AnsweredFamilyCollectionViewCell.swift in Sources */,
 				2C148209270B9F73005C0597 /* NoticeViewController.swift in Sources */,
+				2C22F413270C297600580DCF /* BottomWhiteLabelTableViewCell.swift in Sources */,
 				2C148202270B8033005C0597 /* SettingTableViewCell.swift in Sources */,
 				2CD9D9C82704F49F0041A0DB /* LoginService.swift in Sources */,
 				2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */,

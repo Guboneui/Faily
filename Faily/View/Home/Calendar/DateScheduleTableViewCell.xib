@@ -56,7 +56,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="오후 6시 우리집" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdu-MF-qJM">
-                                        <rect key="frame" x="22" y="39.5" width="185" height="30.5"/>
+                                        <rect key="frame" x="22" y="39.5" width="180" height="30.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" name="grayscale_2"/>
                                         <nil key="highlightedColor"/>
@@ -92,7 +92,7 @@
                                     <constraint firstItem="jpn-AQ-FO0" firstAttribute="centerY" secondItem="Vdu-MF-qJM" secondAttribute="centerY" id="1h2-hT-pH8"/>
                                     <constraint firstAttribute="bottom" secondItem="wMS-fS-URu" secondAttribute="bottom" id="Eyi-fa-mgl"/>
                                     <constraint firstItem="zEi-H9-bkv" firstAttribute="top" secondItem="6z3-ab-UoD" secondAttribute="top" constant="17" id="KIC-Rn-fKn"/>
-                                    <constraint firstItem="jpn-AQ-FO0" firstAttribute="leading" secondItem="Vdu-MF-qJM" secondAttribute="trailing" constant="10" id="OE2-Dp-Cxr"/>
+                                    <constraint firstItem="jpn-AQ-FO0" firstAttribute="leading" secondItem="Vdu-MF-qJM" secondAttribute="trailing" constant="15" id="OE2-Dp-Cxr"/>
                                     <constraint firstItem="Vdu-MF-qJM" firstAttribute="leading" secondItem="6z3-ab-UoD" secondAttribute="leading" constant="22" id="SSo-lX-kcH"/>
                                     <constraint firstAttribute="bottom" secondItem="Vdu-MF-qJM" secondAttribute="bottom" constant="17" id="TKG-XF-HgG"/>
                                     <constraint firstItem="zEi-H9-bkv" firstAttribute="leading" secondItem="6z3-ab-UoD" secondAttribute="leading" constant="22" id="gna-qi-hiP"/>

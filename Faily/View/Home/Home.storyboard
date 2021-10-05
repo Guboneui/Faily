@@ -2101,7 +2101,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cGX-Me-0pu">
-                                <rect key="frame" x="0.0" y="94" width="414" height="689"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
@@ -2119,7 +2119,7 @@
                             <constraint firstItem="YCc-N6-oXT" firstAttribute="trailing" secondItem="Bte-Py-wCG" secondAttribute="trailing" id="h3A-t5-3pr"/>
                             <constraint firstItem="cGX-Me-0pu" firstAttribute="top" secondItem="YCc-N6-oXT" secondAttribute="bottom" id="j55-bq-e5P"/>
                             <constraint firstItem="7b9-CT-kRU" firstAttribute="trailing" secondItem="Bte-Py-wCG" secondAttribute="trailing" id="n4m-j9-vud"/>
-                            <constraint firstItem="Bte-Py-wCG" firstAttribute="bottom" secondItem="cGX-Me-0pu" secondAttribute="bottom" constant="30" id="vAH-3F-iaO"/>
+                            <constraint firstItem="Bte-Py-wCG" firstAttribute="bottom" secondItem="cGX-Me-0pu" secondAttribute="bottom" id="vAH-3F-iaO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="question_default" selectedImage="question_selected" id="wTq-RD-fPz"/>
@@ -2187,7 +2187,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J3D-C6-3Zu">
-                                <rect key="frame" x="0.0" y="94" width="414" height="689"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
@@ -2203,7 +2203,7 @@
                             <constraint firstItem="J3D-C6-3Zu" firstAttribute="leading" secondItem="zpK-yU-JrK" secondAttribute="leading" id="Pa0-ox-lXN"/>
                             <constraint firstItem="J3D-C6-3Zu" firstAttribute="trailing" secondItem="zpK-yU-JrK" secondAttribute="trailing" id="hnL-bF-Gn2"/>
                             <constraint firstItem="dNP-zL-c75" firstAttribute="top" secondItem="Mi4-Gx-b25" secondAttribute="top" id="kKX-Om-kev"/>
-                            <constraint firstItem="zpK-yU-JrK" firstAttribute="bottom" secondItem="J3D-C6-3Zu" secondAttribute="bottom" constant="30" id="pTi-Ed-XZC"/>
+                            <constraint firstItem="zpK-yU-JrK" firstAttribute="bottom" secondItem="J3D-C6-3Zu" secondAttribute="bottom" id="pTi-Ed-XZC"/>
                             <constraint firstItem="tI4-qL-lv4" firstAttribute="trailing" secondItem="zpK-yU-JrK" secondAttribute="trailing" id="pyl-Tn-Ojo"/>
                             <constraint firstAttribute="bottom" secondItem="dNP-zL-c75" secondAttribute="bottom" id="x7b-t3-iBF"/>
                         </constraints>
