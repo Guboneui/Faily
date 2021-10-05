@@ -21,6 +21,7 @@ class CalendarViewController: UIViewController {
         mainTableView.delegate = self
         mainTableView.dataSource = self
         mainTableView.register(UINib(nibName: "CalendarTableViewCell", bundle: nil), forCellReuseIdentifier: "CalendarTableViewCell")
+        mainTableView.register(UINib(nibName: "DateScheduleTableViewCell", bundle: nil), forCellReuseIdentifier: "DateScheduleTableViewCell")
         mainTableView.rowHeight = UITableView.automaticDimension
         mainTableView.separatorStyle = .none
         
@@ -32,14 +33,22 @@ class CalendarViewController: UIViewController {
 
 extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CalendarTableViewCell", for: indexPath) as! CalendarTableViewCell
-        cell.selectionStyle = .none
-        cell.addDateButton.addTarget(self, action: #selector(addDate), for: .touchUpInside)
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CalendarTableViewCell", for: indexPath) as! CalendarTableViewCell
+            cell.selectionStyle = .none
+            cell.addDateButton.addTarget(self, action: #selector(addDate), for: .touchUpInside)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DateScheduleTableViewCell", for: indexPath) as! DateScheduleTableViewCell
+            cell.selectionStyle = .none
+            //cell.addDateButton.addTarget(self, action: #selector(addDate), for: .touchUpInside)
+            return cell
+            
+        }
     }
     
     @objc func addDate() {

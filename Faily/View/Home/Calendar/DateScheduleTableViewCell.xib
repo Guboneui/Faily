@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateScheduleTableViewCell" rowHeight="109" id="KGk-i7-Jjw" customClass="DateScheduleTableViewCell" customModule="Faily" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="109"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="109"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpw-it-j94">
+                        <rect key="frame" x="32" y="11" width="328" height="87"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birthday_box" translatesAutoresizingMaskIntoConstraints="NO" id="wsb-U1-fbh">
+                                <rect key="frame" x="0.0" y="0.0" width="328" height="87"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1fb-bS-m2B">
+                                <rect key="frame" x="17" y="15" width="26" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKm-gD-bKs">
+                                        <rect key="frame" x="0.0" y="0.0" width="26" height="42.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="월" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSS-Cd-Ebw">
+                                        <rect key="frame" x="0.0" y="42.5" width="26" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="grayscale_2"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6z3-ab-UoD">
+                                <rect key="frame" x="57" y="0.0" width="271" height="87"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wMS-fS-URu">
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="87"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="가족모임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEi-H9-bkv">
+                                        <rect key="frame" x="22" y="17" width="227" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="오후 6시 우리집" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdu-MF-qJM">
+                                        <rect key="frame" x="22" y="39.5" width="185" height="30.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="grayscale_2"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jpn-AQ-FO0">
+                                        <rect key="frame" x="217" y="47" width="37" height="16"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPb-Fa-Z5X">
+                                                <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="16" id="k6o-Fh-Rov"/>
+                                                    <constraint firstAttribute="height" constant="16" id="oKW-5l-GQP"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="edit_schedule"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvj-40-Yv9">
+                                                <rect key="frame" x="21" y="0.0" width="16" height="16"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="i0Q-xx-g16"/>
+                                                    <constraint firstAttribute="width" constant="16" id="lp4-dg-YLK"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="delete_date"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="jpn-AQ-FO0" firstAttribute="centerY" secondItem="Vdu-MF-qJM" secondAttribute="centerY" id="1h2-hT-pH8"/>
+                                    <constraint firstAttribute="bottom" secondItem="wMS-fS-URu" secondAttribute="bottom" id="Eyi-fa-mgl"/>
+                                    <constraint firstItem="zEi-H9-bkv" firstAttribute="top" secondItem="6z3-ab-UoD" secondAttribute="top" constant="17" id="KIC-Rn-fKn"/>
+                                    <constraint firstItem="jpn-AQ-FO0" firstAttribute="leading" secondItem="Vdu-MF-qJM" secondAttribute="trailing" constant="10" id="OE2-Dp-Cxr"/>
+                                    <constraint firstItem="Vdu-MF-qJM" firstAttribute="leading" secondItem="6z3-ab-UoD" secondAttribute="leading" constant="22" id="SSo-lX-kcH"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vdu-MF-qJM" secondAttribute="bottom" constant="17" id="TKG-XF-HgG"/>
+                                    <constraint firstItem="zEi-H9-bkv" firstAttribute="leading" secondItem="6z3-ab-UoD" secondAttribute="leading" constant="22" id="gna-qi-hiP"/>
+                                    <constraint firstAttribute="trailing" secondItem="jpn-AQ-FO0" secondAttribute="trailing" constant="17" id="lxg-nU-kXr"/>
+                                    <constraint firstAttribute="trailing" secondItem="wMS-fS-URu" secondAttribute="trailing" id="pCn-3W-7IO"/>
+                                    <constraint firstItem="Vdu-MF-qJM" firstAttribute="top" secondItem="zEi-H9-bkv" secondAttribute="bottom" constant="3" id="pdo-So-Wsd"/>
+                                    <constraint firstItem="wMS-fS-URu" firstAttribute="leading" secondItem="6z3-ab-UoD" secondAttribute="leading" id="rFu-5m-tbV"/>
+                                    <constraint firstItem="wMS-fS-URu" firstAttribute="top" secondItem="6z3-ab-UoD" secondAttribute="top" id="rfn-zj-UzJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="zEi-H9-bkv" secondAttribute="trailing" constant="22" id="u5C-Aa-3A5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1fb-bS-m2B" secondAttribute="bottom" constant="15" id="1O2-MV-6K2"/>
+                            <constraint firstItem="wsb-U1-fbh" firstAttribute="leading" secondItem="Kpw-it-j94" secondAttribute="leading" id="6L5-nX-6y6"/>
+                            <constraint firstAttribute="bottom" secondItem="6z3-ab-UoD" secondAttribute="bottom" id="7WH-QG-h4o"/>
+                            <constraint firstAttribute="bottom" secondItem="wsb-U1-fbh" secondAttribute="bottom" id="9sI-eW-Xza"/>
+                            <constraint firstAttribute="trailing" secondItem="6z3-ab-UoD" secondAttribute="trailing" id="XGO-yn-OO0"/>
+                            <constraint firstItem="1fb-bS-m2B" firstAttribute="top" secondItem="Kpw-it-j94" secondAttribute="top" constant="15" id="bdd-f4-HiR"/>
+                            <constraint firstItem="1fb-bS-m2B" firstAttribute="leading" secondItem="Kpw-it-j94" secondAttribute="leading" constant="17" id="jc5-bm-1nZ"/>
+                            <constraint firstItem="6z3-ab-UoD" firstAttribute="leading" secondItem="Kpw-it-j94" secondAttribute="leading" constant="57" id="kq8-Da-caT"/>
+                            <constraint firstItem="6z3-ab-UoD" firstAttribute="top" secondItem="Kpw-it-j94" secondAttribute="top" id="ngW-nB-ihE"/>
+                            <constraint firstAttribute="trailing" secondItem="wsb-U1-fbh" secondAttribute="trailing" id="tff-3e-qtQ"/>
+                            <constraint firstItem="wsb-U1-fbh" firstAttribute="top" secondItem="Kpw-it-j94" secondAttribute="top" id="zfR-v7-VKZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Kpw-it-j94" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="GIG-6P-hkd"/>
+                    <constraint firstItem="Kpw-it-j94" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="mz9-b6-dcQ"/>
+                    <constraint firstAttribute="trailing" secondItem="Kpw-it-j94" secondAttribute="trailing" constant="32" id="rZS-rB-iPz"/>
+                    <constraint firstAttribute="bottom" secondItem="Kpw-it-j94" secondAttribute="bottom" constant="11" id="ycQ-8L-50J"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="dateLabel" destination="dKm-gD-bKs" id="jql-ss-vc0"/>
+                <outlet property="dayLabel" destination="gSS-Cd-Ebw" id="6Rw-wM-UOP"/>
+                <outlet property="deleteButton" destination="rvj-40-Yv9" id="URI-O1-OA2"/>
+                <outlet property="editButton" destination="wPb-Fa-Z5X" id="pIf-ma-SdX"/>
+                <outlet property="firstBGView" destination="wsb-U1-fbh" id="aRO-Oe-bIV"/>
+                <outlet property="firstBaseView" destination="Kpw-it-j94" id="2Es-aR-GQp"/>
+                <outlet property="scheduleDetailLabel" destination="Vdu-MF-qJM" id="VaR-dZ-SFa"/>
+                <outlet property="scheduleTitleLabel" destination="zEi-H9-bkv" id="LzJ-5M-21n"/>
+                <outlet property="secondBGView" destination="wMS-fS-URu" id="f7Q-oj-6Mb"/>
+                <outlet property="secondBaseView" destination="6z3-ab-UoD" id="5n4-82-esA"/>
+            </connections>
+            <point key="canvasLocation" x="60.869565217391312" y="84.040178571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="birthday_box" width="347" height="70"/>
+        <image name="delete_date" width="16" height="16"/>
+        <image name="edit_schedule" width="16" height="16"/>
+        <namedColor name="grayscale_2">
+            <color red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
