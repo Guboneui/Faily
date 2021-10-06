@@ -37,6 +37,15 @@
 		2C4B7BC026F2E12E0083576A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BBF26F2E12E0083576A /* CalendarViewController.swift */; };
 		2C4B7BC226F2E4040083576A /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BC126F2E4040083576A /* MainTabBar.swift */; };
 		2C5C288B26F4C2DD00217D00 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5C288A26F4C2DD00217D00 /* ChatViewController.swift */; };
+		2C715BC0270DA33F007D67C5 /* DeviceSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C715BBF270DA33F007D67C5 /* DeviceSettingViewController.swift */; };
+		2C715BC3270DA564007D67C5 /* TitleSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C715BC1270DA564007D67C5 /* TitleSettingTableViewCell.swift */; };
+		2C715BC4270DA564007D67C5 /* TitleSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C715BC2270DA564007D67C5 /* TitleSettingTableViewCell.xib */; };
+		2C715BC7270DA5D0007D67C5 /* AlertSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C715BC5270DA5D0007D67C5 /* AlertSettingTableViewCell.swift */; };
+		2C715BC8270DA5D0007D67C5 /* AlertSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C715BC6270DA5D0007D67C5 /* AlertSettingTableViewCell.xib */; };
+		2C715BCB270DA67D007D67C5 /* PolicySettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C715BC9270DA67D007D67C5 /* PolicySettingTableViewCell.swift */; };
+		2C715BCC270DA67D007D67C5 /* PolicySettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C715BCA270DA67D007D67C5 /* PolicySettingTableViewCell.xib */; };
+		2C715BCF270DA6D0007D67C5 /* SettingGuideLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C715BCD270DA6D0007D67C5 /* SettingGuideLineTableViewCell.swift */; };
+		2C715BD0270DA6D0007D67C5 /* SettingGuideLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C715BCE270DA6D0007D67C5 /* SettingGuideLineTableViewCell.xib */; };
 		2C94412627038475005980D0 /* AllAnswerBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C94412427038475005980D0 /* AllAnswerBaseTableViewCell.swift */; };
 		2C94412727038475005980D0 /* AllAnswerBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C94412527038475005980D0 /* AllAnswerBaseTableViewCell.xib */; };
 		2C94412927038795005980D0 /* AllAnswerProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C94412827038795005980D0 /* AllAnswerProfileCollectionViewCell.swift */; };
@@ -162,6 +171,15 @@
 		2C4B7BBF26F2E12E0083576A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		2C4B7BC126F2E4040083576A /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		2C5C288A26F4C2DD00217D00 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		2C715BBF270DA33F007D67C5 /* DeviceSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSettingViewController.swift; sourceTree = "<group>"; };
+		2C715BC1270DA564007D67C5 /* TitleSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSettingTableViewCell.swift; sourceTree = "<group>"; };
+		2C715BC2270DA564007D67C5 /* TitleSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSettingTableViewCell.xib; sourceTree = "<group>"; };
+		2C715BC5270DA5D0007D67C5 /* AlertSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSettingTableViewCell.swift; sourceTree = "<group>"; };
+		2C715BC6270DA5D0007D67C5 /* AlertSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertSettingTableViewCell.xib; sourceTree = "<group>"; };
+		2C715BC9270DA67D007D67C5 /* PolicySettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicySettingTableViewCell.swift; sourceTree = "<group>"; };
+		2C715BCA270DA67D007D67C5 /* PolicySettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PolicySettingTableViewCell.xib; sourceTree = "<group>"; };
+		2C715BCD270DA6D0007D67C5 /* SettingGuideLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingGuideLineTableViewCell.swift; sourceTree = "<group>"; };
+		2C715BCE270DA6D0007D67C5 /* SettingGuideLineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingGuideLineTableViewCell.xib; sourceTree = "<group>"; };
 		2C94412427038475005980D0 /* AllAnswerBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnswerBaseTableViewCell.swift; sourceTree = "<group>"; };
 		2C94412527038475005980D0 /* AllAnswerBaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllAnswerBaseTableViewCell.xib; sourceTree = "<group>"; };
 		2C94412827038795005980D0 /* AllAnswerProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnswerProfileCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -352,6 +370,7 @@
 				2C14820A270B9FE9005C0597 /* NoticeTableViewCell.swift */,
 				2C14820B270B9FE9005C0597 /* NoticeTableViewCell.xib */,
 				2C14820E270BA3B2005C0597 /* DetailNoticeViewController.swift */,
+				2C715BBE270DA328007D67C5 /* DeviceSetting */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -362,6 +381,22 @@
 				2C5C288A26F4C2DD00217D00 /* ChatViewController.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		2C715BBE270DA328007D67C5 /* DeviceSetting */ = {
+			isa = PBXGroup;
+			children = (
+				2C715BBF270DA33F007D67C5 /* DeviceSettingViewController.swift */,
+				2C715BC1270DA564007D67C5 /* TitleSettingTableViewCell.swift */,
+				2C715BC2270DA564007D67C5 /* TitleSettingTableViewCell.xib */,
+				2C715BC5270DA5D0007D67C5 /* AlertSettingTableViewCell.swift */,
+				2C715BC6270DA5D0007D67C5 /* AlertSettingTableViewCell.xib */,
+				2C715BC9270DA67D007D67C5 /* PolicySettingTableViewCell.swift */,
+				2C715BCA270DA67D007D67C5 /* PolicySettingTableViewCell.xib */,
+				2C715BCD270DA6D0007D67C5 /* SettingGuideLineTableViewCell.swift */,
+				2C715BCE270DA6D0007D67C5 /* SettingGuideLineTableViewCell.xib */,
+			);
+			path = DeviceSetting;
 			sourceTree = "<group>";
 		};
 		2C9441302703889D005980D0 /* ShowAllAnswer */ = {
@@ -771,8 +806,11 @@
 				2C94412727038475005980D0 /* AllAnswerBaseTableViewCell.xib in Resources */,
 				2C148203270B8033005C0597 /* SettingTableViewCell.xib in Resources */,
 				2C9EB001270764D400F507A6 /* EachAnswerTableViewCell.xib in Resources */,
+				2C715BC4270DA564007D67C5 /* TitleSettingTableViewCell.xib in Resources */,
+				2C715BCC270DA67D007D67C5 /* PolicySettingTableViewCell.xib in Resources */,
 				2C22F410270C0C5200580DCF /* DateScheduleTableViewCell.xib in Resources */,
 				2CC9C38A26E2A27600936BCD /* LaunchScreen.storyboard in Resources */,
+				2C715BD0270DA6D0007D67C5 /* SettingGuideLineTableViewCell.xib in Resources */,
 				2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */,
 				2C330624270101EE00E638B1 /* AnsweredFamilyCollectionViewCell.xib in Resources */,
 				2C94412B2703879B005980D0 /* AllAnswerProfileCollectionViewCell.xib in Resources */,
@@ -780,6 +818,7 @@
 				2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */,
 				2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */,
 				2CF3D3CC26FBDD59008C13F3 /* PresentCategoryCollectionViewCell.xib in Resources */,
+				2C715BC8270DA5D0007D67C5 /* AlertSettingTableViewCell.xib in Resources */,
 				2C22F414270C297600580DCF /* BottomWhiteLabelTableViewCell.xib in Resources */,
 				2C14820D270B9FE9005C0597 /* NoticeTableViewCell.xib in Resources */,
 				2C9441342703A24A005980D0 /* LockTableViewCell.xib in Resources */,
@@ -868,6 +907,7 @@
 				2CF3D3D526FCEA11008C13F3 /* MainBMCollectionViewCell.swift in Sources */,
 				2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */,
 				2C94412627038475005980D0 /* AllAnswerBaseTableViewCell.swift in Sources */,
+				2C715BC7270DA5D0007D67C5 /* AlertSettingTableViewCell.swift in Sources */,
 				2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */,
 				2CC092BE26F26F53009E69D0 /* HapticManager.swift in Sources */,
 				2C3306172700F78100E638B1 /* MainQuestionTableViewCell.swift in Sources */,
@@ -886,6 +926,7 @@
 				2C22F413270C297600580DCF /* BottomWhiteLabelTableViewCell.swift in Sources */,
 				2C148202270B8033005C0597 /* SettingTableViewCell.swift in Sources */,
 				2CD9D9C82704F49F0041A0DB /* LoginService.swift in Sources */,
+				2C715BCB270DA67D007D67C5 /* PolicySettingTableViewCell.swift in Sources */,
 				2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */,
 				2CD9D9BA2704EAE40041A0DB /* AuthEmailResponse.swift in Sources */,
 				2CD6F7D727037DC000D1E04E /* AllAnswerViewController.swift in Sources */,
@@ -911,6 +952,7 @@
 				2CC092C726F2905B009E69D0 /* ParticipantViewController.swift in Sources */,
 				2CF3D3D126FBE850008C13F3 /* RecommentCollectionViewCell.swift in Sources */,
 				2CF3D3C526FBD3D6008C13F3 /* UIImage.swift in Sources */,
+				2C715BC0270DA33F007D67C5 /* DeviceSettingViewController.swift in Sources */,
 				2CC5AEC626F0FA450096D818 /* OnBoardingViewController.swift in Sources */,
 				2CC5AEB426EFDC600096D818 /* AgreeAuthorityViewController.swift in Sources */,
 				2CBB71D52708E9DA008B3E56 /* TodayQuestionRepository.swift in Sources */,
@@ -933,10 +975,12 @@
 				2CB9288027023AB900BF34DC /* SignUpResponse.swift in Sources */,
 				2CD9D9B82704EAD90041A0DB /* AuthEmailRequest.swift in Sources */,
 				2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */,
+				2C715BC3270DA564007D67C5 /* TitleSettingTableViewCell.swift in Sources */,
 				2CF3D3B826FB9BCE008C13F3 /* CalendarTableViewCell.swift in Sources */,
 				2CB928782702223700BF34DC /* QAViewController.swift in Sources */,
 				2CF3D3BD26FBC180008C13F3 /* AddDateNavigationController.swift in Sources */,
 				2C4B7BB926F2E0EF0083576A /* UserSettingViewController.swift in Sources */,
+				2C715BCF270DA6D0007D67C5 /* SettingGuideLineTableViewCell.swift in Sources */,
 				2C5C288B26F4C2DD00217D00 /* ChatViewController.swift in Sources */,
 				2CD9D9C42704F32A0041A0DB /* LoginResponse.swift in Sources */,
 				2CF3D3C826FBDD20008C13F3 /* PresentMainViewController.swift in Sources */,

@@ -133,10 +133,14 @@ extension UserSettingViewController: UITableViewDelegate, UITableViewDataSource 
             print("공지사항")
             let storyBoard = UIStoryboard(name: "Home", bundle: nil)
             let noticeVC = storyBoard.instantiateViewController(withIdentifier: "NoticeViewController")
-            noticeVC.modalPresentationStyle = .overCurrentContext
             self.navigationController?.pushViewController(noticeVC, animated: true)
         } else if indexPath.row == 2 {
+            
+            
             print("앱 설정")
+            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+            let deviceSettingVC = storyBoard.instantiateViewController(withIdentifier: "DeviceSettingViewController")
+            self.navigationController?.pushViewController(deviceSettingVC, animated: true)
         }
     }
     

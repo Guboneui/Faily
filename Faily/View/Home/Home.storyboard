@@ -408,6 +408,72 @@
             </objects>
             <point key="canvasLocation" x="350.72463768115944" y="361.60714285714283"/>
         </scene>
+        <!--Device Setting View Controller-->
+        <scene sceneID="UFp-yi-oMs">
+            <objects>
+                <viewController restorationIdentifier="DeviceSettingViewController" storyboardIdentifier="DeviceSettingViewController" id="1Ox-5y-hIV" customClass="DeviceSettingViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pHs-JL-TDA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yvl-2h-83N">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaQ-b2-L6I">
+                                        <rect key="frame" x="11" y="13" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="jWG-lS-fgx"/>
+                                            <constraint firstAttribute="width" constant="24" id="s5B-za-okb"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backbuttonAction:" destination="1Ox-5y-hIV" eventType="touchUpInside" id="goF-Pa-a1F"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앱설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5l-ho-Z48">
+                                        <rect key="frame" x="181" y="13" width="52" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="gaQ-b2-L6I" firstAttribute="leading" secondItem="Yvl-2h-83N" secondAttribute="leading" constant="11" id="67d-Ru-lCE"/>
+                                    <constraint firstItem="gaQ-b2-L6I" firstAttribute="centerY" secondItem="O5l-ho-Z48" secondAttribute="centerY" id="6lX-9V-DDK"/>
+                                    <constraint firstItem="O5l-ho-Z48" firstAttribute="centerY" secondItem="Yvl-2h-83N" secondAttribute="centerY" id="AnM-4p-EfW"/>
+                                    <constraint firstItem="O5l-ho-Z48" firstAttribute="centerX" secondItem="Yvl-2h-83N" secondAttribute="centerX" id="S8K-iQ-b5O"/>
+                                    <constraint firstAttribute="height" constant="50" id="kIG-kk-Evj"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Evh-PN-JLf">
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jeu-eK-bo2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jeu-eK-bo2" firstAttribute="trailing" secondItem="Evh-PN-JLf" secondAttribute="trailing" id="6So-ft-Eg3"/>
+                            <constraint firstItem="Yvl-2h-83N" firstAttribute="top" secondItem="jeu-eK-bo2" secondAttribute="top" id="7Ls-yf-1yS"/>
+                            <constraint firstItem="Evh-PN-JLf" firstAttribute="top" secondItem="Yvl-2h-83N" secondAttribute="bottom" id="NLj-Pz-MLQ"/>
+                            <constraint firstItem="Yvl-2h-83N" firstAttribute="leading" secondItem="jeu-eK-bo2" secondAttribute="leading" id="Oa2-XH-W7u"/>
+                            <constraint firstAttribute="bottom" secondItem="Evh-PN-JLf" secondAttribute="bottom" id="PYK-8T-hb9"/>
+                            <constraint firstItem="jeu-eK-bo2" firstAttribute="trailing" secondItem="Yvl-2h-83N" secondAttribute="trailing" id="fnz-VQ-5jF"/>
+                            <constraint firstItem="Evh-PN-JLf" firstAttribute="leading" secondItem="jeu-eK-bo2" secondAttribute="leading" id="yEt-eK-lLN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="gaQ-b2-L6I" id="VtW-IS-gHQ"/>
+                        <outlet property="deviceSettingTableView" destination="Evh-PN-JLf" id="Rxl-7L-VcS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wKO-Db-3iR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5842" y="1193"/>
+        </scene>
         <!--Detail Notice View Controller-->
         <scene sceneID="WcB-LN-xOP">
             <objects>
