@@ -22,6 +22,9 @@ struct PolicySetting {
     var title: String
 }
 
+struct IntroSetting {
+    var title: String
+}
 
 
 class DeviceSettingViewController: UIViewController {
@@ -49,6 +52,10 @@ class DeviceSettingViewController: UIViewController {
         PolicySetting(title: "오픈소스 라이선스")
     ]
     
+    var introSetting = [
+        IntroSetting(title: "앱 소개")
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
@@ -62,6 +69,7 @@ class DeviceSettingViewController: UIViewController {
         deviceSettingTableView.register(UINib(nibName: "TitleSettingTableViewCell", bundle: nil), forCellReuseIdentifier: "TitleSettingTableViewCell")
         deviceSettingTableView.register(UINib(nibName: "AlertSettingTableViewCell", bundle: nil), forCellReuseIdentifier: "AlertSettingTableViewCell")
         deviceSettingTableView.register(UINib(nibName: "PolicySettingTableViewCell", bundle: nil), forCellReuseIdentifier: "PolicySettingTableViewCell")
+        deviceSettingTableView.register(UINib(nibName: "IntroAppTableViewCell", bundle: nil), forCellReuseIdentifier: "IntroAppTableViewCell")
         deviceSettingTableView.register(UINib(nibName: "SettingGuideLineTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingGuideLineTableViewCell")
     }
     
@@ -74,7 +82,7 @@ class DeviceSettingViewController: UIViewController {
 
 extension DeviceSettingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 11
+        return 12
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -124,6 +132,12 @@ extension DeviceSettingViewController: UITableViewDelegate, UITableViewDataSourc
             
             cell.selectionStyle = .none
             return cell
+        } else if indexPath.row == 11 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "IntroAppTableViewCell", for: indexPath) as! IntroAppTableViewCell
+        
+            cell.introTitleLabel.text = self.introSetting[0].title
+            cell.selectionStyle = .none
+            return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingGuideLineTableViewCell", for: indexPath) as! SettingGuideLineTableViewCell
             cell.selectionStyle = .none
@@ -138,11 +152,9 @@ extension DeviceSettingViewController: UITableViewDelegate, UITableViewDataSourc
             self.presentAlert(title: "개인정보 처리 방침")
         } else if indexPath.row == 8 {
             self.presentAlert(title: "오픈소스 라이선스")
-        } else if indexPath.row == 10 {
+        } else if indexPath.row == 11 {
             self.presentAlert(title: "앱 소개")
         }
-        
-        
     }
     
     

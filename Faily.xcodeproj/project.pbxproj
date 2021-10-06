@@ -46,6 +46,8 @@
 		2C715BCC270DA67D007D67C5 /* PolicySettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C715BCA270DA67D007D67C5 /* PolicySettingTableViewCell.xib */; };
 		2C715BCF270DA6D0007D67C5 /* SettingGuideLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C715BCD270DA6D0007D67C5 /* SettingGuideLineTableViewCell.swift */; };
 		2C715BD0270DA6D0007D67C5 /* SettingGuideLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C715BCE270DA6D0007D67C5 /* SettingGuideLineTableViewCell.xib */; };
+		2C715BD3270DB2A1007D67C5 /* IntroAppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C715BD1270DB2A1007D67C5 /* IntroAppTableViewCell.swift */; };
+		2C715BD4270DB2A1007D67C5 /* IntroAppTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C715BD2270DB2A1007D67C5 /* IntroAppTableViewCell.xib */; };
 		2C94412627038475005980D0 /* AllAnswerBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C94412427038475005980D0 /* AllAnswerBaseTableViewCell.swift */; };
 		2C94412727038475005980D0 /* AllAnswerBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C94412527038475005980D0 /* AllAnswerBaseTableViewCell.xib */; };
 		2C94412927038795005980D0 /* AllAnswerProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C94412827038795005980D0 /* AllAnswerProfileCollectionViewCell.swift */; };
@@ -180,6 +182,8 @@
 		2C715BCA270DA67D007D67C5 /* PolicySettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PolicySettingTableViewCell.xib; sourceTree = "<group>"; };
 		2C715BCD270DA6D0007D67C5 /* SettingGuideLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingGuideLineTableViewCell.swift; sourceTree = "<group>"; };
 		2C715BCE270DA6D0007D67C5 /* SettingGuideLineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingGuideLineTableViewCell.xib; sourceTree = "<group>"; };
+		2C715BD1270DB2A1007D67C5 /* IntroAppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroAppTableViewCell.swift; sourceTree = "<group>"; };
+		2C715BD2270DB2A1007D67C5 /* IntroAppTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroAppTableViewCell.xib; sourceTree = "<group>"; };
 		2C94412427038475005980D0 /* AllAnswerBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnswerBaseTableViewCell.swift; sourceTree = "<group>"; };
 		2C94412527038475005980D0 /* AllAnswerBaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllAnswerBaseTableViewCell.xib; sourceTree = "<group>"; };
 		2C94412827038795005980D0 /* AllAnswerProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnswerProfileCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -393,6 +397,8 @@
 				2C715BC6270DA5D0007D67C5 /* AlertSettingTableViewCell.xib */,
 				2C715BC9270DA67D007D67C5 /* PolicySettingTableViewCell.swift */,
 				2C715BCA270DA67D007D67C5 /* PolicySettingTableViewCell.xib */,
+				2C715BD1270DB2A1007D67C5 /* IntroAppTableViewCell.swift */,
+				2C715BD2270DB2A1007D67C5 /* IntroAppTableViewCell.xib */,
 				2C715BCD270DA6D0007D67C5 /* SettingGuideLineTableViewCell.swift */,
 				2C715BCE270DA6D0007D67C5 /* SettingGuideLineTableViewCell.xib */,
 			);
@@ -828,6 +834,7 @@
 				2C33061C2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib in Resources */,
 				2CF3D3D626FCEA11008C13F3 /* MainBMCollectionViewCell.xib in Resources */,
 				2CC9C38726E2A27600936BCD /* Assets.xcassets in Resources */,
+				2C715BD4270DB2A1007D67C5 /* IntroAppTableViewCell.xib in Resources */,
 				2CC092BA26F268E3009E69D0 /* Home.storyboard in Resources */,
 				2C94412F27038811005980D0 /* AllAnswerExpandTableViewCell.xib in Resources */,
 				2CF3D3B926FB9BCE008C13F3 /* CalendarTableViewCell.xib in Resources */,
@@ -891,6 +898,7 @@
 				2C4B7BB726F2E0D90083576A /* GalleryViewController.swift in Sources */,
 				2C22F40F270C0C5200580DCF /* DateScheduleTableViewCell.swift in Sources */,
 				2CD9D9BE2704EDA40041A0DB /* AuthEmailService.swift in Sources */,
+				2C715BD3270DB2A1007D67C5 /* IntroAppTableViewCell.swift in Sources */,
 				2C9EAFF52706142600F507A6 /* InviteRepository.swift in Sources */,
 				2CC5AECD26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift in Sources */,
 				2C94412E27038811005980D0 /* AllAnswerExpandTableViewCell.swift in Sources */,
