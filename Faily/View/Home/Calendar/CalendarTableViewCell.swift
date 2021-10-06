@@ -22,6 +22,9 @@ class CalendarTableViewCell: UITableViewCell {
     var today: Date = Date()
     var dateFormatter: DateFormatter = DateFormatter()
     
+    
+    var events: [Date] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setCalendar()
@@ -56,6 +59,8 @@ class CalendarTableViewCell: UITableViewCell {
         
     }
     
+    
+    
     @IBAction func prevMonthButtonAction(_ sender: Any) {
         scrollCurrentPage(isPrev: true)
     }
@@ -66,10 +71,11 @@ class CalendarTableViewCell: UITableViewCell {
  
 }
 
-extension CalendarTableViewCell: FSCalendarDelegate {
+extension CalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource {
     func setCalendar() {
         dateFormatter.dateFormat = "YYYY년 M월"
         calendarView.delegate = self
+        calendarView.dataSource = self
         calendarView.headerHeight = 0
         calendarView.scope = .month
         calendarView.appearance.weekdayTextColor = UIColor.black
@@ -80,6 +86,9 @@ extension CalendarTableViewCell: FSCalendarDelegate {
         //calendarView.appearance.todaySelectionColor = UIColor.FailyColor.secondaryPinkColor
         calendarView.appearance.titleSelectionColor = .white
         calendarTitleLabel.text = self.dateFormatter.string(from: calendarView.currentPage)
+        
+        calendarView.appearance.eventDefaultColor = UIColor.FailyColor.secondaryPinkColor
+        calendarView.appearance.eventSelectionColor = UIColor.FailyColor.secondaryPinkColor
         
     }
     
@@ -92,5 +101,21 @@ extension CalendarTableViewCell: FSCalendarDelegate {
         //별도 데이터 포맷을 생성하여 api 메소드 추가 필요
     }
     
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        let formatter        = DateFormatter()
+        formatter.locale     = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "YYYY-MM-dd"
+        
+        let dateToString = formatter.date(from: "2021-10-10")
+        events.append(dateToString!)
+        
+        if events.contains(date) {
+            return 1
+        } else {
+            return 0
+        }
+    }
 }
+
+
 
