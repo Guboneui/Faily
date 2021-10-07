@@ -1144,6 +1144,70 @@
             </objects>
             <point key="canvasLocation" x="-2139.130434782609" y="1188.6160714285713"/>
         </scene>
+        <!--Present Box View Controller-->
+        <scene sceneID="oE9-HB-tI2">
+            <objects>
+                <viewController restorationIdentifier="PresentBoxViewController" storyboardIdentifier="PresentBoxViewController" id="ApE-oF-Fja" customClass="PresentBoxViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yW9-Qh-zdG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7m-w7-6Fh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZV6-p0-Yxm">
+                                        <rect key="frame" x="189.5" y="13" width="35" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nv5-b7-9SI">
+                                        <rect key="frame" x="11" y="13" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="AHM-1m-oey"/>
+                                            <constraint firstAttribute="height" constant="24" id="X1M-Ie-s63"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonAction:" destination="ApE-oF-Fja" eventType="touchUpInside" id="72l-TJ-l6C"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ZV6-p0-Yxm" firstAttribute="centerY" secondItem="g7m-w7-6Fh" secondAttribute="centerY" id="EJo-X8-WSG"/>
+                                    <constraint firstItem="nv5-b7-9SI" firstAttribute="leading" secondItem="g7m-w7-6Fh" secondAttribute="leading" constant="11" id="KNf-cj-PDp"/>
+                                    <constraint firstAttribute="height" constant="50" id="LD5-cz-Uwh"/>
+                                    <constraint firstItem="ZV6-p0-Yxm" firstAttribute="centerX" secondItem="g7m-w7-6Fh" secondAttribute="centerX" id="hnP-Or-qKf"/>
+                                    <constraint firstItem="nv5-b7-9SI" firstAttribute="centerY" secondItem="ZV6-p0-Yxm" secondAttribute="centerY" id="nEH-Xy-Rts"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UJf-S1-jV7">
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="j0i-CR-LoI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UJf-S1-jV7" firstAttribute="top" secondItem="g7m-w7-6Fh" secondAttribute="bottom" id="Trs-Th-8Ql"/>
+                            <constraint firstItem="j0i-CR-LoI" firstAttribute="trailing" secondItem="g7m-w7-6Fh" secondAttribute="trailing" id="bs5-Qb-yDf"/>
+                            <constraint firstItem="j0i-CR-LoI" firstAttribute="trailing" secondItem="UJf-S1-jV7" secondAttribute="trailing" id="byc-ub-VTI"/>
+                            <constraint firstItem="UJf-S1-jV7" firstAttribute="leading" secondItem="j0i-CR-LoI" secondAttribute="leading" id="iTP-f2-a4E"/>
+                            <constraint firstItem="g7m-w7-6Fh" firstAttribute="top" secondItem="j0i-CR-LoI" secondAttribute="top" id="jiT-Tj-7Nh"/>
+                            <constraint firstItem="g7m-w7-6Fh" firstAttribute="leading" secondItem="j0i-CR-LoI" secondAttribute="leading" id="svc-7K-X0s"/>
+                            <constraint firstAttribute="bottom" secondItem="UJf-S1-jV7" secondAttribute="bottom" id="wAs-gF-FBk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="presentBoxTableView" destination="UJf-S1-jV7" id="2dD-m2-5is"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7I-CE-fXp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2124.6376811594205" y="1839.5089285714284"/>
+        </scene>
         <!--Gallery View Controller-->
         <scene sceneID="GhZ-L4-7Hr">
             <objects>

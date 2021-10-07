@@ -72,6 +72,12 @@ class UserSettingViewController: UIViewController {
     
     @objc func presentStackViewAction(sender: UITapGestureRecognizer) {
         print("선물")
+        
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let presentBoxVC = storyBoard.instantiateViewController(withIdentifier: "PresentBoxViewController")
+        self.navigationController?.pushViewController(presentBoxVC, animated: true)
+        
+        
     }
     
     @objc func emoticonStackViewAction(sender: UITapGestureRecognizer) {

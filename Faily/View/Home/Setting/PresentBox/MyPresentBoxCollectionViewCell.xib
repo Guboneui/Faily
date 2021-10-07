@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MyPresentBoxCollectionViewCell" reuseIdentifier="MyPresentBoxCollectionViewCell" id="mKw-rC-4IQ" customClass="MyPresentBoxCollectionViewCell" customModule="Faily" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="201" height="265"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="E9p-og-Mpz">
+                <rect key="frame" x="0.0" y="0.0" width="201" height="265"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testBM" translatesAutoresizingMaskIntoConstraints="NO" id="fBh-Ei-PNX">
+                        <rect key="frame" x="0.0" y="0.0" width="201" height="201"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="fBh-Ei-PNX" secondAttribute="height" id="y5B-GC-9Nh"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="스타벅스 커피" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox3-9p-KQB">
+                        <rect key="frame" x="0.0" y="211" width="201" height="19.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="승빈으로부터 온 선물" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBi-aB-gJp">
+                        <rect key="frame" x="0.0" y="230.5" width="201" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="grayscale_2"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fBh-Ei-PNX" firstAttribute="top" secondItem="E9p-og-Mpz" secondAttribute="top" id="3FC-Jl-P8H"/>
+                    <constraint firstItem="OBi-aB-gJp" firstAttribute="leading" secondItem="E9p-og-Mpz" secondAttribute="leading" id="5US-uO-1ls"/>
+                    <constraint firstItem="fBh-Ei-PNX" firstAttribute="leading" secondItem="E9p-og-Mpz" secondAttribute="leading" id="80L-aG-5vM"/>
+                    <constraint firstAttribute="trailing" secondItem="ox3-9p-KQB" secondAttribute="trailing" id="KOM-fn-lcs"/>
+                    <constraint firstItem="OBi-aB-gJp" firstAttribute="top" secondItem="ox3-9p-KQB" secondAttribute="bottom" id="W8X-MI-owD"/>
+                    <constraint firstItem="ox3-9p-KQB" firstAttribute="leading" secondItem="E9p-og-Mpz" secondAttribute="leading" id="bU5-rC-r3b"/>
+                    <constraint firstItem="ox3-9p-KQB" firstAttribute="top" secondItem="fBh-Ei-PNX" secondAttribute="bottom" constant="10" id="lo5-Ml-uJg"/>
+                    <constraint firstAttribute="trailing" secondItem="OBi-aB-gJp" secondAttribute="trailing" id="nvZ-ox-nOR"/>
+                    <constraint firstAttribute="trailing" secondItem="fBh-Ei-PNX" secondAttribute="trailing" id="uJo-KP-q6d"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OBi-aB-gJp" secondAttribute="bottom" id="yXD-qv-R4K"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="201" height="265"/>
+            <connections>
+                <outlet property="presentImage" destination="fBh-Ei-PNX" id="LoS-gS-OoL"/>
+            </connections>
+            <point key="canvasLocation" x="141.30434782608697" y="47.209821428571423"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="testBM" width="1155" height="1155"/>
+        <namedColor name="grayscale_2">
+            <color red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
