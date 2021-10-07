@@ -1206,7 +1206,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7I-CE-fXp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2124.6376811594205" y="1839.5089285714284"/>
+            <point key="canvasLocation" x="-2533" y="1855"/>
+        </scene>
+        <!--Emoticon Box View Controller-->
+        <scene sceneID="7Ti-UG-vZe">
+            <objects>
+                <viewController id="tBP-gT-04P" customClass="EmoticonBoxViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bDL-3m-ocd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nI-IK-3zx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이모티콘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVh-dn-upl">
+                                        <rect key="frame" x="172.5" y="13" width="69.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h24-Ff-R1L">
+                                        <rect key="frame" x="11" y="13" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="6Ih-KP-NBW"/>
+                                            <constraint firstAttribute="height" constant="24" id="diA-Qu-URf"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonAction:" destination="tBP-gT-04P" eventType="touchUpInside" id="kNS-vD-DKv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUE-O1-rAR">
+                                        <rect key="frame" x="359" y="9" width="30" height="32"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="저장">
+                                            <color key="titleColor" name="grayscale_4"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButtonAction:" destination="tBP-gT-04P" eventType="touchUpInside" id="l6t-5B-FIg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Gdv-ml-PMV"/>
+                                    <constraint firstItem="uVh-dn-upl" firstAttribute="centerX" secondItem="4nI-IK-3zx" secondAttribute="centerX" id="M58-7x-uL5"/>
+                                    <constraint firstItem="h24-Ff-R1L" firstAttribute="leading" secondItem="4nI-IK-3zx" secondAttribute="leading" constant="11" id="MGf-cD-UsE"/>
+                                    <constraint firstItem="h24-Ff-R1L" firstAttribute="centerY" secondItem="uVh-dn-upl" secondAttribute="centerY" id="YqF-xj-lNS"/>
+                                    <constraint firstItem="KUE-O1-rAR" firstAttribute="centerY" secondItem="uVh-dn-upl" secondAttribute="centerY" id="e1l-nJ-w32"/>
+                                    <constraint firstItem="uVh-dn-upl" firstAttribute="centerY" secondItem="4nI-IK-3zx" secondAttribute="centerY" id="mBO-HC-VP4"/>
+                                    <constraint firstAttribute="trailing" secondItem="KUE-O1-rAR" secondAttribute="trailing" constant="25" id="zUB-nn-yKD"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bZa-TM-jPf">
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jk8-Yk-VYY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bZa-TM-jPf" secondAttribute="bottom" id="6hE-xe-q63"/>
+                            <constraint firstItem="bZa-TM-jPf" firstAttribute="trailing" secondItem="Jk8-Yk-VYY" secondAttribute="trailing" id="W3y-Ph-iHX"/>
+                            <constraint firstItem="bZa-TM-jPf" firstAttribute="leading" secondItem="Jk8-Yk-VYY" secondAttribute="leading" id="e70-HE-VmU"/>
+                            <constraint firstItem="4nI-IK-3zx" firstAttribute="leading" secondItem="Jk8-Yk-VYY" secondAttribute="leading" id="mVP-zL-GQm"/>
+                            <constraint firstItem="bZa-TM-jPf" firstAttribute="top" secondItem="4nI-IK-3zx" secondAttribute="bottom" id="piN-gW-4I6"/>
+                            <constraint firstItem="4nI-IK-3zx" firstAttribute="top" secondItem="Jk8-Yk-VYY" secondAttribute="top" id="sna-Zz-t2Z"/>
+                            <constraint firstItem="Jk8-Yk-VYY" firstAttribute="trailing" secondItem="4nI-IK-3zx" secondAttribute="trailing" id="yti-Mh-OZF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emoticonBoxTableView" destination="bZa-TM-jPf" id="A6Q-18-aQ3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8zb-uy-Yed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1744.9275362318842" y="1854.9107142857142"/>
         </scene>
         <!--Gallery View Controller-->
         <scene sceneID="GhZ-L4-7Hr">
