@@ -82,6 +82,10 @@ class UserSettingViewController: UIViewController {
     
     @objc func emoticonStackViewAction(sender: UITapGestureRecognizer) {
         print("이모티콘")
+        
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let emoticonVC = storyBoard.instantiateViewController(withIdentifier: "EmoticonBoxViewController")
+        self.navigationController?.pushViewController(emoticonVC, animated: true)
     }
     
     @objc func pointStackViewAction(sender: UITapGestureRecognizer) {

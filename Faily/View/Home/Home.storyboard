@@ -1211,7 +1211,7 @@
         <!--Emoticon Box View Controller-->
         <scene sceneID="7Ti-UG-vZe">
             <objects>
-                <viewController id="tBP-gT-04P" customClass="EmoticonBoxViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="EmoticonBoxViewController" storyboardIdentifier="EmoticonBoxViewController" id="tBP-gT-04P" customClass="EmoticonBoxViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bDL-3m-ocd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1283,7 +1283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zb-uy-Yed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1744.9275362318842" y="1854.9107142857142"/>
+            <point key="canvasLocation" x="-1326" y="1855"/>
         </scene>
         <!--Gallery View Controller-->
         <scene sceneID="GhZ-L4-7Hr">
@@ -1310,7 +1310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u18-HX-qot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-420.28985507246381" y="862.5"/>
+            <point key="canvasLocation" x="-786.95652173913049" y="884.59821428571422"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="TDk-g3-6hV">

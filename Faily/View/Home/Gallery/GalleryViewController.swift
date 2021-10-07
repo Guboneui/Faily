@@ -6,24 +6,30 @@
 //
 
 import UIKit
+import PhotosUI
+import Photos
 
 class GalleryViewController: UIViewController {
-
+    
+    
+    let albumList = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print(albumList.count)
+        
+        for i in 0..<albumList.count {
+            let album = albumList.object(at: i)
+              // eg. get the name of the album
+              print(album.localizedTitle)
+        }
+        
+        
+        
+      
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+

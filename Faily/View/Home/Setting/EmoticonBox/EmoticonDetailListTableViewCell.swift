@@ -41,4 +41,3 @@ extension EmoticonDetailListTableViewCell: UICollectionViewDelegate, UICollectio
     }
 }
 
-extension EmoticonDetailListTableViewCell: uicollection
