@@ -10,6 +10,8 @@ import UIKit
 class MyPresentOrderDetailTableViewCell: UITableViewCell {
 
     @IBOutlet weak var baseView: UIView!
+    @IBOutlet weak var myPresentImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

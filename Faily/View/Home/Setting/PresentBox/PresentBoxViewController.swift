@@ -59,7 +59,7 @@ extension PresentBoxViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else  {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyPresentOrderDetailTableViewCell", for: indexPath) as! MyPresentOrderDetailTableViewCell
-            
+            print(cell.myPresentImage.frame.size)
             cell.selectionStyle = .none
             return cell
         }
@@ -67,7 +67,7 @@ extension PresentBoxViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return self.presentBoxTableView.frame.height * 0.4
+            return self.presentBoxTableView.frame.height * 0.33
         } else {
             return UITableView.automaticDimension
         }

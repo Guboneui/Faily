@@ -44,7 +44,8 @@ extension MyPresentBoxTableViewCell: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyPresentBoxCollectionViewCell", for: indexPath) as! MyPresentBoxCollectionViewCell
-        
+        print("컬렉션뷰")
+        print(cell.presentImage.frame.size)
         return cell
     }
     
@@ -73,6 +74,6 @@ extension MyPresentBoxTableViewCell: UICollectionViewDelegateFlowLayout {
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 0
     }
 }

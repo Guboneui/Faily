@@ -96,6 +96,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="baseView" destination="UZC-2p-Ujw" id="ED7-qx-1Nc"/>
+                <outlet property="myPresentImage" destination="9Uw-lo-xR7" id="fMm-Jh-73Z"/>
             </connections>
             <point key="canvasLocation" x="73.913043478260875" y="72.991071428571431"/>
         </tableViewCell>
