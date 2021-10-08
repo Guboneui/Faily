@@ -10,6 +10,7 @@ import UIKit
 class PresentBoxViewController: UIViewController {
 
     @IBOutlet weak var presentBoxTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,11 +40,11 @@ extension PresentBoxViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 7
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyPresentBoxTableViewCell", for: indexPath) as! MyPresentBoxTableViewCell
-            
+
             cell.selectionStyle = .none
             return cell
         }
@@ -52,27 +53,26 @@ extension PresentBoxViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         }
-        else if indexPath.row == 1 {
+        else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyOrderTitleTableViewCell", for: indexPath) as! MyOrderTitleTableViewCell
-            
+
             cell.selectionStyle = .none
             return cell
         } else  {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyPresentOrderDetailTableViewCell", for: indexPath) as! MyPresentOrderDetailTableViewCell
-            print(cell.myPresentImage.frame.size)
             cell.selectionStyle = .none
             return cell
         }
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             //return self.presentBoxTableView.frame.height * 0.31
             return 225
-        
+
         } else {
             return UITableView.automaticDimension
         }
     }
-    
+
 }

@@ -20,4 +20,5 @@ pod 'PanModal'
 pod 'Cosmos'
 pod 'CollectionViewPagingLayout'
 pod 'ExpyTableView'
+pod 'YPImagePicker'
 end
