@@ -49,6 +49,8 @@ class GalleryViewController: UIViewController {
         imagePicker.settings.theme.selectionShadowColor = .clear
         imagePicker.settings.theme.selectionStrokeColor = .clear
         
+        imagePicker.cancelButton.setBackgroundImage(UIImage(named: "delete_Text"), for: .normal, barMetrics: .default)
+        imagePicker.cancelButton.tintColor = UIColor.black
         imagePicker.albumButton.tintColor = UIColor.black
         imagePicker.albumButton.setImage(UIImage(systemName: "triangle"), for: .normal)
         let start = Date()
