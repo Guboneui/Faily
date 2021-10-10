@@ -19,7 +19,7 @@ class GalleryViewController: UIViewController {
     
     let albumList = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: nil)
     
-    var selectedAssets = [UIImage]()
+    var selectedAssets = [PHAsset]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,12 +42,17 @@ class GalleryViewController: UIViewController {
         let imagePicker = ImagePickerController()
         imagePicker.settings.selection.max = 5
         imagePicker.settings.theme.selectionStyle = .checked
+        
         imagePicker.settings.fetch.assets.supportedMediaTypes = [.image]
         imagePicker.settings.selection.unselectOnReachingMax = false
-        imagePicker.settings.theme.selectionFillColor = UIColor.FailyColor.secondaryPinkColor
+        imagePicker.settings.theme.selectionFillColor = .clear
+        imagePicker.settings.theme.selectionShadowColor = .clear
+        imagePicker.settings.theme.selectionStrokeColor = .clear
+        
         imagePicker.albumButton.tintColor = UIColor.black
         imagePicker.albumButton.setImage(UIImage(systemName: "triangle"), for: .normal)
         let start = Date()
+        imagePicker.modalPresentationStyle = .overCurrentContext
         self.presentImagePicker(imagePicker, select: { (asset) in
             print("Selected: \(asset)")
             
