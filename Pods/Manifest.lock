@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.4.3)
+  - BSImagePicker (3.3.1)
   - CollectionViewPagingLayout (1.0.2)
   - Cosmos (23.0.0)
   - ExpyTableView (1.2.1)
@@ -24,6 +25,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - BSImagePicker (~> 3.1)
   - CollectionViewPagingLayout
   - Cosmos
   - ExpyTableView
@@ -42,6 +44,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - BSImagePicker
     - CollectionViewPagingLayout
     - Cosmos
     - ExpyTableView
@@ -61,6 +64,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  BSImagePicker: 0fe04b574d4d6b81093785d2af6c26227efc8428
   CollectionViewPagingLayout: 418c8f5fc92cb35673f961196d5e0509ab853667
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   ExpyTableView: 19cf224c2ff04b1ec215ec52bc4ba6f81fa809ed
@@ -78,6 +82,6 @@ SPEC CHECKSUMS:
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   YPImagePicker: 1463a19a36244e209dcb03c30e63559c5afa9602
 
-PODFILE CHECKSUM: 1b5f6077c73b230a11afa41043dfcb209501aa68
+PODFILE CHECKSUM: 8e1e154eeeeebb5c36a29b18613ba56fb5d38759
 
 COCOAPODS: 1.11.2
