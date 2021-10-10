@@ -45,10 +45,12 @@ class GalleryViewController: UIViewController {
         imagePicker.settings.fetch.assets.supportedMediaTypes = [.image]
         imagePicker.settings.selection.unselectOnReachingMax = false
         imagePicker.settings.theme.selectionFillColor = UIColor.FailyColor.secondaryPinkColor
-        
+        imagePicker.albumButton.tintColor = UIColor.black
+        imagePicker.albumButton.setImage(UIImage(systemName: "triangle"), for: .normal)
         let start = Date()
         self.presentImagePicker(imagePicker, select: { (asset) in
             print("Selected: \(asset)")
+            
         }, deselect: { (asset) in
             print("Deselected: \(asset)")
         }, cancel: { (assets) in
