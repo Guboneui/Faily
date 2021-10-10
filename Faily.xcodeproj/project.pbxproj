@@ -20,6 +20,8 @@
 		2C22F410270C0C5200580DCF /* DateScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C22F40E270C0C5200580DCF /* DateScheduleTableViewCell.xib */; };
 		2C22F413270C297600580DCF /* BottomWhiteLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C22F411270C297600580DCF /* BottomWhiteLabelTableViewCell.swift */; };
 		2C22F414270C297600580DCF /* BottomWhiteLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C22F412270C297600580DCF /* BottomWhiteLabelTableViewCell.xib */; };
+		2C2EFF8A27137BB700E14662 /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2EFF8827137BB700E14662 /* GalleryTableViewCell.swift */; };
+		2C2EFF8B27137BB700E14662 /* GalleryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2EFF8927137BB700E14662 /* GalleryTableViewCell.xib */; };
 		2C3306172700F78100E638B1 /* MainQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */; };
 		2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */; };
 		2C33061A2700FA2800E638B1 /* MainQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */; };
@@ -177,6 +179,8 @@
 		2C22F40E270C0C5200580DCF /* DateScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		2C22F411270C297600580DCF /* BottomWhiteLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomWhiteLabelTableViewCell.swift; sourceTree = "<group>"; };
 		2C22F412270C297600580DCF /* BottomWhiteLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomWhiteLabelTableViewCell.xib; sourceTree = "<group>"; };
+		2C2EFF8827137BB700E14662 /* GalleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTableViewCell.swift; sourceTree = "<group>"; };
+		2C2EFF8927137BB700E14662 /* GalleryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryTableViewCell.xib; sourceTree = "<group>"; };
 		2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -401,6 +405,8 @@
 			children = (
 				2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */,
 				2C3CC0892710BEA70056EC9D /* UserGalleryCategoryViewController.swift */,
+				2C2EFF8827137BB700E14662 /* GalleryTableViewCell.swift */,
+				2C2EFF8927137BB700E14662 /* GalleryTableViewCell.xib */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -903,6 +909,7 @@
 				2C94412B2703879B005980D0 /* AllAnswerProfileCollectionViewCell.xib in Resources */,
 				2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */,
 				2C715C0D270E90CA007D67C5 /* MyPresentOrderDetailTableViewCell.xib in Resources */,
+				2C2EFF8B27137BB700E14662 /* GalleryTableViewCell.xib in Resources */,
 				2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */,
 				2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */,
 				2CF3D3CC26FBDD59008C13F3 /* PresentCategoryCollectionViewCell.xib in Resources */,
@@ -1035,6 +1042,7 @@
 				2CD9D9BA2704EAE40041A0DB /* AuthEmailResponse.swift in Sources */,
 				2CD6F7D727037DC000D1E04E /* AllAnswerViewController.swift in Sources */,
 				2C9EB00727077A1A00F507A6 /* EntryRepository.swift in Sources */,
+				2C2EFF8A27137BB700E14662 /* GalleryTableViewCell.swift in Sources */,
 				2CB9287B270238A500BF34DC /* ConstantURL.swift in Sources */,
 				2C9EB0032707798600F507A6 /* EntryRequest.swift in Sources */,
 				2CF3D3BF26FBCE88008C13F3 /* ScheduleDivisionViewController.swift in Sources */,
