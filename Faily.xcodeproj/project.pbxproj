@@ -22,6 +22,9 @@
 		2C22F414270C297600580DCF /* BottomWhiteLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C22F412270C297600580DCF /* BottomWhiteLabelTableViewCell.xib */; };
 		2C2EFF8A27137BB700E14662 /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2EFF8827137BB700E14662 /* GalleryTableViewCell.swift */; };
 		2C2EFF8B27137BB700E14662 /* GalleryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2EFF8927137BB700E14662 /* GalleryTableViewCell.xib */; };
+		2C2EFF8D271385ED00E14662 /* DeviceDetailGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2EFF8C271385ED00E14662 /* DeviceDetailGalleryViewController.swift */; };
+		2C2EFF8F2713861200E14662 /* DeviceDetailGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2EFF8E2713861200E14662 /* DeviceDetailGalleryCollectionViewCell.swift */; };
+		2C2EFF912713861800E14662 /* DeviceDetailGalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2EFF902713861800E14662 /* DeviceDetailGalleryCollectionViewCell.xib */; };
 		2C3306172700F78100E638B1 /* MainQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */; };
 		2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */; };
 		2C33061A2700FA2800E638B1 /* MainQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */; };
@@ -181,6 +184,9 @@
 		2C22F412270C297600580DCF /* BottomWhiteLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomWhiteLabelTableViewCell.xib; sourceTree = "<group>"; };
 		2C2EFF8827137BB700E14662 /* GalleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTableViewCell.swift; sourceTree = "<group>"; };
 		2C2EFF8927137BB700E14662 /* GalleryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryTableViewCell.xib; sourceTree = "<group>"; };
+		2C2EFF8C271385ED00E14662 /* DeviceDetailGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailGalleryViewController.swift; sourceTree = "<group>"; };
+		2C2EFF8E2713861200E14662 /* DeviceDetailGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C2EFF902713861800E14662 /* DeviceDetailGalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceDetailGalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C3306152700F78100E638B1 /* MainQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		2C3306162700F78100E638B1 /* MainQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		2C3306192700FA2800E638B1 /* MainQuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuestionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -407,6 +413,9 @@
 				2C3CC0892710BEA70056EC9D /* UserGalleryCategoryViewController.swift */,
 				2C2EFF8827137BB700E14662 /* GalleryTableViewCell.swift */,
 				2C2EFF8927137BB700E14662 /* GalleryTableViewCell.xib */,
+				2C2EFF8C271385ED00E14662 /* DeviceDetailGalleryViewController.swift */,
+				2C2EFF8E2713861200E14662 /* DeviceDetailGalleryCollectionViewCell.swift */,
+				2C2EFF902713861800E14662 /* DeviceDetailGalleryCollectionViewCell.xib */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -927,6 +936,7 @@
 				2CF3D3D626FCEA11008C13F3 /* MainBMCollectionViewCell.xib in Resources */,
 				2C818225270F6B6800BC47A7 /* EmoticonListTableViewCell.xib in Resources */,
 				2CC9C38726E2A27600936BCD /* Assets.xcassets in Resources */,
+				2C2EFF912713861800E14662 /* DeviceDetailGalleryCollectionViewCell.xib in Resources */,
 				2C818221270F64D800BC47A7 /* SelectedEmoticonPhotoTableViewCell.xib in Resources */,
 				2C715BD4270DB2A1007D67C5 /* IntroAppTableViewCell.xib in Resources */,
 				2CC092BA26F268E3009E69D0 /* Home.storyboard in Resources */,
@@ -1091,10 +1101,12 @@
 				2CB9288027023AB900BF34DC /* SignUpResponse.swift in Sources */,
 				2CD9D9B82704EAD90041A0DB /* AuthEmailRequest.swift in Sources */,
 				2CC9C38026E2A27600936BCD /* SceneDelegate.swift in Sources */,
+				2C2EFF8F2713861200E14662 /* DeviceDetailGalleryCollectionViewCell.swift in Sources */,
 				2C715BC3270DA564007D67C5 /* TitleSettingTableViewCell.swift in Sources */,
 				2CF3D3B826FB9BCE008C13F3 /* CalendarTableViewCell.swift in Sources */,
 				2CB928782702223700BF34DC /* QAViewController.swift in Sources */,
 				2CF3D3BD26FBC180008C13F3 /* AddDateNavigationController.swift in Sources */,
+				2C2EFF8D271385ED00E14662 /* DeviceDetailGalleryViewController.swift in Sources */,
 				2C4B7BB926F2E0EF0083576A /* UserSettingViewController.swift in Sources */,
 				2C715BCF270DA6D0007D67C5 /* SettingGuideLineTableViewCell.swift in Sources */,
 				2C5C288B26F4C2DD00217D00 /* ChatViewController.swift in Sources */,

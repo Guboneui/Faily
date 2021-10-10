@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,18 +25,41 @@
                             <constraint firstAttribute="height" constant="50" id="5ZA-Ex-Ars"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suy-rd-NU5">
+                        <rect key="frame" x="75" y="24.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fg-SU-ni1">
+                        <rect key="frame" x="127" y="26.5" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="grayscale_3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="2fg-SU-ni1" firstAttribute="leading" secondItem="suy-rd-NU5" secondAttribute="trailing" constant="10" id="542-S1-OgQ"/>
+                    <constraint firstItem="2fg-SU-ni1" firstAttribute="centerY" secondItem="suy-rd-NU5" secondAttribute="centerY" id="7eN-jS-7XA"/>
+                    <constraint firstItem="suy-rd-NU5" firstAttribute="leading" secondItem="Hpg-V4-sxA" secondAttribute="trailing" constant="15" id="HPp-jX-W2N"/>
                     <constraint firstItem="Hpg-V4-sxA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="L2M-b4-HWW"/>
                     <constraint firstItem="Hpg-V4-sxA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="OX4-YI-vq7"/>
                     <constraint firstAttribute="bottom" secondItem="Hpg-V4-sxA" secondAttribute="bottom" constant="10" id="OvM-aZ-YFC"/>
+                    <constraint firstItem="suy-rd-NU5" firstAttribute="centerY" secondItem="Hpg-V4-sxA" secondAttribute="centerY" id="u7V-tg-Kmh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="albumCountLabel" destination="2fg-SU-ni1" id="TfF-ld-7Jd"/>
+                <outlet property="albumTitle" destination="suy-rd-NU5" id="0xh-hM-PJY"/>
                 <outlet property="photo" destination="Hpg-V4-sxA" id="f33-1n-xv5"/>
             </connections>
             <point key="canvasLocation" x="155.07246376811597" y="121.875"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="grayscale_3">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

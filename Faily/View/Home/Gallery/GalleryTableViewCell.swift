@@ -10,6 +10,9 @@ import UIKit
 class GalleryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var photo: UIImageView!
+    @IBOutlet weak var albumTitle: UILabel!
+    @IBOutlet weak var albumCountLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

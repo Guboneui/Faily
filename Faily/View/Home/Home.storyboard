@@ -1350,7 +1350,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEt-Vv-TuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13" y="1153"/>
+            <point key="canvasLocation" x="-54" y="1106"/>
+        </scene>
+        <!--Device Detail Gallery View Controller-->
+        <scene sceneID="iCz-nA-6fR">
+            <objects>
+                <viewController restorationIdentifier="DeviceDetailGalleryViewController" storyboardIdentifier="DeviceDetailGalleryViewController" id="vgv-b7-H1P" customClass="DeviceDetailGalleryViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PDw-E2-B47">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="S1D-0H-kf1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MoK-4c-wAm">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="g1h-9a-oiz">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iQt-65-d0E">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zvn-pF-tok"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zvn-pF-tok" firstAttribute="bottom" secondItem="S1D-0H-kf1" secondAttribute="bottom" id="6Dq-f3-5d4"/>
+                            <constraint firstItem="S1D-0H-kf1" firstAttribute="top" secondItem="Zvn-pF-tok" secondAttribute="top" id="DZY-SX-cT7"/>
+                            <constraint firstItem="Zvn-pF-tok" firstAttribute="trailing" secondItem="S1D-0H-kf1" secondAttribute="trailing" id="OSj-dk-uQv"/>
+                            <constraint firstItem="S1D-0H-kf1" firstAttribute="leading" secondItem="Zvn-pF-tok" secondAttribute="leading" id="dgW-kf-Im6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="galleryCollectionView" destination="S1D-0H-kf1" id="YBP-Li-CVd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QZI-7k-SUC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="1106"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="TDk-g3-6hV">
