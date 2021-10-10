@@ -1296,14 +1296,24 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_Main" translatesAutoresizingMaskIntoConstraints="NO" id="QoP-3Y-KQG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0J-cQ-fkP">
+                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="goGallery:" destination="idU-D7-40y" eventType="touchUpInside" id="hh8-Dl-bOx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2eV-2s-aSj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QoP-3Y-KQG" firstAttribute="top" secondItem="jdq-JT-0SK" secondAttribute="top" id="6AC-G6-Ip4"/>
                             <constraint firstAttribute="bottom" secondItem="QoP-3Y-KQG" secondAttribute="bottom" id="Dxn-XF-ibp"/>
+                            <constraint firstItem="w0J-cQ-fkP" firstAttribute="centerY" secondItem="jdq-JT-0SK" secondAttribute="centerY" id="OKb-K8-zt1"/>
                             <constraint firstItem="QoP-3Y-KQG" firstAttribute="trailing" secondItem="2eV-2s-aSj" secondAttribute="trailing" id="bey-fS-Adr"/>
                             <constraint firstItem="QoP-3Y-KQG" firstAttribute="leading" secondItem="2eV-2s-aSj" secondAttribute="leading" id="iC6-ZV-MH5"/>
+                            <constraint firstItem="w0J-cQ-fkP" firstAttribute="centerX" secondItem="jdq-JT-0SK" secondAttribute="centerX" id="xmK-GO-yeG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="gallery_default" selectedImage="galley_selected" id="tjq-5B-cmL"/>
@@ -1311,6 +1321,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u18-HX-qot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-786.95652173913049" y="884.59821428571422"/>
+        </scene>
+        <!--User Gallery Category View Controller-->
+        <scene sceneID="dy2-O4-wYP">
+            <objects>
+                <viewController restorationIdentifier="UserGalleryCategoryViewController" storyboardIdentifier="UserGalleryCategoryViewController" id="2aH-6Q-BBw" customClass="UserGalleryCategoryViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZM9-2y-pzC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="23t-7D-1N3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bgn-8m-Nn7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bgn-8m-Nn7" firstAttribute="bottom" secondItem="23t-7D-1N3" secondAttribute="bottom" id="HGb-Ct-k2m"/>
+                            <constraint firstItem="23t-7D-1N3" firstAttribute="leading" secondItem="Bgn-8m-Nn7" secondAttribute="leading" id="Z9z-Zg-JaA"/>
+                            <constraint firstItem="23t-7D-1N3" firstAttribute="top" secondItem="Bgn-8m-Nn7" secondAttribute="top" id="rgv-Vg-mH2"/>
+                            <constraint firstItem="Bgn-8m-Nn7" firstAttribute="trailing" secondItem="23t-7D-1N3" secondAttribute="trailing" id="vmi-mS-fJs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="galleryTableView" destination="23t-7D-1N3" id="U9Q-hS-3L3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEt-Vv-TuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="1153"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="TDk-g3-6hV">

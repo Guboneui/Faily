@@ -11,7 +11,10 @@ import Photos
 
 
 
+
+
 class GalleryViewController: UIViewController {
+    
     
     
     let albumList = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: nil)
@@ -26,4 +29,15 @@ class GalleryViewController: UIViewController {
               print(album.localizedTitle)
         }
     }
+    
+    @IBAction func goGallery(_ sender: Any) {
+        
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let aa = storyBoard.instantiateViewController(withIdentifier: "UserGalleryCategoryViewController") as! UserGalleryCategoryViewController
+        aa.modalPresentationStyle = .overCurrentContext
+        self.present(aa, animated: true, completion: nil)
+        
+        
+    }
+    
 }
