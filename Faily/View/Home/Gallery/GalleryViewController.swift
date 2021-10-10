@@ -54,7 +54,7 @@ class GalleryViewController: UIViewController {
         imagePicker.albumButton.tintColor = UIColor.black
         imagePicker.albumButton.setImage(UIImage(systemName: "triangle"), for: .normal)
         let start = Date()
-        imagePicker.modalPresentationStyle = .overCurrentContext
+        //imagePicker.modalPresentationStyle = .currentContext
         self.presentImagePicker(imagePicker, select: { (asset) in
             print("Selected: \(asset)")
             
