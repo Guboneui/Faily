@@ -8,6 +8,9 @@
 import UIKit
 import CoreMIDI
 
+
+
+
 class ChatViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIButton!
@@ -15,6 +18,9 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var bottomBaseViewHeight: NSLayoutConstraint!
     @IBOutlet weak var typingBaseView: UIView!
     @IBOutlet weak var messageTextView: UITextView!
+    
+    
+    @IBOutlet weak var chatTableView: UITableView!
     
     var menuState = false
     
@@ -155,6 +161,13 @@ class ChatViewController: UIViewController {
         scheduleStackView.isUserInteractionEnabled = true
         scheduleStackView.addGestureRecognizer(scheduleStackViewTapGesture)
         
+        chatTableView.delegate = self
+        chatTableView.dataSource = self
+        chatTableView.separatorStyle = .none
+        chatTableView.register(UINib(nibName: "MyMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "MyMessageTableViewCell")
+        chatTableView.register(UINib(nibName: "FamilyMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "FamilyMessageTableViewCell")
+        
+        
         
     }
     
@@ -172,7 +185,8 @@ class ChatViewController: UIViewController {
     
     
     @IBAction func dismissButtonAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
+        
     }
     
     @IBAction func menuButtonAction(_ sender: Any) {
@@ -196,5 +210,28 @@ class ChatViewController: UIViewController {
         }
         
     }
+    
+}
+
+
+extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row < 2{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMessageTableViewCell", for: indexPath) as! FamilyMessageTableViewCell
+            return cell
+        }
+        
+        
+        
+    }
+    
     
 }

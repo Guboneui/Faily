@@ -1494,21 +1494,31 @@
                                     <constraint firstItem="uDD-sr-Kcy" firstAttribute="leading" secondItem="08Z-48-cff" secondAttribute="leading" constant="14" id="xnr-sy-NXS"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="abb-7x-h6g">
+                                <rect key="frame" x="0.0" y="94" width="414" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dAu-bn-5k4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dAu-bn-5k4" firstAttribute="trailing" secondItem="hCy-LJ-Py0" secondAttribute="trailing" id="5nE-e0-Arw"/>
+                            <constraint firstItem="abb-7x-h6g" firstAttribute="leading" secondItem="dAu-bn-5k4" secondAttribute="leading" id="61z-ct-Gz2"/>
                             <constraint firstItem="hCy-LJ-Py0" firstAttribute="top" secondItem="dAu-bn-5k4" secondAttribute="top" id="Dew-Rs-WUy"/>
+                            <constraint firstItem="dAu-bn-5k4" firstAttribute="trailing" secondItem="abb-7x-h6g" secondAttribute="trailing" id="Fev-Ja-IAN"/>
                             <constraint firstAttribute="bottom" secondItem="08Z-48-cff" secondAttribute="bottom" id="ea0-ie-jsK"/>
                             <constraint firstItem="hCy-LJ-Py0" firstAttribute="leading" secondItem="dAu-bn-5k4" secondAttribute="leading" id="hW2-Vw-U2q"/>
                             <constraint firstItem="08Z-48-cff" firstAttribute="trailing" secondItem="dAu-bn-5k4" secondAttribute="trailing" id="rjS-vn-njw"/>
+                            <constraint firstItem="abb-7x-h6g" firstAttribute="top" secondItem="hCy-LJ-Py0" secondAttribute="bottom" id="uIu-sk-FZt"/>
                             <constraint firstItem="08Z-48-cff" firstAttribute="leading" secondItem="dAu-bn-5k4" secondAttribute="leading" id="xX0-fe-TOr"/>
+                            <constraint firstItem="08Z-48-cff" firstAttribute="top" secondItem="abb-7x-h6g" secondAttribute="bottom" id="yWl-FA-ezN"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomBaseView" destination="08Z-48-cff" id="R0E-zP-BaF"/>
                         <outlet property="bottomBaseViewHeight" destination="0xe-V2-Yvv" id="sYl-M0-P0A"/>
+                        <outlet property="chatTableView" destination="abb-7x-h6g" id="6Wc-We-dEL"/>
                         <outlet property="menuButton" destination="uDD-sr-Kcy" id="S2s-1m-qjZ"/>
                         <outlet property="messageTextView" destination="6yI-Vo-OAH" id="pxH-We-oYQ"/>
                         <outlet property="typingBaseView" destination="RtJ-Gg-RYu" id="Rce-2i-aWf"/>
