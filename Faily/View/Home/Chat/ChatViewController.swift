@@ -9,11 +9,15 @@ import UIKit
 
 class ChatViewController: UIViewController {
 
+    @IBOutlet weak var typingBaseView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        typingBaseView.layer.cornerRadius = 17
     }
     
-
+    @IBAction func dismissButtonAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

@@ -173,10 +173,11 @@ class MainTabBarController: UITabBarController {
             
             if goChatView.backgroundColor == UIColor.FailyColor.secondaryPinkColor {
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "확인", message: "", preferredStyle: .alert)
-                    let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
-                    alert.addAction(okButton)
-                    self.present(alert, animated: true, completion: nil)
+                    
+                    
+                    let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+                    let chatVC = storyBoard.instantiateViewController(withIdentifier: "ChatViewController")
+                    self.present(chatVC, animated: true, completion: nil)
                 }
             }
             
