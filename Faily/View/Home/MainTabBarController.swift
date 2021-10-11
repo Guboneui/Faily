@@ -177,6 +177,7 @@ class MainTabBarController: UITabBarController {
                     
                     let storyBoard = UIStoryboard(name: "Home", bundle: nil)
                     let chatVC = storyBoard.instantiateViewController(withIdentifier: "ChatViewController")
+                    chatVC.modalPresentationStyle = .fullScreen
                     self.present(chatVC, animated: true, completion: nil)
                 }
             }

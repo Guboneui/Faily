@@ -1437,11 +1437,6 @@
                                     <constraint firstItem="Tbx-gG-sb2" firstAttribute="centerX" secondItem="hCy-LJ-Py0" secondAttribute="centerX" id="rI2-cP-sWS"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IzB-gO-aDd">
-                                <rect key="frame" x="0.0" y="94" width="414" height="738"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08Z-48-cff">
                                 <rect key="frame" x="0.0" y="832" width="414" height="64"/>
                                 <subviews>
@@ -1453,6 +1448,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="add_chat"/>
+                                        <connections>
+                                            <action selector="menuButtonAction:" destination="q74-sU-dye" eventType="touchUpInside" id="FJ1-Xb-Il2"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RtJ-Gg-RYu">
                                         <rect key="frame" x="52" y="5" width="352" height="34"/>
@@ -1486,12 +1484,12 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <color key="backgroundColor" name="grayscale_5"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="0xe-V2-Yvv"/>
                                     <constraint firstItem="RtJ-Gg-RYu" firstAttribute="top" secondItem="08Z-48-cff" secondAttribute="top" constant="5" id="6NV-7e-tAa"/>
                                     <constraint firstItem="RtJ-Gg-RYu" firstAttribute="leading" secondItem="uDD-sr-Kcy" secondAttribute="trailing" constant="14" id="Nme-cV-tlf"/>
                                     <constraint firstAttribute="trailing" secondItem="RtJ-Gg-RYu" secondAttribute="trailing" constant="10" id="UEp-rO-Srf"/>
-                                    <constraint firstAttribute="bottom" secondItem="RtJ-Gg-RYu" secondAttribute="bottom" constant="25" id="fbL-sH-gDx"/>
                                     <constraint firstItem="uDD-sr-Kcy" firstAttribute="centerY" secondItem="RtJ-Gg-RYu" secondAttribute="centerY" id="ng4-AA-Dzx"/>
                                     <constraint firstItem="uDD-sr-Kcy" firstAttribute="leading" secondItem="08Z-48-cff" secondAttribute="leading" constant="14" id="xnr-sy-NXS"/>
                                 </constraints>
@@ -1501,11 +1499,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dAu-bn-5k4" firstAttribute="trailing" secondItem="hCy-LJ-Py0" secondAttribute="trailing" id="5nE-e0-Arw"/>
-                            <constraint firstItem="IzB-gO-aDd" firstAttribute="trailing" secondItem="dAu-bn-5k4" secondAttribute="trailing" id="CiE-lD-hHH"/>
                             <constraint firstItem="hCy-LJ-Py0" firstAttribute="top" secondItem="dAu-bn-5k4" secondAttribute="top" id="Dew-Rs-WUy"/>
-                            <constraint firstItem="IzB-gO-aDd" firstAttribute="top" secondItem="hCy-LJ-Py0" secondAttribute="bottom" id="FWT-3l-CCc"/>
-                            <constraint firstItem="IzB-gO-aDd" firstAttribute="leading" secondItem="dAu-bn-5k4" secondAttribute="leading" id="R2Z-Ze-Gdp"/>
-                            <constraint firstItem="08Z-48-cff" firstAttribute="top" secondItem="IzB-gO-aDd" secondAttribute="bottom" id="bhn-oi-gIq"/>
                             <constraint firstAttribute="bottom" secondItem="08Z-48-cff" secondAttribute="bottom" id="ea0-ie-jsK"/>
                             <constraint firstItem="hCy-LJ-Py0" firstAttribute="leading" secondItem="dAu-bn-5k4" secondAttribute="leading" id="hW2-Vw-U2q"/>
                             <constraint firstItem="08Z-48-cff" firstAttribute="trailing" secondItem="dAu-bn-5k4" secondAttribute="trailing" id="rjS-vn-njw"/>
@@ -1513,6 +1507,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomBaseView" destination="08Z-48-cff" id="R0E-zP-BaF"/>
+                        <outlet property="bottomBaseViewHeight" destination="0xe-V2-Yvv" id="sYl-M0-P0A"/>
+                        <outlet property="menuButton" destination="uDD-sr-Kcy" id="S2s-1m-qjZ"/>
+                        <outlet property="messageTextView" destination="6yI-Vo-OAH" id="pxH-We-oYQ"/>
                         <outlet property="typingBaseView" destination="RtJ-Gg-RYu" id="Rce-2i-aWf"/>
                     </connections>
                 </viewController>
@@ -2692,9 +2690,6 @@
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
