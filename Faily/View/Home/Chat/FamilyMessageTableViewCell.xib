@@ -72,7 +72,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="messageBaseView" destination="ABi-wE-wzG" id="gwW-E6-kiv"/>
+                <outlet property="messageLabel" destination="xe1-Zh-ffg" id="9GL-T6-ihw"/>
+                <outlet property="nameLabel" destination="TSv-jb-cvW" id="1WE-74-yCK"/>
                 <outlet property="profileImage" destination="dRY-uf-gPR" id="VD0-2h-JVF"/>
+                <outlet property="timeLabel" destination="6vB-VW-yKx" id="509-Z4-Gmj"/>
             </connections>
             <point key="canvasLocation" x="260.86956521739131" y="145.3125"/>
         </tableViewCell>

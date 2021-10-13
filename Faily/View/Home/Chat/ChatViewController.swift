@@ -8,8 +8,14 @@
 import UIKit
 import CoreMIDI
 import IQKeyboardManager
-import RxCocoa
-import RxSwift
+
+
+struct ChatMessage {
+    let userName: String
+    let message: String
+    let profileImage: String
+    let sendTime: String
+}
 
 
 
@@ -32,12 +38,30 @@ class ChatViewController: UIViewController {
     let scheduleStackView = UIStackView()
     
     
+    
+    var message: [ChatMessage] = [
+        ChatMessage(userName: "보니", message: "안녕하세요", profileImage: "boni", sendTime: "오후 11시 20분"),
+        ChatMessage(userName: "수빈", message: "안녕하세요~~", profileImage: "subin", sendTime: "오후 11시 22분"),
+        ChatMessage(userName: "수빈", message: "저는 정수빈입니다.", profileImage: "subin", sendTime: "오후 11시 23분"),
+        ChatMessage(userName: "승빈", message: "처음 뵙겠습니댱", profileImage: "sb", sendTime: "오후 11시 25분"),
+        ChatMessage(userName: "보니", message: "안녕하세요~~~", profileImage: "boni", sendTime: "오후 11시 25분"),
+        ChatMessage(userName: "나연", message: "안녕하세요", profileImage: "nayoun", sendTime: "오후 11시 26분"),
+        ChatMessage(userName: "나연", message: "이제 막 참가했어요", profileImage: "nayoun", sendTime: "오후 11시 26분"),
+        ChatMessage(userName: "수빈", message: "안녕하세요!!", profileImage: "subin", sendTime: "오후 11시 26분"),
+        ChatMessage(userName: "승빈", message: "안녕하세요!!!!", profileImage: "sb", sendTime: "오후 11시 27분"),
+        ChatMessage(userName: "승빈", message: "저희 잘 지내봐용", profileImage: "sb", sendTime: "오후 11시 28분"),
+        ChatMessage(userName: "승빈", message: "화이팅팅팅", profileImage: "sb", sendTime: "오후 11시 28분"),
+        ChatMessage(userName: "보니", message: "~~~~~", profileImage: "boni", sendTime: "오후 11시 30분"),
+        
+    ]
+    
+    
     @IBOutlet weak var bottomMargin: NSLayoutConstraint!
     @IBOutlet weak var inputViewBottomMargin: NSLayoutConstraint!
     
     @IBOutlet weak var tableViewBottomMargin: NSLayoutConstraint!
     @IBOutlet weak var textViewHeight: NSLayoutConstraint!
-    let disposeBag = DisposeBag()
+    
     
     var isFistLayoutSubviews = true
     var oldTableViewBottomInset: CGFloat = 0
@@ -185,7 +209,7 @@ class ChatViewController: UIViewController {
         UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: {(completed) in
-            let indexPath = IndexPath(row: 10, section: 0)
+            let indexPath = IndexPath(row: self.message.count - 1, section: 0)
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         })
         
@@ -274,12 +298,21 @@ class ChatViewController: UIViewController {
     
     
     @IBAction func sendButtonAction(_ sender: Any) {
-        UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
-            self.view.layoutIfNeeded()
-        }, completion: {(completed) in
-            let indexPath = IndexPath(row: 10, section: 0)
-            self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-        })
+        
+        if messageTextView.text != nil || messageTextView.text != "" {
+            message.append(ChatMessage(userName: "보니", message: self.messageTextView.text, profileImage: "boni", sendTime: "오후 11시 30분"))
+            self.chatTableView.reloadData()
+            self.messageTextView.text = nil
+            UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+                self.view.layoutIfNeeded()
+            }, completion: {(completed) in
+                let indexPath = IndexPath(row: self.message.count - 1, section: 0)
+                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            })
+        }
+        
+        
+        
     }
     
 }
@@ -287,16 +320,23 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 11
+        return self.message.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row < 2{
+        let chatMessage = message[indexPath.row]
+        
+        if chatMessage.userName == "보니"{
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
+            cell.myMessageLabel.text = chatMessage.message
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMessageTableViewCell", for: indexPath) as! FamilyMessageTableViewCell
+            cell.nameLabel.text = chatMessage.userName
+            cell.messageLabel.text = chatMessage.message
+            cell.profileImage.image = UIImage(named: chatMessage.profileImage)
+            cell.timeLabel.text = chatMessage.sendTime
             return cell
         }
         

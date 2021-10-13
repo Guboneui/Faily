@@ -12,8 +12,11 @@ class FamilyMessageTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var messageBaseView: UIView!
     
+    @IBOutlet weak var messageLabel: UILabel!
     
+    @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var timeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

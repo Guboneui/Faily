@@ -56,6 +56,7 @@
             <connections>
                 <outlet property="messageBaseView" destination="hkK-7F-y7g" id="2uw-YK-sm1"/>
                 <outlet property="myMessageLabel" destination="NoI-Hk-Cdj" id="C47-fR-FtA"/>
+                <outlet property="timeLabel" destination="P6f-iE-JUp" id="jOb-Q8-mpD"/>
             </connections>
             <point key="canvasLocation" x="276.81159420289856" y="164.73214285714286"/>
         </tableViewCell>

@@ -12,6 +12,7 @@ class MyMessageTableViewCell: UITableViewCell {
     @IBOutlet weak var myMessageLabel: UILabel!
     @IBOutlet weak var messageBaseView: UIView!
     
+    @IBOutlet weak var timeLabel: UILabel!
     override func layoutSubviews() {
         layoutIfNeeded()
         messageBaseView.clipsToBounds = true
