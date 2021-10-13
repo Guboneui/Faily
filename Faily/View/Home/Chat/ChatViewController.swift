@@ -8,7 +8,10 @@
 import UIKit
 import CoreMIDI
 import IQKeyboardManager
-
+import Photos
+import AVFoundation
+import AVKit
+import BSImagePicker
 
 struct ChatMessage {
     let userName: String
@@ -37,7 +40,7 @@ class ChatViewController: UIViewController {
     let cameraStackView = UIStackView()
     let scheduleStackView = UIStackView()
     
-    
+    var selectedAssets = [PHAsset]()
     
     var message: [ChatMessage] = [
         ChatMessage(userName: "보니", message: "안녕하세요", profileImage: "boni", sendTime: "오후 11시 20분"),
@@ -67,6 +70,7 @@ class ChatViewController: UIViewController {
     var oldTableViewBottomInset: CGFloat = 0
     
     override func loadView() {
+        
         super.loadView()
         stackView.axis = .horizontal
         stackView.alignment = .center
@@ -226,7 +230,13 @@ class ChatViewController: UIViewController {
         let keyboardRectangle = keyboardFrame.cgRectValue
         print(keyboardRectangle)
         
-        bottomMargin.constant =  keyboardRectangle.height - 22
+        if menuState == false {
+            bottomMargin.constant =  keyboardRectangle.height - 22
+        } else {
+            bottomMargin.constant =  keyboardRectangle.height - 83
+        }
+        
+        
         
        
         
@@ -257,6 +267,43 @@ class ChatViewController: UIViewController {
     }
     
     @objc func galleryStackViewActoin(_ sender: UITapGestureRecognizer) {
+        let imagePicker = ImagePickerController()
+        imagePicker.settings.selection.max = 5
+        imagePicker.settings.theme.selectionStyle = .checked
+        
+        imagePicker.settings.fetch.assets.supportedMediaTypes = [.image]
+        imagePicker.settings.selection.unselectOnReachingMax = false
+        imagePicker.settings.theme.selectionFillColor = .clear
+        imagePicker.settings.theme.selectionShadowColor = .clear
+        imagePicker.settings.theme.selectionStrokeColor = .clear
+        
+        imagePicker.cancelButton.setBackgroundImage(UIImage(named: "closeMark"), for: .normal, barMetrics: .default)
+        imagePicker.cancelButton.tintColor = UIColor.black
+        imagePicker.albumButton.tintColor = UIColor.black
+        
+        let start = Date()
+        
+        //imagePicker.modalPresentationStyle = .currentContext
+        self.presentImagePicker(imagePicker, select: { (asset) in
+            print("Selected: \(asset)")
+            
+        }, deselect: { (asset) in
+            print("Deselected: \(asset)")
+        }, cancel: { (assets) in
+            print("Canceled with selections: \(assets)")
+        }, finish: { (assets) in
+            print("Finished with selections: \(assets)")
+        }, completion: {
+            let finish = Date()
+            print(finish.timeIntervalSince(start))
+        })
+        let options = imagePicker.settings.fetch.album.options
+        imagePicker.settings.fetch.album.fetchResults = [
+            PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: options),
+            PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: options),
+        ]
+        
+        
         print("gallery")
     }
     
