@@ -1470,6 +1470,9 @@
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="send"/>
+                                                <connections>
+                                                    <action selector="sendButtonAction:" destination="q74-sU-dye" eventType="touchUpInside" id="eRx-Mr-uob"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1518,9 +1521,13 @@
                     <connections>
                         <outlet property="bottomBaseView" destination="08Z-48-cff" id="R0E-zP-BaF"/>
                         <outlet property="bottomBaseViewHeight" destination="0xe-V2-Yvv" id="sYl-M0-P0A"/>
+                        <outlet property="bottomMargin" destination="ea0-ie-jsK" id="YgY-uY-XuG"/>
                         <outlet property="chatTableView" destination="abb-7x-h6g" id="6Wc-We-dEL"/>
+                        <outlet property="inputViewBottomMargin" destination="ea0-ie-jsK" id="LMP-re-hXk"/>
                         <outlet property="menuButton" destination="uDD-sr-Kcy" id="S2s-1m-qjZ"/>
                         <outlet property="messageTextView" destination="6yI-Vo-OAH" id="pxH-We-oYQ"/>
+                        <outlet property="tableViewBottomMargin" destination="yWl-FA-ezN" id="vh4-pB-yEt"/>
+                        <outlet property="textViewHeight" destination="GQr-QX-GKx" id="uXe-al-niI"/>
                         <outlet property="typingBaseView" destination="RtJ-Gg-RYu" id="Rce-2i-aWf"/>
                     </connections>
                 </viewController>
