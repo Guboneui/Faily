@@ -69,6 +69,9 @@ class ChatViewController: UIViewController {
     var isFistLayoutSubviews = true
     var oldTableViewBottomInset: CGFloat = 0
     
+    
+    let imagePickerController = UIImagePickerController()
+    
     override func loadView() {
         
         super.loadView()
@@ -221,6 +224,9 @@ class ChatViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardHideNotification), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         
+        imagePickerController.delegate = self
+        
+        
     }
     
     @objc func handleKeyboardShowNotification(_ sender: Notification) {
@@ -302,14 +308,59 @@ class ChatViewController: UIViewController {
             PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: options),
             PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: options),
         ]
-        
-        
-        print("gallery")
     }
     
     @objc func cameraStackViewAction(_ sender: UITapGestureRecognizer) {
-        print("camera")
+        
+        switch PHPhotoLibrary.authorizationStatus() {
+        case .denied:
+            settingAlert()
+        case .restricted:
+            break
+        case .authorized:
+            self.imagePickerController.sourceType = .camera
+            self.imagePickerController.allowsEditing = true
+            self.present(self.imagePickerController, animated: true, completion: nil)
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization({ state in
+                if state == .authorized {
+                    DispatchQueue.main.async {
+                        self.imagePickerController.sourceType = .camera
+                        self.imagePickerController.allowsEditing = true
+                        
+                        self.present(self.imagePickerController, animated: true, completion: nil)
+                    }
+                    
+                } else {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            })
+        default:
+            break
+        }
+        
+        
+        
     }
+    
+    
+    func settingAlert() {
+        if let appName = Bundle.main.infoDictionary!["CFBundelName"] as? String {
+            let alert = UIAlertController(title: "설정", message: "\(appName)이(가) 카메라 접근 허영되어 있지 않습니다. 설정화면으로 사기셌습니다?", preferredStyle: .alert)
+            let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
+            let okButton = UIAlertAction(title: "확인", style: .default, handler: { _ in
+                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+            })
+            
+            alert.addAction(cancelButton)
+            alert.addAction(okButton)
+            
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            print("존재하지 않는 앱 아이디 입니다.")
+        }
+    }
+    
     
     @objc func scheduleStackViewAction(_ sender: UITapGestureRecognizer) {
         print("schedule")
@@ -392,4 +443,16 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+
+
+extension ChatViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            print("가져온 사진은 아래에 표시됩니다.")
+            print(image)
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 }

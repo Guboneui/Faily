@@ -12,4 +12,5 @@ struct LoginResponse: Decodable {
     let code: Int
     let message: String
     let jwt_token: String?
+    let group_code: String?
 }

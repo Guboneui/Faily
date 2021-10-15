@@ -12,7 +12,7 @@ class LoginService {
     
     func postLogin(_ parameters: LoginRequest, onCompleted: @escaping (LoginResponse) -> Void, onError: @escaping (String) -> Void) {
         repository.postLogin(parameters, onCompleted: { response in
-            let responseData = LoginResponse(isSuccess: response.isSuccess, code: response.code, message: response.message, jwt_token: response.jwt_token)
+            let responseData = LoginResponse(isSuccess: response.isSuccess, code: response.code, message: response.message, jwt_token: response.jwt_token, group_code: response.group_code)
             onCompleted(responseData)
         }, onError: onError)
     }
