@@ -136,6 +136,7 @@
 		2CC9C38526E2A27600936BCD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC9C38326E2A27600936BCD /* Login.storyboard */; };
 		2CC9C38726E2A27600936BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CC9C38626E2A27600936BCD /* Assets.xcassets */; };
 		2CC9C38A26E2A27600936BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC9C38826E2A27600936BCD /* LaunchScreen.storyboard */; };
+		2CD6D14B2719BA4C00DC9DC7 /* ScheduleInChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6D14A2719BA4C00DC9DC7 /* ScheduleInChatViewController.swift */; };
 		2CD6F7D327036AB500D1E04E /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6F7D227036AB500D1E04E /* CollectionView.swift */; };
 		2CD6F7D727037DC000D1E04E /* AllAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6F7D627037DC000D1E04E /* AllAnswerViewController.swift */; };
 		2CD9D9B82704EAD90041A0DB /* AuthEmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9D9B72704EAD90041A0DB /* AuthEmailRequest.swift */; };
@@ -299,6 +300,7 @@
 		2CC9C38626E2A27600936BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CC9C38926E2A27600936BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CC9C38B26E2A27600936BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CD6D14A2719BA4C00DC9DC7 /* ScheduleInChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInChatViewController.swift; sourceTree = "<group>"; };
 		2CD6F7D227036AB500D1E04E /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		2CD6F7D627037DC000D1E04E /* AllAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnswerViewController.swift; sourceTree = "<group>"; };
 		2CD9D9B72704EAD90041A0DB /* AuthEmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEmailRequest.swift; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 				2C8AFC782714B6E500966309 /* MyMessageTableViewCell.xib */,
 				2C8AFC7B2714B6F400966309 /* FamilyMessageTableViewCell.swift */,
 				2C8AFC7C2714B6F400966309 /* FamilyMessageTableViewCell.xib */,
+				2CD6D14A2719BA4C00DC9DC7 /* ScheduleInChatViewController.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -1052,6 +1055,7 @@
 				2C9EB00727077A1A00F507A6 /* EntryRepository.swift in Sources */,
 				2CB9287B270238A500BF34DC /* ConstantURL.swift in Sources */,
 				2C9EB0032707798600F507A6 /* EntryRequest.swift in Sources */,
+				2CD6D14B2719BA4C00DC9DC7 /* ScheduleInChatViewController.swift in Sources */,
 				2CF3D3BF26FBCE88008C13F3 /* ScheduleDivisionViewController.swift in Sources */,
 				2C9EB00927077B2E00F507A6 /* EntryService.swift in Sources */,
 				2C14820F270BA3B2005C0597 /* DetailNoticeViewController.swift in Sources */,
