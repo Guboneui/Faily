@@ -367,10 +367,6 @@ class ChatViewController: UIViewController {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let addScheduleView = storyBoard.instantiateViewController(withIdentifier: "ScheduleInChatViewController") as! ScheduleInChatViewController
         addScheduleView.modalPresentationStyle = .overCurrentContext
-        
-       
-        
-        
         present(addScheduleView, animated: true)
     }
     

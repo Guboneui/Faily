@@ -15,6 +15,7 @@ class ScheduleInChatViewController: UIViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     
+    @IBOutlet weak var showMoreOptionLabel: UILabel!
     
     override func loadView() {
         super.loadView()
@@ -31,6 +32,11 @@ class ScheduleInChatViewController: UIViewController {
         let dismissGesture = UITapGestureRecognizer(target: self, action: #selector(dismissTapGesture))
         backgroundImageView.isUserInteractionEnabled = true
         backgroundImageView.addGestureRecognizer(dismissGesture)
+        
+        let showMoreOptionGesture = UITapGestureRecognizer(target: self, action: #selector(showMoreTapGesture))
+        showMoreOptionLabel.isUserInteractionEnabled = true
+        showMoreOptionLabel.addGestureRecognizer(showMoreOptionGesture)
+        
         
     }
     
@@ -63,6 +69,30 @@ class ScheduleInChatViewController: UIViewController {
     
     @objc func dismissTapGesture(_ sender: UITapGestureRecognizer) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func showMoreTapGesture(_ sender: UITapGestureRecognizer) {
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let showMoreOptionVC = storyBoard.instantiateViewController(withIdentifier: "ScheduleInChatDetailViewController") as! ScheduleInChatDetailViewController
+        showMoreOptionVC.modalPresentationStyle = .fullScreen
+        
+        let transition = CATransition()
+        transition.duration = 0.2
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        //present(dashboardWorkout, animated: false, completion: nil)
+        
+        
+        
+        
+        self.present(showMoreOptionVC, animated: false, completion: nil)
+        
+        
+      
+        
+        
     }
 
 }
