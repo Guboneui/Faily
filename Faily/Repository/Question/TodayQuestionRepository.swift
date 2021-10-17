@@ -22,7 +22,7 @@ class TodayQuestionRepository {
                     print("getTodayQuestion - repository")
                     onCompleted(response)
                 case .failure(let error):
-                    onError("postGroupCode - repository: \(error)")
+                    onError("getTodayQuestion - repository: \(error)")
                 }
                 
             }

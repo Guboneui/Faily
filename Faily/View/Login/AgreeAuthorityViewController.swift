@@ -35,35 +35,8 @@ class AgreeAuthorityViewController: UIViewController {
                 print("알림 권한을 거부했습니다.")
             }
             
-//            AVCaptureDevice.requestAccess(for: .video, completionHandler: { (granted: Bool) in
-//                if granted {
-//                    print("Camera: 권한 허용")
-//                } else {
-//                    print("Camera: 권한 거부")
-//                }
-//
-//                PHPhotoLibrary.requestAuthorization( { status in
-//                    switch status{
-//                    case .authorized:
-//                        print("Album: 권한 허용")
-//                    case .denied:
-//                        print("Album: 권한 거부")
-//                    case .restricted, .notDetermined:
-//                        print("Album: 선택하지 않음")
-//                    default:
-//                        break
-//                    }
-//
-//                    DispatchQueue.main.async {
-//                        let storyBoard = UIStoryboard(name: "Tutorial", bundle: nil)
-//                        let homeNav = storyBoard.instantiateViewController(identifier: "TutorialNav")
-//                        self.changeRootViewController(homeNav)
-//                    }
-//
-//
-//
-//                })
-//            })
+            UserDefaults.standard.set(true, forKey: UserDefaultKey.alertState)
+
             DispatchQueue.main.async {
                 let storyBoard = UIStoryboard(name: "Tutorial", bundle: nil)
                 let homeNav = storyBoard.instantiateViewController(identifier: "TutorialNav")

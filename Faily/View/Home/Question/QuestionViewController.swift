@@ -12,8 +12,18 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet weak var questionMainTableView: UITableView!
     
+    lazy var viewModel: AllQuestionViewModel = AllQuestionViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.questionView = self
+        viewModel.getAllQuestion()
+        setTableView()
+       
+    }
+    
+    func setTableView() {
         questionMainTableView.delegate = self
         questionMainTableView.dataSource = self
         questionMainTableView.rowHeight = UITableView.automaticDimension
@@ -30,7 +40,6 @@ class QuestionViewController: UIViewController {
         
         
     }
-
 }
 
 extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {

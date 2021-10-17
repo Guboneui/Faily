@@ -9,6 +9,7 @@ import Foundation
 
 struct UserDefaultKey {
     static let showOnBoarding: String = "showOnBoarding"
+    static let alertState: String = "alertState"
     static let jwtToken: String = "jwtToken"
     static let createdGroupCode: String = "createdGroupCode"
     static let groupCode: String = "groupCode"

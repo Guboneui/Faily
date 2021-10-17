@@ -22,11 +22,14 @@ class ParticipantViewController: UIViewController {
     let disposeBag = DisposeBag()
     var userInputAuthNum: String = ""
     
+    lazy var viewModel: EntryViewModel = EntryViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
         digitTextFields = [firstAuthTextField, secondAuthTextField, thirdAuthTextField, fourthAuthTextField]
         textCheckWithRXSwift()
+        viewModelMethod()
         // Do any additional setup after loading the view.
     }
     
@@ -92,13 +95,37 @@ class ParticipantViewController: UIViewController {
     func configUI() {
         self.navigationItem.backButtonTitle = ""
         self.title = "시작하기"
+        firstAuthTextField.keyboardType = .alphabet
+        secondAuthTextField.keyboardType = .alphabet
+        thirdAuthTextField.keyboardType = .alphabet
+        fourthAuthTextField.keyboardType = .alphabet
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
     }
     @IBAction func goMainHomeButtonAction(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let homeNAV = storyBoard.instantiateViewController(identifier: "HomeNav")
-        self.changeRootViewController(homeNAV)
+        
+        let param = EntryRequest(group_code: self.userInputAuthNum)
+        viewModel.postEntryChat(param)
     }
     
 
+}
+
+
+extension ParticipantViewController {
+    
+    func viewModelMethod() {
+        viewModel.showAlert = { [self] message in
+            let alert = UIAlertController(title: message, message: "", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alert.addAction(okButton)
+            present(alert, animated: true, completion: nil)
+        }
+    
+        viewModel.goMainView = {
+            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+            let homeNAV = storyBoard.instantiateViewController(identifier: "HomeNav")
+            self.changeRootViewController(homeNAV)
+        }
+    }
+    
 }

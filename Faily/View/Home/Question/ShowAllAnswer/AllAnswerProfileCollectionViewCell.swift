@@ -10,7 +10,7 @@ import UIKit
 class AllAnswerProfileCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var familyProfileImage: UIImageView!
     
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
     }
     

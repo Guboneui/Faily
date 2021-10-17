@@ -12,7 +12,23 @@ class TutorialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
+        
         configUI()
+    }
+    
+    func existGroupCode() {
+        if UserDefaults.standard.string(forKey: UserDefaultKey.groupCode) != nil {
+            let alert = UIAlertController(title: "알림", message: "이미 참가된 그룹 코드가 존재합니다.\n메인 화면으로 이동합니다.", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "확인", style: .default, handler: {_ in
+                let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+                let homeNAV = storyBoard.instantiateViewController(identifier: "HomeNav")
+                self.changeRootViewController(homeNAV)
+            })
+            alert.addAction(okButton)
+            self.present(alert, animated: true)
+        }
     }
     
     func configUI() {
