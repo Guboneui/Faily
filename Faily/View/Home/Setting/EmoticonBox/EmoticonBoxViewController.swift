@@ -2,42 +2,23 @@
 //  EmoticonBoxViewController.swift
 //  Faily
 //
-//  Created by 구본의 on 2021/10/08.
+//  Created by 구본의 on 2021/10/17.
 //
 
 import UIKit
 
 class EmoticonBoxViewController: UIViewController {
 
-    
-    @IBOutlet weak var designBottomView: UIView!
-    
-    override func loadView() {
-        super.loadView()
-        
-        designBottomView.layer.cornerRadius = 20
-        designBottomView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner)
-            
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-    
+
+        // Do any additional setup after loading the view.
     }
-    
-    
-   
-    @IBAction func selectedButtonAction(_ sender: Any) {
-    }
-    
-    @IBAction func backButtonAction(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    
     
 
+    @IBAction func newEmoticonButtonAction(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let newEmoticonVC = storyBoard.instantiateViewController(withIdentifier: "MakeEmoticonViewController") as! MakeEmoticonViewController
+        self.navigationController?.pushViewController(newEmoticonVC, animated: true)
+    }
 }
-

@@ -59,7 +59,7 @@
 		2C715C09270E9082007D67C5 /* MyOrderTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C715C07270E9082007D67C5 /* MyOrderTitleTableViewCell.xib */; };
 		2C715C0B270E90B9007D67C5 /* MyPresentOrderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C715C0A270E90B9007D67C5 /* MyPresentOrderDetailTableViewCell.swift */; };
 		2C715C0D270E90CA007D67C5 /* MyPresentOrderDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C715C0C270E90CA007D67C5 /* MyPresentOrderDetailTableViewCell.xib */; };
-		2C81821D270F634800BC47A7 /* EmoticonBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81821C270F634800BC47A7 /* EmoticonBoxViewController.swift */; };
+		2C81821D270F634800BC47A7 /* MakeEmoticonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81821C270F634800BC47A7 /* MakeEmoticonViewController.swift */; };
 		2C8AFC792714B6E500966309 /* MyMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AFC772714B6E500966309 /* MyMessageTableViewCell.swift */; };
 		2C8AFC7A2714B6E500966309 /* MyMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8AFC782714B6E500966309 /* MyMessageTableViewCell.xib */; };
 		2C8AFC7D2714B6F400966309 /* FamilyMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AFC7B2714B6F400966309 /* FamilyMessageTableViewCell.swift */; };
@@ -131,6 +131,7 @@
 		2CD6D14B2719BA4C00DC9DC7 /* ScheduleInChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6D14A2719BA4C00DC9DC7 /* ScheduleInChatViewController.swift */; };
 		2CD6D14F271BF8F900DC9DC7 /* ScheduleInChatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6D14E271BF8F900DC9DC7 /* ScheduleInChatDetailViewController.swift */; };
 		2CD6D151271C2DC900DC9DC7 /* EmoticonPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6D150271C2DC900DC9DC7 /* EmoticonPopUpViewController.swift */; };
+		2CD6D153271C31B300DC9DC7 /* EmoticonBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6D152271C31B300DC9DC7 /* EmoticonBoxViewController.swift */; };
 		2CD6F7D327036AB500D1E04E /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6F7D227036AB500D1E04E /* CollectionView.swift */; };
 		2CD6F7D727037DC000D1E04E /* AllAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6F7D627037DC000D1E04E /* AllAnswerViewController.swift */; };
 		2CD9D9B82704EAD90041A0DB /* AuthEmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9D9B72704EAD90041A0DB /* AuthEmailRequest.swift */; };
@@ -215,7 +216,7 @@
 		2C715C07270E9082007D67C5 /* MyOrderTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOrderTitleTableViewCell.xib; sourceTree = "<group>"; };
 		2C715C0A270E90B9007D67C5 /* MyPresentOrderDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPresentOrderDetailTableViewCell.swift; sourceTree = "<group>"; };
 		2C715C0C270E90CA007D67C5 /* MyPresentOrderDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPresentOrderDetailTableViewCell.xib; sourceTree = "<group>"; };
-		2C81821C270F634800BC47A7 /* EmoticonBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonBoxViewController.swift; sourceTree = "<group>"; };
+		2C81821C270F634800BC47A7 /* MakeEmoticonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeEmoticonViewController.swift; sourceTree = "<group>"; };
 		2C8AFC772714B6E500966309 /* MyMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMessageTableViewCell.swift; sourceTree = "<group>"; };
 		2C8AFC782714B6E500966309 /* MyMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyMessageTableViewCell.xib; sourceTree = "<group>"; };
 		2C8AFC7B2714B6F400966309 /* FamilyMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMessageTableViewCell.swift; sourceTree = "<group>"; };
@@ -289,6 +290,7 @@
 		2CD6D14A2719BA4C00DC9DC7 /* ScheduleInChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInChatViewController.swift; sourceTree = "<group>"; };
 		2CD6D14E271BF8F900DC9DC7 /* ScheduleInChatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInChatDetailViewController.swift; sourceTree = "<group>"; };
 		2CD6D150271C2DC900DC9DC7 /* EmoticonPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonPopUpViewController.swift; sourceTree = "<group>"; };
+		2CD6D152271C31B300DC9DC7 /* EmoticonBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonBoxViewController.swift; sourceTree = "<group>"; };
 		2CD6F7D227036AB500D1E04E /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		2CD6F7D627037DC000D1E04E /* AllAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnswerViewController.swift; sourceTree = "<group>"; };
 		2CD9D9B72704EAD90041A0DB /* AuthEmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEmailRequest.swift; sourceTree = "<group>"; };
@@ -474,7 +476,8 @@
 		2C81821B270F633100BC47A7 /* EmoticonBox */ = {
 			isa = PBXGroup;
 			children = (
-				2C81821C270F634800BC47A7 /* EmoticonBoxViewController.swift */,
+				2CD6D152271C31B300DC9DC7 /* EmoticonBoxViewController.swift */,
+				2C81821C270F634800BC47A7 /* MakeEmoticonViewController.swift */,
 				2CD6D150271C2DC900DC9DC7 /* EmoticonPopUpViewController.swift */,
 			);
 			path = EmoticonBox;
@@ -987,6 +990,7 @@
 				2CC5AECD26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift in Sources */,
 				2C94412E27038811005980D0 /* AllAnswerExpandTableViewCell.swift in Sources */,
 				2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */,
+				2CD6D153271C31B300DC9DC7 /* EmoticonBoxViewController.swift in Sources */,
 				2C9EB00B27077BB400F507A6 /* EntryViewModel.swift in Sources */,
 				2CBB71D82708EABF008B3E56 /* TodayQuestionService.swift in Sources */,
 				2C715BFA270E8C2B007D67C5 /* MyPresentBoxTableViewCell.swift in Sources */,
@@ -997,7 +1001,7 @@
 				2CC5AEBB26F0D8920096D818 /* BaseView.swift in Sources */,
 				2C715BFE270E8F4B007D67C5 /* MyPresentBoxCollectionViewCell.swift in Sources */,
 				2C14820C270B9FE9005C0597 /* NoticeTableViewCell.swift in Sources */,
-				2C81821D270F634800BC47A7 /* EmoticonBoxViewController.swift in Sources */,
+				2C81821D270F634800BC47A7 /* MakeEmoticonViewController.swift in Sources */,
 				2CB9287E2702395300BF34DC /* SignUpRequest.swift in Sources */,
 				2CF3D3D526FCEA11008C13F3 /* MainBMCollectionViewCell.swift in Sources */,
 				2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */,

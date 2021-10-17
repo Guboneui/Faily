@@ -12,7 +12,7 @@ class EmoticonPopUpViewController: UIViewController {
     @IBOutlet weak var popUpBaseView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configUI()
     }
     
@@ -21,6 +21,14 @@ class EmoticonPopUpViewController: UIViewController {
         self.popUpBaseView.layer.cornerRadius = 15
         self.makeShadow(popUpBaseView)
     }
+    
+    @IBAction func cancelButtonAction(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+    }
+    
 
-   
+    @IBAction func saveButtonAction(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+    }
+    
 }
