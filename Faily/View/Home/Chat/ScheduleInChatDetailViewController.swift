@@ -17,7 +17,16 @@ class ScheduleInChatDetailViewController: UIViewController {
     
 
     @IBAction func backButtonAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        
+        let transition = CATransition()
+        transition.duration = 0.2
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        
+        
+        self.dismiss(animated: false, completion: nil)
     }
     
 
