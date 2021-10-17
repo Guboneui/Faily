@@ -130,6 +130,7 @@
 		2CC9C38A26E2A27600936BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC9C38826E2A27600936BCD /* LaunchScreen.storyboard */; };
 		2CD6D14B2719BA4C00DC9DC7 /* ScheduleInChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6D14A2719BA4C00DC9DC7 /* ScheduleInChatViewController.swift */; };
 		2CD6D14F271BF8F900DC9DC7 /* ScheduleInChatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6D14E271BF8F900DC9DC7 /* ScheduleInChatDetailViewController.swift */; };
+		2CD6D151271C2DC900DC9DC7 /* EmoticonPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6D150271C2DC900DC9DC7 /* EmoticonPopUpViewController.swift */; };
 		2CD6F7D327036AB500D1E04E /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6F7D227036AB500D1E04E /* CollectionView.swift */; };
 		2CD6F7D727037DC000D1E04E /* AllAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6F7D627037DC000D1E04E /* AllAnswerViewController.swift */; };
 		2CD9D9B82704EAD90041A0DB /* AuthEmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9D9B72704EAD90041A0DB /* AuthEmailRequest.swift */; };
@@ -287,6 +288,7 @@
 		2CC9C38B26E2A27600936BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CD6D14A2719BA4C00DC9DC7 /* ScheduleInChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInChatViewController.swift; sourceTree = "<group>"; };
 		2CD6D14E271BF8F900DC9DC7 /* ScheduleInChatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInChatDetailViewController.swift; sourceTree = "<group>"; };
+		2CD6D150271C2DC900DC9DC7 /* EmoticonPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonPopUpViewController.swift; sourceTree = "<group>"; };
 		2CD6F7D227036AB500D1E04E /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		2CD6F7D627037DC000D1E04E /* AllAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnswerViewController.swift; sourceTree = "<group>"; };
 		2CD9D9B72704EAD90041A0DB /* AuthEmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEmailRequest.swift; sourceTree = "<group>"; };
@@ -473,6 +475,7 @@
 			isa = PBXGroup;
 			children = (
 				2C81821C270F634800BC47A7 /* EmoticonBoxViewController.swift */,
+				2CD6D150271C2DC900DC9DC7 /* EmoticonPopUpViewController.swift */,
 			);
 			path = EmoticonBox;
 			sourceTree = "<group>";
@@ -1079,6 +1082,7 @@
 				2C8AFC802714C79500966309 /* CATransition.swift in Sources */,
 				2CB928782702223700BF34DC /* QAViewController.swift in Sources */,
 				2CF3D3BD26FBC180008C13F3 /* AddDateNavigationController.swift in Sources */,
+				2CD6D151271C2DC900DC9DC7 /* EmoticonPopUpViewController.swift in Sources */,
 				2C4B7BB926F2E0EF0083576A /* UserSettingViewController.swift in Sources */,
 				2C715BCF270DA6D0007D67C5 /* SettingGuideLineTableViewCell.swift in Sources */,
 				2C5C288B26F4C2DD00217D00 /* ChatViewController.swift in Sources */,

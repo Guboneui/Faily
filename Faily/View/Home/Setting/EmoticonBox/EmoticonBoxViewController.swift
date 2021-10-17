@@ -27,7 +27,10 @@ class EmoticonBoxViewController: UIViewController {
     
     }
     
+    
    
+    @IBAction func selectedButtonAction(_ sender: Any) {
+    }
     
     @IBAction func backButtonAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
