@@ -12,6 +12,7 @@ class MakeEmoticonViewController: UIViewController {
 
     
     @IBOutlet weak var designBottomView: UIView!
+    @IBOutlet weak var designCollectionView: UICollectionView!
     
     override func loadView() {
         super.loadView()
@@ -22,10 +23,19 @@ class MakeEmoticonViewController: UIViewController {
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        setCollectionView()
+    }
     
+    func setCollectionView() {
+        self.designCollectionView.delegate = self
+        self.designCollectionView.dataSource = self
+        self.designCollectionView.register(UINib(nibName: "MakeEmoticonCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MakeEmoticonCollectionViewCell")
+        
+        
     }
     
     
@@ -46,3 +56,34 @@ class MakeEmoticonViewController: UIViewController {
 
 }
 
+extension MakeEmoticonViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 9
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MakeEmoticonCollectionViewCell", for: indexPath) as! MakeEmoticonCollectionViewCell
+        return cell
+    }
+    
+    
+}
+
+extension MakeEmoticonViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = designCollectionView.frame.width
+        let itemsPerRow: CGFloat = 3
+        let widthPadding = 12 * (itemsPerRow + 1)
+        let cellWidth = (width - widthPadding) / itemsPerRow
+        return CGSize(width: cellWidth, height: cellWidth)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 12
+    }
+}
