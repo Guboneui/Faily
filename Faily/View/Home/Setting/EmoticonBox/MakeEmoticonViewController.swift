@@ -11,10 +11,13 @@ import UIKit
 class MakeEmoticonViewController: UIViewController {
 
     
+    @IBOutlet weak var userSelectedImageView: UIImageView!
     @IBOutlet weak var designBottomView: UIView!
     @IBOutlet weak var designCollectionView: UICollectionView!
+    @IBOutlet weak var selectPhotoStackView: UIStackView!
     
     let imageArr = ["sick_big", "happy_big", "mumu_big", "sad_big", "angry_big"]
+    
     
     var selectedIndexPath: IndexPath = [] {
         didSet {
@@ -22,7 +25,10 @@ class MakeEmoticonViewController: UIViewController {
         }
     }
     
+    let picker = UIImagePickerController()
+    
     var seletedIndexItem: Int = -1
+    var userSelectedState: Bool = false
     
     override func loadView() {
         super.loadView()
@@ -38,6 +44,17 @@ class MakeEmoticonViewController: UIViewController {
         super.viewDidLoad()
     
         setCollectionView()
+        picker.delegate = self
+        
+        let selectPhotoTapGesture = UITapGestureRecognizer(target: self, action: #selector(selectPhotoTapAction))
+        selectPhotoStackView.isUserInteractionEnabled = true
+        selectPhotoStackView.addGestureRecognizer(selectPhotoTapGesture)
+    }
+    
+    @objc func selectPhotoTapAction(_ sender: UITapGestureRecognizer) {
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
     }
     
     func setCollectionView() {
@@ -51,15 +68,23 @@ class MakeEmoticonViewController: UIViewController {
     
    
     @IBAction func selectedButtonAction(_ sender: Any) {
-        if self.seletedIndexItem == -1 {
-            self.presentAlert(title: "디자인을 선택 해주세요.")
+        
+        if self.userSelectedState == false {
+            self.presentAlert(title: "적용할 이미지를 선택 해주세요.")
         } else {
-            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-            let popUpVC = storyBoard.instantiateViewController(withIdentifier: "EmoticonPopUpViewController") as! EmoticonPopUpViewController
-            popUpVC.modalPresentationStyle = .overCurrentContext
-            popUpVC.backGroundImageName = imageArr[seletedIndexItem]
-            self.present(popUpVC, animated: false, completion: nil)
+            if self.seletedIndexItem == -1 {
+                self.presentAlert(title: "디자인을 선택 해주세요.")
+            } else {
+                let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+                let popUpVC = storyBoard.instantiateViewController(withIdentifier: "EmoticonPopUpViewController") as! EmoticonPopUpViewController
+                popUpVC.modalPresentationStyle = .overCurrentContext
+                popUpVC.backGroundImageName = imageArr[seletedIndexItem]
+                self.present(popUpVC, animated: false, completion: nil)
+            }
         }
+        
+        
+       
         
     }
     
@@ -124,5 +149,16 @@ extension MakeEmoticonViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 12
+    }
+}
+
+extension MakeEmoticonViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print(info)
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            userSelectedImageView.image = image
+        }
+        self.userSelectedState = true
+        dismiss(animated: true, completion: nil)
     }
 }
