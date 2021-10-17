@@ -14,6 +14,16 @@ class MakeEmoticonViewController: UIViewController {
     @IBOutlet weak var designBottomView: UIView!
     @IBOutlet weak var designCollectionView: UICollectionView!
     
+    let imageArr = ["sick_big", "happy_big", "mumu_big", "sad_big", "angry_big"]
+    
+    var selectedIndexPath: IndexPath = [] {
+        didSet {
+            designCollectionView.reloadData()
+        }
+    }
+    
+    var seletedIndexItem: Int = -1
+    
     override func loadView() {
         super.loadView()
         
@@ -41,10 +51,16 @@ class MakeEmoticonViewController: UIViewController {
     
    
     @IBAction func selectedButtonAction(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let popUpVC = storyBoard.instantiateViewController(withIdentifier: "EmoticonPopUpViewController") as! EmoticonPopUpViewController
-        popUpVC.modalPresentationStyle = .overCurrentContext
-        self.present(popUpVC, animated: false, completion: nil)
+        if self.seletedIndexItem == -1 {
+            self.presentAlert(title: "디자인을 선택 해주세요.")
+        } else {
+            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+            let popUpVC = storyBoard.instantiateViewController(withIdentifier: "EmoticonPopUpViewController") as! EmoticonPopUpViewController
+            popUpVC.modalPresentationStyle = .overCurrentContext
+            popUpVC.backGroundImageName = imageArr[seletedIndexItem]
+            self.present(popUpVC, animated: false, completion: nil)
+        }
+        
     }
     
     @IBAction func backButtonAction(_ sender: Any) {
@@ -58,12 +74,35 @@ class MakeEmoticonViewController: UIViewController {
 
 extension MakeEmoticonViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return imageArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MakeEmoticonCollectionViewCell", for: indexPath) as! MakeEmoticonCollectionViewCell
+        
+        
+        var borderColor: CGColor = UIColor.clear.cgColor
+        var borderWidth: CGFloat = 0
+        
+        if indexPath == self.selectedIndexPath {
+            borderColor = UIColor.FailyColor.mainPinkColor.cgColor
+            borderWidth = 3
+        } else {
+            borderColor = UIColor.clear.cgColor
+            borderWidth = 0
+        }
+        
+        cell.designImageView.layer.borderWidth = borderWidth
+        cell.designImageView.layer.borderColor = borderColor
+        cell.designImageView.image = UIImage(named: self.imageArr[indexPath.item])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.allowsMultipleSelection = false
+        selectedIndexPath = indexPath
+        seletedIndexItem = indexPath.item
+        
     }
     
     

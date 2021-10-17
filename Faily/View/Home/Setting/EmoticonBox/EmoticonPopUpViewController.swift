@@ -10,6 +10,10 @@ import UIKit
 class EmoticonPopUpViewController: UIViewController {
 
     @IBOutlet weak var popUpBaseView: UIView!
+    @IBOutlet weak var resultImage: UIImageView!
+    
+    var backGroundImageName: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +24,8 @@ class EmoticonPopUpViewController: UIViewController {
     func configUI() {
         self.popUpBaseView.layer.cornerRadius = 15
         self.makeShadow(popUpBaseView)
+        resultImage.image = UIImage(named: backGroundImageName)
+        
     }
     
     @IBAction func cancelButtonAction(_ sender: Any) {

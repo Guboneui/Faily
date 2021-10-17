@@ -1559,6 +1559,7 @@
                     </view>
                     <connections>
                         <outlet property="popUpBaseView" destination="HgC-nF-s8J" id="J2i-h9-h4Y"/>
+                        <outlet property="resultImage" destination="BM1-JG-TUf" id="IFZ-rr-WaH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3A-L7-9fe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
