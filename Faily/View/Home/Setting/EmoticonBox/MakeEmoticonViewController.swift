@@ -90,6 +90,7 @@ class MakeEmoticonViewController: UIViewController {
                 }
                 
                 let combinedImage = userSelectedImage + userSelectedBackGround
+                //let combinedImage = userSelectedImage + UIImage(named: "TestPng")!
                 popUpVC.combinedImage = combinedImage
                 self.present(popUpVC, animated: false, completion: nil)
             }
