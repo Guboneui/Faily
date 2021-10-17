@@ -22,6 +22,8 @@ pod 'CollectionViewPagingLayout'
 pod 'ExpyTableView'
 pod 'YPImagePicker'
 pod "BSImagePicker", "~> 3.1"
+pod "SwiftyImage"
+
 
 
 end

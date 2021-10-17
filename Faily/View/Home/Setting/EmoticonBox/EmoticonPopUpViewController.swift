@@ -12,7 +12,7 @@ class EmoticonPopUpViewController: UIViewController {
     @IBOutlet weak var popUpBaseView: UIView!
     @IBOutlet weak var resultImage: UIImageView!
     
-    var backGroundImageName: String = ""
+    var combinedImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class EmoticonPopUpViewController: UIViewController {
     func configUI() {
         self.popUpBaseView.layer.cornerRadius = 15
         self.makeShadow(popUpBaseView)
-        resultImage.image = UIImage(named: backGroundImageName)
+        resultImage.image = combinedImage
         
     }
     

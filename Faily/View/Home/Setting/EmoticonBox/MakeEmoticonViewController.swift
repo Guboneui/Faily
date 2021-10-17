@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SwiftyImage
 
 class MakeEmoticonViewController: UIViewController {
 
@@ -17,6 +17,10 @@ class MakeEmoticonViewController: UIViewController {
     @IBOutlet weak var selectPhotoStackView: UIStackView!
     
     let imageArr = ["sick_big", "happy_big", "mumu_big", "sad_big", "angry_big"]
+    
+    
+    var seletedImage: UIImage?
+    var seletedBackGround: UIImage?
     
     
     var selectedIndexPath: IndexPath = [] {
@@ -78,7 +82,15 @@ class MakeEmoticonViewController: UIViewController {
                 let storyBoard = UIStoryboard(name: "Home", bundle: nil)
                 let popUpVC = storyBoard.instantiateViewController(withIdentifier: "EmoticonPopUpViewController") as! EmoticonPopUpViewController
                 popUpVC.modalPresentationStyle = .overCurrentContext
-                popUpVC.backGroundImageName = imageArr[seletedIndexItem]
+                self.seletedBackGround = UIImage(named: imageArr[seletedIndexItem])
+                //popUpVC.backGroundImageName = imageArr[seletedIndexItem]
+                
+                guard let userSelectedImage = self.seletedImage, let userSelectedBackGround = self.seletedBackGround else {
+                    return
+                }
+                
+                let combinedImage = userSelectedImage + userSelectedBackGround
+                popUpVC.combinedImage = combinedImage
                 self.present(popUpVC, animated: false, completion: nil)
             }
         }
@@ -157,8 +169,10 @@ extension MakeEmoticonViewController: UIImagePickerControllerDelegate, UINavigat
         print(info)
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             userSelectedImageView.image = image
+            self.seletedImage = image
         }
         self.userSelectedState = true
+        
         dismiss(animated: true, completion: nil)
     }
 }
