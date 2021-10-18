@@ -239,6 +239,8 @@ class ChatViewController: UIViewController {
         chatTableView.register(UINib(nibName: "FamilyMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "FamilyMessageTableViewCell")
         chatTableView.register(UINib(nibName: "MyPhotoMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "MyPhotoMessageTableViewCell")
         chatTableView.register(UINib(nibName: "FamilyPhotoMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "FamilyPhotoMessageTableViewCell")
+        chatTableView.register(UINib(nibName: "MyScheduleTableViewCell", bundle: nil), forCellReuseIdentifier: "MyScheduleTableViewCell")
+        chatTableView.register(UINib(nibName: "FamilyScheduleTableViewCell", bundle: nil), forCellReuseIdentifier: "FamilyScheduleTableViewCell")
         
         UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
@@ -638,7 +640,7 @@ class ChatViewController: UIViewController {
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return self.message.count + 2
-        return 14
+        return 16
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -670,8 +672,14 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             if indexPath.row == 12 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MyPhotoMessageTableViewCell", for: indexPath) as! MyPhotoMessageTableViewCell
                 return cell
-            } else {
+            } else if indexPath.row == 13{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyPhotoMessageTableViewCell", for: indexPath) as! FamilyPhotoMessageTableViewCell
+                return cell
+            } else if indexPath.row == 14{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "MyScheduleTableViewCell", for: indexPath) as! MyScheduleTableViewCell
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyScheduleTableViewCell", for: indexPath) as! FamilyScheduleTableViewCell
                 return cell
             }
         }

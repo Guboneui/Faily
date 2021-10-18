@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="FamilyScheduleTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="FamilyScheduleTableViewCell" rowHeight="163" id="KGk-i7-Jjw" customClass="FamilyScheduleTableViewCell" customModule="Faily" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="496" height="163"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="496" height="163"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="potato" translatesAutoresizingMaskIntoConstraints="NO" id="gud-MJ-Zzd">
+                        <rect key="frame" x="25" y="10" width="49.5" height="49.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="gud-MJ-Zzd" secondAttribute="height" id="aBS-cL-cYA"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="보니" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQ1-j3-TQv">
+                        <rect key="frame" x="84.5" y="10" width="28" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOL-Ng-KYe">
+                        <rect key="frame" x="84.5" y="39.5" width="241.5" height="113.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="일정이 공유되었어요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiJ-IY-Imq">
+                                <rect key="frame" x="10" y="10" width="221.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ug9-aM-AZi">
+                                <rect key="frame" x="10" y="39" width="221.5" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="QEa-jQ-gz2"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fdi-V3-v4e">
+                                <rect key="frame" x="47.5" y="56.5" width="174" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10월 13일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh6-XI-Bdp">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" text="가족 모임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYx-ZN-2cn">
+                                        <rect key="frame" x="0.0" y="19" width="174" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="calendar_chat" translatesAutoresizingMaskIntoConstraints="NO" id="d1k-Ej-9te">
+                                <rect key="frame" x="10" y="64" width="27.5" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d1k-Ej-9te" secondAttribute="height" id="vPG-dg-6nR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="grayscale_5"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ug9-aM-AZi" secondAttribute="trailing" constant="10" id="3Fz-2w-7RC"/>
+                            <constraint firstAttribute="trailing" secondItem="hiJ-IY-Imq" secondAttribute="trailing" constant="10" id="3xU-LW-YeC"/>
+                            <constraint firstItem="fdi-V3-v4e" firstAttribute="top" secondItem="Ug9-aM-AZi" secondAttribute="bottom" constant="16.5" id="43N-6m-4LL"/>
+                            <constraint firstItem="Ug9-aM-AZi" firstAttribute="top" secondItem="hiJ-IY-Imq" secondAttribute="bottom" constant="9.5" id="Agv-H9-MjV"/>
+                            <constraint firstItem="d1k-Ej-9te" firstAttribute="leading" secondItem="LOL-Ng-KYe" secondAttribute="leading" constant="10" id="ENy-jA-fVG"/>
+                            <constraint firstItem="hiJ-IY-Imq" firstAttribute="leading" secondItem="LOL-Ng-KYe" secondAttribute="leading" constant="10" id="IWy-pY-o06"/>
+                            <constraint firstItem="d1k-Ej-9te" firstAttribute="centerY" secondItem="fdi-V3-v4e" secondAttribute="centerY" id="MO7-bd-a6P"/>
+                            <constraint firstAttribute="trailing" secondItem="fdi-V3-v4e" secondAttribute="trailing" constant="20" id="NTf-03-MmI"/>
+                            <constraint firstAttribute="bottom" secondItem="fdi-V3-v4e" secondAttribute="bottom" constant="15" id="V3e-tR-ucd"/>
+                            <constraint firstItem="d1k-Ej-9te" firstAttribute="height" secondItem="LOL-Ng-KYe" secondAttribute="height" multiplier="0.24" id="WKr-7G-vsR"/>
+                            <constraint firstItem="hiJ-IY-Imq" firstAttribute="top" secondItem="LOL-Ng-KYe" secondAttribute="top" constant="10" id="mWX-WV-J2O"/>
+                            <constraint firstItem="fdi-V3-v4e" firstAttribute="leading" secondItem="d1k-Ej-9te" secondAttribute="trailing" constant="10" id="o4m-ee-jfg"/>
+                            <constraint firstItem="Ug9-aM-AZi" firstAttribute="leading" secondItem="LOL-Ng-KYe" secondAttribute="leading" constant="10" id="s7V-hG-KoV"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오후 10시 22분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mm-eu-ktR">
+                        <rect key="frame" x="330" y="141" width="64" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" name="grayscale_2"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gud-MJ-Zzd" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.1" id="AzT-Yf-wEK"/>
+                    <constraint firstItem="JQ1-j3-TQv" firstAttribute="leading" secondItem="gud-MJ-Zzd" secondAttribute="trailing" constant="10" id="Bjh-b0-91x"/>
+                    <constraint firstItem="gud-MJ-Zzd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Hx9-Bo-dMz"/>
+                    <constraint firstItem="7Mm-eu-ktR" firstAttribute="leading" secondItem="LOL-Ng-KYe" secondAttribute="trailing" constant="4" id="NBQ-uI-l05"/>
+                    <constraint firstItem="7Mm-eu-ktR" firstAttribute="bottom" secondItem="LOL-Ng-KYe" secondAttribute="bottom" id="OIt-xd-kqZ"/>
+                    <constraint firstItem="JQ1-j3-TQv" firstAttribute="top" secondItem="gud-MJ-Zzd" secondAttribute="top" id="XMg-rw-4q4"/>
+                    <constraint firstItem="LOL-Ng-KYe" firstAttribute="leading" secondItem="gud-MJ-Zzd" secondAttribute="trailing" constant="10" id="cCI-K5-xlN"/>
+                    <constraint firstItem="LOL-Ng-KYe" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4866" id="eWo-ot-hLZ"/>
+                    <constraint firstItem="LOL-Ng-KYe" firstAttribute="top" secondItem="JQ1-j3-TQv" secondAttribute="bottom" constant="10" id="oED-m0-ygJ"/>
+                    <constraint firstItem="gud-MJ-Zzd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="qIC-ih-3u5"/>
+                    <constraint firstAttribute="bottom" secondItem="LOL-Ng-KYe" secondAttribute="bottom" constant="10" id="yub-f7-BRu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="familyScheduleBaseView" destination="LOL-Ng-KYe" id="iPr-Z9-cZr"/>
+            </connections>
+            <point key="canvasLocation" x="-44.927536231884062" y="-63.28125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="calendar_chat" width="24" height="24"/>
+        <image name="potato" width="3024" height="3024"/>
+        <namedColor name="grayscale_2">
+            <color red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grayscale_5">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
