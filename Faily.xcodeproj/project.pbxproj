@@ -93,6 +93,10 @@
 		2CB38510271D4D0100BE438A /* EmoticonInChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3850F271D4D0100BE438A /* EmoticonInChatViewController.swift */; };
 		2CB38512271D4D1900BE438A /* EmoticonInChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB38511271D4D1900BE438A /* EmoticonInChatCollectionViewCell.swift */; };
 		2CB38514271D4D2000BE438A /* EmoticonInChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB38513271D4D2000BE438A /* EmoticonInChatCollectionViewCell.xib */; };
+		2CB38517271DD96800BE438A /* MyPhotoMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB38515271DD96800BE438A /* MyPhotoMessageTableViewCell.swift */; };
+		2CB38518271DD96800BE438A /* MyPhotoMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB38516271DD96800BE438A /* MyPhotoMessageTableViewCell.xib */; };
+		2CB3851B271DD97900BE438A /* FamilyPhotoMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB38519271DD97900BE438A /* FamilyPhotoMessageTableViewCell.swift */; };
+		2CB3851C271DD97900BE438A /* FamilyPhotoMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB3851A271DD97900BE438A /* FamilyPhotoMessageTableViewCell.xib */; };
 		2CB928782702223700BF34DC /* QAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB928772702223700BF34DC /* QAViewController.swift */; };
 		2CB9287B270238A500BF34DC /* ConstantURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9287A270238A500BF34DC /* ConstantURL.swift */; };
 		2CB9287E2702395300BF34DC /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9287D2702395300BF34DC /* SignUpRequest.swift */; };
@@ -261,6 +265,10 @@
 		2CB3850F271D4D0100BE438A /* EmoticonInChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonInChatViewController.swift; sourceTree = "<group>"; };
 		2CB38511271D4D1900BE438A /* EmoticonInChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonInChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		2CB38513271D4D2000BE438A /* EmoticonInChatCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmoticonInChatCollectionViewCell.xib; sourceTree = "<group>"; };
+		2CB38515271DD96800BE438A /* MyPhotoMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotoMessageTableViewCell.swift; sourceTree = "<group>"; };
+		2CB38516271DD96800BE438A /* MyPhotoMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPhotoMessageTableViewCell.xib; sourceTree = "<group>"; };
+		2CB38519271DD97900BE438A /* FamilyPhotoMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPhotoMessageTableViewCell.swift; sourceTree = "<group>"; };
+		2CB3851A271DD97900BE438A /* FamilyPhotoMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyPhotoMessageTableViewCell.xib; sourceTree = "<group>"; };
 		2CB928772702223700BF34DC /* QAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAViewController.swift; sourceTree = "<group>"; };
 		2CB9287A270238A500BF34DC /* ConstantURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantURL.swift; sourceTree = "<group>"; };
 		2CB9287D2702395300BF34DC /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
@@ -454,6 +462,10 @@
 				2C8AFC782714B6E500966309 /* MyMessageTableViewCell.xib */,
 				2C8AFC7B2714B6F400966309 /* FamilyMessageTableViewCell.swift */,
 				2C8AFC7C2714B6F400966309 /* FamilyMessageTableViewCell.xib */,
+				2CB38515271DD96800BE438A /* MyPhotoMessageTableViewCell.swift */,
+				2CB38516271DD96800BE438A /* MyPhotoMessageTableViewCell.xib */,
+				2CB38519271DD97900BE438A /* FamilyPhotoMessageTableViewCell.swift */,
+				2CB3851A271DD97900BE438A /* FamilyPhotoMessageTableViewCell.xib */,
 				2CD6D14A2719BA4C00DC9DC7 /* ScheduleInChatViewController.swift */,
 				2CD6D14E271BF8F900DC9DC7 /* ScheduleInChatDetailViewController.swift */,
 				2CB3850F271D4D0100BE438A /* EmoticonInChatViewController.swift */,
@@ -927,6 +939,7 @@
 				2C715BFB270E8C2B007D67C5 /* MyPresentBoxTableViewCell.xib in Resources */,
 				2C9EB001270764D400F507A6 /* EachAnswerTableViewCell.xib in Resources */,
 				2C715BC4270DA564007D67C5 /* TitleSettingTableViewCell.xib in Resources */,
+				2CB38518271DD96800BE438A /* MyPhotoMessageTableViewCell.xib in Resources */,
 				2C715BCC270DA67D007D67C5 /* PolicySettingTableViewCell.xib in Resources */,
 				2C8AFC7E2714B6F400966309 /* FamilyMessageTableViewCell.xib in Resources */,
 				2C22F410270C0C5200580DCF /* DateScheduleTableViewCell.xib in Resources */,
@@ -951,6 +964,7 @@
 				2CAF2CE326F927C00044C594 /* HomeBusinessCollectionViewCell.xib in Resources */,
 				2C715C09270E9082007D67C5 /* MyOrderTitleTableViewCell.xib in Resources */,
 				2CD6D168271CA8E300DC9DC7 /* MakeEmoticonCollectionViewCell.xib in Resources */,
+				2CB3851C271DD97900BE438A /* FamilyPhotoMessageTableViewCell.xib in Resources */,
 				2CF3D3C326FBCF82008C13F3 /* ScheduleDivisionTableViewCell.xib in Resources */,
 				2C33061C2700FA2E00E638B1 /* MainQuestionCollectionViewCell.xib in Resources */,
 				2CF3D3D626FCEA11008C13F3 /* MainBMCollectionViewCell.xib in Resources */,
@@ -1058,6 +1072,7 @@
 				2C9EAFFA270615E100F507A6 /* InviteService.swift in Sources */,
 				2C4B7BB126F2E0470083576A /* QuestionViewController.swift in Sources */,
 				2CC5AEA726EFA8C10096D818 /* String.swift in Sources */,
+				2CB3851B271DD97900BE438A /* FamilyPhotoMessageTableViewCell.swift in Sources */,
 				2C9441332703A24A005980D0 /* LockTableViewCell.swift in Sources */,
 				2C148207270B990F005C0597 /* EditProfileViewController.swift in Sources */,
 				2C330622270101E800E638B1 /* AnsweredFamilyCollectionViewCell.swift in Sources */,
@@ -1101,6 +1116,7 @@
 				2CC5AEC626F0FA450096D818 /* OnBoardingViewController.swift in Sources */,
 				2CC5AEB426EFDC600096D818 /* AgreeAuthorityViewController.swift in Sources */,
 				2CBB71D52708E9DA008B3E56 /* TodayQuestionRepository.swift in Sources */,
+				2CB38517271DD96800BE438A /* MyPhotoMessageTableViewCell.swift in Sources */,
 				2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */,
 				2C715C0B270E90B9007D67C5 /* MyPresentOrderDetailTableViewCell.swift in Sources */,
 				2CC5AEC126F0F67C0096D818 /* PinkMainButton.swift in Sources */,

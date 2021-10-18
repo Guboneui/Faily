@@ -237,11 +237,14 @@ class ChatViewController: UIViewController {
         chatTableView.separatorStyle = .none
         chatTableView.register(UINib(nibName: "MyMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "MyMessageTableViewCell")
         chatTableView.register(UINib(nibName: "FamilyMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "FamilyMessageTableViewCell")
+        chatTableView.register(UINib(nibName: "MyPhotoMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "MyPhotoMessageTableViewCell")
+        chatTableView.register(UINib(nibName: "FamilyPhotoMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "FamilyPhotoMessageTableViewCell")
         
         UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: {(completed) in
-            let indexPath = IndexPath(row: self.message.count - 1, section: 0)
+            //let indexPath = IndexPath(row: self.message.count - 1, section: 0)
+            let indexPath = IndexPath(row: 13, section: 0)
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         })
     }
@@ -589,6 +592,7 @@ class ChatViewController: UIViewController {
             self.view.layoutIfNeeded()
         }, completion: {(completed) in
             let indexPath = IndexPath(row: self.message.count - 1, section: 0)
+            
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         })
         
@@ -633,25 +637,47 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.message.count
+        //return self.message.count + 2
+        return 14
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let chatMessage = message[indexPath.row]
         
-        if chatMessage.userName == "보니"{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
-            cell.myMessageLabel.text = chatMessage.message
-            return cell
+        if indexPath.row < 12 {
+            let chatMessage = message[indexPath.row]
+            if chatMessage.userName == "보니"{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
+                cell.myMessageLabel.text = chatMessage.message
+                return cell
+            } else {
+                
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMessageTableViewCell", for: indexPath) as! FamilyMessageTableViewCell
+                cell.nameLabel.text = chatMessage.userName
+                cell.messageLabel.text = chatMessage.message
+                cell.profileImage.image = UIImage(named: chatMessage.profileImage)
+                cell.timeLabel.text = chatMessage.sendTime
+                return cell
+                
+                
+                
+            }
+            
+            
+            
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMessageTableViewCell", for: indexPath) as! FamilyMessageTableViewCell
-            cell.nameLabel.text = chatMessage.userName
-            cell.messageLabel.text = chatMessage.message
-            cell.profileImage.image = UIImage(named: chatMessage.profileImage)
-            cell.timeLabel.text = chatMessage.sendTime
-            return cell
+            if indexPath.row == 12 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "MyPhotoMessageTableViewCell", for: indexPath) as! MyPhotoMessageTableViewCell
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyPhotoMessageTableViewCell", for: indexPath) as! FamilyPhotoMessageTableViewCell
+                return cell
+            }
         }
+        
+        
+        
         
         
         
