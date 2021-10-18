@@ -44,6 +44,7 @@ class ChatViewController: UIViewController {
     }
     
     var menuState = false
+    var emoticonState = false
     
     let stackView = UIStackView()
     let emoticonStackView = UIStackView()
@@ -76,6 +77,8 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableViewBottomMargin: NSLayoutConstraint!
     @IBOutlet weak var textViewHeight: NSLayoutConstraint!
     
+    
+    @IBOutlet weak var emoticonBaseViewHeight: NSLayoutConstraint!
     
     var isFistLayoutSubviews = true
     var oldTableViewBottomInset: CGFloat = 0
@@ -313,6 +316,8 @@ class ChatViewController: UIViewController {
 //        showUserEmoticonVC.modalPresentationStyle = .overCurrentContext
 //        present(showUserEmoticonVC, animated: false)
         userEmoticonBaseView.isHidden = false
+        self.emoticonState = true
+        self.bottomMargin.constant = self.bottomMargin.constant + 175
     }
     
     
@@ -460,6 +465,8 @@ class ChatViewController: UIViewController {
     
     @IBAction func dismissEmoticonViewAction(_ sender: Any) {
         self.userEmoticonBaseView.isHidden = true
+        self.emoticonState = false
+        self.bottomMargin.constant = self.bottomMargin.constant - 175
     }
     
     

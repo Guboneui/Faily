@@ -1901,6 +1901,7 @@
                         <outlet property="bottomBaseViewHeight" destination="0xe-V2-Yvv" id="sYl-M0-P0A"/>
                         <outlet property="bottomMargin" destination="ea0-ie-jsK" id="YgY-uY-XuG"/>
                         <outlet property="chatTableView" destination="abb-7x-h6g" id="6Wc-We-dEL"/>
+                        <outlet property="emoticonBaseViewHeight" destination="pu4-n5-bbu" id="gNi-EA-LEZ"/>
                         <outlet property="inputViewBottomMargin" destination="ea0-ie-jsK" id="LMP-re-hXk"/>
                         <outlet property="menuButton" destination="uDD-sr-Kcy" id="S2s-1m-qjZ"/>
                         <outlet property="messageTextView" destination="6yI-Vo-OAH" id="pxH-We-oYQ"/>
