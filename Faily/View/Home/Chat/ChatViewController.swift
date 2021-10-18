@@ -195,7 +195,7 @@ class ChatViewController: UIViewController {
         ])
         typingBaseView.layer.cornerRadius = 17
         userEmoticonBaseView.isHidden = true
-        
+        messageTextView.becomeFirstResponder()
     }
     
     
