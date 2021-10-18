@@ -449,17 +449,35 @@ class ChatViewController: UIViewController {
     
     @IBAction func sendButtonAction(_ sender: Any) {
         
-        if messageTextView.text != nil || messageTextView.text != "" {
-            message.append(ChatMessage(userName: "보니", message: self.messageTextView.text, profileImage: "boni", sendTime: "오후 11시 30분"))
-            self.chatTableView.reloadData()
-            self.messageTextView.text = nil
-            UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
-                self.view.layoutIfNeeded()
-            }, completion: {(completed) in
-                let indexPath = IndexPath(row: self.message.count - 1, section: 0)
-                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-            })
+        guard let userMessage = messageTextView.text?.trim, userMessage.isExists else {
+            print("빈 메세지 입니다. 전달되지 않습니다.")
+            return
         }
+        
+        message.append(ChatMessage(userName: "보니", message: self.messageTextView.text, profileImage: "boni", sendTime: "오후 11시 30분"))
+        self.chatTableView.reloadData()
+        self.messageTextView.text = nil
+        UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: {(completed) in
+            let indexPath = IndexPath(row: self.message.count - 1, section: 0)
+            self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+        })
+        
+        self.messageTextView.becomeFirstResponder()
+        
+        
+//        if messageTextView.text != nil || messageTextView.text != "" {
+//            message.append(ChatMessage(userName: "보니", message: self.messageTextView.text, profileImage: "boni", sendTime: "오후 11시 30분"))
+//            self.chatTableView.reloadData()
+//            self.messageTextView.text = nil
+//            UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+//                self.view.layoutIfNeeded()
+//            }, completion: {(completed) in
+//                let indexPath = IndexPath(row: self.message.count - 1, section: 0)
+//                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+//            })
+//        }
         
     }
     
