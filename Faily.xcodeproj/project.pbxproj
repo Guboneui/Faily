@@ -90,6 +90,9 @@
 		2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */; };
 		2CB0B50D26EE9F1D00F10964 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50C26EE9F1D00F10964 /* AppColor.swift */; };
 		2CB0B50F26EEC15000F10964 /* AuthEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */; };
+		2CB38510271D4D0100BE438A /* EmoticonInChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3850F271D4D0100BE438A /* EmoticonInChatViewController.swift */; };
+		2CB38512271D4D1900BE438A /* EmoticonInChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB38511271D4D1900BE438A /* EmoticonInChatCollectionViewCell.swift */; };
+		2CB38514271D4D2000BE438A /* EmoticonInChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB38513271D4D2000BE438A /* EmoticonInChatCollectionViewCell.xib */; };
 		2CB928782702223700BF34DC /* QAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB928772702223700BF34DC /* QAViewController.swift */; };
 		2CB9287B270238A500BF34DC /* ConstantURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9287A270238A500BF34DC /* ConstantURL.swift */; };
 		2CB9287E2702395300BF34DC /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9287D2702395300BF34DC /* SignUpRequest.swift */; };
@@ -255,6 +258,9 @@
 		2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2CB0B50C26EE9F1D00F10964 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		2CB0B50E26EEC15000F10964 /* AuthEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEmailViewController.swift; sourceTree = "<group>"; };
+		2CB3850F271D4D0100BE438A /* EmoticonInChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonInChatViewController.swift; sourceTree = "<group>"; };
+		2CB38511271D4D1900BE438A /* EmoticonInChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonInChatCollectionViewCell.swift; sourceTree = "<group>"; };
+		2CB38513271D4D2000BE438A /* EmoticonInChatCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmoticonInChatCollectionViewCell.xib; sourceTree = "<group>"; };
 		2CB928772702223700BF34DC /* QAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAViewController.swift; sourceTree = "<group>"; };
 		2CB9287A270238A500BF34DC /* ConstantURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantURL.swift; sourceTree = "<group>"; };
 		2CB9287D2702395300BF34DC /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
@@ -450,6 +456,9 @@
 				2C8AFC7C2714B6F400966309 /* FamilyMessageTableViewCell.xib */,
 				2CD6D14A2719BA4C00DC9DC7 /* ScheduleInChatViewController.swift */,
 				2CD6D14E271BF8F900DC9DC7 /* ScheduleInChatDetailViewController.swift */,
+				2CB3850F271D4D0100BE438A /* EmoticonInChatViewController.swift */,
+				2CB38511271D4D1900BE438A /* EmoticonInChatCollectionViewCell.swift */,
+				2CB38513271D4D2000BE438A /* EmoticonInChatCollectionViewCell.xib */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -912,6 +921,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C3306202700FFF300E638B1 /* AnsweredFamilyTableViewCell.xib in Resources */,
+				2CB38514271D4D2000BE438A /* EmoticonInChatCollectionViewCell.xib in Resources */,
 				2C94412727038475005980D0 /* AllAnswerBaseTableViewCell.xib in Resources */,
 				2C148203270B8033005C0597 /* SettingTableViewCell.xib in Resources */,
 				2C715BFB270E8C2B007D67C5 /* MyPresentBoxTableViewCell.xib in Resources */,
@@ -1019,6 +1029,7 @@
 				2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */,
 				2CD6D153271C31B300DC9DC7 /* EmoticonBoxViewController.swift in Sources */,
 				2C9EB00B27077BB400F507A6 /* EntryViewModel.swift in Sources */,
+				2CB38512271D4D1900BE438A /* EmoticonInChatCollectionViewCell.swift in Sources */,
 				2CBB71D82708EABF008B3E56 /* TodayQuestionService.swift in Sources */,
 				2C715BFA270E8C2B007D67C5 /* MyPresentBoxTableViewCell.swift in Sources */,
 				2CD9D9C62704F3990041A0DB /* LoginRepository.swift in Sources */,
@@ -1034,6 +1045,7 @@
 				2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */,
 				2C94412627038475005980D0 /* AllAnswerBaseTableViewCell.swift in Sources */,
 				2C715BC7270DA5D0007D67C5 /* AlertSettingTableViewCell.swift in Sources */,
+				2CB38510271D4D0100BE438A /* EmoticonInChatViewController.swift in Sources */,
 				2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */,
 				2CC092BE26F26F53009E69D0 /* HapticManager.swift in Sources */,
 				2C3306172700F78100E638B1 /* MainQuestionTableViewCell.swift in Sources */,

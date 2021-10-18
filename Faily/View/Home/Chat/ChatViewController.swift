@@ -33,6 +33,16 @@ class ChatViewController: UIViewController {
     
     @IBOutlet weak var chatTableView: UITableView!
     
+    @IBOutlet weak var userEmoticonBaseView: UIView!
+    
+    @IBOutlet weak var userEmoticonCollectionView: UICollectionView!
+    let sectionInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 0)
+    var selectedIndexPath: IndexPath = [] {
+        didSet {
+            userEmoticonCollectionView.reloadData()
+        }
+    }
+    
     var menuState = false
     
     let stackView = UIStackView()
@@ -184,6 +194,8 @@ class ChatViewController: UIViewController {
             
         ])
         typingBaseView.layer.cornerRadius = 17
+        userEmoticonBaseView.isHidden = true
+        
     }
     
     
@@ -192,22 +204,17 @@ class ChatViewController: UIViewController {
         self.stackView.isHidden = true
         IQKeyboardManager.shared().isEnabled = false
         
-        let galleryStackViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(galleryStackViewActoin))
-        galleryStackView.isUserInteractionEnabled = true
-        galleryStackView.addGestureRecognizer(galleryStackViewTapGesture)
+        setGesture()
+        setTableView()
+        setCollectionView()
+        setKeyboardNotification()
         
-        let cameraStackViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(cameraStackViewAction))
-        cameraStackView.isUserInteractionEnabled = true
-        cameraStackView.addGestureRecognizer(cameraStackViewTapGesture)
-        
-        let scheduleStackViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(scheduleStackViewAction))
-        scheduleStackView.isUserInteractionEnabled = true
-        scheduleStackView.addGestureRecognizer(scheduleStackViewTapGesture)
+        imagePickerController.delegate = self
         
         
-        
-        
-        
+    }
+    
+    func setTableView() {
         chatTableView.delegate = self
         chatTableView.dataSource = self
         chatTableView.separatorStyle = .none
@@ -220,15 +227,44 @@ class ChatViewController: UIViewController {
             let indexPath = IndexPath(row: self.message.count - 1, section: 0)
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         })
+    }
+    
+    func setCollectionView() {
+        self.userEmoticonCollectionView.delegate = self
+        self.userEmoticonCollectionView.dataSource = self
+        self.userEmoticonCollectionView.register(UINib(nibName: "EmoticonInChatCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "EmoticonInChatCollectionViewCell")
+    }
+    
+    func setGesture() {
+        let emoticonStackViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(emoticonStackViewAction))
+        emoticonStackView.isUserInteractionEnabled = true
+        emoticonStackView.addGestureRecognizer(emoticonStackViewTapGesture)
+        
+        let galleryStackViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(galleryStackViewAction))
+        galleryStackView.isUserInteractionEnabled = true
+        galleryStackView.addGestureRecognizer(galleryStackViewTapGesture)
+        
+        let cameraStackViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(cameraStackViewAction))
+        cameraStackView.isUserInteractionEnabled = true
+        cameraStackView.addGestureRecognizer(cameraStackViewTapGesture)
+        
+        let scheduleStackViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(scheduleStackViewAction))
+        scheduleStackView.isUserInteractionEnabled = true
+        scheduleStackView.addGestureRecognizer(scheduleStackViewTapGesture)
+        
+    }
+    
+    func setKeyboardNotification() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardShowNotification), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardHideNotification), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         
-        imagePickerController.delegate = self
-        
-        
     }
+    
+    
+    
+    
     
     @objc func handleKeyboardShowNotification(_ sender: Notification) {
         
@@ -242,14 +278,10 @@ class ChatViewController: UIViewController {
         } else {
             bottomMargin.constant =  keyboardRectangle.height - 83
         }
-        
-        
-        
-       
-        
-
-        
     }
+    
+    
+    
     
     @objc func handleKeyboardHideNotification(_ sender: Notification) {
         
@@ -273,7 +305,18 @@ class ChatViewController: UIViewController {
         IQKeyboardManager.shared().isEnabled = true
     }
     
-    @objc func galleryStackViewActoin(_ sender: UITapGestureRecognizer) {
+    
+    
+    @objc func emoticonStackViewAction(_ sender: UITapGestureRecognizer) {
+//        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+//        let showUserEmoticonVC = storyBoard.instantiateViewController(withIdentifier: "EmoticonInChatViewController") as! EmoticonInChatViewController
+//        showUserEmoticonVC.modalPresentationStyle = .overCurrentContext
+//        present(showUserEmoticonVC, animated: false)
+        userEmoticonBaseView.isHidden = false
+    }
+    
+    
+    @objc func galleryStackViewAction(_ sender: UITapGestureRecognizer) {
         let imagePicker = ImagePickerController()
         imagePicker.settings.selection.max = 5
         imagePicker.settings.theme.selectionStyle = .checked
@@ -367,7 +410,7 @@ class ChatViewController: UIViewController {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let addScheduleView = storyBoard.instantiateViewController(withIdentifier: "ScheduleInChatViewController") as! ScheduleInChatViewController
         addScheduleView.modalPresentationStyle = .overCurrentContext
-        present(addScheduleView, animated: true)
+        present(addScheduleView, animated: false)
     }
     
     
@@ -413,9 +456,18 @@ class ChatViewController: UIViewController {
             })
         }
         
-        
-        
     }
+    
+    @IBAction func dismissEmoticonViewAction(_ sender: Any) {
+        self.userEmoticonBaseView.isHidden = true
+    }
+    
+    
+    @IBAction func sendEmoticonButtonAction(_ sender: Any) {
+        print(123123123)
+    }
+    
+    
     
 }
 
@@ -459,4 +511,85 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
         
         self.dismiss(animated: true, completion: nil)
     }
+}
+
+
+extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmoticonInChatCollectionViewCell", for: indexPath) as! EmoticonInChatCollectionViewCell
+        
+        
+        var borderColor: CGColor = UIColor.clear.cgColor
+        var borderWidth: CGFloat = 0
+        
+        if indexPath == self.selectedIndexPath {
+            borderColor = UIColor.FailyColor.mainPinkColor.cgColor
+            borderWidth = 3
+        } else {
+            borderColor = UIColor.clear.cgColor
+            borderWidth = 0
+        }
+        
+        cell.emoticonImageView.layer.borderWidth = borderWidth
+        cell.emoticonImageView.layer.borderColor = borderColor
+        cell.testLabel.text = "\(indexPath.item)"
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.userEmoticonCollectionView.allowsMultipleSelection = false
+        self.selectedIndexPath = indexPath
+    }
+    
+    
+}
+
+
+extension ChatViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = self.userEmoticonCollectionView.frame.width
+        let height = self.userEmoticonCollectionView.frame.height
+        let itemsPerRow: CGFloat = 4
+        let widthPadding = sectionInsets.left * (4)
+        let itemsPerColumn: CGFloat = 2
+        let heightPadding = sectionInsets.top * (3)
+        let cellWidth = (width - widthPadding) / itemsPerRow
+        let cellHeight = (height - heightPadding) / itemsPerColumn
+        
+        
+        print(cellWidth)
+        print("alalalalall")
+        print(cellHeight)
+        
+        
+        if cellWidth > cellHeight {
+            return CGSize(width: cellHeight, height: cellHeight)
+        } else if cellWidth == cellHeight {
+            return CGSize(width: cellWidth, height: cellHeight)
+        } else {
+            return CGSize(width: cellWidth, height: cellWidth)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 0)
+        
+       
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
+////
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
+    
+    
+    
 }
