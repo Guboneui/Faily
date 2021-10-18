@@ -338,25 +338,69 @@ class ChatViewController: UIViewController {
         
         let start = Date()
         
+        
+        PHPhotoLibrary.requestAuthorization { (auth_status) in
+            if auth_status == .denied || auth_status == .notDetermined {
+                print("권한허용하지 않음.")
+            } else {
+                self.presentImagePicker(imagePicker, select: { (asset) in
+                    print("Selected: \(asset)")
+                    
+                }, deselect: { (asset) in
+                    print("Deselected: \(asset)")
+                }, cancel: { (assets) in
+                    print("Canceled with selections: \(assets)")
+                }, finish: { (assets) in
+                    print("Finished with selections: \(assets)")
+                }, completion: {
+                    let finish = Date()
+                    print(finish.timeIntervalSince(start))
+                })
+                
+                let options = imagePicker.settings.fetch.album.options
+                imagePicker.settings.fetch.album.fetchResults = [
+                    PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: options),
+                    PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: options),
+                ]
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         //imagePicker.modalPresentationStyle = .currentContext
-        self.presentImagePicker(imagePicker, select: { (asset) in
-            print("Selected: \(asset)")
-            
-        }, deselect: { (asset) in
-            print("Deselected: \(asset)")
-        }, cancel: { (assets) in
-            print("Canceled with selections: \(assets)")
-        }, finish: { (assets) in
-            print("Finished with selections: \(assets)")
-        }, completion: {
-            let finish = Date()
-            print(finish.timeIntervalSince(start))
-        })
-        let options = imagePicker.settings.fetch.album.options
-        imagePicker.settings.fetch.album.fetchResults = [
-            PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: options),
-            PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: options),
-        ]
+//        self.presentImagePicker(imagePicker, select: { (asset) in
+//            print("Selected: \(asset)")
+//
+//        }, deselect: { (asset) in
+//            print("Deselected: \(asset)")
+//        }, cancel: { (assets) in
+//            print("Canceled with selections: \(assets)")
+//        }, finish: { (assets) in
+//            print("Finished with selections: \(assets)")
+//        }, completion: {
+//            let finish = Date()
+//            print(finish.timeIntervalSince(start))
+//        })
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        let options = imagePicker.settings.fetch.album.options
+//        imagePicker.settings.fetch.album.fetchResults = [
+//            PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: options),
+//            PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: options),
+//        ]
     }
     
     @objc func cameraStackViewAction(_ sender: UITapGestureRecognizer) {

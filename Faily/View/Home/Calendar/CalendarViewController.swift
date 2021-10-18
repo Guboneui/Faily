@@ -46,6 +46,7 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else if indexPath.row == 5 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
+            cell.selectionStyle = .none
             return cell
         }
         

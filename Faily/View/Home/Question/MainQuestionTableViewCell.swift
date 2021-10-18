@@ -48,6 +48,7 @@ class MainQuestionTableViewCell: UITableViewCell {
         print(questionCollectionView.frame.width)
         DispatchQueue.main.async {
             self.moveCollectionToFrame(contentOffset: contentOffset)
+            
         }
         questionCollectionView.isPagingEnabled = true
         
