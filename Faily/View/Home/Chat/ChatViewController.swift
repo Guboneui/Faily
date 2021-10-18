@@ -46,6 +46,14 @@ class ChatViewController: UIViewController {
     var menuState = false
     var emoticonState = false
     
+    
+    @IBOutlet weak var scheduleBaseView: UIView!
+    @IBOutlet weak var selectScheduleCategory: UIImageView!
+    @IBOutlet weak var showMoreScheduleOption: UILabel!
+    @IBOutlet weak var schduleAllDaySwitch: UISwitch!
+    
+    
+    
     let stackView = UIStackView()
     let emoticonStackView = UIStackView()
     let galleryStackView = UIStackView()
@@ -79,6 +87,11 @@ class ChatViewController: UIViewController {
     
     
     @IBOutlet weak var emoticonBaseViewHeight: NSLayoutConstraint!
+    
+    
+    
+    
+    
     
     var isFistLayoutSubviews = true
     var oldTableViewBottomInset: CGFloat = 0
@@ -198,7 +211,8 @@ class ChatViewController: UIViewController {
         ])
         typingBaseView.layer.cornerRadius = 17
         userEmoticonBaseView.isHidden = true
-        //messageTextView.becomeFirstResponder()
+        scheduleBaseView.isHidden = true
+        schduleAllDaySwitch.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
     }
     
     
@@ -255,19 +269,85 @@ class ChatViewController: UIViewController {
         scheduleStackView.isUserInteractionEnabled = true
         scheduleStackView.addGestureRecognizer(scheduleStackViewTapGesture)
         
+        
+        let scheduleCategoryTapGesture = UITapGestureRecognizer(target: self, action: #selector(selectScheduleCategoryAction))
+        self.selectScheduleCategory.isUserInteractionEnabled = true
+        self.selectScheduleCategory.addGestureRecognizer(scheduleCategoryTapGesture)
+        
+        let showMoreScheduleOptionTapGesture = UITapGestureRecognizer(target: self, action: #selector(showMoreScheduleOptionAction))
+        self.showMoreScheduleOption.isUserInteractionEnabled = true
+        self.showMoreScheduleOption.addGestureRecognizer(showMoreScheduleOptionTapGesture)
+        
     }
     
     func setKeyboardNotification() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardShowNotification), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardHideNotification), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-        
     }
     
+    @objc func selectScheduleCategoryAction(_ sender: UITapGestureRecognizer) {
+        print("일정구분")
+        let alert = UIAlertController(title: "일정 구분", message: "일정을 분류 해주세요", preferredStyle: .actionSheet)
+        
+        var birthdayImage = UIImage(named: "birthday_addDate")
+        birthdayImage = birthdayImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
+        let addBirthDay = UIAlertAction(title: "기념일 및 생일", style: .default, handler: {[self] _ in
+            selectScheduleCategory.image = UIImage(named: "birthday_addDate")
+        })
+        addBirthDay.setValue(birthdayImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
+        addBirthDay.setValue(UIColor.black, forKey: "titleTextColor")
+        alert.addAction(addBirthDay)
+        
+        var familyImage = UIImage(named: "family_addDate")
+        familyImage = familyImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
+        let addFamily = UIAlertAction(title: "가족", style: .default, handler: {[self] _ in
+            selectScheduleCategory.image = UIImage(named: "family_addDate")
+        })
+        addFamily.setValue(familyImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
+        addFamily.setValue(UIColor.black, forKey: "titleTextColor")
+        alert.addAction(addFamily)
+        
+        var personalImage = UIImage(named: "person_addDate")
+        personalImage = personalImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
+        let addPersonal = UIAlertAction(title: "개인", style: .default, handler: {[self] _ in
+            selectScheduleCategory.image = UIImage(named: "person_addDate")
+        })
+        addPersonal.setValue(personalImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
+        addPersonal.setValue(UIColor.black, forKey: "titleTextColor")
+        alert.addAction(addPersonal)
+        
+        var normalImage = UIImage(named: "normal_addDate")
+        normalImage = normalImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
+        let addNormal = UIAlertAction(title: "일반", style: .default, handler: {[self] _ in
+            selectScheduleCategory.image = UIImage(named: "normal_addDate")
+        })
+        addNormal.setValue(normalImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
+        addNormal.setValue(UIColor.black, forKey: "titleTextColor")
+        alert.addAction(addNormal)
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        cancel.setValue(UIColor.FailyColor.coral, forKey: "titleTextColor")
+        alert.addAction(cancel)
+        
+        
+        self.present(alert, animated: true, completion: nil)
+    }
     
-    
-    
+    @objc func showMoreScheduleOptionAction(_ sender: UITapGestureRecognizer) {
+        print("스케듈 옵션 더보기")
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let showMoreOptionVC = storyBoard.instantiateViewController(withIdentifier: "ScheduleInChatDetailViewController") as! ScheduleInChatDetailViewController
+        showMoreOptionVC.modalPresentationStyle = .fullScreen
+        
+        let transition = CATransition()
+        transition.duration = 0.2
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        self.present(showMoreOptionVC, animated: false, completion: nil)
+    }
     
     @objc func handleKeyboardShowNotification(_ sender: Notification) {
         
@@ -283,9 +363,6 @@ class ChatViewController: UIViewController {
         }
     }
     
-    
-    
-    
     @objc func handleKeyboardHideNotification(_ sender: Notification) {
         
         let userInfo:NSDictionary = sender.userInfo! as NSDictionary
@@ -295,7 +372,7 @@ class ChatViewController: UIViewController {
         
         
         bottomMargin.constant = 0
-
+        
         
     }
     
@@ -311,10 +388,10 @@ class ChatViewController: UIViewController {
     
     
     @objc func emoticonStackViewAction(_ sender: UITapGestureRecognizer) {
-//        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-//        let showUserEmoticonVC = storyBoard.instantiateViewController(withIdentifier: "EmoticonInChatViewController") as! EmoticonInChatViewController
-//        showUserEmoticonVC.modalPresentationStyle = .overCurrentContext
-//        present(showUserEmoticonVC, animated: false)
+        //        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        //        let showUserEmoticonVC = storyBoard.instantiateViewController(withIdentifier: "EmoticonInChatViewController") as! EmoticonInChatViewController
+        //        showUserEmoticonVC.modalPresentationStyle = .overCurrentContext
+        //        present(showUserEmoticonVC, animated: false)
         userEmoticonBaseView.isHidden = false
         self.emoticonState = true
         self.bottomMargin.constant = self.bottomMargin.constant + 175
@@ -374,19 +451,19 @@ class ChatViewController: UIViewController {
         
         
         //imagePicker.modalPresentationStyle = .currentContext
-//        self.presentImagePicker(imagePicker, select: { (asset) in
-//            print("Selected: \(asset)")
-//
-//        }, deselect: { (asset) in
-//            print("Deselected: \(asset)")
-//        }, cancel: { (assets) in
-//            print("Canceled with selections: \(assets)")
-//        }, finish: { (assets) in
-//            print("Finished with selections: \(assets)")
-//        }, completion: {
-//            let finish = Date()
-//            print(finish.timeIntervalSince(start))
-//        })
+        //        self.presentImagePicker(imagePicker, select: { (asset) in
+        //            print("Selected: \(asset)")
+        //
+        //        }, deselect: { (asset) in
+        //            print("Deselected: \(asset)")
+        //        }, cancel: { (assets) in
+        //            print("Canceled with selections: \(assets)")
+        //        }, finish: { (assets) in
+        //            print("Finished with selections: \(assets)")
+        //        }, completion: {
+        //            let finish = Date()
+        //            print(finish.timeIntervalSince(start))
+        //        })
         
         
         
@@ -396,42 +473,42 @@ class ChatViewController: UIViewController {
         
         
         
-//        let options = imagePicker.settings.fetch.album.options
-//        imagePicker.settings.fetch.album.fetchResults = [
-//            PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: options),
-//            PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: options),
-//        ]
+        //        let options = imagePicker.settings.fetch.album.options
+        //        imagePicker.settings.fetch.album.fetchResults = [
+        //            PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: options),
+        //            PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: options),
+        //        ]
     }
     
     @objc func cameraStackViewAction(_ sender: UITapGestureRecognizer) {
         
-//        switch PHPhotoLibrary.authorizationStatus() {
-//        case .denied:
-//            settingAlert()
-//        case .restricted:
-//            break
-//        case .authorized:
-//            self.imagePickerController.sourceType = .camera
-//            self.imagePickerController.allowsEditing = true
-//            self.present(self.imagePickerController, animated: true, completion: nil)
-//        case .notDetermined:
-//            PHPhotoLibrary.requestAuthorization({ state in
-//                if state == .authorized {
-//                    DispatchQueue.main.async {
-//                        self.imagePickerController.sourceType = .camera
-//                        self.imagePickerController.allowsEditing = true
-//
-//                        self.present(self.imagePickerController, animated: true, completion: nil)
-//                    }
-//
-//                } else {
-//                    self.dismiss(animated: true, completion: nil)
-//                }
-//            })
-//        default:
-//            break
-//        }
-//
+        //        switch PHPhotoLibrary.authorizationStatus() {
+        //        case .denied:
+        //            settingAlert()
+        //        case .restricted:
+        //            break
+        //        case .authorized:
+        //            self.imagePickerController.sourceType = .camera
+        //            self.imagePickerController.allowsEditing = true
+        //            self.present(self.imagePickerController, animated: true, completion: nil)
+        //        case .notDetermined:
+        //            PHPhotoLibrary.requestAuthorization({ state in
+        //                if state == .authorized {
+        //                    DispatchQueue.main.async {
+        //                        self.imagePickerController.sourceType = .camera
+        //                        self.imagePickerController.allowsEditing = true
+        //
+        //                        self.present(self.imagePickerController, animated: true, completion: nil)
+        //                    }
+        //
+        //                } else {
+        //                    self.dismiss(animated: true, completion: nil)
+        //                }
+        //            })
+        //        default:
+        //            break
+        //        }
+        //
         
         self.imagePickerController.sourceType = .camera
         self.imagePickerController.allowsEditing = true
@@ -460,10 +537,13 @@ class ChatViewController: UIViewController {
     
     
     @objc func scheduleStackViewAction(_ sender: UITapGestureRecognizer) {
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let addScheduleView = storyBoard.instantiateViewController(withIdentifier: "ScheduleInChatViewController") as! ScheduleInChatViewController
-        addScheduleView.modalPresentationStyle = .overCurrentContext
-        present(addScheduleView, animated: false)
+        //        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        //        let addScheduleView = storyBoard.instantiateViewController(withIdentifier: "ScheduleInChatViewController") as! ScheduleInChatViewController
+        //        addScheduleView.modalPresentationStyle = .overCurrentContext
+        //        present(addScheduleView, animated: false)
+        
+        self.scheduleBaseView.isHidden = false
+        self.bottomMargin.constant = self.bottomMargin.constant + (self.scheduleBaseView.frame.height - 125)
     }
     
     
@@ -515,17 +595,17 @@ class ChatViewController: UIViewController {
         self.messageTextView.becomeFirstResponder()
         
         
-//        if messageTextView.text != nil || messageTextView.text != "" {
-//            message.append(ChatMessage(userName: "보니", message: self.messageTextView.text, profileImage: "boni", sendTime: "오후 11시 30분"))
-//            self.chatTableView.reloadData()
-//            self.messageTextView.text = nil
-//            UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
-//                self.view.layoutIfNeeded()
-//            }, completion: {(completed) in
-//                let indexPath = IndexPath(row: self.message.count - 1, section: 0)
-//                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-//            })
-//        }
+        //        if messageTextView.text != nil || messageTextView.text != "" {
+        //            message.append(ChatMessage(userName: "보니", message: self.messageTextView.text, profileImage: "boni", sendTime: "오후 11시 30분"))
+        //            self.chatTableView.reloadData()
+        //            self.messageTextView.text = nil
+        //            UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+        //                self.view.layoutIfNeeded()
+        //            }, completion: {(completed) in
+        //                let indexPath = IndexPath(row: self.message.count - 1, section: 0)
+        //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+        //            })
+        //        }
         
     }
     
@@ -538,6 +618,12 @@ class ChatViewController: UIViewController {
     
     @IBAction func sendEmoticonButtonAction(_ sender: Any) {
         print(123123123)
+    }
+    
+    
+    @IBAction func dismissScheduleViewAction(_ sender: Any) {
+        self.scheduleBaseView.isHidden = true
+        self.bottomMargin.constant = self.bottomMargin.constant - (self.scheduleBaseView.frame.height - 125)
     }
     
     
@@ -651,14 +737,14 @@ extension ChatViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 0)
         
-       
+        
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
     }
-////
+    ////
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
     }
