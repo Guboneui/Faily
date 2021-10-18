@@ -198,7 +198,7 @@ class ChatViewController: UIViewController {
         ])
         typingBaseView.layer.cornerRadius = 17
         userEmoticonBaseView.isHidden = true
-        messageTextView.becomeFirstResponder()
+        //messageTextView.becomeFirstResponder()
     }
     
     
@@ -405,33 +405,37 @@ class ChatViewController: UIViewController {
     
     @objc func cameraStackViewAction(_ sender: UITapGestureRecognizer) {
         
-        switch PHPhotoLibrary.authorizationStatus() {
-        case .denied:
-            settingAlert()
-        case .restricted:
-            break
-        case .authorized:
-            self.imagePickerController.sourceType = .camera
-            self.imagePickerController.allowsEditing = true
-            self.present(self.imagePickerController, animated: true, completion: nil)
-        case .notDetermined:
-            PHPhotoLibrary.requestAuthorization({ state in
-                if state == .authorized {
-                    DispatchQueue.main.async {
-                        self.imagePickerController.sourceType = .camera
-                        self.imagePickerController.allowsEditing = true
-                        
-                        self.present(self.imagePickerController, animated: true, completion: nil)
-                    }
-                    
-                } else {
-                    self.dismiss(animated: true, completion: nil)
-                }
-            })
-        default:
-            break
-        }
+//        switch PHPhotoLibrary.authorizationStatus() {
+//        case .denied:
+//            settingAlert()
+//        case .restricted:
+//            break
+//        case .authorized:
+//            self.imagePickerController.sourceType = .camera
+//            self.imagePickerController.allowsEditing = true
+//            self.present(self.imagePickerController, animated: true, completion: nil)
+//        case .notDetermined:
+//            PHPhotoLibrary.requestAuthorization({ state in
+//                if state == .authorized {
+//                    DispatchQueue.main.async {
+//                        self.imagePickerController.sourceType = .camera
+//                        self.imagePickerController.allowsEditing = true
+//
+//                        self.present(self.imagePickerController, animated: true, completion: nil)
+//                    }
+//
+//                } else {
+//                    self.dismiss(animated: true, completion: nil)
+//                }
+//            })
+//        default:
+//            break
+//        }
+//
         
+        self.imagePickerController.sourceType = .camera
+        self.imagePickerController.allowsEditing = true
+        self.present(self.imagePickerController, animated: true, completion: nil)
         
         
     }
