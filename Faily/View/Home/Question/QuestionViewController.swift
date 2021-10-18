@@ -64,6 +64,7 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             
         } else if indexPath.row == 5 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
+            cell.selectionStyle = .none
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
