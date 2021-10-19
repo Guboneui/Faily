@@ -515,9 +515,14 @@ class ChatViewController: UIViewController {
         //        }
         //
         
-        self.imagePickerController.sourceType = .camera
-        self.imagePickerController.allowsEditing = true
-        self.present(self.imagePickerController, animated: true, completion: nil)
+//        self.imagePickerController.sourceType = .camera
+//        self.imagePickerController.allowsEditing = true
+//        self.present(self.imagePickerController, animated: true, completion: nil)
+        
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "AllAnsweredPopUpInChatViewController") as! AllAnsweredPopUpInChatViewController
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: false, completion: nil)
         
         
     }

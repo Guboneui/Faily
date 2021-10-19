@@ -2519,6 +2519,67 @@
             </objects>
             <point key="canvasLocation" x="3708.6956521739135" y="361.60714285714283"/>
         </scene>
+        <!--All Answered Pop Up In Chat View Controller-->
+        <scene sceneID="ccm-HQ-Yjf">
+            <objects>
+                <viewController restorationIdentifier="AllAnsweredPopUpInChatViewController" storyboardIdentifier="AllAnsweredPopUpInChatViewController" id="OQl-S0-2be" customClass="AllAnsweredPopUpInChatViewController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nhz-rQ-pjy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khE-kI-fQf">
+                                <rect key="frame" x="55" y="372" width="304" height="152"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" image="allAnsweredPopup" translatesAutoresizingMaskIntoConstraints="NO" id="s4s-Ia-V1m">
+                                        <rect key="frame" x="140" y="27" width="24" height="24"/>
+                                        <color key="backgroundColor" red="0.97254901959999995" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="s4s-Ia-V1m" secondAttribute="height" id="seE-Tg-ajh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021년 10월 19일" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmT-xL-Hdm">
+                                        <rect key="frame" x="98.5" y="59.5" width="107.5" height="14"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="질문에 모두가 답변을 했어요. 지금 확인해 보세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEv-a4-Afw">
+                                        <rect key="frame" x="72" y="88.5" width="160.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="s4s-Ia-V1m" firstAttribute="centerX" secondItem="khE-kI-fQf" secondAttribute="centerX" id="LBo-CT-Unf"/>
+                                    <constraint firstAttribute="height" constant="152" id="SGW-9K-2d3"/>
+                                    <constraint firstItem="qmT-xL-Hdm" firstAttribute="centerX" secondItem="khE-kI-fQf" secondAttribute="centerX" id="UVE-LY-09i"/>
+                                    <constraint firstItem="s4s-Ia-V1m" firstAttribute="top" secondItem="khE-kI-fQf" secondAttribute="top" constant="27" id="VXs-WN-Bji"/>
+                                    <constraint firstItem="qmT-xL-Hdm" firstAttribute="top" secondItem="s4s-Ia-V1m" secondAttribute="bottom" constant="8.5" id="bPZ-Yo-77T"/>
+                                    <constraint firstItem="ZEv-a4-Afw" firstAttribute="centerX" secondItem="khE-kI-fQf" secondAttribute="centerX" id="iG9-tm-aFM"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZEv-a4-Afw" secondAttribute="bottom" constant="30" id="neF-TN-JkP"/>
+                                    <constraint firstItem="ZEv-a4-Afw" firstAttribute="top" secondItem="qmT-xL-Hdm" secondAttribute="bottom" constant="15" id="yXt-we-zSN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oCZ-z3-Kia"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="khE-kI-fQf" firstAttribute="centerY" secondItem="nhz-rQ-pjy" secondAttribute="centerY" id="Dk1-uj-Dyb"/>
+                            <constraint firstItem="khE-kI-fQf" firstAttribute="leading" secondItem="oCZ-z3-Kia" secondAttribute="leading" constant="55" id="S0f-pj-MLd"/>
+                            <constraint firstItem="oCZ-z3-Kia" firstAttribute="trailing" secondItem="khE-kI-fQf" secondAttribute="trailing" constant="55" id="hCv-ud-9e0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainBaseView" destination="nhz-rQ-pjy" id="8zy-fJ-dm8"/>
+                        <outlet property="popUpBaseView" destination="khE-kI-fQf" id="NA4-x8-Uav"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p6C-op-v8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4575.36231884058" y="371.65178571428572"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="9P8-N1-EoK">
             <objects>
@@ -3749,6 +3810,7 @@
         <image name="Home_Main" width="414" height="896"/>
         <image name="SFImage" width="347" height="163"/>
         <image name="add_chat" width="24" height="24"/>
+        <image name="allAnsweredPopup" width="24" height="24"/>
         <image name="back" width="24" height="24"/>
         <image name="boni" width="152" height="152"/>
         <image name="calendar_default" width="28" height="28"/>
