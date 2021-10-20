@@ -18,6 +18,9 @@ class AllAnswerBaseTableViewCell: UITableViewCell {
     @IBOutlet weak var familyCollectionVIew: UICollectionView!
     @IBOutlet weak var dropdownImage: UIImageView!
     
+    
+    var data: [AllQuestionDetail] = []
+    var indexPathItem = -1
     override func awakeFromNib() {
         super.awakeFromNib()
         setCollectionView()
@@ -58,12 +61,16 @@ extension AllAnswerBaseTableViewCell: ExpyTableViewHeaderCell{
 }
 
 extension AllAnswerBaseTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        
+      
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllAnswerProfileCollectionViewCell", for: indexPath) as! AllAnswerProfileCollectionViewCell
+        
         
         return cell
     }

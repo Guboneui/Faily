@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="ExpandableLockTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpandableLockTableViewCell" rowHeight="101" id="KGk-i7-Jjw" customClass="ExpandableLockTableViewCell" customModule="Faily" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="462" height="101"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="462" height="101"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="Cse-kp-9hf">
+                        <rect key="frame" x="216" y="9" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="FpJ-dq-Y5Q"/>
+                            <constraint firstAttribute="height" constant="30" id="bpM-0B-lHN"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가족 모두가 답변을 해 답변을 열어보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92B-RK-hgm">
+                        <rect key="frame" x="119.5" y="47" width="223.5" height="42"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" name="grayscale_3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKg-jY-vDY">
+                        <rect key="frame" x="30" y="100" width="402" height="1"/>
+                        <color key="backgroundColor" name="grayscale_5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="jEu-Am-0Za"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r24-7a-SqC">
+                        <rect key="frame" x="281" y="23.5" width="149" height="1"/>
+                        <color key="backgroundColor" name="secondary_pink"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Mcf-K4-peb"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogh-iP-3SX">
+                        <rect key="frame" x="32" y="23.5" width="149" height="1"/>
+                        <color key="backgroundColor" name="secondary_pink"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="A5e-Ea-PH2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="ogh-iP-3SX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="4rd-6w-1Wc"/>
+                    <constraint firstAttribute="trailing" secondItem="r24-7a-SqC" secondAttribute="trailing" constant="32" id="64p-ak-Z9H"/>
+                    <constraint firstItem="Cse-kp-9hf" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="9Pt-VE-350"/>
+                    <constraint firstItem="92B-RK-hgm" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="BIZ-K8-Zur"/>
+                    <constraint firstItem="r24-7a-SqC" firstAttribute="leading" secondItem="Cse-kp-9hf" secondAttribute="trailing" constant="35" id="L8e-W4-XKY"/>
+                    <constraint firstItem="Cse-kp-9hf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="UEt-b6-1te"/>
+                    <constraint firstItem="92B-RK-hgm" firstAttribute="top" secondItem="Cse-kp-9hf" secondAttribute="bottom" constant="8" id="WEY-Xm-PSx"/>
+                    <constraint firstAttribute="bottom" secondItem="iKg-jY-vDY" secondAttribute="bottom" id="XmA-zu-QzU"/>
+                    <constraint firstItem="iKg-jY-vDY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="a1D-Id-2HI"/>
+                    <constraint firstItem="Cse-kp-9hf" firstAttribute="leading" secondItem="ogh-iP-3SX" secondAttribute="trailing" constant="35" id="c5P-md-LEd"/>
+                    <constraint firstItem="r24-7a-SqC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23.5" id="imk-WC-t9P"/>
+                    <constraint firstItem="ogh-iP-3SX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23.5" id="jBo-nK-l4Y"/>
+                    <constraint firstAttribute="trailing" secondItem="iKg-jY-vDY" secondAttribute="trailing" constant="30" id="oBA-Kl-zgl"/>
+                    <constraint firstItem="iKg-jY-vDY" firstAttribute="top" secondItem="92B-RK-hgm" secondAttribute="bottom" constant="11" id="ofs-Vr-dPd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="197.10144927536234" y="39.84375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="lock" width="24" height="24"/>
+        <namedColor name="grayscale_3">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grayscale_5">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary_pink">
+            <color red="1" green="0.66699999570846558" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
