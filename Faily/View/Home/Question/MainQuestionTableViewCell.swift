@@ -15,9 +15,12 @@ class MainQuestionTableViewCell: UITableViewCell {
     
     var allQuestionData: [AllQuestionDetail] = []
     
+    var questionView: QuestionViewController = QuestionViewController()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        questionView.mainQuestionCell = self
         
         questionCollectionView.delegate = self
         questionCollectionView.dataSource = self
@@ -48,7 +51,7 @@ class MainQuestionTableViewCell: UITableViewCell {
         questionCollectionView.isPagingEnabled = false
         let collectionBounds = self.questionCollectionView.bounds
         //let contentOffset = CGFloat(floor(self.questionCollectionView.contentOffset.x + (questionCollectionView.frame.width * CGFloat(self.allQuestionData.count))))
-        let contentOffset = CGFloat(floor(self.questionCollectionView.contentOffset.x + collectionBounds.size.width * 2))
+        let contentOffset = CGFloat(floor(self.questionCollectionView.contentOffset.x + collectionBounds.size.width * CGFloat(self.allQuestionData.count - 1)))
         //self.moveCollectionToFrame(contentOffset: contentOffset)
 //        print(self.questionCollectionView.contentOffset.x)
 //        print(collectionBounds.size.width)
@@ -119,29 +122,29 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainQuestionCollectionViewCell", for: indexPath) as! MainQuestionCollectionViewCell
-//        let questionDeatil = self.allQuestionData[indexPath.item]
-//
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "yyyy년 MM월 dd일"
-//        let current_date_string = formatter.string(from: Date())
-//
-//
-//        cell.questionLabel.text = questionDeatil.question
-//        cell.dateLabel.text = questionDeatil.date
-//
-//        if questionDeatil.date == current_date_string {
-//            cell.questionBox.image = UIImage(named: "questionBox_BookMark")
-//            cell.answerStackViewLabel.text = "답변하러 가기"
-//            cell.answerStackViewImage.image = UIImage(named: "pencil_gray")
-//            cell.answerStackView.isHidden = false
-//
-//        } else {
-//            cell.questionBox.image = UIImage(named: "questionBox_noBookMark")
-//            cell.answerStackViewLabel.text = "답변보러 가기"
-//            cell.answerStackViewImage.image = UIImage(named: "showAnswer")
-//            cell.answerStackView.isHidden = true
-//
-//        }
+        let questionDeatil = self.allQuestionData[indexPath.item]
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy년 MM월 dd일"
+        let current_date_string = formatter.string(from: Date())
+
+
+        cell.questionLabel.text = questionDeatil.question
+        cell.dateLabel.text = questionDeatil.date
+
+        if questionDeatil.date == current_date_string {
+            cell.questionBox.image = UIImage(named: "questionBox_BookMark")
+            cell.answerStackViewLabel.text = "답변하러 가기"
+            cell.answerStackViewImage.image = UIImage(named: "pencil_gray")
+            cell.answerStackView.isHidden = false
+
+        } else {
+            cell.questionBox.image = UIImage(named: "questionBox_noBookMark")
+            cell.answerStackViewLabel.text = "답변보러 가기"
+            cell.answerStackViewImage.image = UIImage(named: "showAnswer")
+            cell.answerStackView.isHidden = true
+
+        }
         
         return cell
     }
@@ -155,7 +158,7 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
         let x = targetContentOffset.pointee.x
         let currentPage = Int(x / questionCollectionView.frame.width)
         print("currentpage = \(currentPage)")
-        
+        questionView.mainQuestionPage = currentPage
        
     }
     

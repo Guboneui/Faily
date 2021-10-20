@@ -22,7 +22,12 @@ class CalendarTableViewCell: UITableViewCell {
     var today: Date = Date()
     var dateFormatter: DateFormatter = DateFormatter()
     
-    
+    var schedule: [ScheduleDetail] = [] {
+        didSet {
+            print(schedule)
+            self.calendarView.reloadData()
+        }
+    }
     var events: [Date] = []
     
     override func awakeFromNib() {
@@ -106,8 +111,14 @@ extension CalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource {
         formatter.locale     = Locale(identifier: "ko_KR")
         formatter.dateFormat = "YYYY-MM-dd"
         
-        let dateToString = formatter.date(from: "2021-10-10")
-        events.append(dateToString!)
+        for i in 0..<self.schedule.count {
+            
+            let dateToString = formatter.date(from: self.schedule[i].calendar_date)
+            events.append(dateToString!)
+            
+        }
+        
+      
         
         if events.contains(date) {
             return 1

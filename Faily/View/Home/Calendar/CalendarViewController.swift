@@ -12,8 +12,13 @@ class CalendarViewController: UIViewController {
     
    
     @IBOutlet weak var mainTableView: UITableView!
+    
+    lazy var viewModel = GetAllScheduleViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.calendarView = self
+        viewModel.getAllSchedule()
         setTableView()
     }
 
@@ -42,6 +47,7 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CalendarTableViewCell", for: indexPath) as! CalendarTableViewCell
             cell.selectionStyle = .none
+            cell.schedule = self.viewModel.detailSchedule
             cell.addDateButton.addTarget(self, action: #selector(addDate), for: .touchUpInside)
             return cell
         } else if indexPath.row == 5 {

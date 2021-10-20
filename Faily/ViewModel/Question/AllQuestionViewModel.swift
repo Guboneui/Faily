@@ -19,6 +19,7 @@ class AllQuestionViewModel {
             reloadTableView()
             //reloadCollectionView()
             print(questionData.count)
+            questionView?.mainQuestionPage = questionData.count - 1
         }
     }
     
