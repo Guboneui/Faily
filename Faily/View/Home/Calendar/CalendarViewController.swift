@@ -15,6 +15,11 @@ class CalendarViewController: UIViewController {
     
     lazy var viewModel = GetAllScheduleViewModel()
     
+    
+    
+    var seletedDate: String = ""
+    var data: [ScheduleDetail] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.calendarView = self
@@ -39,49 +44,80 @@ class CalendarViewController: UIViewController {
 
 
 extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        
+        if section == 0 {
+            return 1
+        } else {
+            self.data = []
+            for i in 0..<viewModel.detailSchedule.count {
+                //let date = viewModel.detailSchedule[i].calendar_start_time.substring(from: 0, to: 8)
+                if viewModel.detailSchedule[i].calendar_date == seletedDate {
+                    data.append(viewModel.detailSchedule[i])
+                }
+            }
+            
+            return data.count + 1
+        }
+     
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        
+        if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CalendarTableViewCell", for: indexPath) as! CalendarTableViewCell
             cell.selectionStyle = .none
+            cell.mainCalendarView = self
             cell.schedule = self.viewModel.detailSchedule
             cell.addDateButton.addTarget(self, action: #selector(addDate), for: .touchUpInside)
             return cell
-        } else if indexPath.row == 5 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        }
-        
-        else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DateScheduleTableViewCell", for: indexPath) as! DateScheduleTableViewCell
-            cell.selectionStyle = .none
+        } else {
             
-            
-            cell.editButton.addTarget(self, action: #selector(editSchedule), for: .touchUpInside)
-            cell.deleteButton.addTarget(self, action: #selector(deleteSchedule), for: .touchUpInside)
-            
-            
-            
-            if indexPath.row == 1 {
-                cell.firstBGView.image = UIImage(named: "birthday_baseBox")
-            } else if indexPath.row == 2 {
-                cell.firstBGView.image = UIImage(named: "family_baseBox")
-            } else if indexPath.row == 3 {
-                cell.firstBGView.image = UIImage(named: "normal_baseBox")
-            } else if indexPath.row == 4 {
-                cell.firstBGView.image = UIImage(named: "personal_baseBox")
+            if indexPath.row == data.count {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
+                cell.selectionStyle = .none
+                return cell
+            } else {
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: "DateScheduleTableViewCell", for: indexPath) as! DateScheduleTableViewCell
+                cell.selectionStyle = .none
+                
+                cell.editButton.addTarget(self, action: #selector(editSchedule), for: .touchUpInside)
+                cell.deleteButton.addTarget(self, action: #selector(deleteSchedule), for: .touchUpInside)
+                
+                cell.scheduleTitleLabel.text = data[indexPath.row].calendar_name
+                cell.scheduleDetailLabel.text = data[indexPath.row].calendar_memo
+                
+                if data[indexPath.row].calendar_category == "기념일" {
+                    cell.firstBGView.image = UIImage(named: "birthday_baseBox")
+                } else if data[indexPath.row].calendar_category == "가족" {
+                    cell.firstBGView.image = UIImage(named: "family_baseBox")
+                } else if data[indexPath.row].calendar_category == "개인" {
+                    cell.firstBGView.image = UIImage(named: "personal_baseBox")
+                } else {
+                    cell.firstBGView.image = UIImage(named: "normal_baseBox")
+                }
+                
+                
+               
+                
+               
+                
+                
+                //cell.addDateButton.addTarget(self, action: #selector(addDate), for: .touchUpInside)
+                return cell
             }
             
-            
-            
-            //cell.addDateButton.addTarget(self, action: #selector(addDate), for: .touchUpInside)
-            return cell
-            
+
         }
+        
+        
     }
     
     @objc func addDate() {

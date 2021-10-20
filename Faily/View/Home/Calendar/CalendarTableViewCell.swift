@@ -22,9 +22,10 @@ class CalendarTableViewCell: UITableViewCell {
     var today: Date = Date()
     var dateFormatter: DateFormatter = DateFormatter()
     
+    var mainCalendarView = CalendarViewController()
+    
     var schedule: [ScheduleDetail] = [] {
         didSet {
-            print(schedule)
             self.calendarView.reloadData()
         }
     }
@@ -102,8 +103,19 @@ extension CalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource {
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print(dateFormatter.string(from: date) + " 선택됨")
+        
+        let formatter        = DateFormatter()
+        formatter.locale     = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "YYYY-MM-dd"
+        
+        
+        print(formatter.string(from: date) + " 선택됨")
+        
+        mainCalendarView.seletedDate = formatter.string(from: date)
+        
+        
         //별도 데이터 포맷을 생성하여 api 메소드 추가 필요
+        mainCalendarView.mainTableView.reloadSections(IndexSet(integer: 1), with: .none)
     }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
@@ -112,7 +124,7 @@ extension CalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource {
         formatter.dateFormat = "YYYY-MM-dd"
         
         for i in 0..<self.schedule.count {
-            
+
             let dateToString = formatter.date(from: self.schedule[i].calendar_date)
             events.append(dateToString!)
             
