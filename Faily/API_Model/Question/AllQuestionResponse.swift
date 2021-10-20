@@ -11,14 +11,15 @@ struct AllQuestionResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var result: AllQuestionDetail?
+    var result: [AllQuestionDetail]?
 }
 
 struct AllQuestionDetail: Decodable {
+    let date: String
     let question: String
     let isAnswered: Bool
     let allAnswered: Bool
-    let answerInfo: [AnswerInfo]
+    let answerInfo: [AnswerInfo]?
 }
 
 struct AnswerInfo: Decodable {

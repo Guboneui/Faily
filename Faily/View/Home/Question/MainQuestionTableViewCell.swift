@@ -14,9 +14,15 @@ class MainQuestionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var questionCollectionView: UICollectionView!
     @IBOutlet weak var showAllQuestionStackView: UIStackView!
+    
+    var viewModel: AllQuestionViewModel = AllQuestionViewModel()
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("awakeFromNib")
+        
+        viewModel.questionCell = self
+       
         questionCollectionView.delegate = self
         questionCollectionView.dataSource = self
         
@@ -34,6 +40,8 @@ class MainQuestionTableViewCell: UITableViewCell {
             
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(goAnswerView))
         showAllQuestionStackView.addGestureRecognizer(tapGesture)
+        
+        
     }
     
   
@@ -43,9 +51,9 @@ class MainQuestionTableViewCell: UITableViewCell {
         layoutIfNeeded()
         let collectionBounds = self.questionCollectionView.bounds
         let contentOffset = CGFloat(floor(self.questionCollectionView.contentOffset.x + (questionCollectionView.frame.width * CGFloat(dateArr.count))))
-        print(self.questionCollectionView.contentOffset.x)
-        print(collectionBounds.size.width)
-        print(questionCollectionView.frame.width)
+//        print(self.questionCollectionView.contentOffset.x)
+//        print(collectionBounds.size.width)
+//        print(questionCollectionView.frame.width)
         DispatchQueue.main.async {
             self.moveCollectionToFrame(contentOffset: contentOffset)
             
@@ -62,7 +70,7 @@ class MainQuestionTableViewCell: UITableViewCell {
             height : self.questionCollectionView.frame.height
         )
         self.questionCollectionView.scrollRectToVisible(frame, animated: false)
-        print("move collection to frame")
+       // print("move collection to frame")
     }
     
     @objc func goAnswerView(_ recognizer: UITapGestureRecognizer) {
@@ -82,29 +90,33 @@ class MainQuestionTableViewCell: UITableViewCell {
 
 extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dateArr.count
+        //return dateArr.count
+        print("데이터 바인딩 필요")
+        print(self.viewModel.questionData)
+        
+        return self.viewModel.questionData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainQuestionCollectionViewCell", for: indexPath) as! MainQuestionCollectionViewCell
-        cell.dateLabel.text = dateArr[indexPath.item]
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy년 M월 d일"
-        let current_date_string = formatter.string(from: Date())
-        if cell.dateLabel.text == current_date_string {
-            cell.questionBox.image = UIImage(named: "questionBox_BookMark")
-            cell.answerStackViewLabel.text = "답변하러 가기"
-            cell.answerStackViewImage.image = UIImage(named: "pencil_gray")
-            cell.answerStackView.isHidden = false
-            
-        } else {
-            cell.questionBox.image = UIImage(named: "questionBox_noBookMark")
-            cell.answerStackViewLabel.text = "답변보러 가기"
-            cell.answerStackViewImage.image = UIImage(named: "showAnswer")
-            cell.answerStackView.isHidden = true
-            
-        }
+//        cell.dateLabel.text = dateArr[indexPath.item]
+//
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "yyyy년 M월 d일"
+//        let current_date_string = formatter.string(from: Date())
+//        if cell.dateLabel.text == current_date_string {
+//            cell.questionBox.image = UIImage(named: "questionBox_BookMark")
+//            cell.answerStackViewLabel.text = "답변하러 가기"
+//            cell.answerStackViewImage.image = UIImage(named: "pencil_gray")
+//            cell.answerStackView.isHidden = false
+//
+//        } else {
+//            cell.questionBox.image = UIImage(named: "questionBox_noBookMark")
+//            cell.answerStackViewLabel.text = "답변보러 가기"
+//            cell.answerStackViewImage.image = UIImage(named: "showAnswer")
+//            cell.answerStackView.isHidden = true
+//
+//        }
         return cell
     }
     
@@ -127,7 +139,7 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let x = targetContentOffset.pointee.x
-        var currentPage = Int(x / questionCollectionView.frame.width)
+        let currentPage = Int(x / questionCollectionView.frame.width)
         print("currentpage = \(currentPage)")
         
        
@@ -142,3 +154,4 @@ extension MainQuestionTableViewCell: CollectionViewPagingLayoutDelegate {
         print("collectionview paging layout delegate")
     }
 }
+

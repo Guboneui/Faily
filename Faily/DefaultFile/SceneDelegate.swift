@@ -13,12 +13,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
        
-        if UserDefaults.standard.string(forKey: UserDefaultKey.jwtToken) != nil {
-            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-            let homeVC = storyBoard.instantiateViewController(identifier: "HomeNav")
-            window?.rootViewController = homeVC
-            window?.makeKeyAndVisible()
-        }
+//        if UserDefaults.standard.string(forKey: UserDefaultKey.jwtToken) != nil {
+//            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+//            let homeVC = storyBoard.instantiateViewController(identifier: "HomeNav")
+//            window?.rootViewController = homeVC
+//            window?.makeKeyAndVisible()
+//        }
         
 //        if UserDefaults.standard.bool(forKey: UserDefaultKey.showOnBoarding) == true {
 //            let storyBoard = UIStoryboard(name: "Login", bundle: nil)

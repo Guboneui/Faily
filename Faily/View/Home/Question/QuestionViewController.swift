@@ -18,6 +18,7 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         
         viewModel.questionView = self
+        viewModelMethod()
         viewModel.getAllQuestion()
         setTableView()
        
@@ -50,6 +51,7 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MainQuestionTableViewCell", for: indexPath) as! MainQuestionTableViewCell
+            cell.questionCollectionView.reloadData()
             cell.selectionStyle = .none
             return cell
         } else if indexPath.row == 1 {
@@ -83,6 +85,15 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             return 75
         } else {
             return UITableView.automaticDimension
+        }
+    }
+}
+
+
+extension QuestionViewController {
+    func viewModelMethod() {
+        viewModel.reloadCollectionView = {
+            self.questionMainTableView.reloadData()
         }
     }
 }
