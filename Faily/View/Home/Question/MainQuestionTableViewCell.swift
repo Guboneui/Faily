@@ -15,7 +15,7 @@ class MainQuestionTableViewCell: UITableViewCell {
     
     var allQuestionData: [AllQuestionDetail] = []
     
-    var questionView: QuestionViewController = QuestionViewController()
+    var questionView = QuestionViewController()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -99,8 +99,9 @@ class MainQuestionTableViewCell: UITableViewCell {
     @objc func goAnswerView(_ recognizer: UITapGestureRecognizer) {
         
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let allAnswerVC = storyBoard.instantiateViewController(withIdentifier: "AllAnswerViewController")
+        let allAnswerVC = storyBoard.instantiateViewController(withIdentifier: "AllAnswerViewController") as! AllAnswerViewController
         allAnswerVC.modalPresentationStyle = .overCurrentContext
+        allAnswerVC.allAnswerData = self.allQuestionData
         self.window?.rootViewController?.present(allAnswerVC, animated: true, completion: nil)
         
     }
@@ -158,8 +159,7 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
         let x = targetContentOffset.pointee.x
         let currentPage = Int(x / questionCollectionView.frame.width)
         print("currentpage = \(currentPage)")
-        questionView.mainQuestionPage = currentPage
-       
+        //questionView.mainQuestionPage = currentPage
     }
     
 }

@@ -15,8 +15,6 @@ class CalendarViewController: UIViewController {
     
     lazy var viewModel = GetAllScheduleViewModel()
     
-    
-    
     var seletedDate: String = ""
     var data: [ScheduleDetail] = []
     
@@ -103,11 +101,6 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
                 } else {
                     cell.firstBGView.image = UIImage(named: "normal_baseBox")
                 }
-                
-                
-               
-                
-               
                 
                 
                 //cell.addDateButton.addTarget(self, action: #selector(addDate), for: .touchUpInside)

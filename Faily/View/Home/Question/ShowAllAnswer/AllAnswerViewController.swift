@@ -12,6 +12,9 @@ class AllAnswerViewController: UIViewController {
 
     @IBOutlet weak var allAnswerTableView: UITableView!
     
+    var allAnswerData: [AllQuestionDetail] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
@@ -55,41 +58,46 @@ extension AllAnswerViewController: ExpyTableViewDelegate, ExpyTableViewDataSourc
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllAnswerBaseTableViewCell") as! AllAnswerBaseTableViewCell
         cell.selectionStyle = .none
-        if section == 3 {
-            cell.questionLabel.text = "Eleifend sit senectus malesuada fusce sociis nunc. Quis egestas quisque est ipsum sagittis sed dictum. Adipiscing ut augue diam sed aliquam faucibus egestas enim ultricies. Quam nullam amet consec"
-        }
-        cell.numberLabel.text = "\(7 - section)"
+        cell.numberLabel.text = "\(self.allAnswerData.count - section)"
+        cell.dateLabel.text = self.allAnswerData[self.allAnswerData.count - 1 - section].date
+        cell.questionLabel.text = self.allAnswerData[self.allAnswerData.count - 1 - section].question
         return cell
     }
     
-    
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 7
+        return allAnswerData.count
     }
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllAnswerExpandTableViewCell") as! AllAnswerExpandTableViewCell
         cell.selectionStyle = .none
-        if indexPath.row == 3 {
-            cell.answerLabel.text = "Eleifend sit senectus malesuada fusce sociis nunc. Quis egestas quisque est ipsum sagittis sed dictum. Adipiscing ut augue diam sed aliquam faucibus egestas enim ultricies. Quam nullam amet consectetur ultrice.Eleifend sit senectus malesuada fusce sociis nunc. Quis egestas quisque est ipsum sagittis sed dictum. Adipiscing ut augue diam sed aliquam faucibus egestas enim ultricies. Quam nullam amet consectetur ultrice.Eleifend sit senectus malesuada fusce sociis nunc. Quis egestas quisque est ipsum sagittis sed dictum. Adipiscing ut augue diam sed aliquam faucibus egestas enim ultricies. Quam nullam amet consectetur ultrice.Eleifend sit senectus malesuada fusce sociis nunc. Quis egestas quisque est ipsum sagittis sed dictum. Adipiscing ut augue diam sed aliquam faucibus egestas enim ultricies. Quam nullam amet consectetur ultrice.Eleifend sit senectus malesuada fusce sociis nunc. Quis egestas quisque est ipsum sagittis sed dictum. Adipiscing ut augue diam sed aliquam faucibus egestas enim ultricies. Quam nullam amet consectetur ultrice.Eleifend sit senectus malesuada fusce sociis nunc. Quis egestas quisque est ipsum sagittis sed dictum. Adipiscing ut augue diam sed aliquam faucibus egestas enim ultricies. Quam nullam amet consectetur ultrice."
-        }
         
-     
         
-        if indexPath.row == 4 {
-            cell.guideLineView.isHidden = false
-        } else {
-            cell.guideLineView.isHidden = true
-        }
+        
+        let data = allAnswerData[allAnswerData.count - 1 - indexPath.section]
+        let answerInfo = data.answerInfo
+        
+        
+        
+        
+        cell.nameLabel.text = answerInfo?[indexPath.row - 1].user_name
+        cell.answerLabel.text = answerInfo?[indexPath.row - 1].answer
+
+
+//        if indexPath.row == 4 {
+//            cell.guideLineView.isHidden = false
+//        } else {
+//            cell.guideLineView.isHidden = true
+//        }
+        
+        
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return allAnswerData[allAnswerData.count - 1 - section].answerInfo!.count + 1
     }
-    
-   
-    
-    
 }

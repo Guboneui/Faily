@@ -23,14 +23,13 @@ class QuestionViewController: UIViewController {
         didSet {
             print("현재 페이지는 ")
             print(mainQuestionPage)
-            self.questionMainTableView?.reloadSections(IndexSet(integer: 1), with: .middle)
-            test()
+            
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        mainQuestionCell.questionView = self
         viewModel.questionView = self
         viewModel.reloadTableView = {
             self.questionMainTableView.reloadData()
