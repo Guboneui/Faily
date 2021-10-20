@@ -29,6 +29,8 @@ class AllAnswerViewController: UIViewController {
         allAnswerTableView.estimatedRowHeight = 20
         allAnswerTableView.register(UINib(nibName: "AllAnswerBaseTableViewCell", bundle: nil), forCellReuseIdentifier: "AllAnswerBaseTableViewCell")
         allAnswerTableView.register(UINib(nibName: "AllAnswerExpandTableViewCell", bundle: nil), forCellReuseIdentifier: "AllAnswerExpandTableViewCell")
+        allAnswerTableView.register(UINib(nibName: "ForFirstAnswerTableViewCell", bundle: nil), forCellReuseIdentifier: "ForFirstAnswerTableViewCell")
+        allAnswerTableView.register(UINib(nibName: "LockTableViewCell", bundle: nil), forCellReuseIdentifier: "LockTableViewCell")
     }
     
     @IBAction func dismissButtonAction(_ sender: Any) {
@@ -72,19 +74,31 @@ extension AllAnswerViewController: ExpyTableViewDelegate, ExpyTableViewDataSourc
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AllAnswerExpandTableViewCell") as! AllAnswerExpandTableViewCell
-        cell.selectionStyle = .none
-        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "AllAnswerExpandTableViewCell") as! AllAnswerExpandTableViewCell
+//        cell.selectionStyle = .none
+//
         
         
         let data = allAnswerData[allAnswerData.count - 1 - indexPath.section]
         let answerInfo = data.answerInfo
+        if data.allAnswered == false && data.isAnswered == false {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ForFirstAnswerTableViewCell", for: indexPath) as! ForFirstAnswerTableViewCell
+            cell.selectionStyle = .none
+            return cell
+        } else if data.allAnswered == false && data.isAnswered == true {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LockTableViewCell", for: indexPath) as! LockTableViewCell
+            cell.selectionStyle = .none
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AllAnswerExpandTableViewCell") as! AllAnswerExpandTableViewCell
+            cell.selectionStyle = .none
+            return cell
+        }
         
         
-        
-        
-        cell.nameLabel.text = answerInfo?[indexPath.row - 1].user_name
-        cell.answerLabel.text = answerInfo?[indexPath.row - 1].answer
+//
+//        cell.nameLabel.text = answerInfo?[indexPath.row - 1].user_name
+//        cell.answerLabel.text = answerInfo?[indexPath.row - 1].answer
 
 
 //        if indexPath.row == 4 {
@@ -94,7 +108,7 @@ extension AllAnswerViewController: ExpyTableViewDelegate, ExpyTableViewDataSourc
 //        }
         
         
-        return cell
+        //return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
