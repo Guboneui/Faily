@@ -16,8 +16,8 @@ class AllQuestionViewModel {
     
     var questionData: [AllQuestionDetail] = [] {
         didSet {
-            //reloadTableView
-            reloadCollectionView()
+            reloadTableView()
+            //reloadCollectionView()
             print(questionData.count)
         }
     }

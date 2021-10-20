@@ -18,8 +18,10 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         
         viewModel.questionView = self
-        viewModelMethod()
-        //viewModel.getAllQuestion()
+        viewModel.reloadTableView = {
+            self.questionMainTableView.reloadData()
+        }
+        viewModel.getAllQuestion()
         setTableView()
        
     }
@@ -51,6 +53,8 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MainQuestionTableViewCell", for: indexPath) as! MainQuestionTableViewCell
+            print("1번째 인덱스")
+            cell.allQuestionData = viewModel.questionData
             cell.questionCollectionView.reloadData()
             cell.selectionStyle = .none
             return cell
@@ -73,11 +77,6 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         }
-        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
-//        cell.selectionStyle = .none
-//        return cell
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -94,10 +93,3 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 
-extension QuestionViewController {
-    func viewModelMethod() {
-        viewModel.reloadTableView = {
-            self.questionMainTableView.reloadData()
-        }
-    }
-}

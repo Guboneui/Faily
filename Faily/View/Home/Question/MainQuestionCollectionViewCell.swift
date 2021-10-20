@@ -56,6 +56,3 @@ class MainQuestionCollectionViewCell: UICollectionViewCell, ScaleTransformView {
     }
 }
 
-
-
-
