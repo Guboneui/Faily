@@ -15,14 +15,15 @@ class MainQuestionTableViewCell: UITableViewCell {
     @IBOutlet weak var questionCollectionView: UICollectionView!
     @IBOutlet weak var showAllQuestionStackView: UIStackView!
     
-    var viewModel: AllQuestionViewModel = AllQuestionViewModel()
+    lazy var viewModel: AllQuestionViewModel = AllQuestionViewModel()
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         viewModel.questionCell = self
-       
+        viewModel.getAllQuestion()
+        viewModelMethod()
         questionCollectionView.delegate = self
         questionCollectionView.dataSource = self
         
@@ -91,32 +92,38 @@ class MainQuestionTableViewCell: UITableViewCell {
 extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //return dateArr.count
-        print("데이터 바인딩 필요")
-        print(self.viewModel.questionData)
         
-        return self.viewModel.questionData.count
+        return viewModel.questionData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainQuestionCollectionViewCell", for: indexPath) as! MainQuestionCollectionViewCell
-//        cell.dateLabel.text = dateArr[indexPath.item]
-//
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "yyyy년 M월 d일"
-//        let current_date_string = formatter.string(from: Date())
-//        if cell.dateLabel.text == current_date_string {
-//            cell.questionBox.image = UIImage(named: "questionBox_BookMark")
-//            cell.answerStackViewLabel.text = "답변하러 가기"
-//            cell.answerStackViewImage.image = UIImage(named: "pencil_gray")
-//            cell.answerStackView.isHidden = false
-//
-//        } else {
-//            cell.questionBox.image = UIImage(named: "questionBox_noBookMark")
-//            cell.answerStackViewLabel.text = "답변보러 가기"
-//            cell.answerStackViewImage.image = UIImage(named: "showAnswer")
-//            cell.answerStackView.isHidden = true
-//
-//        }
+        
+        let questionDeatil = viewModel.questionData[indexPath.item]
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let current_date_string = formatter.string(from: Date())
+        print("오늘 날짜 \(current_date_string)")
+        print(current_date_string == questionDeatil.date)
+        
+        
+        cell.questionLabel.text = questionDeatil.question
+        cell.dateLabel.text = questionDeatil.date
+        
+        if questionDeatil.date == current_date_string {
+            cell.questionBox.image = UIImage(named: "questionBox_BookMark")
+            cell.answerStackViewLabel.text = "답변하러 가기"
+            cell.answerStackViewImage.image = UIImage(named: "pencil_gray")
+            cell.answerStackView.isHidden = false
+
+        } else {
+            cell.questionBox.image = UIImage(named: "questionBox_noBookMark")
+            cell.answerStackViewLabel.text = "답변보러 가기"
+            cell.answerStackViewImage.image = UIImage(named: "showAnswer")
+            cell.answerStackView.isHidden = true
+
+        }
         return cell
     }
     
@@ -155,3 +162,11 @@ extension MainQuestionTableViewCell: CollectionViewPagingLayoutDelegate {
     }
 }
 
+
+extension MainQuestionTableViewCell {
+    func viewModelMethod() {
+        viewModel.reloadCollectionView = {
+            self.questionCollectionView.reloadData()
+        }
+    }
+}

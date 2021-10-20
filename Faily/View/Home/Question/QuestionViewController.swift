@@ -19,7 +19,7 @@ class QuestionViewController: UIViewController {
         
         viewModel.questionView = self
         viewModelMethod()
-        viewModel.getAllQuestion()
+        //viewModel.getAllQuestion()
         setTableView()
        
     }
@@ -57,13 +57,13 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
             cell.selectionStyle = .none
-            
+
             return cell
         } else if indexPath.row == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "LockTableViewCell", for: indexPath) as! LockTableViewCell
             cell.selectionStyle = .none
             return cell
-            
+
         } else if indexPath.row == 5 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
             cell.selectionStyle = .none
@@ -73,6 +73,10 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         }
+        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
+//        cell.selectionStyle = .none
+//        return cell
         
     }
     
@@ -92,7 +96,7 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension QuestionViewController {
     func viewModelMethod() {
-        viewModel.reloadCollectionView = {
+        viewModel.reloadTableView = {
             self.questionMainTableView.reloadData()
         }
     }

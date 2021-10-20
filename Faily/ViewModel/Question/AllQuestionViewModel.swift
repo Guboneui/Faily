@@ -12,11 +12,11 @@ class AllQuestionViewModel {
     weak var questionCell: MainQuestionTableViewCell?
     let useService = AllQuestionService()
     var reloadCollectionView: () -> Void = {}
-    
+    var reloadTableView: () -> Void = {}
     
     var questionData: [AllQuestionDetail] = [] {
         didSet {
-            print("메인 테이블뷰가 리로드 됩니다.")
+            //reloadTableView
             reloadCollectionView()
             print(questionData.count)
         }
@@ -30,8 +30,7 @@ class AllQuestionViewModel {
             if response.isSuccess == true {
                 print("전체 질문을 불러왔습니다.")
                 //self.questionCell?.allQuestionResult = response.result ?? []
-                //self.questionData = response.result!
-                self.questionData.append(contentsOf: response.result ?? [])
+                self.questionData = response.result!
                 print(self.questionData)
                 
             } else {
