@@ -18,6 +18,8 @@ class MainQuestionTableViewCell: UITableViewCell {
     @IBOutlet weak var questionCollectionView: UICollectionView!
     @IBOutlet weak var showAllQuestionStackView: UIStackView!
     
+    
+    var firstTime = false
     var allQuestionData: [AllQuestionDetail] = []
     var questionView = QuestionViewController()
     
@@ -65,9 +67,10 @@ class MainQuestionTableViewCell: UITableViewCell {
 //        print(questionCollectionView.frame.width)
         
         DispatchQueue.main.async {
-            self.moveCollectionToFrame(contentOffset: contentOffset)
-
-
+         
+                self.moveCollectionToFrame(contentOffset: contentOffset)
+         
+            
         }
         
         
@@ -178,6 +181,7 @@ extension MainQuestionTableViewCell: CollectionViewPagingLayoutDelegate {
         print(currentPage)
         print("collectionview paging layout delegate")
         questionView.mainQuestionPage = currentPage
+        //print("cell에서의 currentpage: \(currentPage), cell에서 전달된 page = \(questionView.page)")
         self.questionDelegate?.reloadQuestionTableView()
     }
 }

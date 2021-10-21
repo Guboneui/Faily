@@ -17,11 +17,12 @@ class QuestionViewController: UIViewController {
     
     var keyWord: String = ""
     
+    var page = 0
     var mainQuestionPage: Int = 0 {
-        didSet {
+        didSet{
             print("현재 페이지는: \(mainQuestionPage) ")
-            
         }
+       
     }
     
     override func viewDidLoad() {
@@ -73,26 +74,26 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             return 1
         } else {
             
-            
-            return 5
-            
-//            if viewModel.questionData.count == 0 {
-//                return 0
-//            } else {
-//                let data = viewModel.questionData[self.mainQuestionPage]
-//                if data.answerInfo?.count == 0 {
-//                    self.keyWord = "none"
-//                    return 1
-//                } else {
-//                    return 0
-//                }
-//
-//            }
-            
-           
+            if viewModel.questionData.count != 0 {
+                
+                let data = viewModel.questionData[self.mainQuestionPage]
+                print(data)
+                if data.isAnswered == false && data.allAnswered == false {
+                    print("첫번째 답변을 입력 해보새요")
+                    return 2
+                    
+                } else if data.isAnswered == true && data.allAnswered == false {
+                    print("모두가 답변을 해야합니다")
+                    
+                    return 4
+                    
+                } else {
+                    return data.answerInfo!.count + 2
+                }
+            } else {
+                return 0
+            }
         }
-        
-      
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,6 +105,7 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             print("1번째 인덱스")
             cell.allQuestionData = viewModel.questionData
             cell.questionCollectionView.reloadData()
+            cell.questionView = self
             cell.selectionStyle = .none
             cell.questionDelegate = self
             return cell
@@ -112,6 +114,54 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
             cell.selectionStyle = .none
+            print("viewModel.questionData.count: \(viewModel.questionData.count)")
+            print("self.mainQuestionPage: \(mainQuestionPage)")
+            
+            if viewModel.questionData.count != 0 {
+                
+                let data = viewModel.questionData[self.mainQuestionPage]
+                print(data)
+                if data.isAnswered == false && data.allAnswered == false {
+                    print("첫번째 답변을 입력 해보새요")
+                    if indexPath.row == 0 {
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ForFirstAnswerTableViewCell", for: indexPath) as! ForFirstAnswerTableViewCell
+                        return cell
+                    } else {
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
+                        return cell
+                    }
+                } else if data.isAnswered == true && data.allAnswered == false {
+                    print("모두가 답변을 해야합니다")
+                    if indexPath.row == 0 {
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
+                        
+                        return cell
+                    } else if indexPath.row == 1 {
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
+                        return cell
+                    } else if indexPath.row == 2 {
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "LockTableViewCell", for: indexPath) as! LockTableViewCell
+                        return cell
+                    } else {
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
+                        return cell
+                    }
+                } else {
+                    print("가족 모두가 답변을 했습니다.")
+                    if indexPath.row == 0 {
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
+                        
+                        return cell
+                    } else if indexPath.row == data.answerInfo!.count + 1 {
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
+                        return cell
+                    } else {
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
+                        return cell
+                    }
+                }
+            }
+            
             return cell
             
 //
@@ -198,6 +248,9 @@ extension QuestionViewController {
 extension QuestionViewController: ReloadQuestionTableViewDelegate {
     func reloadQuestionTableView() {
         self.questionMainTableView.reloadSections(IndexSet(integer: 1), with: .none)
+        print("델리게이트")
+        print("현재 전달된 페이지는 \(self.mainQuestionPage)")
+        
     }
     
     
