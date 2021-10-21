@@ -10,7 +10,7 @@ import FSCalendar
 
 class CalendarViewController: UIViewController {
     
-   
+    
     @IBOutlet weak var mainTableView: UITableView!
     
     lazy var viewModel = GetAllScheduleViewModel()
@@ -24,7 +24,7 @@ class CalendarViewController: UIViewController {
         viewModel.getAllSchedule()
         setTableView()
     }
-
+    
     
     func setTableView() {
         mainTableView.delegate = self
@@ -37,7 +37,6 @@ class CalendarViewController: UIViewController {
         
         mainTableView.estimatedRowHeight = 20
     }
-    
 }
 
 
@@ -63,7 +62,7 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
             
             return data.count + 1
         }
-     
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -106,11 +105,7 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
                 //cell.addDateButton.addTarget(self, action: #selector(addDate), for: .touchUpInside)
                 return cell
             }
-            
-
         }
-        
-        
     }
     
     @objc func addDate() {

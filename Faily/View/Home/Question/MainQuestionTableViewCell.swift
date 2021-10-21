@@ -12,61 +12,58 @@ protocol ReloadQuestionTableViewDelegate: AnyObject {
     func reloadQuestionTableView()
 }
 
-
 class MainQuestionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var questionCollectionView: UICollectionView!
     @IBOutlet weak var showAllQuestionStackView: UIStackView!
     
-    
-    
     var allQuestionData: [AllQuestionDetail] = []
     var questionView = QuestionViewController()
-    
     weak var questionDelegate: ReloadQuestionTableViewDelegate?
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        setCollectionView()
+        addGesture()
+    }
     
+    func setCollectionView() {
         questionCollectionView.delegate = self
         questionCollectionView.dataSource = self
         
         let layout = CollectionViewPagingLayout()
         layout.delegate = self
-
         questionCollectionView.collectionViewLayout = layout
-
+        
         questionCollectionView.isPagingEnabled = true
         questionCollectionView.register(UINib(nibName: "MainQuestionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MainQuestionCollectionViewCell")
-            
+    }
+    
+    func addGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(goAnswerView))
         showAllQuestionStackView.addGestureRecognizer(tapGesture)
-        
-        
     }
     
     
-    
-  
     override func layoutSubviews() {
         super.layoutSubviews()
         print("MainQuestionTableViewCell - layoutSubviews")
         layoutIfNeeded()
         
         //**해당 부분 중복 호출로 인한 버그 발생 -> 상위 뷰인 QuestionViewController 에서 호출하는 방식으로 변경**
-//        questionCollectionView.isPagingEnabled = false
-//        let collectionBounds = self.questionCollectionView.bounds
-//        //let contentOffset = CGFloat(floor(self.questionCollectionView.contentOffset.x + (questionCollectionView.frame.width * CGFloat(self.allQuestionData.count))))
-//        let contentOffset = CGFloat(floor(self.questionCollectionView.contentOffset.x + collectionBounds.size.width * CGFloat(self.allQuestionData.count - 1)))
-//        //self.moveCollectionToFrame(contentOffset: contentOffset)
-//
-//        DispatchQueue.main.async {
-//            self.moveCollectionToFrame(contentOffset: contentOffset)
-//        }
-//
-//
-//        questionCollectionView.isPagingEnabled = true
+        //        questionCollectionView.isPagingEnabled = false
+        //        let collectionBounds = self.questionCollectionView.bounds
+        //        //let contentOffset = CGFloat(floor(self.questionCollectionView.contentOffset.x + (questionCollectionView.frame.width * CGFloat(self.allQuestionData.count))))
+        //        let contentOffset = CGFloat(floor(self.questionCollectionView.contentOffset.x + collectionBounds.size.width * CGFloat(self.allQuestionData.count - 1)))
+        //        //self.moveCollectionToFrame(contentOffset: contentOffset)
+        //
+        //        DispatchQueue.main.async {
+        //            self.moveCollectionToFrame(contentOffset: contentOffset)
+        //        }
+        //
+        //
+        //        questionCollectionView.isPagingEnabled = true
         
     }
     
@@ -76,14 +73,14 @@ class MainQuestionTableViewCell: UITableViewCell {
             y : self.questionCollectionView.contentOffset.y,
             width : self.questionCollectionView.frame.width,
             height : self.questionCollectionView.frame.height)
-
+        
         UIView.animate(withDuration: 0, delay: 0, options: .curveEaseInOut, animations: {
             self.layoutIfNeeded()
         }, completion: {(completed) in
             self.questionCollectionView.scrollRectToVisible(frame, animated: false)
         })
     }
-
+    
     @objc func goAnswerView(_ recognizer: UITapGestureRecognizer) {
         
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
@@ -110,45 +107,45 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainQuestionCollectionViewCell", for: indexPath) as! MainQuestionCollectionViewCell
         let questionDeatil = self.allQuestionData[indexPath.item]
-
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy년 MM월 dd일"
         let current_date_string = formatter.string(from: Date())
-
-
+        
+        
         cell.questionLabel.text = questionDeatil.question
         cell.dateLabel.text = questionDeatil.date
-
+        
         if questionDeatil.date == current_date_string {
             cell.questionBox.image = UIImage(named: "questionBox_BookMark")
             cell.answerStackViewLabel.text = "답변하러 가기"
             cell.answerStackViewImage.image = UIImage(named: "pencil_gray")
             cell.answerStackView.isHidden = false
-
+            
         } else {
             cell.questionBox.image = UIImage(named: "questionBox_noBookMark")
             cell.answerStackViewLabel.text = "답변보러 가기"
             cell.answerStackViewImage.image = UIImage(named: "showAnswer")
             cell.answerStackView.isHidden = true
-
+            
         }
         
         return cell
     }
-
+    
     
     func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//        let x = targetContentOffset.pointee.x
-//        let currentPage = Int(x / questionCollectionView.frame.width)
-//        print("currentpage = \(currentPage)")
-//        questionView.mainQuestionPage = currentPage
-//
-//    }
-//    
+    //    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    //        let x = targetContentOffset.pointee.x
+    //        let currentPage = Int(x / questionCollectionView.frame.width)
+    //        print("currentpage = \(currentPage)")
+    //        questionView.mainQuestionPage = currentPage
+    //
+    //    }
+    //
 }
 extension MainQuestionTableViewCell: CollectionViewPagingLayoutDelegate {
     func onCurrentPageChanged(layout: CollectionViewPagingLayout, currentPage: Int) {

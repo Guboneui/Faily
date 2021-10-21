@@ -136,6 +136,3 @@ extension CalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource {
         }
     }
 }
-
-
-
