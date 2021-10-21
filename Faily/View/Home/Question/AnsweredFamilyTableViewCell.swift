@@ -9,6 +9,7 @@ import UIKit
 
 class AnsweredFamilyTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var answeredFamilyCountImage: UIImageView!
     @IBOutlet weak var answeredCollectionView: UICollectionView!
     
     var answeredFamilyCount: Int = 0

@@ -124,6 +124,8 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                     if indexPath.row == 0 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
                         cell.answeredFamilyCount = data.answerInfo?.count ?? 0
+                        let imageName = "num\(data.answerInfo?.count ?? 1)"
+                        cell.answeredFamilyCountImage.image = UIImage(named: imageName)
                         print("답변한 가족의 수: \(data.answerInfo?.count)")
                         cell.answeredCollectionView.reloadData()
                         cell.selectionStyle = .none
@@ -147,6 +149,8 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
                         cell.selectionStyle = .none
                         cell.answeredFamilyCount = data.answerInfo?.count ?? 0
+                        let imageName = "num\(data.answerInfo?.count ?? 1)"
+                        cell.answeredFamilyCountImage.image = UIImage(named: imageName)
                         print("답변한 가족의 수: \(data.answerInfo?.count)")
                         cell.answeredCollectionView.reloadData()
                         return cell

@@ -63,6 +63,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="answeredCollectionView" destination="mdi-7s-KhM" id="U5v-dU-ah8"/>
+                <outlet property="answeredFamilyCountImage" destination="0h8-9D-sQf" id="2JP-bU-0Rb"/>
             </connections>
             <point key="canvasLocation" x="205.07246376811597" y="116.51785714285714"/>
         </tableViewCell>
