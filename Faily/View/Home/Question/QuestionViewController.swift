@@ -90,6 +90,18 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             cell.questionView = self
             cell.selectionStyle = .none
             cell.questionDelegate = self
+            
+            //cell 레이아웃 변경 부분
+            cell.layoutIfNeeded()
+            cell.questionCollectionView.isPagingEnabled = false
+            let collectionBounds = cell.questionCollectionView.bounds
+            let contentOffset = CGFloat(floor(cell.questionCollectionView.contentOffset.x + collectionBounds.size.width * CGFloat(viewModel.questionData.count - 1)))
+            DispatchQueue.main.async {
+                cell.moveCollectionToFrame(contentOffset: contentOffset)
+            }
+            
+            cell.questionCollectionView.isPagingEnabled = true
+            
             return cell
             
         } else {
@@ -185,7 +197,14 @@ extension QuestionViewController {
 
 extension QuestionViewController: ReloadQuestionTableViewDelegate {
     func reloadQuestionTableView() {
-        self.questionMainTableView.reloadSections(IndexSet(integer: 1), with: .fade)
+        let sectionToReload = 1
+        let indexSet: IndexSet = [sectionToReload]
+        DispatchQueue.main.async {
+            self.questionMainTableView.reloadSections(indexSet, with: .fade)
+            
+        }
+        
+        
         
         print("현재 전달된 페이지는 \(self.mainQuestionPage)")
     }

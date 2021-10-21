@@ -37,8 +37,7 @@ extension UICollectionView {
            
             return
         }
-        print("스크롤롤")
-        scrollToItem(at: lastIndexPath, at: .left, animated: animated)
+        scrollToItem(at: lastIndexPath, at: .right, animated: animated)
     }
 }
 

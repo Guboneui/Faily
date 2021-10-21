@@ -46,26 +46,27 @@ class MainQuestionTableViewCell: UITableViewCell {
         
     }
     
+    
+    
   
     override func layoutSubviews() {
         super.layoutSubviews()
-        print("레이아웃")
-        //layoutIfNeeded()
-        questionCollectionView.isPagingEnabled = false
-        let collectionBounds = self.questionCollectionView.bounds
-        //let contentOffset = CGFloat(floor(self.questionCollectionView.contentOffset.x + (questionCollectionView.frame.width * CGFloat(self.allQuestionData.count))))
-        let contentOffset = CGFloat(floor(self.questionCollectionView.contentOffset.x + collectionBounds.size.width * CGFloat(self.allQuestionData.count - 1)))
-        //self.moveCollectionToFrame(contentOffset: contentOffset)
-//        print(self.questionCollectionView.contentOffset.x)
-//        print(collectionBounds.size.width)
-//        print(questionCollectionView.frame.width)
-
-        DispatchQueue.main.async {
-            self.moveCollectionToFrame(contentOffset: contentOffset)
-        }
-
-
-        questionCollectionView.isPagingEnabled = true
+        print("MainQuestionTableViewCell - layoutSubviews")
+        layoutIfNeeded()
+        
+        //**해당 부분 중복 호출로 인한 버그 발생 -> 상위 뷰인 QuestionViewController 에서 호출하는 방식으로 변경**
+//        questionCollectionView.isPagingEnabled = false
+//        let collectionBounds = self.questionCollectionView.bounds
+//        //let contentOffset = CGFloat(floor(self.questionCollectionView.contentOffset.x + (questionCollectionView.frame.width * CGFloat(self.allQuestionData.count))))
+//        let contentOffset = CGFloat(floor(self.questionCollectionView.contentOffset.x + collectionBounds.size.width * CGFloat(self.allQuestionData.count - 1)))
+//        //self.moveCollectionToFrame(contentOffset: contentOffset)
+//
+//        DispatchQueue.main.async {
+//            self.moveCollectionToFrame(contentOffset: contentOffset)
+//        }
+//
+//
+//        questionCollectionView.isPagingEnabled = true
         
     }
     
@@ -153,7 +154,6 @@ extension MainQuestionTableViewCell: CollectionViewPagingLayoutDelegate {
         print(currentPage)
         print("collectionview paging layout delegate")
         questionView.mainQuestionPage = currentPage
-        //print("cell에서의 currentpage: \(currentPage), cell에서 전달된 page = \(questionView.page)")
         self.questionDelegate?.reloadQuestionTableView()
     }
 }
