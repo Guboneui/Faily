@@ -18,6 +18,7 @@ class AllAnswerBaseTableViewCell: UITableViewCell {
     @IBOutlet weak var familyCollectionVIew: UICollectionView!
     @IBOutlet weak var dropdownImage: UIImageView!
     
+    var getMemberCount: Int = 0
     
     var data: [AllQuestionDetail] = []
     var indexPathItem = -1
@@ -64,14 +65,14 @@ extension AllAnswerBaseTableViewCell: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-      
-        return 4
+        
+        return self.getMemberCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllAnswerProfileCollectionViewCell", for: indexPath) as! AllAnswerProfileCollectionViewCell
         
-        
+        print("컬렉션뷰 생성")
         return cell
     }
 }

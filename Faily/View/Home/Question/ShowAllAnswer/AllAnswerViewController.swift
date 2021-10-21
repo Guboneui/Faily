@@ -57,13 +57,16 @@ extension AllAnswerViewController: ExpyTableViewDelegate, ExpyTableViewDataSourc
         return true
     }
     func tableView(_ tableView: ExpyTableView, expandableCellForSection section: Int) -> UITableViewCell {
-        
+        print("테이블뷰 생성됌")
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllAnswerBaseTableViewCell") as! AllAnswerBaseTableViewCell
         cell.selectionStyle = .none
         cell.numberLabel.text = "\(self.allAnswerData.count - section)"
         cell.dateLabel.text = self.allAnswerData[self.allAnswerData.count - 1 - section].date
         cell.questionLabel.text = self.allAnswerData[self.allAnswerData.count - 1 - section].question
         cell.data = self.allAnswerData
+        cell.getMemberCount = self.allAnswerData[self.allAnswerData.count - 1 - section].answerInfo!.count
+        
+        
         return cell
     }
     
@@ -71,9 +74,7 @@ extension AllAnswerViewController: ExpyTableViewDelegate, ExpyTableViewDataSourc
         return allAnswerData.count
     }
     
-    
-    
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "AllAnswerExpandTableViewCell") as! AllAnswerExpandTableViewCell
 //        cell.selectionStyle = .none
