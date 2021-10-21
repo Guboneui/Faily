@@ -107,14 +107,11 @@ extension CalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource {
         let formatter        = DateFormatter()
         formatter.locale     = Locale(identifier: "ko_KR")
         formatter.dateFormat = "YYYY-MM-dd"
-        
-        
         print(formatter.string(from: date) + " 선택됨")
         
         mainCalendarView.seletedDate = formatter.string(from: date)
         
-        
-        //별도 데이터 포맷을 생성하여 api 메소드 추가 필요
+    
         mainCalendarView.mainTableView.reloadSections(IndexSet(integer: 1), with: .none)
     }
     

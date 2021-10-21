@@ -8,19 +8,26 @@
 import UIKit
 import CollectionViewPagingLayout
 
+protocol ReloadQuestionTableViewDelegate: AnyObject {
+    func reloadQuestionTableView()
+}
+
+
 class MainQuestionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var questionCollectionView: UICollectionView!
     @IBOutlet weak var showAllQuestionStackView: UIStackView!
     
     var allQuestionData: [AllQuestionDetail] = []
-    
     var questionView = QuestionViewController()
+    
+    weak var questionDelegate: ReloadQuestionTableViewDelegate?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        questionView.mainQuestionCell = self
+        //questionView.mainQuestionCell = self
         
         questionCollectionView.delegate = self
         questionCollectionView.dataSource = self
@@ -155,13 +162,14 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
         return true
     }
     
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let x = targetContentOffset.pointee.x
-        let currentPage = Int(x / questionCollectionView.frame.width)
-        print("currentpage = \(currentPage)")
-        //questionView.mainQuestionPage = currentPage
-    }
-    
+//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        let x = targetContentOffset.pointee.x
+//        let currentPage = Int(x / questionCollectionView.frame.width)
+//        print("currentpage = \(currentPage)")
+//        questionView.mainQuestionPage = currentPage
+//
+//    }
+//    
 }
 
 
@@ -169,6 +177,8 @@ extension MainQuestionTableViewCell: CollectionViewPagingLayoutDelegate {
     func onCurrentPageChanged(layout: CollectionViewPagingLayout, currentPage: Int) {
         print(currentPage)
         print("collectionview paging layout delegate")
+        questionView.mainQuestionPage = currentPage
+        self.questionDelegate?.reloadQuestionTableView()
     }
 }
 

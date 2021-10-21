@@ -14,28 +14,25 @@ class QuestionViewController: UIViewController {
     
     lazy var viewModel: AllQuestionViewModel = AllQuestionViewModel()
     
-    lazy var mainQuestionCell: MainQuestionTableViewCell = MainQuestionTableViewCell()
-    
     
     var keyWord: String = ""
     
     var mainQuestionPage: Int = 0 {
         didSet {
-            print("현재 페이지는 ")
-            print(mainQuestionPage)
+            print("현재 페이지는: \(mainQuestionPage) ")
             
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainQuestionCell.questionView = self
+        
         viewModel.questionView = self
-        viewModel.reloadTableView = {
-            self.questionMainTableView.reloadData()
-        }
+        viewModelMethod()
         viewModel.getAllQuestion()
         setTableView()
+        
+      
         
      
     }
@@ -76,18 +73,21 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             return 1
         } else {
             
-            if viewModel.questionData.count == 0 {
-                return 0
-            } else {
-                let data = viewModel.questionData[self.mainQuestionPage]
-                if data.answerInfo?.count == 0 {
-                    self.keyWord = "none"
-                    return 1
-                } else {
-                    return 0
-                }
-                
-            }
+            
+            return 5
+            
+//            if viewModel.questionData.count == 0 {
+//                return 0
+//            } else {
+//                let data = viewModel.questionData[self.mainQuestionPage]
+//                if data.answerInfo?.count == 0 {
+//                    self.keyWord = "none"
+//                    return 1
+//                } else {
+//                    return 0
+//                }
+//
+//            }
             
            
         }
@@ -105,19 +105,25 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             cell.allQuestionData = viewModel.questionData
             cell.questionCollectionView.reloadData()
             cell.selectionStyle = .none
+            cell.questionDelegate = self
             return cell
             
         } else {
             
-            if self.keyWord == "none" {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "ForFirstAnswerTableViewCell", for: indexPath) as! ForFirstAnswerTableViewCell
-                return cell
-            } else {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
-                cell.selectionStyle = .none
-                return cell
-            }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
+            cell.selectionStyle = .none
+            return cell
             
+//
+//            if self.keyWord == "none" {
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "ForFirstAnswerTableViewCell", for: indexPath) as! ForFirstAnswerTableViewCell
+//                return cell
+//            } else {
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
+//                cell.selectionStyle = .none
+//                return cell
+//            }
+//
             
             
             
@@ -157,15 +163,18 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0 {
             return self.view.frame.width + 7.5 + 20
         } else {
-            if indexPath.row == 0 {
-                return self.view.frame.width + 7.5 + 20
-            } else if indexPath.row == 1{
-                return 105
-            } else if indexPath.row == 2{
-                return 75
-            } else {
-                return UITableView.automaticDimension
-            }
+            
+            return UITableView.automaticDimension
+            
+//            if indexPath.row == 0 {
+//                return self.view.frame.width + 7.5 + 20
+//            } else if indexPath.row == 1{
+//                return 105
+//            } else if indexPath.row == 2{
+//                return 75
+//            } else {
+//                return UITableView.automaticDimension
+//            }
         }
              
         
@@ -175,3 +184,21 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 
+
+extension QuestionViewController {
+    func viewModelMethod() {
+        viewModel.reloadTableView = {
+            self.questionMainTableView.reloadData()
+        }
+    }
+}
+
+
+
+extension QuestionViewController: ReloadQuestionTableViewDelegate {
+    func reloadQuestionTableView() {
+        self.questionMainTableView.reloadSections(IndexSet(integer: 1), with: .none)
+    }
+    
+    
+}
