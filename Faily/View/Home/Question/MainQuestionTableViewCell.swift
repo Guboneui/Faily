@@ -104,6 +104,7 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //return dateArr.count
         return self.allQuestionData.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -123,6 +123,9 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                     print("모두가 답변을 해야합니다")
                     if indexPath.row == 0 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
+                        cell.answeredFamilyCount = data.answerInfo?.count ?? 0
+                        print("답변한 가족의 수: \(data.answerInfo?.count)")
+                        cell.answeredCollectionView.reloadData()
                         cell.selectionStyle = .none
                         return cell
                     } else if indexPath.row == 1 {
@@ -143,6 +146,9 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                     if indexPath.row == 0 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
                         cell.selectionStyle = .none
+                        cell.answeredFamilyCount = data.answerInfo?.count ?? 0
+                        print("답변한 가족의 수: \(data.answerInfo?.count)")
+                        cell.answeredCollectionView.reloadData()
                         return cell
                     } else if indexPath.row == data.answerInfo!.count + 1 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell

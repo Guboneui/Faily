@@ -11,6 +11,7 @@ class AnsweredFamilyTableViewCell: UITableViewCell {
 
     @IBOutlet weak var answeredCollectionView: UICollectionView!
     
+    var answeredFamilyCount: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,7 +37,8 @@ class AnsweredFamilyTableViewCell: UITableViewCell {
 
 extension AnsweredFamilyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        print("AnsweredFamilyTableViewCell - answeredFamilyCount ====== \(self.answeredFamilyCount)")
+        return self.answeredFamilyCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
