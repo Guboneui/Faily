@@ -19,7 +19,7 @@ class MainQuestionTableViewCell: UITableViewCell {
     @IBOutlet weak var showAllQuestionStackView: UIStackView!
     
     
-    var firstTime = false
+    
     var allQuestionData: [AllQuestionDetail] = []
     var questionView = QuestionViewController()
     
@@ -28,9 +28,7 @@ class MainQuestionTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        //questionView.mainQuestionCell = self
-        
+    
         questionCollectionView.delegate = self
         questionCollectionView.dataSource = self
         
@@ -41,10 +39,6 @@ class MainQuestionTableViewCell: UITableViewCell {
 
         questionCollectionView.isPagingEnabled = true
         questionCollectionView.register(UINib(nibName: "MainQuestionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MainQuestionCollectionViewCell")
-//        layout.setCurrentPage(14, animated: false, completion: {
-//            print("setcurrentpage 호출")
-//
-//        })
             
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(goAnswerView))
         showAllQuestionStackView.addGestureRecognizer(tapGesture)
@@ -56,7 +50,7 @@ class MainQuestionTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         print("레이아웃")
-        layoutIfNeeded()
+        //layoutIfNeeded()
         questionCollectionView.isPagingEnabled = false
         let collectionBounds = self.questionCollectionView.bounds
         //let contentOffset = CGFloat(floor(self.questionCollectionView.contentOffset.x + (questionCollectionView.frame.width * CGFloat(self.allQuestionData.count))))
@@ -65,15 +59,12 @@ class MainQuestionTableViewCell: UITableViewCell {
 //        print(self.questionCollectionView.contentOffset.x)
 //        print(collectionBounds.size.width)
 //        print(questionCollectionView.frame.width)
-        
+
         DispatchQueue.main.async {
-         
-                self.moveCollectionToFrame(contentOffset: contentOffset)
-         
-            
+            self.moveCollectionToFrame(contentOffset: contentOffset)
         }
-        
-        
+
+
         questionCollectionView.isPagingEnabled = true
         
     }
@@ -88,24 +79,10 @@ class MainQuestionTableViewCell: UITableViewCell {
         UIView.animate(withDuration: 0, delay: 0, options: .curveEaseInOut, animations: {
             self.layoutIfNeeded()
         }, completion: {(completed) in
-
             self.questionCollectionView.scrollRectToVisible(frame, animated: false)
-
         })
-
     }
 
-//    func moveCollectionToFrame(contentOffset : CGFloat) {
-//        let frame: CGRect = CGRect(
-//            x : contentOffset + (self.questionCollectionView.bounds.size.width / 4),
-//            y : self.questionCollectionView.contentOffset.y,
-//            width : self.questionCollectionView.frame.width,
-//            height : self.questionCollectionView.frame.height
-//        )
-//        self.questionCollectionView.scrollRectToVisible(frame, animated: false)
-//       // print("move collection to frame")
-//    }
-//
     @objc func goAnswerView(_ recognizer: UITapGestureRecognizer) {
         
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
@@ -126,9 +103,6 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //return dateArr.count
         return self.allQuestionData.count
-        
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -174,8 +148,6 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
 //    }
 //    
 }
-
-
 extension MainQuestionTableViewCell: CollectionViewPagingLayoutDelegate {
     func onCurrentPageChanged(layout: CollectionViewPagingLayout, currentPage: Int) {
         print(currentPage)

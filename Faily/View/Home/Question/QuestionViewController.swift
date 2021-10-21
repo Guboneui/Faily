@@ -13,16 +13,12 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var questionMainTableView: UITableView!
     
     lazy var viewModel: AllQuestionViewModel = AllQuestionViewModel()
-    
-    
     var keyWord: String = ""
-    
     var page = 0
     var mainQuestionPage: Int = 0 {
         didSet{
             print("현재 페이지는: \(mainQuestionPage) ")
         }
-       
     }
     
     override func viewDidLoad() {
@@ -32,10 +28,6 @@ class QuestionViewController: UIViewController {
         viewModelMethod()
         viewModel.getAllQuestion()
         setTableView()
-        
-      
-        
-     
     }
     
     func setTableView() {
@@ -53,12 +45,6 @@ class QuestionViewController: UIViewController {
         questionMainTableView.register(UINib(nibName: "EachAnswerTableViewCell", bundle: nil), forCellReuseIdentifier: "EachAnswerTableViewCell")
         questionMainTableView.register(UINib(nibName: "BottomWhiteLabelTableViewCell", bundle: nil), forCellReuseIdentifier: "BottomWhiteLabelTableViewCell")
         questionMainTableView.register(UINib(nibName: "ForFirstAnswerTableViewCell", bundle: nil), forCellReuseIdentifier: "ForFirstAnswerTableViewCell")
-        
-        
-    }
-    
-    func test() {
-        self.questionMainTableView.reloadSections(IndexSet(integer: 1), with: .none)
     }
 }
 
@@ -79,12 +65,9 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                 let data = viewModel.questionData[self.mainQuestionPage]
                 print(data)
                 if data.isAnswered == false && data.allAnswered == false {
-                    print("첫번째 답변을 입력 해보새요")
                     return 2
                     
                 } else if data.isAnswered == true && data.allAnswered == false {
-                    print("모두가 답변을 해야합니다")
-                    
                     return 4
                     
                 } else {
@@ -102,7 +85,6 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "MainQuestionTableViewCell", for: indexPath) as! MainQuestionTableViewCell
-            print("1번째 인덱스")
             cell.allQuestionData = viewModel.questionData
             cell.questionCollectionView.reloadData()
             cell.questionView = self
@@ -111,101 +93,61 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
             
         } else {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
-            cell.selectionStyle = .none
-            print("viewModel.questionData.count: \(viewModel.questionData.count)")
-            print("self.mainQuestionPage: \(mainQuestionPage)")
-            
             if viewModel.questionData.count != 0 {
                 
                 let data = viewModel.questionData[self.mainQuestionPage]
-                print(data)
                 if data.isAnswered == false && data.allAnswered == false {
                     print("첫번째 답변을 입력 해보새요")
                     if indexPath.row == 0 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "ForFirstAnswerTableViewCell", for: indexPath) as! ForFirstAnswerTableViewCell
+                        cell.selectionStyle = .none
                         return cell
                     } else {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
+                        cell.selectionStyle = .none
                         return cell
                     }
                 } else if data.isAnswered == true && data.allAnswered == false {
                     print("모두가 답변을 해야합니다")
                     if indexPath.row == 0 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
-                        
+                        cell.selectionStyle = .none
                         return cell
                     } else if indexPath.row == 1 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
+                        cell.selectionStyle = .none
                         return cell
                     } else if indexPath.row == 2 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "LockTableViewCell", for: indexPath) as! LockTableViewCell
+                        cell.selectionStyle = .none
                         return cell
                     } else {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
+                        cell.selectionStyle = .none
                         return cell
                     }
                 } else {
                     print("가족 모두가 답변을 했습니다.")
                     if indexPath.row == 0 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
-                        
+                        cell.selectionStyle = .none
                         return cell
                     } else if indexPath.row == data.answerInfo!.count + 1 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
+                        cell.selectionStyle = .none
                         return cell
                     } else {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
+                        cell.selectionStyle = .none
                         return cell
                     }
                 }
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
+                cell.selectionStyle = .none
+                return cell
             }
-            
-            return cell
-            
-//
-//            if self.keyWord == "none" {
-//                let cell = tableView.dequeueReusableCell(withIdentifier: "ForFirstAnswerTableViewCell", for: indexPath) as! ForFirstAnswerTableViewCell
-//                return cell
-//            } else {
-//                let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
-//                cell.selectionStyle = .none
-//                return cell
-//            }
-//
-            
-            
-            
-//            if indexPath.row == 0 {
-//                let cell = tableView.dequeueReusableCell(withIdentifier: "MainQuestionTableViewCell", for: indexPath) as! MainQuestionTableViewCell
-//                print("1번째 인덱스")
-//                cell.allQuestionData = viewModel.questionData
-//                cell.questionCollectionView.reloadData()
-//                cell.selectionStyle = .none
-//                return cell
-//            } else if indexPath.row == 1 {
-//                let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
-//                cell.selectionStyle = .none
-//
-//                return cell
-//            } else if indexPath.row == 2{
-//                let cell = tableView.dequeueReusableCell(withIdentifier: "LockTableViewCell", for: indexPath) as! LockTableViewCell
-//                cell.selectionStyle = .none
-//                return cell
-//
-//            } else if indexPath.row == 5 {
-//                let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
-//                cell.selectionStyle = .none
-//                return cell
-//            } else {
-//                let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
-//                cell.selectionStyle = .none
-//                return cell
-//            }
         }
-        
-       
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -226,10 +168,6 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
 //                return UITableView.automaticDimension
 //            }
         }
-             
-        
-        
-       
     }
 }
 
@@ -247,11 +185,8 @@ extension QuestionViewController {
 
 extension QuestionViewController: ReloadQuestionTableViewDelegate {
     func reloadQuestionTableView() {
-        self.questionMainTableView.reloadSections(IndexSet(integer: 1), with: .none)
-        print("델리게이트")
-        print("현재 전달된 페이지는 \(self.mainQuestionPage)")
+        self.questionMainTableView.reloadSections(IndexSet(integer: 1), with: .fade)
         
+        print("현재 전달된 페이지는 \(self.mainQuestionPage)")
     }
-    
-    
 }
