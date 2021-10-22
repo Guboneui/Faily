@@ -170,7 +170,7 @@ class AddDateViewController: UIViewController {
             
             
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd-HH:mm"
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
             let startDate = dateFormatter.string(from: startDatePicker.date)
             let endDate = dateFormatter.string(from: endDatePicker.date)
             
@@ -178,7 +178,6 @@ class AddDateViewController: UIViewController {
                     
             
             let param = AddScheduleRequest(
-                calendar_date: "2021-11-01",
                 calendar_category: self.category,
                 calendar_name: title,
                 calendar_place: location,

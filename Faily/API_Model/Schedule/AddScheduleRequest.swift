@@ -8,7 +8,6 @@
 import Foundation
 
 struct AddScheduleRequest: Encodable {
-    var calendar_date: String
     var calendar_category: String
     var calendar_name: String
     var calendar_place: String
