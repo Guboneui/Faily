@@ -17,6 +17,9 @@ class MainQuestionCollectionViewCell: UICollectionViewCell, ScaleTransformView {
     @IBOutlet weak var answerStackViewLabel: UILabel!
     @IBOutlet weak var answerStackViewImage: UIImageView!
     
+    var getQuestionIndex = 0
+    var question = ""
+    
     var scaleOptions = ScaleTransformViewOptions (
         minScale: 0.68,
         scaleRatio: 0.35,
@@ -43,8 +46,10 @@ class MainQuestionCollectionViewCell: UICollectionViewCell, ScaleTransformView {
     @objc func goAnswerView(_ recognizer: UITapGestureRecognizer) {
         if answerStackViewLabel.text == "답변하러 가기" {
             let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-            let qaVC = storyBoard.instantiateViewController(withIdentifier: "QAViewController")
+            let qaVC = storyBoard.instantiateViewController(withIdentifier: "QAViewController") as! QAViewController
             qaVC.modalPresentationStyle = .overCurrentContext
+            qaVC.getQuestionIndex = self.getQuestionIndex
+            qaVC.question = self.question
             self.window?.rootViewController?.present(qaVC, animated: true, completion: nil)
             
         } else if answerStackViewLabel.text == "답변보러 가기" {

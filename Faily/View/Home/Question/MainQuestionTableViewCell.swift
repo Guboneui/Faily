@@ -107,6 +107,8 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainQuestionCollectionViewCell", for: indexPath) as! MainQuestionCollectionViewCell
         let questionDeatil = self.allQuestionData[indexPath.item]
+        cell.getQuestionIndex = questionDeatil.question_index
+        cell.question = questionDeatil.question
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy년 MM월 dd일"
