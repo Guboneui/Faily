@@ -22,7 +22,14 @@ class CalendarViewController: UIViewController {
         super.viewDidLoad()
         viewModel.calendarView = self
         viewModel.getAllSchedule()
+        viewModelMethod()
         setTableView()
+        
+        
+        
+        
+        
+        
     }
     
     
@@ -82,6 +89,7 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
                 return cell
             } else {
                 
+                
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DateScheduleTableViewCell", for: indexPath) as! DateScheduleTableViewCell
                 cell.selectionStyle = .none
                 
@@ -125,4 +133,20 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+
+
+extension CalendarViewController {
+    func viewModelMethod() {
+        viewModel.reloadTableView = {
+            
+            
+            var formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            var current_date_string = formatter.string(from: Date())
+            self.seletedDate = current_date_string
+            print("테이블뷰가 reload 됩니다.")
+            self.mainTableView.reloadData()
+        }
+    }
 }

@@ -107,8 +107,6 @@ extension CalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource {
         print(formatter.string(from: date) + " 선택됨")
         
         mainCalendarView.seletedDate = formatter.string(from: date)
-        
-    
         mainCalendarView.mainTableView.reloadSections(IndexSet(integer: 1), with: .none)
     }
     

@@ -10,7 +10,7 @@ import Foundation
 class GetAllScheduleViewModel {
     weak var calendarView: CalendarViewController?
     let useService = GetAllScheduleService()
-    
+    var reloadTableView: () -> Void = {}
     
     var detailSchedule: [ScheduleDetail] = [] {
         didSet {
@@ -27,6 +27,7 @@ class GetAllScheduleViewModel {
             if response.isSuccess == true {
                 print("일정을 불러왔습니다.")
                 self.detailSchedule = response.calendar!
+                self.reloadTableView()
             } else {
                 print("\(code): \(message)")
             }
