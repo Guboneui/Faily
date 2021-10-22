@@ -11,7 +11,6 @@ import PanModal
 
 class CalendarTableViewCell: UITableViewCell {
     
-    
     @IBOutlet weak var calendarBaseView: UIView!
     @IBOutlet weak var calendarBGView: UIImageView!
     @IBOutlet weak var calendarTitleLabel: UILabel!
@@ -64,8 +63,6 @@ class CalendarTableViewCell: UITableViewCell {
         self.calendarView.setCurrentPage(self.currentPage, animated: true)
         
     }
-    
-    
     
     @IBAction func prevMonthButtonAction(_ sender: Any) {
         scrollCurrentPage(isPrev: true)
@@ -126,8 +123,6 @@ extension CalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource {
             events.append(dateToString!)
             
         }
-        
-      
         
         if events.contains(date) {
             return 1

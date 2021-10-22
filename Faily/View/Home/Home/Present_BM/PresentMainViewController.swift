@@ -50,7 +50,6 @@ class PresentMainViewController: UIViewController {
         recommentCollectionView.dataSource = self
         recommentCollectionView.register(UINib(nibName: "RecommentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "RecommentCollectionViewCell")
         
-        //categoryCollectionView.collectionViewLayout = 컴포넌트 레이아웃
     }
     
     @IBAction func backButtonAction(_ sender: Any) {
@@ -93,9 +92,6 @@ extension PresentMainViewController: UICollectionViewDelegate, UICollectionViewD
             detailPresentVC.getCategoryIndex = indexPath.item
             self.navigationController?.pushViewController(detailPresentVC, animated: true)
         }
-        
-        
-        
         
     }
     

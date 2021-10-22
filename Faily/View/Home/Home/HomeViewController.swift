@@ -57,6 +57,11 @@ class HomeViewController: UIViewController {
     let percentColorPicker = ColorPickerViewController()
     
     
+    
+    lazy var todayQuestionViewModel: TodayQuestionViewModel = TodayQuestionViewModel()
+    
+    
+    
     func gradientLayer(bounds : CGRect,
                        color1: CGColor, color2: CGColor, color3: CGColor, color4: CGColor, color5: CGColor, color6: CGColor, color7: CGColor, color8: CGColor, color9: CGColor) -> CAGradientLayer{
         let gradient = CAGradientLayer()
@@ -82,6 +87,8 @@ class HomeViewController: UIViewController {
         
         configUI()
         setCollectionView()
+        todayQuestionViewModel.mainHome = self
+        todayQuestionViewModel.getTodayQuestion()
         
     }
     

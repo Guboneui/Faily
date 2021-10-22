@@ -8,7 +8,7 @@
 import Foundation
 
 class TodayQuestionViewModel {
-    weak var questionView: QuestionViewController?
+    weak var mainHome: HomeViewController?
     let useService = TodayQuestionService()
     
     func getTodayQuestion() {
@@ -19,9 +19,9 @@ class TodayQuestionViewModel {
             
             if response.isSuccess == true {
                 print("오늘의 질문을 받아왔습니다.")
-                print("오늘의 질문은 <\(response.todayQuestion)>입니다.")
+                print("오늘의 질문은 <\(response.todayQuestion ?? "")>입니다.")
             } else {
-                print("\(code) Error")
+                print("code: \(code), message: \(message)")
             
             }
         }, onError: {error in

@@ -81,8 +81,6 @@ extension PresentDetailViewController: UICollectionViewDelegate, UICollectionVie
         }
         
     }
-    
-    
 }
 
 extension PresentDetailViewController: UICollectionViewDelegateFlowLayout {
@@ -97,10 +95,6 @@ extension PresentDetailViewController: UICollectionViewDelegateFlowLayout {
             
             return CGSize(width: size, height: size * 1.64)
         }
-        
-        
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
