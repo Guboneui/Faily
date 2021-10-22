@@ -25,11 +25,6 @@ class CalendarViewController: UIViewController {
         viewModelMethod()
         setTableView()
         
-        
-        
-        
-        
-        
     }
     
     
@@ -61,7 +56,6 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             self.data = []
             for i in 0..<viewModel.detailSchedule.count {
-                //let date = viewModel.detailSchedule[i].calendar_start_time.substring(from: 0, to: 8)
                 if viewModel.detailSchedule[i].calendar_date == seletedDate {
                     data.append(viewModel.detailSchedule[i])
                 }
@@ -98,6 +92,16 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.scheduleTitleLabel.text = data[indexPath.row].calendar_name
                 cell.scheduleDetailLabel.text = data[indexPath.row].calendar_memo
+                let fullDate = data[indexPath.row].calendar_date.substring(from: 8, to: 10)
+                cell.dateLabel.text = fullDate
+                
+                let year: Int = Int(data[indexPath.row].calendar_date.substring(from: 0, to: 4)) ?? 0
+                let month: Int = Int(data[indexPath.row].calendar_date.substring(from: 5, to: 7)) ?? 0
+                let day: Int = Int(data[indexPath.row].calendar_date.substring(from: 8, to: 10)) ?? 0
+                
+                let date = weekday(year: year, month: month, day: day)
+                cell.dayLabel.text = date
+                
                 
                 if data[indexPath.row].calendar_category == "기념일" {
                     cell.firstBGView.image = UIImage(named: "birthday_baseBox")
@@ -115,6 +119,21 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    
+    func weekday(year: Int, month: Int, day: Int) -> String? {
+        let calendar = Calendar(identifier: .gregorian)
+        
+        guard let targetDate: Date = {
+            let comps = DateComponents(calendar:calendar, year: year, month: month, day: day)
+            return comps.date
+            }() else { return nil }
+        
+        let day = Calendar.current.component(.weekday, from: targetDate) - 1
+        return Calendar.current.shortWeekdaySymbols[day] // ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    }
+    
+    
     
     @objc func addDate() {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
@@ -139,11 +158,9 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
 extension CalendarViewController {
     func viewModelMethod() {
         viewModel.reloadTableView = {
-            
-            
-            var formatter = DateFormatter()
+            let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
-            var current_date_string = formatter.string(from: Date())
+            let current_date_string = formatter.string(from: Date())
             self.seletedDate = current_date_string
             print("테이블뷰가 reload 됩니다.")
             self.mainTableView.reloadData()

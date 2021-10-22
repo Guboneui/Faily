@@ -107,7 +107,7 @@ extension CalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource {
         print(formatter.string(from: date) + " 선택됨")
         
         mainCalendarView.seletedDate = formatter.string(from: date)
-        mainCalendarView.mainTableView.reloadSections(IndexSet(integer: 1), with: .none)
+        mainCalendarView.mainTableView.reloadSections(IndexSet(integer: 1), with: .fade)
     }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
