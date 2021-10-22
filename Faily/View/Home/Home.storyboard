@@ -3667,23 +3667,6 @@
             </objects>
             <point key="canvasLocation" x="-713.04347826086962" y="-494.19642857142856"/>
         </scene>
-        <!--Add Date Navigation Controller-->
-        <scene sceneID="KX8-ec-zMj">
-            <objects>
-                <navigationController restorationIdentifier="AddDateNavigationController" storyboardIdentifier="AddDateNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ZA7-Hd-L5p" customClass="AddDateNavigationController" customModule="Faily" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OX6-UA-ig9">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="1kB-Xn-a5m" kind="relationship" relationship="rootViewController" id="eZg-zV-CgD"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jnf-mQ-74e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3435" y="2758"/>
-        </scene>
         <!--Emoticon In Chat View Controller-->
         <scene sceneID="X91-DF-ZSc">
             <objects>

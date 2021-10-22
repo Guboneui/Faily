@@ -8,6 +8,11 @@
 import UIKit
 import PanModal
 
+
+protocol ReloadCalendarDelegate: AnyObject {
+    func reloadCalendar()
+}
+
 class AddDateViewController: UIViewController {
     
     @IBOutlet weak var alwaysSwitch: UISwitch!
@@ -18,6 +23,8 @@ class AddDateViewController: UIViewController {
     @IBOutlet weak var repeatLabel: UILabel!
     @IBOutlet weak var memoTextView: UITextView!
     
+    
+    weak var delegate: ReloadCalendarDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +33,7 @@ class AddDateViewController: UIViewController {
         memoTextView.textColor = UIColor.FailyColor.placeholder_gray
         alwaysSwitch.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
         endDatePicker.minimumDate = startDatePicker.date
+        
     }
     
     
@@ -125,6 +133,7 @@ class AddDateViewController: UIViewController {
     @IBAction func saveButtonAction(_ sender: Any) {
         let alert = UIAlertController(title: "저장되었습니다.", message: "", preferredStyle: .alert)
         let okButton = UIAlertAction(title: "확인", style: .default, handler: {[self] _ in
+            delegate?.reloadCalendar()
             dismiss(animated: true, completion: nil)
         })
         alert.addAction(okButton)
@@ -157,9 +166,22 @@ extension AddDateViewController: UITextViewDelegate {
             memoTextView.textColor = UIColor.FailyColor.placeholder_gray
         }
     }
+}
+
+extension AddDateViewController: PanModalPresentable {
+    var panScrollable: UIScrollView? {
+        nil
+    }
     
+    var longFormHeight: PanModalHeight {
+        return .maxHeight
+    }
+
+    var shortFormHeight: PanModalHeight {
+        return longFormHeight
+    }
     
-    
-    
-    
+    var cornerRadius: CGFloat {
+        return 20.0
+    }
 }

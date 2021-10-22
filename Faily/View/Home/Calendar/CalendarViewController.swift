@@ -72,6 +72,7 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CalendarTableViewCell", for: indexPath) as! CalendarTableViewCell
             cell.selectionStyle = .none
             cell.mainCalendarView = self
+            cell.calendarView.reloadData()
             cell.schedule = self.viewModel.detailSchedule
             cell.addDateButton.addTarget(self, action: #selector(addDate), for: .touchUpInside)
             return cell
@@ -137,8 +138,10 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     
     @objc func addDate() {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let addDateNAV = storyBoard.instantiateViewController(identifier: "AddDateNavigationController") as! AddDateNavigationController
-        presentPanModal(addDateNAV)
+        let addDateVC = storyBoard.instantiateViewController(withIdentifier: "AddDateViewController") as! AddDateViewController
+        
+        addDateVC.delegate = self
+        presentPanModal(addDateVC)
     }
     
     @objc func editSchedule() {
@@ -166,4 +169,14 @@ extension CalendarViewController {
             self.mainTableView.reloadData()
         }
     }
+}
+
+
+extension CalendarViewController: ReloadCalendarDelegate {
+    func reloadCalendar() {
+        print("델리게이트 - reload calendarView")
+        viewModel.getAllSchedule()
+    }
+    
+    
 }
