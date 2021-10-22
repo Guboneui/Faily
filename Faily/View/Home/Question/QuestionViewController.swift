@@ -124,6 +124,7 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                     if indexPath.row == 0 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
                         cell.answeredFamilyCount = data.answerInfo?.count ?? 0
+                        print("data.question_index: \(data.question_index)")
                         let imageName = "num\(data.answerInfo?.count ?? 1)"
                         cell.answeredFamilyCountImage.image = UIImage(named: imageName)
                         cell.answeredCollectionView.reloadData()

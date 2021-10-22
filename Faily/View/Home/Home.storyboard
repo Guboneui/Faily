@@ -3430,10 +3430,12 @@
                     <connections>
                         <outlet property="alwaysSwitch" destination="cva-nt-TSe" id="gES-nc-A7T"/>
                         <outlet property="endDatePicker" destination="NtK-Mt-oBx" id="xjJ-q0-bAG"/>
+                        <outlet property="locationTextField" destination="Nx3-SB-FJE" id="IUB-H6-hGO"/>
                         <outlet property="memoTextView" destination="zqT-do-T2T" id="Wnm-by-yKQ"/>
                         <outlet property="repeatLabel" destination="ANV-YK-0Dw" id="4Pv-mx-7ef"/>
                         <outlet property="scheduleImage" destination="WJL-oT-wXV" id="Kf7-jY-8Or"/>
                         <outlet property="startDatePicker" destination="ODD-Tg-dMg" id="Ofb-HW-boV"/>
+                        <outlet property="titleTextField" destination="ADA-5I-dBD" id="HQx-64-2xj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EV0-bw-GGi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

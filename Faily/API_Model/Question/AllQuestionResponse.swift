@@ -19,6 +19,7 @@ struct AllQuestionDetail: Decodable {
     let question: String
     let isAnswered: Bool
     let allAnswered: Bool
+    let question_index: Int
     let answerInfo: [AnswerInfo]?
 }
 

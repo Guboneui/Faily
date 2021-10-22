@@ -70,6 +70,11 @@
 		2C715C09270E9082007D67C5 /* MyOrderTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C715C07270E9082007D67C5 /* MyOrderTitleTableViewCell.xib */; };
 		2C715C0B270E90B9007D67C5 /* MyPresentOrderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C715C0A270E90B9007D67C5 /* MyPresentOrderDetailTableViewCell.swift */; };
 		2C715C0D270E90CA007D67C5 /* MyPresentOrderDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C715C0C270E90CA007D67C5 /* MyPresentOrderDetailTableViewCell.xib */; };
+		2C803924272329CE00B6DB7B /* AddScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C803923272329CE00B6DB7B /* AddScheduleRequest.swift */; };
+		2C80392627232A5500B6DB7B /* AddScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80392527232A5500B6DB7B /* AddScheduleResponse.swift */; };
+		2C80392827232B0700B6DB7B /* AddScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80392727232B0700B6DB7B /* AddScheduleRepository.swift */; };
+		2C80392A27232C6B00B6DB7B /* AddScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80392927232C6B00B6DB7B /* AddScheduleService.swift */; };
+		2C80392C27232DF400B6DB7B /* AddScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80392B27232DF400B6DB7B /* AddScheduleViewModel.swift */; };
 		2C81821D270F634800BC47A7 /* MakeEmoticonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81821C270F634800BC47A7 /* MakeEmoticonViewController.swift */; };
 		2C8AFC792714B6E500966309 /* MyMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AFC772714B6E500966309 /* MyMessageTableViewCell.swift */; };
 		2C8AFC7A2714B6E500966309 /* MyMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8AFC782714B6E500966309 /* MyMessageTableViewCell.xib */; };
@@ -257,6 +262,11 @@
 		2C715C07270E9082007D67C5 /* MyOrderTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOrderTitleTableViewCell.xib; sourceTree = "<group>"; };
 		2C715C0A270E90B9007D67C5 /* MyPresentOrderDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPresentOrderDetailTableViewCell.swift; sourceTree = "<group>"; };
 		2C715C0C270E90CA007D67C5 /* MyPresentOrderDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPresentOrderDetailTableViewCell.xib; sourceTree = "<group>"; };
+		2C803923272329CE00B6DB7B /* AddScheduleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleRequest.swift; sourceTree = "<group>"; };
+		2C80392527232A5500B6DB7B /* AddScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleResponse.swift; sourceTree = "<group>"; };
+		2C80392727232B0700B6DB7B /* AddScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleRepository.swift; sourceTree = "<group>"; };
+		2C80392927232C6B00B6DB7B /* AddScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleService.swift; sourceTree = "<group>"; };
+		2C80392B27232DF400B6DB7B /* AddScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleViewModel.swift; sourceTree = "<group>"; };
 		2C81821C270F634800BC47A7 /* MakeEmoticonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeEmoticonViewController.swift; sourceTree = "<group>"; };
 		2C8AFC772714B6E500966309 /* MyMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMessageTableViewCell.swift; sourceTree = "<group>"; };
 		2C8AFC782714B6E500966309 /* MyMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyMessageTableViewCell.xib; sourceTree = "<group>"; };
@@ -516,6 +526,8 @@
 			isa = PBXGroup;
 			children = (
 				2C5F781127206C8600D6EB90 /* GetScheduleResponse.swift */,
+				2C803923272329CE00B6DB7B /* AddScheduleRequest.swift */,
+				2C80392527232A5500B6DB7B /* AddScheduleResponse.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -524,6 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				2C5F781427206D2A00D6EB90 /* GetAllScheduleRepository.swift */,
+				2C80392727232B0700B6DB7B /* AddScheduleRepository.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -532,6 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				2C5F781727206E3800D6EB90 /* GetAllScheduleService.swift */,
+				2C80392927232C6B00B6DB7B /* AddScheduleService.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -540,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				2C5F781A27206EEA00D6EB90 /* GetAllScheduleViewModel.swift */,
+				2C80392B27232DF400B6DB7B /* AddScheduleViewModel.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -1121,6 +1136,7 @@
 				2C715BD3270DB2A1007D67C5 /* IntroAppTableViewCell.swift in Sources */,
 				2C9EAFF52706142600F507A6 /* InviteRepository.swift in Sources */,
 				2CC5AECD26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift in Sources */,
+				2C803924272329CE00B6DB7B /* AddScheduleRequest.swift in Sources */,
 				2C94412E27038811005980D0 /* AllAnswerExpandTableViewCell.swift in Sources */,
 				2C5F781227206C8600D6EB90 /* GetScheduleResponse.swift in Sources */,
 				2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */,
@@ -1139,6 +1155,7 @@
 				2C14820C270B9FE9005C0597 /* NoticeTableViewCell.swift in Sources */,
 				2C81821D270F634800BC47A7 /* MakeEmoticonViewController.swift in Sources */,
 				2CB9287E2702395300BF34DC /* SignUpRequest.swift in Sources */,
+				2C80392C27232DF400B6DB7B /* AddScheduleViewModel.swift in Sources */,
 				2C5F781527206D2A00D6EB90 /* GetAllScheduleRepository.swift in Sources */,
 				2CF3D3D526FCEA11008C13F3 /* MainBMCollectionViewCell.swift in Sources */,
 				2CC5AEA326EF95780096D818 /* LoginViewController.swift in Sources */,
@@ -1169,6 +1186,7 @@
 				2C148202270B8033005C0597 /* SettingTableViewCell.swift in Sources */,
 				2CD9D9C82704F49F0041A0DB /* LoginService.swift in Sources */,
 				2C715C04270E9009007D67C5 /* MyPresentBoxGuideLineTableViewCell.swift in Sources */,
+				2C80392A27232C6B00B6DB7B /* AddScheduleService.swift in Sources */,
 				2C715BCB270DA67D007D67C5 /* PolicySettingTableViewCell.swift in Sources */,
 				2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */,
 				2CD9D9BA2704EAE40041A0DB /* AuthEmailResponse.swift in Sources */,
@@ -1182,6 +1200,7 @@
 				2C9EB00927077B2E00F507A6 /* EntryService.swift in Sources */,
 				2C14820F270BA3B2005C0597 /* DetailNoticeViewController.swift in Sources */,
 				2CD9D9CA2704F5330041A0DB /* LoginViewModel.swift in Sources */,
+				2C80392627232A5500B6DB7B /* AddScheduleResponse.swift in Sources */,
 				2CF3D3CE26FBE5F4008C13F3 /* PresentDetailViewController.swift in Sources */,
 				2C4B7BB526F2E0C30083576A /* HomeViewController.swift in Sources */,
 				2CD6D159271C656D00DC9DC7 /* AllQuestionRepository.swift in Sources */,
@@ -1238,6 +1257,7 @@
 				2CB928782702223700BF34DC /* QAViewController.swift in Sources */,
 				2CF3D3BD26FBC180008C13F3 /* AddDateNavigationController.swift in Sources */,
 				2CD6D151271C2DC900DC9DC7 /* EmoticonPopUpViewController.swift in Sources */,
+				2C80392827232B0700B6DB7B /* AddScheduleRepository.swift in Sources */,
 				2C4B7BB926F2E0EF0083576A /* UserSettingViewController.swift in Sources */,
 				2C715BCF270DA6D0007D67C5 /* SettingGuideLineTableViewCell.swift in Sources */,
 				2C5C288B26F4C2DD00217D00 /* ChatViewController.swift in Sources */,

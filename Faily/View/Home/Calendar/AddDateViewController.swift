@@ -15,6 +15,8 @@ protocol ReloadCalendarDelegate: AnyObject {
 
 class AddDateViewController: UIViewController {
     
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var alwaysSwitch: UISwitch!
     @IBOutlet weak var startDatePicker: UIDatePicker!
     @IBOutlet weak var endDatePicker: UIDatePicker!
@@ -25,6 +27,13 @@ class AddDateViewController: UIViewController {
     
     
     weak var delegate: ReloadCalendarDelegate?
+    lazy var viewModel: AddScheduleViewModel = AddScheduleViewModel()
+    
+    
+    var category: String = ""
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +43,9 @@ class AddDateViewController: UIViewController {
         alwaysSwitch.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
         endDatePicker.minimumDate = startDatePicker.date
         
+        
+        viewModel.addScheduleView = self
+        viewModelMethod()
     }
     
     
@@ -49,6 +61,7 @@ class AddDateViewController: UIViewController {
         birthdayImage = birthdayImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
         let addBirthDay = UIAlertAction(title: "기념일 및 생일", style: .default, handler: {[self] _ in
             scheduleImage.image = UIImage(named: "birthday_addDate")
+            self.category = "기념일"
         })
         addBirthDay.setValue(birthdayImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
         addBirthDay.setValue(UIColor.black, forKey: "titleTextColor")
@@ -58,6 +71,7 @@ class AddDateViewController: UIViewController {
         familyImage = familyImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
         let addFamily = UIAlertAction(title: "가족", style: .default, handler: {[self] _ in
             scheduleImage.image = UIImage(named: "family_addDate")
+            self.category = "가족"
         })
         addFamily.setValue(familyImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
         addFamily.setValue(UIColor.black, forKey: "titleTextColor")
@@ -67,6 +81,7 @@ class AddDateViewController: UIViewController {
         personalImage = personalImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
         let addPersonal = UIAlertAction(title: "개인", style: .default, handler: {[self] _ in
             scheduleImage.image = UIImage(named: "person_addDate")
+            self.category = "개인"
         })
         addPersonal.setValue(personalImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
         addPersonal.setValue(UIColor.black, forKey: "titleTextColor")
@@ -76,6 +91,7 @@ class AddDateViewController: UIViewController {
         normalImage = normalImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 32))
         let addNormal = UIAlertAction(title: "일반", style: .default, handler: {[self] _ in
             scheduleImage.image = UIImage(named: "normal_addDate")
+            self.category = "일반"
         })
         addNormal.setValue(normalImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
         addNormal.setValue(UIColor.black, forKey: "titleTextColor")
@@ -131,13 +147,47 @@ class AddDateViewController: UIViewController {
     }
     
     @IBAction func saveButtonAction(_ sender: Any) {
-        let alert = UIAlertController(title: "저장되었습니다.", message: "", preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "확인", style: .default, handler: {[self] _ in
-            delegate?.reloadCalendar()
-            dismiss(animated: true, completion: nil)
-        })
-        alert.addAction(okButton)
-        self.present(alert, animated: true, completion: nil)
+        
+        
+        if self.category == "" {
+            self.presentAlert(title: "카테고리를 선택해 주세요.")
+        } else {
+            
+            guard let title = titleTextField.text?.trim, title.isExists else {
+                self.presentAlert(title: "제목을 입력 해주세요.")
+                return
+            }
+            
+            guard let location = locationTextField.text?.trim, location.isExists else {
+                self.presentAlert(title: "위치를 입력 해수제요.")
+                return
+            }
+                    
+            guard let memo = memoTextView.text?.trim, memo.isExists else {
+                self.presentAlert(title: "메모를 입력 해주세요.")
+                return
+            }
+            
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd-HH:mm"
+            let startDate = dateFormatter.string(from: startDatePicker.date)
+            let endDate = dateFormatter.string(from: endDatePicker.date)
+            
+            
+                    
+            
+            let param = AddScheduleRequest(
+                calendar_date: "2021-11-01",
+                calendar_category: self.category,
+                calendar_name: title,
+                calendar_place: location,
+                calendar_memo: memo,
+                calendar_start_time: startDate,
+                calendar_end_time: endDate
+            )
+            viewModel.postAddSchedule(param)
+        }
     }
     
 }
@@ -183,5 +233,20 @@ extension AddDateViewController: PanModalPresentable {
     
     var cornerRadius: CGFloat {
         return 20.0
+    }
+}
+
+
+extension AddDateViewController {
+    func viewModelMethod() {
+        viewModel.successAddSchedule = {
+            let alert = UIAlertController(title: "저장되었습니다.", message: "", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "확인", style: .default, handler: {[self] _ in
+                delegate?.reloadCalendar()
+                dismiss(animated: true, completion: nil)
+            })
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
