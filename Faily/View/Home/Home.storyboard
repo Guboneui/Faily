@@ -1580,21 +1580,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0J-cQ-fkP">
-                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <rect key="frame" x="166" y="58.5" width="82" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="갤러리 테스트"/>
                                 <connections>
                                     <action selector="goGallery:" destination="idU-D7-40y" eventType="touchUpInside" id="hh8-Dl-bOx"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WdD-ka-oQX">
+                                <rect key="frame" x="0.0" y="98.5" width="414" height="714.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2eV-2s-aSj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QoP-3Y-KQG" firstAttribute="top" secondItem="jdq-JT-0SK" secondAttribute="top" id="6AC-G6-Ip4"/>
+                            <constraint firstItem="2eV-2s-aSj" firstAttribute="trailing" secondItem="WdD-ka-oQX" secondAttribute="trailing" id="BVh-IZ-wPJ"/>
+                            <constraint firstItem="WdD-ka-oQX" firstAttribute="top" secondItem="w0J-cQ-fkP" secondAttribute="bottom" constant="10" id="DJA-u0-uwo"/>
                             <constraint firstAttribute="bottom" secondItem="QoP-3Y-KQG" secondAttribute="bottom" id="Dxn-XF-ibp"/>
-                            <constraint firstItem="w0J-cQ-fkP" firstAttribute="centerY" secondItem="jdq-JT-0SK" secondAttribute="centerY" id="OKb-K8-zt1"/>
+                            <constraint firstItem="w0J-cQ-fkP" firstAttribute="centerY" secondItem="jdq-JT-0SK" secondAttribute="centerY" constant="-374.5" id="OKb-K8-zt1"/>
                             <constraint firstItem="QoP-3Y-KQG" firstAttribute="trailing" secondItem="2eV-2s-aSj" secondAttribute="trailing" id="bey-fS-Adr"/>
+                            <constraint firstItem="2eV-2s-aSj" firstAttribute="bottom" secondItem="WdD-ka-oQX" secondAttribute="bottom" id="dv1-vk-bTU"/>
+                            <constraint firstItem="WdD-ka-oQX" firstAttribute="leading" secondItem="2eV-2s-aSj" secondAttribute="leading" id="gAE-sb-3uL"/>
                             <constraint firstItem="QoP-3Y-KQG" firstAttribute="leading" secondItem="2eV-2s-aSj" secondAttribute="leading" id="iC6-ZV-MH5"/>
                             <constraint firstItem="w0J-cQ-fkP" firstAttribute="centerX" secondItem="jdq-JT-0SK" secondAttribute="centerX" id="xmK-GO-yeG"/>
                         </constraints>
