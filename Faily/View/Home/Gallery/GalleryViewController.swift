@@ -6,13 +6,13 @@
 //
 
 import UIKit
+import Photos
 
 class GalleryViewController: UIViewController {
     
    
     @IBOutlet weak var galleryCategoryTableView: UITableView!
-    
-    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,10 @@ class GalleryViewController: UIViewController {
         
         
     }
+    
+    
+    
+    
     
     
     @IBAction func addGalleryCategoryAction(_ sender: Any) {
@@ -78,5 +82,11 @@ extension GalleryViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let detailGalleryVC = storyBoard.instantiateViewController(withIdentifier: "DetailGalleryViewController") as! DetailGalleryViewController
+        
+        self.navigationController?.pushViewController(detailGalleryVC, animated: true)
+    }
     
 }
