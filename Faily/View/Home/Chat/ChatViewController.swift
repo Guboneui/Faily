@@ -656,6 +656,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             if chatMessage.userName == "보니"{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
                 cell.myMessageLabel.text = chatMessage.message
+                cell.selectionStyle = .none
                 return cell
             } else {
                 
@@ -665,6 +666,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.messageLabel.text = chatMessage.message
                 cell.profileImage.image = UIImage(named: chatMessage.profileImage)
                 cell.timeLabel.text = chatMessage.sendTime
+                cell.selectionStyle = .none
                 return cell
                 
                 
@@ -676,15 +678,19 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             if indexPath.row == 12 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MyPhotoMessageTableViewCell", for: indexPath) as! MyPhotoMessageTableViewCell
+                cell.selectionStyle = .none
                 return cell
             } else if indexPath.row == 13{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyPhotoMessageTableViewCell", for: indexPath) as! FamilyPhotoMessageTableViewCell
+                cell.selectionStyle = .none
                 return cell
             } else if indexPath.row == 14{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MyScheduleTableViewCell", for: indexPath) as! MyScheduleTableViewCell
+                cell.selectionStyle = .none
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyScheduleTableViewCell", for: indexPath) as! FamilyScheduleTableViewCell
+                cell.selectionStyle = .none
                 return cell
             }
         }
