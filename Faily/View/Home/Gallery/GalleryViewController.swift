@@ -10,10 +10,23 @@ import UIKit
 class GalleryViewController: UIViewController {
     
    
+    @IBOutlet weak var galleryCategoryTableView: UITableView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
      
+        setTableView()
+        
+    }
+    
+    func setTableView() {
+        galleryCategoryTableView.delegate = self
+        galleryCategoryTableView.dataSource = self
+        galleryCategoryTableView.separatorStyle = .none
+        galleryCategoryTableView.register(UINib(nibName: "GalleryCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "GalleryCategoryTableViewCell")
+        galleryCategoryTableView.register(UINib(nibName: "BottomWhiteLabelTableViewCell", bundle: nil), forCellReuseIdentifier: "BottomWhiteLabelTableViewCell")
         
         
     }
@@ -29,6 +42,40 @@ class GalleryViewController: UIViewController {
         alert.addAction(cancelButton)
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+}
+
+extension GalleryViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row == 4 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
+            cell.selectionStyle = .none
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "GalleryCategoryTableViewCell", for: indexPath) as! GalleryCategoryTableViewCell
+            cell.selectionStyle = .none
+            
+            return cell
+        }
+        
+       
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if indexPath.row == 4 {
+            return UITableView.automaticDimension
+        } else {
+            
+            return 100
+        }
     }
     
     

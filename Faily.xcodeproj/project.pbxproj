@@ -36,6 +36,8 @@
 		2C4B7BB926F2E0EF0083576A /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB826F2E0EF0083576A /* UserSettingViewController.swift */; };
 		2C4B7BC026F2E12E0083576A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BBF26F2E12E0083576A /* CalendarViewController.swift */; };
 		2C4B7BC226F2E4040083576A /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BC126F2E4040083576A /* MainTabBar.swift */; };
+		2C55205A2725D3C0001A11AE /* GalleryCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5520582725D3C0001A11AE /* GalleryCategoryTableViewCell.swift */; };
+		2C55205B2725D3C0001A11AE /* GalleryCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5520592725D3C0001A11AE /* GalleryCategoryTableViewCell.xib */; };
 		2C5C288B26F4C2DD00217D00 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5C288A26F4C2DD00217D00 /* ChatViewController.swift */; };
 		2C5F780B271E77F900D6EB90 /* AllAnsweredPopUpInChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F780A271E77F900D6EB90 /* AllAnsweredPopUpInChatViewController.swift */; };
 		2C5F780E27205E4900D6EB90 /* ForFirstAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F780C27205E4900D6EB90 /* ForFirstAnswerTableViewCell.swift */; };
@@ -233,6 +235,8 @@
 		2C4B7BB826F2E0EF0083576A /* UserSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingViewController.swift; sourceTree = "<group>"; };
 		2C4B7BBF26F2E12E0083576A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		2C4B7BC126F2E4040083576A /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		2C5520582725D3C0001A11AE /* GalleryCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		2C5520592725D3C0001A11AE /* GalleryCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCategoryTableViewCell.xib; sourceTree = "<group>"; };
 		2C5C288A26F4C2DD00217D00 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		2C5F780A271E77F900D6EB90 /* AllAnsweredPopUpInChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnsweredPopUpInChatViewController.swift; sourceTree = "<group>"; };
 		2C5F780C27205E4900D6EB90 /* ForFirstAnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForFirstAnswerTableViewCell.swift; sourceTree = "<group>"; };
@@ -484,6 +488,8 @@
 			isa = PBXGroup;
 			children = (
 				2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */,
+				2C5520582725D3C0001A11AE /* GalleryCategoryTableViewCell.swift */,
+				2C5520592725D3C0001A11AE /* GalleryCategoryTableViewCell.xib */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -1055,6 +1061,7 @@
 				2CB38520271DDF7600BE438A /* MyScheduleTableViewCell.xib in Resources */,
 				2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */,
 				2C330624270101EE00E638B1 /* AnsweredFamilyCollectionViewCell.xib in Resources */,
+				2C55205B2725D3C0001A11AE /* GalleryCategoryTableViewCell.xib in Resources */,
 				2C5F781F2720B91E00D6EB90 /* ExpandableLockTableViewCell.xib in Resources */,
 				2C94412B2703879B005980D0 /* AllAnswerProfileCollectionViewCell.xib in Resources */,
 				2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */,
@@ -1166,6 +1173,7 @@
 				2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */,
 				2C1481FF270B36E3005C0597 /* TodayQuestionViewModel.swift in Sources */,
 				2CC5AEBB26F0D8920096D818 /* BaseView.swift in Sources */,
+				2C55205A2725D3C0001A11AE /* GalleryCategoryTableViewCell.swift in Sources */,
 				2C80393627233F3B00B6DB7B /* SendAnswerViewModel.swift in Sources */,
 				2C715BFE270E8F4B007D67C5 /* MyPresentBoxCollectionViewCell.swift in Sources */,
 				2C14820C270B9FE9005C0597 /* NoticeTableViewCell.swift in Sources */,
