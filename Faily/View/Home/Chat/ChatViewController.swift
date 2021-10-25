@@ -550,8 +550,8 @@ class ChatViewController: UIViewController {
             self.view.layoutIfNeeded()
         }, completion: {(completed) in
             let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
-            self.selectedEmoticon = ""
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            self.selectedAssets = []
         })
     }
     
