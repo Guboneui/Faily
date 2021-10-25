@@ -12,7 +12,11 @@ protocol ReloadQuestionTableViewDelegate: AnyObject {
     func reloadQuestionTableView()
 }
 
-class MainQuestionTableViewCell: UITableViewCell {
+protocol ReloadMainQuestionTableViewDelegate: AnyObject {
+    func reloadTableView()
+}
+
+class MainQuestionTableViewCell: UITableViewCell{
     
     @IBOutlet weak var questionCollectionView: UICollectionView!
     @IBOutlet weak var showAllQuestionStackView: UIStackView!
@@ -20,6 +24,7 @@ class MainQuestionTableViewCell: UITableViewCell {
     var allQuestionData: [AllQuestionDetail] = []
     var questionView = QuestionViewController()
     weak var questionDelegate: ReloadQuestionTableViewDelegate?
+    weak var delegate: ReloadMainQuestionTableViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -109,7 +114,7 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
         let questionDeatil = self.allQuestionData[indexPath.item]
         cell.getQuestionIndex = questionDeatil.question_index
         cell.question = questionDeatil.question
-        
+        cell.delegate = self
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy년 MM월 dd일"
         let current_date_string = formatter.string(from: Date())
@@ -158,3 +163,10 @@ extension MainQuestionTableViewCell: CollectionViewPagingLayoutDelegate {
     }
 }
 
+extension MainQuestionTableViewCell: ReloadMainQuestionCollectionViewDelegate {
+    func reloadCollectionView() {
+        delegate?.reloadTableView()
+    }
+    
+    
+}

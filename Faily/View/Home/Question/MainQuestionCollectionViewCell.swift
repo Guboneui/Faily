@@ -8,6 +8,10 @@
 import UIKit
 import CollectionViewPagingLayout
 
+protocol ReloadMainQuestionCollectionViewDelegate: AnyObject {
+    func reloadCollectionView()
+}
+
 class MainQuestionCollectionViewCell: UICollectionViewCell, ScaleTransformView {
     
     @IBOutlet weak var questionBox: UIImageView!
@@ -32,6 +36,8 @@ class MainQuestionCollectionViewCell: UICollectionViewCell, ScaleTransformView {
         translationCurve: .linear
     )
 
+    weak var delegate: ReloadMainQuestionCollectionViewDelegate?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -50,6 +56,7 @@ class MainQuestionCollectionViewCell: UICollectionViewCell, ScaleTransformView {
             qaVC.modalPresentationStyle = .overCurrentContext
             qaVC.getQuestionIndex = self.getQuestionIndex
             qaVC.question = self.question
+            qaVC.delegate = self
             self.window?.rootViewController?.present(qaVC, animated: true, completion: nil)
             
         } else if answerStackViewLabel.text == "답변보러 가기" {
@@ -61,3 +68,10 @@ class MainQuestionCollectionViewCell: UICollectionViewCell, ScaleTransformView {
     }
 }
 
+extension MainQuestionCollectionViewCell: ReloadQuestionCollectionViewDelegate {
+    func reloadCollectionView() {
+        self.delegate?.reloadCollectionView()
+    }
+    
+    
+}

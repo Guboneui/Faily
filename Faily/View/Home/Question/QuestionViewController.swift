@@ -90,6 +90,7 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             cell.questionView = self
             cell.selectionStyle = .none
             cell.questionDelegate = self
+            cell.delegate = self
             
             //cell 레이아웃 변경 부분
             cell.layoutIfNeeded()
@@ -218,3 +219,12 @@ extension QuestionViewController: ReloadQuestionTableViewDelegate {
         print("현재 전달된 페이지는 \(self.mainQuestionPage)")
     }
 }
+
+extension QuestionViewController: ReloadMainQuestionTableViewDelegate {
+    func reloadTableView() {
+        viewModel.getAllQuestion()
+    }
+    
+    
+}
+

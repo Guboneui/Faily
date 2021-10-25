@@ -7,6 +7,14 @@
 
 import UIKit
 
+
+
+protocol ReloadQuestionCollectionViewDelegate: AnyObject {
+    func reloadCollectionView()
+}
+
+
+
 class QAViewController: UIViewController{
 
     
@@ -19,6 +27,9 @@ class QAViewController: UIViewController{
     var getQuestionIndex: Int = 0
     
     lazy var viewModel: SendAnswerViewModel = SendAnswerViewModel()
+    
+    weak var delegate: ReloadQuestionCollectionViewDelegate?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,6 +127,7 @@ extension QAViewController {
         viewModel.dismissView = {
             let alert = UIAlertController(title: "답변", message: "답변이 작성되었습니다..", preferredStyle: .alert)
             let okButton = UIAlertAction(title: "확인", style: .default, handler: {[self] _ in
+                delegate?.reloadCollectionView()
                 dismiss(animated: true, completion: nil)
             })
             alert.addAction(okButton)
