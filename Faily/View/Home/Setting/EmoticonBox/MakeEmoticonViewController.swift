@@ -16,7 +16,7 @@ class MakeEmoticonViewController: UIViewController {
     @IBOutlet weak var designCollectionView: UICollectionView!
     @IBOutlet weak var selectPhotoStackView: UIStackView!
     
-    let imageArr = ["sick_big", "happy_big", "mumu_big", "sad_big", "angry_big"]
+    var imageArr = ["testBG1", "testBG2", "testBG3", "testBG4", "testBG5", "testBG6"]
     
     
     var seletedImage: UIImage?
@@ -40,7 +40,8 @@ class MakeEmoticonViewController: UIViewController {
         designBottomView.layer.cornerRadius = 20
         designBottomView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner)
             
-        
+        userSelectedImageView.layer.borderWidth = 1
+        userSelectedImageView.layer.borderColor = UIColor.FailyColor.grayscale_5.cgColor
     }
     
     
@@ -85,9 +86,12 @@ class MakeEmoticonViewController: UIViewController {
                 self.seletedBackGround = UIImage(named: imageArr[seletedIndexItem])
                 //popUpVC.backGroundImageName = imageArr[seletedIndexItem]
                 
-                guard let userSelectedImage = self.seletedImage, let userSelectedBackGround = self.seletedBackGround else {
+                guard var userSelectedImage = self.seletedImage, var userSelectedBackGround = self.seletedBackGround else {
                     return
                 }
+                
+              
+                
                 
                 let combinedImage = userSelectedImage + userSelectedBackGround
                 //let combinedImage = userSelectedImage + UIImage(named: "TestPng")!
@@ -95,11 +99,10 @@ class MakeEmoticonViewController: UIViewController {
                 self.present(popUpVC, animated: false, completion: nil)
             }
         }
-        
-        
-       
-        
     }
+    
+    
+    
     
     @IBAction func backButtonAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -126,8 +129,8 @@ extension MakeEmoticonViewController: UICollectionViewDelegate, UICollectionView
             borderColor = UIColor.FailyColor.mainPinkColor.cgColor
             borderWidth = 3
         } else {
-            borderColor = UIColor.clear.cgColor
-            borderWidth = 0
+            borderColor = UIColor.white.cgColor
+            borderWidth = 1
         }
         
         cell.designImageView.layer.borderWidth = borderWidth

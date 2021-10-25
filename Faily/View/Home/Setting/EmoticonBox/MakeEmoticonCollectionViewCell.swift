@@ -15,7 +15,10 @@ class MakeEmoticonCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
+    
+    
     override func layoutSubviews() {
         super.layoutSubviews()
+        
     }
 }

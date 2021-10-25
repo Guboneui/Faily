@@ -26,6 +26,9 @@ class EmoticonPopUpViewController: UIViewController {
         self.makeShadow(popUpBaseView)
         resultImage.image = combinedImage
         
+        resultImage.layer.borderWidth = 1
+        resultImage.layer.borderColor = UIColor.FailyColor.grayscale_5.cgColor
+        
     }
     
     @IBAction func cancelButtonAction(_ sender: Any) {

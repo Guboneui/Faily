@@ -10,7 +10,7 @@ import UIKit
 class EmoticonBoxViewController: UIViewController {
 
     @IBOutlet weak var emoticonBoxCollectionView: UICollectionView!
-    var imageArr = ["sick_big", "happy_big", "mumu_big", "sad_big", "angry_big"]
+    var imageArr = ["testBG1", "testBG2", "testBG3", "testBG4", "testBG5", "testBG6"]
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
