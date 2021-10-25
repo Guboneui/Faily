@@ -16,8 +16,8 @@ class FamilyMemberCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var emotionImageView: UIImageView!
     
     
+    var userProgress: CGFloat = 0.00
     
- 
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -40,7 +40,7 @@ class FamilyMemberCollectionViewCell: UICollectionViewCell {
         progressBar.progressShapeColor = borderColor!
         progressBar.backgroundShapeColor = .clear
         progressBar.orientation = .top
-        progressBar.setProgress(progress: 0.75)
+        progressBar.setProgress(progress: userProgress)
         
         
        

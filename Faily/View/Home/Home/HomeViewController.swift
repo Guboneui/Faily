@@ -10,11 +10,34 @@ import MKMagneticProgress
 import MKColorPicker
 import FSPagerView
 
+
+struct UserInfo {
+    let profileImage: String
+    let userName: String
+    let userFamiliar: Float
+    let userEmotion: String
+}
+
 class HomeViewController: UIViewController {
     
+    static var userInfo: [UserInfo] = [
+        UserInfo(profileImage: "수빈_프로필", userName: "수빈", userFamiliar: 89.3, userEmotion: "sad_big"),
+        UserInfo(profileImage: "본의_프로필", userName: "본의", userFamiliar: 79.1, userEmotion: "happy_big"),
+        UserInfo(profileImage: "나연_프로필", userName: "나연", userFamiliar: 83.9, userEmotion: "mumu_big"),
+        UserInfo(profileImage: "승빈_프로필", userName: "승빈", userFamiliar: 65.9, userEmotion: "sick_big")
+    ]
     
     let imageArr = ["sick_big", "happy_big", "mumu_big", "sad_big", "angry_big"]
+    
+    
+    let bmArr = ["bm1", "bm2", "bm3", "bm4", "bm5", "bm6", "bm7"]
+    
+    
     let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    
+   
+    
+    
     @IBOutlet weak var totalProgressBaseView: UIView!
     @IBOutlet weak var totalProgressBaseImageView: UIImageView!
     
@@ -33,20 +56,16 @@ class HomeViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var navTitleLabel: UILabel!
     @IBOutlet weak var navProfileImage: UIImageView!
     @IBOutlet weak var homeCalendarBaseView: UIView!
     @IBOutlet weak var homeCalendarContentsView: UIView!
     @IBOutlet weak var homeCalendarBGImageView: UIImageView!
     @IBOutlet weak var homeCalendarDateLabel: UILabel!
-    
-    
     @IBOutlet weak var memberProfileBaseView: UIView!
     @IBOutlet weak var memberProfileBGView: UIImageView!
     @IBOutlet weak var memberProfileCollectionView: UICollectionView!
-    
-    
-    
     @IBOutlet weak var BusinessBaseView: UIView!
     @IBOutlet weak var BusinessBGView: UIImageView!
     @IBOutlet weak var BusinessCollectionView: UICollectionView!
@@ -118,7 +137,18 @@ class HomeViewController: UIViewController {
         
         totalProgressBaseImageView.layer.cornerRadius = 20
         
-        totalProgress.setProgress(progress: 0.6, animated: true)
+        
+        var familyTotalProgress = 0
+        for i in 0..<HomeViewController.userInfo.count {
+            familyTotalProgress += Int(HomeViewController.userInfo[i].userFamiliar)
+        }
+        
+        
+        familyTotalProgress = familyTotalProgress / HomeViewController.userInfo.count
+        
+        self.percentLabel.text = "\(familyTotalProgress)%"
+        
+        totalProgress.setProgress(progress: CGFloat(familyTotalProgress) * 0.01, animated: true)
         totalProgress.progressShapeColor = .yellow
         totalProgress.backgroundShapeColor = .white
         totalProgress.lineWidth = 40
@@ -190,9 +220,9 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == memberProfileCollectionView {
-            return 6
+            return HomeViewController.userInfo.count
         } else if collectionView == BusinessCollectionView {
-            return 10
+            return self.bmArr.count
         } else {
             return 0
         }
@@ -203,11 +233,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         if collectionView == memberProfileCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FamilyMemberCollectionViewCell", for: indexPath) as! FamilyMemberCollectionViewCell
-            
+            cell.profileImage.image = UIImage(named: HomeViewController.userInfo[indexPath.item].profileImage)
+            cell.memberNameLabel.text = HomeViewController.userInfo[indexPath.item].userName
+            cell.userProgress = CGFloat(HomeViewController.userInfo[indexPath.item].userFamiliar * 0.01)
+            cell.emotionImageView.image = UIImage(named: HomeViewController.userInfo[indexPath.item].userEmotion)
             return cell
         } else if collectionView == BusinessCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBusinessCollectionViewCell", for: indexPath) as! HomeBusinessCollectionViewCell
-            
+            cell.bmImageView.image = UIImage(named: self.bmArr[indexPath.item])
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBusinessCollectionViewCell", for: indexPath) as! HomeBusinessCollectionViewCell

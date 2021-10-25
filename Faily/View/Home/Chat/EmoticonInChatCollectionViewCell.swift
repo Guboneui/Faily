@@ -10,7 +10,7 @@ import UIKit
 class EmoticonInChatCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var emoticonImageView: UIImageView!
-    @IBOutlet weak var testLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

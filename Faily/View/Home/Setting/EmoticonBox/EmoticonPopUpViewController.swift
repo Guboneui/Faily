@@ -37,7 +37,13 @@ class EmoticonPopUpViewController: UIViewController {
     
 
     @IBAction func saveButtonAction(_ sender: Any) {
-        self.dismiss(animated: false, completion: nil)
+        let alert = UIAlertController(title: "저장", message: "만들어진 이모티콘을 저장하시겠어요?", preferredStyle: .alert)
+        let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
+        let okButton = UIAlertAction(title: "확인", style: .default, handler: { _ in
+            self.dismiss(animated: false, completion: nil)
+        })
+        alert.addAction(cancelButton)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
     }
-    
 }

@@ -62,6 +62,8 @@ class ChatViewController: UIViewController {
     
     var selectedAssets = [PHAsset]()
     
+    var imageArr = ["이모티콘1", "이모티콘2", "이모티콘3", "이모티콘4", "이모티콘5"]
+    
     var message: [ChatMessage] = [
         ChatMessage(userName: "보니", message: "안녕하세요", profileImage: "boni", sendTime: "오후 11시 20분"),
         ChatMessage(userName: "수빈", message: "안녕하세요~~", profileImage: "subin", sendTime: "오후 11시 22분"),
@@ -720,7 +722,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
 
 extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return self.imageArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -734,13 +736,13 @@ extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSour
             borderColor = UIColor.FailyColor.mainPinkColor.cgColor
             borderWidth = 3
         } else {
-            borderColor = UIColor.clear.cgColor
-            borderWidth = 0
+            borderColor = UIColor.FailyColor.grayscale_5.cgColor
+            borderWidth = 1
         }
         
         cell.emoticonImageView.layer.borderWidth = borderWidth
         cell.emoticonImageView.layer.borderColor = borderColor
-        cell.testLabel.text = "\(indexPath.item)"
+        cell.emoticonImageView.image = UIImage(named: self.imageArr[indexPath.item])
         return cell
     }
     
@@ -763,13 +765,8 @@ extension ChatViewController: UICollectionViewDelegateFlowLayout {
         let heightPadding = sectionInsets.top * (3)
         let cellWidth = (width - widthPadding) / itemsPerRow
         let cellHeight = (height - heightPadding) / itemsPerColumn
-        
-        
-        print(cellWidth)
-        print("alalalalall")
-        print(cellHeight)
-        
-        
+
+
         if cellWidth > cellHeight {
             return CGSize(width: cellHeight, height: cellHeight)
         } else if cellWidth == cellHeight {
@@ -777,6 +774,11 @@ extension ChatViewController: UICollectionViewDelegateFlowLayout {
         } else {
             return CGSize(width: cellWidth, height: cellWidth)
         }
+
+
+
+        
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,16 +20,8 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testBM" translatesAutoresizingMaskIntoConstraints="NO" id="3Pr-sV-KAu">
                         <rect key="frame" x="0.0" y="0.0" width="121" height="128"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grq-73-dFw">
-                        <rect key="frame" x="32.5" y="51" width="56" height="26.5"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                        <color key="textColor" name="coral_red"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Grq-73-dFw" firstAttribute="centerY" secondItem="Psh-Vu-xiL" secondAttribute="centerY" id="FDZ-QU-9QX"/>
-                    <constraint firstItem="Grq-73-dFw" firstAttribute="centerX" secondItem="Psh-Vu-xiL" secondAttribute="centerX" id="OGq-yb-2uV"/>
                     <constraint firstAttribute="bottom" secondItem="3Pr-sV-KAu" secondAttribute="bottom" id="caV-iO-1X7"/>
                     <constraint firstItem="3Pr-sV-KAu" firstAttribute="leading" secondItem="Psh-Vu-xiL" secondAttribute="leading" id="oWG-Lf-uo7"/>
                     <constraint firstAttribute="trailing" secondItem="3Pr-sV-KAu" secondAttribute="trailing" id="pEM-CQ-M7t"/>
@@ -40,15 +31,11 @@
             <size key="customSize" width="121" height="128"/>
             <connections>
                 <outlet property="emoticonImageView" destination="3Pr-sV-KAu" id="eUE-s5-jIV"/>
-                <outlet property="testLabel" destination="Grq-73-dFw" id="sH6-wy-MLq"/>
             </connections>
             <point key="canvasLocation" x="193.47826086956522" y="140.625"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="testBM" width="1155" height="1155"/>
-        <namedColor name="coral_red">
-            <color red="0.97254901960784312" green="0.25882352941176473" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>
