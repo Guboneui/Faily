@@ -10,6 +10,8 @@ import UIKit
 class MyScheduleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var myScheduleBaseView: UIView!
+    @IBOutlet weak var startDateLabel: UILabel!
+    @IBOutlet weak var scheduleTitleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -2329,6 +2329,8 @@
                         <outlet property="messageTextView" destination="6yI-Vo-OAH" id="pxH-We-oYQ"/>
                         <outlet property="schduleAllDaySwitch" destination="fvK-H6-ebQ" id="EWy-2n-qaP"/>
                         <outlet property="scheduleBaseView" destination="Dh1-xa-18S" id="n5H-7F-8q7"/>
+                        <outlet property="scheduleStartTimePicker" destination="DUp-HY-sPD" id="g0k-8t-pZM"/>
+                        <outlet property="scheduleTitleLabel" destination="EMu-Tg-Ovp" id="PvE-qi-VoJ"/>
                         <outlet property="selectScheduleCategory" destination="tRL-uu-6lD" id="KZ8-7J-3bZ"/>
                         <outlet property="showMoreScheduleOption" destination="B8w-qx-s2S" id="KLS-4J-6eL"/>
                         <outlet property="tableViewBottomMargin" destination="yWl-FA-ezN" id="vh4-pB-yEt"/>
