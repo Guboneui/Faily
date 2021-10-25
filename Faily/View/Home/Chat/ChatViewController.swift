@@ -51,7 +51,7 @@ class ChatViewController: UIViewController {
     
     var menuState = false
     var emoticonState = false
-    
+    var isChat = true
     
     @IBOutlet weak var scheduleBaseView: UIView!
     @IBOutlet weak var selectScheduleCategory: UIImageView!
@@ -388,11 +388,18 @@ class ChatViewController: UIViewController {
         let keyboardRectangle = keyboardFrame.cgRectValue
         print(keyboardRectangle)
         
-        if menuState == false {
-            bottomMargin.constant =  keyboardRectangle.height - 22
+        if isChat == true {
+            
+            if menuState == false {
+                bottomMargin.constant =  keyboardRectangle.height - 22
+            } else {
+                bottomMargin.constant =  keyboardRectangle.height - 83
+            }
         } else {
-            bottomMargin.constant =  keyboardRectangle.height - 83
+            bottomMargin.constant = keyboardRectangle.height - 300
         }
+        
+      
     }
     
     @objc func handleKeyboardHideNotification(_ sender: Notification) {
@@ -403,7 +410,12 @@ class ChatViewController: UIViewController {
         print(keyboardRectangle)
         
         
-        bottomMargin.constant = 0
+        if isChat == true {
+            bottomMargin.constant = 0
+        } else {
+            bottomMargin.constant = 200
+        }
+        
         
         
     }
@@ -625,6 +637,7 @@ class ChatViewController: UIViewController {
         //        addScheduleView.modalPresentationStyle = .overCurrentContext
         //        present(addScheduleView, animated: false)
         
+        self.isChat = false
         self.scheduleBaseView.isHidden = false
         self.bottomMargin.constant = self.bottomMargin.constant + (self.scheduleBaseView.frame.height - 125)
     }
@@ -722,6 +735,7 @@ class ChatViewController: UIViewController {
     
     
     @IBAction func dismissScheduleViewAction(_ sender: Any) {
+        self.isChat = true
         self.scheduleBaseView.isHidden = true
         self.bottomMargin.constant = self.bottomMargin.constant - (self.scheduleBaseView.frame.height - 125)
     }
@@ -739,11 +753,14 @@ class ChatViewController: UIViewController {
         UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: {(completed) in
+            IQKeyboardManager.shared().isEnabled = false
             let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
             self.selectedEmoticon = ""
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         })
     }
+    
+
     
 }
 
