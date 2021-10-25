@@ -82,8 +82,10 @@ extension DetailGalleryViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let previewVC = storyBoard.instantiateViewController(withIdentifier: "PhotoPreViewViewController")
-       
+        let previewVC = storyBoard.instantiateViewController(withIdentifier: "PhotoPreViewViewController") as! PhotoPreViewViewController
+        //previewVC(inde)
+        previewVC.index = indexPath.item
+        //let previewVC = PhotoPreViewViewController(index: indexPath.item)
         self.navigationController?.pushViewController(previewVC, animated: true)
     }
     
