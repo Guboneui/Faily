@@ -16,9 +16,12 @@ import PanModal
 
 struct ChatMessage {
     let userName: String
+    let userProfile: String
+    let isPhoto: Bool
+    let isSchedule: Bool
     let message: String
-    let profileImage: String
     let sendTime: String
+    let emoticon: String?
 }
 
 
@@ -53,7 +56,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var schduleAllDaySwitch: UISwitch!
     
     
-    
+    var seletedEmoticon: String = ""
     let stackView = UIStackView()
     let emoticonStackView = UIStackView()
     let galleryStackView = UIStackView()
@@ -64,19 +67,36 @@ class ChatViewController: UIViewController {
     
     var imageArr = ["이모티콘1", "이모티콘2", "이모티콘3", "이모티콘4", "이모티콘5"]
     
-    var message: [ChatMessage] = [
-        ChatMessage(userName: "보니", message: "안녕하세요", profileImage: "boni", sendTime: "오후 11시 20분"),
-        ChatMessage(userName: "수빈", message: "안녕하세요~~", profileImage: "subin", sendTime: "오후 11시 22분"),
-        ChatMessage(userName: "수빈", message: "저는 정수빈입니다.", profileImage: "subin", sendTime: "오후 11시 23분"),
-        ChatMessage(userName: "승빈", message: "처음 뵙겠습니댱", profileImage: "sb", sendTime: "오후 11시 25분"),
-        ChatMessage(userName: "보니", message: "안녕하세요~~~", profileImage: "boni", sendTime: "오후 11시 25분"),
-        ChatMessage(userName: "나연", message: "안녕하세요", profileImage: "nayoun", sendTime: "오후 11시 26분"),
-        ChatMessage(userName: "나연", message: "이제 막 참가했어요", profileImage: "nayoun", sendTime: "오후 11시 26분"),
-        ChatMessage(userName: "수빈", message: "안녕하세요!!", profileImage: "subin", sendTime: "오후 11시 26분"),
-        ChatMessage(userName: "승빈", message: "안녕하세요!!!!", profileImage: "sb", sendTime: "오후 11시 27분"),
-        ChatMessage(userName: "승빈", message: "저희 잘 지내봐용", profileImage: "sb", sendTime: "오후 11시 28분"),
-        ChatMessage(userName: "승빈", message: "화이팅팅팅", profileImage: "sb", sendTime: "오후 11시 28분"),
-        ChatMessage(userName: "보니", message: "~~~~~", profileImage: "boni", sendTime: "오후 11시 30분"),
+    static var message: [ChatMessage] = [
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "우리 가족 단톡방을 생성했어요!!!!", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "오오오오오오오 카톡보다 좋은거 같은데???", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "나도 들어왔댱", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "승빈이 언제 들어오는거야", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "하하하하하하하하하하하하하", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "ㅎㅇㅎㅇ", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "왤케 늦게 들어옴", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "암튼 젤 늦어", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "내가 주인공이거든😎", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: ";;;;;;;;;;;;;;;;;;;;;;;;;", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "넝담~~", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "그래서 우리 여행은 어딜로 언제 가는게 좋을까???", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "나 바다 보고 싶은데", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "겨울바다 보러가자", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "운전은 승빈이 있으니까 패스~~", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "저요.......?", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "승빈이 운전하면 진짜 꿀잠 계약", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "원래 승빈이가 운전 담당이긴 하지", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "못하겠으면 내가 하고~", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "나 여행 안갈래.....", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "키키키키키킼 난 좋아", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "어우우ㅜ우우우우", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "왜왜왜왜왜왜왜왜왜왱", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "아닙니댜~~~", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "그럼 언제가 좋을라나???", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "더 추워지기 전에 가는게 좋을 것 같은데", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "아무래도 그렇지..?", sendTime: "오전 8시 23분", emoticon: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "일단 졸프부터 끝내고??????", sendTime: "오전 8시 23분", emoticon: nil),
+        
         
     ]
     
@@ -247,8 +267,7 @@ class ChatViewController: UIViewController {
         UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: {(completed) in
-            //let indexPath = IndexPath(row: self.message.count - 1, section: 0)
-            let indexPath = IndexPath(row: 13, section: 0)
+            let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         })
     }
@@ -594,13 +613,14 @@ class ChatViewController: UIViewController {
             return
         }
         
-        message.append(ChatMessage(userName: "보니", message: self.messageTextView.text, profileImage: "boni", sendTime: "오후 11시 30분"))
+        //message.append(ChatMessage(userName: "보니", message: self.messageTextView.text, profileImage: "boni", sendTime: "오후 11시 30분"))
+        ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: self.messageTextView.text, sendTime: "오후 11시 37분", emoticon: nil))
         self.chatTableView.reloadData()
         self.messageTextView.text = nil
         UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: {(completed) in
-            let indexPath = IndexPath(row: self.message.count - 1, section: 0)
+            let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
             
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         })
@@ -630,7 +650,22 @@ class ChatViewController: UIViewController {
     
     
     @IBAction func sendEmoticonButtonAction(_ sender: Any) {
-        print(123123123)
+        
+        if seletedEmoticon == "" {
+            print("이모티콘을 선택해 주세요")
+        } else {
+            ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: self.messageTextView.text, sendTime: "오후 11시 37분", emoticon: self.seletedEmoticon))
+            self.chatTableView.reloadData()
+            UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+                self.view.layoutIfNeeded()
+            }, completion: {(completed) in
+                let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
+                self.seletedEmoticon = ""
+                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            })
+        }
+        
+       
     }
     
     
@@ -640,6 +675,8 @@ class ChatViewController: UIViewController {
     }
     
     
+    @IBAction func sendScheduleButtonAction(_ sender: Any) {
+    }
     
 }
 
@@ -647,58 +684,104 @@ class ChatViewController: UIViewController {
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return self.message.count + 2
-        return 16
+        return ChatViewController.message.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        if indexPath.row < 12 {
-            let chatMessage = message[indexPath.row]
-            if chatMessage.userName == "보니"{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
-                cell.myMessageLabel.text = chatMessage.message
-                cell.selectionStyle = .none
-                return cell
+        let chatMessage = ChatViewController.message[indexPath.row]
+        if chatMessage.isPhoto == false && chatMessage.isSchedule == false {
+            
+            if chatMessage.userName == "본의" {
+                if chatMessage.emoticon != nil {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "MyPhotoMessageTableViewCell", for: indexPath) as! MyPhotoMessageTableViewCell
+                    cell.selectionStyle = .none
+                    cell.mySendImage.image = UIImage(named: chatMessage.emoticon!)
+                    return cell
+                } else {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
+                    cell.myMessageLabel.text = chatMessage.message
+                    cell.selectionStyle = .none
+                    return cell
+                }
+                
+                
             } else {
                 
+                if chatMessage.emoticon != nil {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyPhotoMessageTableViewCell", for: indexPath) as! FamilyPhotoMessageTableViewCell
+                    cell.selectionStyle = .none
+                    return cell
+                } else {
+                    
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMessageTableViewCell", for: indexPath) as! FamilyMessageTableViewCell
+                    cell.nameLabel.text = chatMessage.userName
+                    cell.messageLabel.text = chatMessage.message
+                    cell.profileImage.image = UIImage(named: chatMessage.userProfile)
+                    cell.timeLabel.text = chatMessage.sendTime
+                    cell.selectionStyle = .none
+                    return cell
+                }
                 
-                let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMessageTableViewCell", for: indexPath) as! FamilyMessageTableViewCell
-                cell.nameLabel.text = chatMessage.userName
-                cell.messageLabel.text = chatMessage.message
-                cell.profileImage.image = UIImage(named: chatMessage.profileImage)
-                cell.timeLabel.text = chatMessage.sendTime
-                cell.selectionStyle = .none
-                return cell
-                
-                
+               
                 
             }
-            
-            
-            
         } else {
-            if indexPath.row == 12 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "MyPhotoMessageTableViewCell", for: indexPath) as! MyPhotoMessageTableViewCell
-                cell.selectionStyle = .none
-                return cell
-            } else if indexPath.row == 13{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyPhotoMessageTableViewCell", for: indexPath) as! FamilyPhotoMessageTableViewCell
-                cell.selectionStyle = .none
-                return cell
-            } else if indexPath.row == 14{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "MyScheduleTableViewCell", for: indexPath) as! MyScheduleTableViewCell
-                cell.selectionStyle = .none
-                return cell
-            } else {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyScheduleTableViewCell", for: indexPath) as! FamilyScheduleTableViewCell
-                cell.selectionStyle = .none
-                return cell
-            }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
+            cell.myMessageLabel.text = chatMessage.message
+            cell.selectionStyle = .none
+            return cell
         }
         
         
         
+        
+//        if indexPath.row < 12 {
+//            let chatMessage = ChatViewController.message[indexPath.row]
+//            if chatMessage.userName == "본의"{
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
+//                cell.myMessageLabel.text = chatMessage.message
+//                cell.selectionStyle = .none
+//                return cell
+//            } else {
+//
+//
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMessageTableViewCell", for: indexPath) as! FamilyMessageTableViewCell
+//                cell.nameLabel.text = chatMessage.userName
+//                cell.messageLabel.text = chatMessage.message
+//                cell.profileImage.image = UIImage(named: chatMessage.userProfile)
+//                cell.timeLabel.text = chatMessage.sendTime
+//                cell.selectionStyle = .none
+//                return cell
+//
+//
+//
+//            }
+//
+//
+//
+//        } else {
+//            if indexPath.row == 12 {
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "MyPhotoMessageTableViewCell", for: indexPath) as! MyPhotoMessageTableViewCell
+//                cell.selectionStyle = .none
+//                return cell
+//            } else if indexPath.row == 13{
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyPhotoMessageTableViewCell", for: indexPath) as! FamilyPhotoMessageTableViewCell
+//                cell.selectionStyle = .none
+//                return cell
+//            } else if indexPath.row == 14{
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "MyScheduleTableViewCell", for: indexPath) as! MyScheduleTableViewCell
+//                cell.selectionStyle = .none
+//                return cell
+//            } else {
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyScheduleTableViewCell", for: indexPath) as! FamilyScheduleTableViewCell
+//                cell.selectionStyle = .none
+//                return cell
+//            }
+//        }
+//
+//
+//
         
         
         
@@ -734,6 +817,8 @@ extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         if indexPath == self.selectedIndexPath {
             borderColor = UIColor.FailyColor.mainPinkColor.cgColor
+            self.seletedEmoticon = self.imageArr[self.selectedIndexPath.item]
+            print(seletedEmoticon)
             borderWidth = 3
         } else {
             borderColor = UIColor.FailyColor.grayscale_5.cgColor

@@ -21,10 +21,10 @@ struct UserInfo {
 class HomeViewController: UIViewController {
     
     static var userInfo: [UserInfo] = [
-        UserInfo(profileImage: "수빈_프로필", userName: "수빈", userFamiliar: 89.3, userEmotion: "sad_big"),
-        UserInfo(profileImage: "본의_프로필", userName: "본의", userFamiliar: 79.1, userEmotion: "happy_big"),
-        UserInfo(profileImage: "나연_프로필", userName: "나연", userFamiliar: 83.9, userEmotion: "mumu_big"),
-        UserInfo(profileImage: "승빈_프로필", userName: "승빈", userFamiliar: 65.9, userEmotion: "sick_big")
+        UserInfo(profileImage: "수빈_프로필", userName: "수빈", userFamiliar: 89.3, userEmotion: "sad_full"),
+        UserInfo(profileImage: "본의_프로필", userName: "본의", userFamiliar: 79.1, userEmotion: "happy_full"),
+        UserInfo(profileImage: "나연_프로필", userName: "나연", userFamiliar: 83.9, userEmotion: "mumu_full"),
+        UserInfo(profileImage: "승빈_프로필", userName: "승빈", userFamiliar: 65.9, userEmotion: "sick_full")
     ]
     
     let imageArr = ["sick_big", "happy_big", "mumu_big", "sad_big", "angry_big"]
