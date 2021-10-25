@@ -65,7 +65,11 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                 let data = viewModel.questionData[self.mainQuestionPage]
                 print(data)
                 if data.isAnswered == false && data.allAnswered == false {
-                    return 2
+                    if data.answerInfo?.count == 0 {
+                        return 2
+                    } else {
+                        return 3
+                    }
                     
                 } else if data.isAnswered == true && data.allAnswered == false {
                     return 4
@@ -110,16 +114,40 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 let data = viewModel.questionData[self.mainQuestionPage]
                 if data.isAnswered == false && data.allAnswered == false {
-                    print("첫번째 답변을 입력 해보새요")
-                    if indexPath.row == 0 {
-                        let cell = tableView.dequeueReusableCell(withIdentifier: "ForFirstAnswerTableViewCell", for: indexPath) as! ForFirstAnswerTableViewCell
-                        cell.selectionStyle = .none
-                        return cell
+                    
+                    if data.answerInfo?.count == 0 {
+                        print("첫번째 답변을 입력 해보새요")
+                        if indexPath.row == 0 {
+                            let cell = tableView.dequeueReusableCell(withIdentifier: "ForFirstAnswerTableViewCell", for: indexPath) as! ForFirstAnswerTableViewCell
+                            cell.selectionStyle = .none
+                            return cell
+                        } else {
+                            let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
+                            cell.selectionStyle = .none
+                            return cell
+                        }
                     } else {
-                        let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
-                        cell.selectionStyle = .none
-                        return cell
+                        if indexPath.row == 0 {
+                            let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
+                            cell.answeredFamilyCount = data.answerInfo?.count ?? 0
+                            print("data.question_index: \(data.question_index)")
+                            let imageName = "num\(data.answerInfo?.count ?? 1)"
+                            cell.answeredFamilyCountImage.image = UIImage(named: imageName)
+                            cell.answeredCollectionView.reloadData()
+                            cell.selectionStyle = .none
+                            return cell
+                        } else if indexPath.row == 1 {
+                            let cell = tableView.dequeueReusableCell(withIdentifier: "LockTableViewCell", for: indexPath) as! LockTableViewCell
+                            cell.selectionStyle = .none
+                            return cell
+                        } else {
+                            let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
+                            cell.selectionStyle = .none
+                            return cell
+                        }
                     }
+                    
+                   
                 } else if data.isAnswered == true && data.allAnswered == false {
                     print("모두가 답변을 해야합니다")
                     if indexPath.row == 0 {
