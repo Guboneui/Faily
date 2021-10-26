@@ -9,7 +9,7 @@ import UIKit
 import Photos
 
 struct photoInfo {
-    var photoName: String
+    var photoName: UIImage
     var isLoved: Bool
 }
 
@@ -31,10 +31,10 @@ class GalleryViewController: UIViewController {
     ]
     
     static var recentPhotoAlbum: [photoInfo] = [
-        photoInfo(photoName: "chat_image1", isLoved: false),
-        photoInfo(photoName: "chat_image2", isLoved: false),
-        photoInfo(photoName: "chat_image3", isLoved: false),
-        photoInfo(photoName: "chat_image4", isLoved: true)
+        photoInfo(photoName: UIImage(named: "chat_image1")!, isLoved: false),
+        photoInfo(photoName: UIImage(named: "chat_image2")!, isLoved: false),
+        photoInfo(photoName: UIImage(named: "chat_image3")!, isLoved: false),
+        photoInfo(photoName: UIImage(named: "chat_image4")!, isLoved: true)
     ]
     
     static var lovePhotoAlbum: [photoInfo] = []
@@ -57,6 +57,11 @@ class GalleryViewController: UIViewController {
         print(GalleryViewController.lovePhotoAlbum)
         
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.galleryCategoryCollectionView.reloadData()
     }
     
     
@@ -108,8 +113,8 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
         cell.titleLabel.text = GalleryViewController.totalAlbum[indexPath.item].albumTitle
         let photoArray = GalleryViewController.totalAlbum[indexPath.item].album
         let firstArray = photoArray.first
-        cell.thumbnailImage.image = UIImage(named: firstArray!.photoName)
-        
+        cell.thumbnailImage.image = firstArray!.photoName
+        cell.countLabel.text = ("\(GalleryViewController.totalAlbum[indexPath.item].album.count)")
         if GalleryViewController.totalAlbum[indexPath.item].isloved == true {
             cell.heartImage.isHidden = false
         } else {
@@ -123,7 +128,8 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let detailGalleryVC = storyBoard.instantiateViewController(withIdentifier: "DetailGalleryViewController") as! DetailGalleryViewController
-
+        detailGalleryVC.getPhoto = GalleryViewController.totalAlbum[indexPath.item].album
+        detailGalleryVC.getTitle = GalleryViewController.totalAlbum[indexPath.item].albumTitle
         self.navigationController?.pushViewController(detailGalleryVC, animated: true)
     }
     

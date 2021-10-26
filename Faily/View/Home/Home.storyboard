@@ -1744,6 +1744,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mainTitleLabel" destination="Zuv-6j-y1I" id="agM-Wk-u9i"/>
                         <outlet property="photoCollectionView" destination="rGs-sK-Fod" id="iZ4-7i-GeB"/>
                     </connections>
                 </viewController>
@@ -1760,8 +1761,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7x7-qI-gPO">
-                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="622"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2iP-aT-dUi">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1798,6 +1799,7 @@
                                         <state key="normal" title="Button" image="back"/>
                                         <connections>
                                             <action selector="backButtonAction:" destination="nsn-Mg-L22" eventType="touchUpInside" id="RAg-YN-ISf"/>
+                                            <action selector="backButtonAction:" destination="ahu-Lj-U5U" eventType="touchUpInside" id="kl1-QY-HeB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1810,26 +1812,96 @@
                                     <constraint firstItem="FSn-nl-NXd" firstAttribute="centerX" secondItem="0wC-i0-n30" secondAttribute="centerX" id="uaj-tO-RWY"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cN7-4c-Ta4">
+                                <rect key="frame" x="0.0" y="787.5" width="414" height="74.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzl-4R-6ek">
+                                        <rect key="frame" x="30" y="22.5" width="29.5" height="29.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Jzl-4R-6ek" secondAttribute="height" id="WS8-rH-W4h"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="share_photo"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMh-dw-L5U">
+                                        <rect key="frame" x="192" y="22.5" width="30" height="29.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="rMh-dw-L5U" secondAttribute="height" id="f3k-fv-Duu"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="album_heart_empty"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ho-9o-lqg">
+                                        <rect key="frame" x="354.5" y="22.5" width="29.5" height="29.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8Ho-9o-lqg" secondAttribute="height" id="W4V-I1-BhS"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="delete_photo"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Jzl-4R-6ek" firstAttribute="centerY" secondItem="cN7-4c-Ta4" secondAttribute="centerY" id="2sy-2j-Bqp"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Ho-9o-lqg" secondAttribute="trailing" constant="30" id="E80-H9-nFn"/>
+                                    <constraint firstItem="Jzl-4R-6ek" firstAttribute="height" secondItem="cN7-4c-Ta4" secondAttribute="height" multiplier="0.4" id="dp1-uZ-dQj"/>
+                                    <constraint firstItem="8Ho-9o-lqg" firstAttribute="centerY" secondItem="cN7-4c-Ta4" secondAttribute="centerY" id="eTj-Iq-6kP"/>
+                                    <constraint firstItem="Jzl-4R-6ek" firstAttribute="leading" secondItem="cN7-4c-Ta4" secondAttribute="leading" constant="30" id="fIT-6F-Fmz"/>
+                                    <constraint firstItem="8Ho-9o-lqg" firstAttribute="height" secondItem="cN7-4c-Ta4" secondAttribute="height" multiplier="0.4" id="h72-80-H6P"/>
+                                    <constraint firstItem="rMh-dw-L5U" firstAttribute="centerX" secondItem="cN7-4c-Ta4" secondAttribute="centerX" id="oIP-mb-daS"/>
+                                    <constraint firstItem="rMh-dw-L5U" firstAttribute="height" secondItem="cN7-4c-Ta4" secondAttribute="height" multiplier="0.4" id="qqG-uY-ttx"/>
+                                    <constraint firstItem="rMh-dw-L5U" firstAttribute="centerY" secondItem="cN7-4c-Ta4" secondAttribute="centerY" id="sPu-ow-8VQ"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Klm-pR-Hdc">
+                                <rect key="frame" x="0.0" y="716" width="414" height="71.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S3E-xi-23Q">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bR8-6x-aPN">
+                                        <rect key="frame" x="0.0" y="-28.5" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Chk-Jm-MYq">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LtP-hM-QPg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7x7-qI-gPO" firstAttribute="leading" secondItem="LtP-hM-QPg" secondAttribute="leading" id="5iU-CF-Gqy"/>
-                            <constraint firstItem="7x7-qI-gPO" firstAttribute="top" secondItem="0wC-i0-n30" secondAttribute="bottom" id="69F-m4-2IT"/>
-                            <constraint firstAttribute="bottom" secondItem="7x7-qI-gPO" secondAttribute="bottom" id="6vm-hb-5pK"/>
+                            <constraint firstItem="cN7-4c-Ta4" firstAttribute="top" secondItem="Klm-pR-Hdc" secondAttribute="bottom" id="8BJ-NS-QVp"/>
+                            <constraint firstItem="Klm-pR-Hdc" firstAttribute="leading" secondItem="LtP-hM-QPg" secondAttribute="leading" id="B2k-Pb-3bw"/>
+                            <constraint firstItem="cN7-4c-Ta4" firstAttribute="leading" secondItem="LtP-hM-QPg" secondAttribute="leading" id="Hoq-B6-gdI"/>
                             <constraint firstItem="0wC-i0-n30" firstAttribute="leading" secondItem="8Eq-ea-9Uk" secondAttribute="leading" id="Iem-Hj-ty0"/>
                             <constraint firstItem="0wC-i0-n30" firstAttribute="top" secondItem="LtP-hM-QPg" secondAttribute="top" id="Lsk-1i-7Kz"/>
+                            <constraint firstItem="Klm-pR-Hdc" firstAttribute="top" secondItem="7x7-qI-gPO" secondAttribute="bottom" id="RGY-Nn-lba"/>
                             <constraint firstItem="LtP-hM-QPg" firstAttribute="trailing" secondItem="7x7-qI-gPO" secondAttribute="trailing" id="UDM-ck-cYs"/>
+                            <constraint firstItem="LtP-hM-QPg" firstAttribute="bottom" secondItem="cN7-4c-Ta4" secondAttribute="bottom" id="XJM-mH-0yM"/>
+                            <constraint firstItem="cN7-4c-Ta4" firstAttribute="height" secondItem="8Eq-ea-9Uk" secondAttribute="height" multiplier="0.083" id="fV2-t7-wIP"/>
                             <constraint firstItem="LtP-hM-QPg" firstAttribute="trailing" secondItem="0wC-i0-n30" secondAttribute="trailing" id="ft1-Vi-Wee"/>
+                            <constraint firstItem="7x7-qI-gPO" firstAttribute="top" secondItem="0wC-i0-n30" secondAttribute="bottom" id="o3B-m2-doW"/>
+                            <constraint firstItem="Klm-pR-Hdc" firstAttribute="height" secondItem="8Eq-ea-9Uk" secondAttribute="height" multiplier="0.08" id="rkW-TB-njU"/>
+                            <constraint firstItem="LtP-hM-QPg" firstAttribute="trailing" secondItem="Klm-pR-Hdc" secondAttribute="trailing" id="uXt-Qb-UXl"/>
+                            <constraint firstItem="LtP-hM-QPg" firstAttribute="trailing" secondItem="cN7-4c-Ta4" secondAttribute="trailing" id="yLp-bk-Yu0"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="allPhotoPreviewCollectionView" destination="Klm-pR-Hdc" id="sTL-XI-1lN"/>
                         <outlet property="previewCollectionView" destination="7x7-qI-gPO" id="ae0-6w-9zU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nP-e8-MXv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="510" y="1079"/>
+            <point key="canvasLocation" x="508.69565217391306" y="1078.7946428571429"/>
         </scene>
         <!--User Gallery Category View Controller-->
         <scene sceneID="dy2-O4-wYP">
@@ -4028,6 +4100,7 @@
         <image name="Home_Main" width="414" height="896"/>
         <image name="SFImage" width="347" height="163"/>
         <image name="add_chat" width="24" height="24"/>
+        <image name="album_heart_empty" width="32" height="32"/>
         <image name="allAnsweredPopup" width="24" height="24"/>
         <image name="back" width="24" height="24"/>
         <image name="boni" width="152" height="152"/>
@@ -4036,6 +4109,7 @@
         <image name="change_profile_image" width="30" height="30"/>
         <image name="closeMark" width="24" height="24"/>
         <image name="copy" width="43" height="43"/>
+        <image name="delete_photo" width="32" height="32"/>
         <image name="emoticon_chat" width="24" height="24"/>
         <image name="emoticon_setting" width="24" height="24"/>
         <image name="gallery_default" width="28" height="28"/>
@@ -4059,6 +4133,7 @@
         <image name="setting_selected" width="28" height="28"/>
         <image name="shadowRECT" width="266" height="150"/>
         <image name="share" width="43" height="43"/>
+        <image name="share_photo" width="32" height="32"/>
         <image name="testBM" width="1155" height="1155"/>
         <image name="본의_프로필" width="1440" height="1440"/>
         <namedColor name="coral_red">

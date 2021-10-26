@@ -12,12 +12,18 @@ class DetailGalleryViewController: UIViewController {
 
     @IBOutlet weak var photoCollectionView: UICollectionView!
     
-    var imageArr = ["sick_big", "happy_big", "mumu_big", "sad_big", "angry_big"]
+    @IBOutlet weak var mainTitleLabel: UILabel!
+    
+    var getTitle: String = ""
+    
+    var getPhoto: [photoInfo] = []
+    
     var imageArray = [UIImage]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setCollectionView()
+        self.mainTitleLabel.text = getTitle
     }
     
     func setCollectionView() {
@@ -71,14 +77,14 @@ class DetailGalleryViewController: UIViewController {
 
 extension DetailGalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return GalleryViewController.recentPhotoAlbum.count
+        return self.getPhoto.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailGalleryCollectionViewCell", for: indexPath) as! DetailGalleryCollectionViewCell
-        cell.photo.image = UIImage(named: GalleryViewController.recentPhotoAlbum[indexPath.item].photoName)
+        cell.photo.image = getPhoto[indexPath.item].photoName
         
-        if GalleryViewController.recentPhotoAlbum[indexPath.item].isLoved == true {
+        if getPhoto[indexPath.item].isLoved == true {
             cell.heart.isHidden = false
         } else {
             cell.heart.isHidden = true
@@ -90,7 +96,7 @@ extension DetailGalleryViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let previewVC = storyBoard.instantiateViewController(withIdentifier: "PhotoPreViewViewController") as! PhotoPreViewViewController
-        //previewVC(inde)
+        previewVC.getPhotoArray = self.getPhoto
         previewVC.index = indexPath.item
         //let previewVC = PhotoPreViewViewController(index: indexPath.item)
         self.navigationController?.pushViewController(previewVC, animated: true)

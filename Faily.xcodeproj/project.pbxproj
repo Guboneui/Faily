@@ -32,14 +32,14 @@
 		2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C35566926FA466100A1F50B /* FamilyMemberCollectionViewCell.xib */; };
 		2C4695E5272841720082A04D /* GalleryCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4695E4272841720082A04D /* GalleryCategoryCollectionViewCell.swift */; };
 		2C4695E72728418C0082A04D /* GalleryCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4695E62728418C0082A04D /* GalleryCategoryCollectionViewCell.xib */; };
+		2C4695EA272862340082A04D /* AllPhotoPreviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4695E9272862340082A04D /* AllPhotoPreviewCollectionViewCell.swift */; };
+		2C4695EC2728623D0082A04D /* AllPhotoPreviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4695EB2728623D0082A04D /* AllPhotoPreviewCollectionViewCell.xib */; };
 		2C4B7BB126F2E0470083576A /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB026F2E0470083576A /* QuestionViewController.swift */; };
 		2C4B7BB526F2E0C30083576A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB426F2E0C30083576A /* HomeViewController.swift */; };
 		2C4B7BB726F2E0D90083576A /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */; };
 		2C4B7BB926F2E0EF0083576A /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB826F2E0EF0083576A /* UserSettingViewController.swift */; };
 		2C4B7BC026F2E12E0083576A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BBF26F2E12E0083576A /* CalendarViewController.swift */; };
 		2C4B7BC226F2E4040083576A /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BC126F2E4040083576A /* MainTabBar.swift */; };
-		2C55205A2725D3C0001A11AE /* GalleryCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5520582725D3C0001A11AE /* GalleryCategoryTableViewCell.swift */; };
-		2C55205B2725D3C0001A11AE /* GalleryCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5520592725D3C0001A11AE /* GalleryCategoryTableViewCell.xib */; };
 		2C55205D2725DA4A001A11AE /* DetailGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55205C2725DA4A001A11AE /* DetailGalleryViewController.swift */; };
 		2C55205F2725DCDA001A11AE /* DetailGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55205E2725DCDA001A11AE /* DetailGalleryCollectionViewCell.swift */; };
 		2C5520612725DCE3001A11AE /* DetailGalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5520602725DCE3001A11AE /* DetailGalleryCollectionViewCell.xib */; };
@@ -239,14 +239,14 @@
 		2C35566926FA466100A1F50B /* FamilyMemberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyMemberCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C4695E4272841720082A04D /* GalleryCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C4695E62728418C0082A04D /* GalleryCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		2C4695E9272862340082A04D /* AllPhotoPreviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPhotoPreviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C4695EB2728623D0082A04D /* AllPhotoPreviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllPhotoPreviewCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C4B7BB026F2E0470083576A /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		2C4B7BB426F2E0C30083576A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		2C4B7BB826F2E0EF0083576A /* UserSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingViewController.swift; sourceTree = "<group>"; };
 		2C4B7BBF26F2E12E0083576A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		2C4B7BC126F2E4040083576A /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
-		2C5520582725D3C0001A11AE /* GalleryCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCategoryTableViewCell.swift; sourceTree = "<group>"; };
-		2C5520592725D3C0001A11AE /* GalleryCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCategoryTableViewCell.xib; sourceTree = "<group>"; };
 		2C55205C2725DA4A001A11AE /* DetailGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGalleryViewController.swift; sourceTree = "<group>"; };
 		2C55205E2725DCDA001A11AE /* DetailGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C5520602725DCE3001A11AE /* DetailGalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailGalleryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -506,14 +506,14 @@
 				2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */,
 				2C4695E4272841720082A04D /* GalleryCategoryCollectionViewCell.swift */,
 				2C4695E62728418C0082A04D /* GalleryCategoryCollectionViewCell.xib */,
-				2C5520582725D3C0001A11AE /* GalleryCategoryTableViewCell.swift */,
-				2C5520592725D3C0001A11AE /* GalleryCategoryTableViewCell.xib */,
 				2C55205C2725DA4A001A11AE /* DetailGalleryViewController.swift */,
 				2C55205E2725DCDA001A11AE /* DetailGalleryCollectionViewCell.swift */,
 				2C5520602725DCE3001A11AE /* DetailGalleryCollectionViewCell.xib */,
 				2C5520682725EEA1001A11AE /* PhotoPreViewViewController.swift */,
 				2C5520702727013D001A11AE /* PhotoPreviewCollectionViewCell.swift */,
 				2C55207227270146001A11AE /* PhotoPreviewCollectionViewCell.xib */,
+				2C4695E9272862340082A04D /* AllPhotoPreviewCollectionViewCell.swift */,
+				2C4695EB2728623D0082A04D /* AllPhotoPreviewCollectionViewCell.xib */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -1085,7 +1085,6 @@
 				2CB38520271DDF7600BE438A /* MyScheduleTableViewCell.xib in Resources */,
 				2CC092C126F27048009E69D0 /* Tutorial.storyboard in Resources */,
 				2C330624270101EE00E638B1 /* AnsweredFamilyCollectionViewCell.xib in Resources */,
-				2C55205B2725D3C0001A11AE /* GalleryCategoryTableViewCell.xib in Resources */,
 				2C5F781F2720B91E00D6EB90 /* ExpandableLockTableViewCell.xib in Resources */,
 				2C94412B2703879B005980D0 /* AllAnswerProfileCollectionViewCell.xib in Resources */,
 				2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */,
@@ -1106,6 +1105,7 @@
 				2CAF2CE326F927C00044C594 /* HomeBusinessCollectionViewCell.xib in Resources */,
 				2C715C09270E9082007D67C5 /* MyOrderTitleTableViewCell.xib in Resources */,
 				2CD6D168271CA8E300DC9DC7 /* MakeEmoticonCollectionViewCell.xib in Resources */,
+				2C4695EC2728623D0082A04D /* AllPhotoPreviewCollectionViewCell.xib in Resources */,
 				2CB3851C271DD97900BE438A /* FamilyPhotoMessageTableViewCell.xib in Resources */,
 				2CF3D3C326FBCF82008C13F3 /* ScheduleDivisionTableViewCell.xib in Resources */,
 				2C55207327270146001A11AE /* PhotoPreviewCollectionViewCell.xib in Resources */,
@@ -1201,7 +1201,6 @@
 				2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */,
 				2C1481FF270B36E3005C0597 /* TodayQuestionViewModel.swift in Sources */,
 				2CC5AEBB26F0D8920096D818 /* BaseView.swift in Sources */,
-				2C55205A2725D3C0001A11AE /* GalleryCategoryTableViewCell.swift in Sources */,
 				2C80393627233F3B00B6DB7B /* SendAnswerViewModel.swift in Sources */,
 				2C715BFE270E8F4B007D67C5 /* MyPresentBoxCollectionViewCell.swift in Sources */,
 				2C14820C270B9FE9005C0597 /* NoticeTableViewCell.swift in Sources */,
@@ -1289,6 +1288,7 @@
 				2CC5AEA526EFA8450096D818 /* UIViewController.swift in Sources */,
 				2C80393027233DAC00B6DB7B /* SendAnswerResponse.swift in Sources */,
 				2C715C0B270E90B9007D67C5 /* MyPresentOrderDetailTableViewCell.swift in Sources */,
+				2C4695EA272862340082A04D /* AllPhotoPreviewCollectionViewCell.swift in Sources */,
 				2CC5AEC126F0F67C0096D818 /* PinkMainButton.swift in Sources */,
 				2CBB71D22708E98C008B3E56 /* TodayQuestionResponse.swift in Sources */,
 				2C715BF7270E8C0A007D67C5 /* PresentBoxViewController.swift in Sources */,
