@@ -400,6 +400,7 @@
                         <outlet property="navProfileImage" destination="iPq-cE-Gjo" id="3bq-QU-ZtY"/>
                         <outlet property="navTitleLabel" destination="uFC-SY-UmS" id="aVB-13-ceY"/>
                         <outlet property="percentLabel" destination="tZu-sg-AMD" id="FdC-Bm-5Ez"/>
+                        <outlet property="scheduleTitleLabel" destination="LXc-VA-KOn" id="Xjm-dB-h67"/>
                         <outlet property="totalProgress" destination="YGQ-0t-6md" id="moj-Bb-Hfn"/>
                         <outlet property="totalProgressBaseImageView" destination="5CH-Zn-dna" id="ZvO-m5-bL7"/>
                         <outlet property="totalProgressBaseView" destination="aJ2-ap-azM" id="LAR-Mk-Kgf"/>

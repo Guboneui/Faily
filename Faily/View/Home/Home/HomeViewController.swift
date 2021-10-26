@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
     let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
    
-    
+    static var scheduleArray: [String] = []
     
     @IBOutlet weak var totalProgressBaseView: UIView!
     @IBOutlet weak var totalProgressBaseImageView: UIImageView!
@@ -59,6 +59,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var scheduleTitleLabel: UILabel!
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var navTitleLabel: UILabel!
     @IBOutlet weak var navProfileImage: UIImageView!
@@ -131,6 +132,14 @@ class HomeViewController: UIViewController {
         totalProgress.setProgress(progress: CGFloat(familyTotalProgress) * 0.01, animated: true)
         
         self.memberProfileCollectionView.reloadData()
+        
+        
+        if HomeViewController.scheduleArray.count == 0 {
+            self.scheduleTitleLabel.text = "특별한 날로\n만들어보세요!"
+        } else {
+            self.scheduleTitleLabel.text = HomeViewController.scheduleArray[0]
+        }
+        
     }
     
     
