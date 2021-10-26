@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCategoryCollectionViewCell" id="5Eg-KF-dgQ" customClass="GalleryCategoryCollectionViewCell" customModule="Faily" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="242"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0i2-ik-vgk">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="242"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="potato" translatesAutoresizingMaskIntoConstraints="NO" id="qMx-dx-Nb3">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="qMx-dx-Nb3" secondAttribute="height" id="5CI-jl-vQC"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="최근 항목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgj-ql-myp">
+                        <rect key="frame" x="1" y="195" width="178" height="19.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feY-eD-XV8">
+                        <rect key="frame" x="1" y="219.5" width="178" height="22.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" name="grayscale_4"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gallery_heart_fill" translatesAutoresizingMaskIntoConstraints="NO" id="bS2-S0-dyR">
+                        <rect key="frame" x="12" y="141" width="27" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="bS2-S0-dyR" secondAttribute="height" id="axJ-QL-hMF"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Cgj-ql-myp" secondAttribute="trailing" constant="1" id="0CR-5F-wcg"/>
+                    <constraint firstItem="feY-eD-XV8" firstAttribute="leading" secondItem="0i2-ik-vgk" secondAttribute="leading" constant="1" id="46b-iC-B0G"/>
+                    <constraint firstItem="bS2-S0-dyR" firstAttribute="width" secondItem="qMx-dx-Nb3" secondAttribute="width" multiplier="0.15" id="DLa-IZ-qgB"/>
+                    <constraint firstAttribute="trailing" secondItem="feY-eD-XV8" secondAttribute="trailing" constant="1" id="Dus-Gu-CMH"/>
+                    <constraint firstItem="bS2-S0-dyR" firstAttribute="bottom" secondItem="qMx-dx-Nb3" secondAttribute="bottom" constant="-12" id="LTB-dD-70L"/>
+                    <constraint firstItem="qMx-dx-Nb3" firstAttribute="leading" secondItem="0i2-ik-vgk" secondAttribute="leading" id="TV4-HP-nAe"/>
+                    <constraint firstAttribute="bottom" secondItem="feY-eD-XV8" secondAttribute="bottom" id="baK-Ux-g1O"/>
+                    <constraint firstItem="qMx-dx-Nb3" firstAttribute="top" secondItem="0i2-ik-vgk" secondAttribute="top" id="cue-K5-c4g"/>
+                    <constraint firstItem="Cgj-ql-myp" firstAttribute="top" secondItem="qMx-dx-Nb3" secondAttribute="bottom" constant="15" id="drr-Nd-tTf"/>
+                    <constraint firstItem="feY-eD-XV8" firstAttribute="top" secondItem="Cgj-ql-myp" secondAttribute="bottom" constant="5" id="gXW-kq-za1"/>
+                    <constraint firstAttribute="trailing" secondItem="qMx-dx-Nb3" secondAttribute="trailing" id="n0y-6U-itN"/>
+                    <constraint firstItem="bS2-S0-dyR" firstAttribute="leading" secondItem="0i2-ik-vgk" secondAttribute="leading" constant="12" id="qoV-jL-HFH"/>
+                    <constraint firstItem="Cgj-ql-myp" firstAttribute="leading" secondItem="0i2-ik-vgk" secondAttribute="leading" constant="1" id="srK-9L-tnf"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="180" height="242"/>
+            <connections>
+                <outlet property="countLabel" destination="feY-eD-XV8" id="mdd-mV-chr"/>
+                <outlet property="heartImage" destination="bS2-S0-dyR" id="gmB-dZ-WeJ"/>
+                <outlet property="thumbnailImage" destination="qMx-dx-Nb3" id="RdC-M5-6Gz"/>
+                <outlet property="titleLabel" destination="Cgj-ql-myp" id="Uv1-VM-stL"/>
+            </connections>
+            <point key="canvasLocation" x="0.0" y="156.69642857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="gallery_heart_fill" width="24" height="24"/>
+        <image name="potato" width="3024" height="3024"/>
+        <namedColor name="grayscale_4">
+            <color red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

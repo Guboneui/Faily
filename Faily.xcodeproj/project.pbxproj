@@ -30,6 +30,8 @@
 		2C330624270101EE00E638B1 /* AnsweredFamilyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C330623270101EE00E638B1 /* AnsweredFamilyCollectionViewCell.xib */; };
 		2C35566A26FA466100A1F50B /* FamilyMemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C35566826FA466100A1F50B /* FamilyMemberCollectionViewCell.swift */; };
 		2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C35566926FA466100A1F50B /* FamilyMemberCollectionViewCell.xib */; };
+		2C4695E5272841720082A04D /* GalleryCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4695E4272841720082A04D /* GalleryCategoryCollectionViewCell.swift */; };
+		2C4695E72728418C0082A04D /* GalleryCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4695E62728418C0082A04D /* GalleryCategoryCollectionViewCell.xib */; };
 		2C4B7BB126F2E0470083576A /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB026F2E0470083576A /* QuestionViewController.swift */; };
 		2C4B7BB526F2E0C30083576A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB426F2E0C30083576A /* HomeViewController.swift */; };
 		2C4B7BB726F2E0D90083576A /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */; };
@@ -235,6 +237,8 @@
 		2C330623270101EE00E638B1 /* AnsweredFamilyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnsweredFamilyCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C35566826FA466100A1F50B /* FamilyMemberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C35566926FA466100A1F50B /* FamilyMemberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyMemberCollectionViewCell.xib; sourceTree = "<group>"; };
+		2C4695E4272841720082A04D /* GalleryCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C4695E62728418C0082A04D /* GalleryCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C4B7BB026F2E0470083576A /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		2C4B7BB426F2E0C30083576A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -500,6 +504,8 @@
 			isa = PBXGroup;
 			children = (
 				2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */,
+				2C4695E4272841720082A04D /* GalleryCategoryCollectionViewCell.swift */,
+				2C4695E62728418C0082A04D /* GalleryCategoryCollectionViewCell.xib */,
 				2C5520582725D3C0001A11AE /* GalleryCategoryTableViewCell.swift */,
 				2C5520592725D3C0001A11AE /* GalleryCategoryTableViewCell.xib */,
 				2C55205C2725DA4A001A11AE /* DetailGalleryViewController.swift */,
@@ -1084,6 +1090,7 @@
 				2C94412B2703879B005980D0 /* AllAnswerProfileCollectionViewCell.xib in Resources */,
 				2C35566B26FA466100A1F50B /* FamilyMemberCollectionViewCell.xib in Resources */,
 				2C715C0D270E90CA007D67C5 /* MyPresentOrderDetailTableViewCell.xib in Resources */,
+				2C4695E72728418C0082A04D /* GalleryCategoryCollectionViewCell.xib in Resources */,
 				2CD6D163271C885700DC9DC7 /* EmoticonBoxCollectionViewCell.xib in Resources */,
 				2CC5AECE26F0FAA50096D818 /* OnBoardingCollectionViewCell.xib in Resources */,
 				2C3306182700F78100E638B1 /* MainQuestionTableViewCell.xib in Resources */,
@@ -1180,6 +1187,7 @@
 				2CC5AECD26F0FAA50096D818 /* OnBoardingCollectionViewCell.swift in Sources */,
 				2C803924272329CE00B6DB7B /* AddScheduleRequest.swift in Sources */,
 				2C94412E27038811005980D0 /* AllAnswerExpandTableViewCell.swift in Sources */,
+				2C4695E5272841720082A04D /* GalleryCategoryCollectionViewCell.swift in Sources */,
 				2C5F781227206C8600D6EB90 /* GetScheduleResponse.swift in Sources */,
 				2CC5AEB226EFD16D0096D818 /* ChangePasswordViewController.swift in Sources */,
 				2CD6D153271C31B300DC9DC7 /* EmoticonBoxViewController.swift in Sources */,
