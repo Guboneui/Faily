@@ -1898,6 +1898,7 @@
                     </view>
                     <connections>
                         <outlet property="allPhotoPreviewCollectionView" destination="Klm-pR-Hdc" id="sTL-XI-1lN"/>
+                        <outlet property="heartImage" destination="rMh-dw-L5U" id="yuP-op-Du4"/>
                         <outlet property="previewCollectionView" destination="7x7-qI-gPO" id="ae0-6w-9zU"/>
                     </connections>
                 </viewController>

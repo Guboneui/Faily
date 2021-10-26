@@ -9,17 +9,29 @@ import UIKit
 
 class PhotoPreViewViewController: UIViewController {
     
+    @IBOutlet weak var heartImage: UIButton!
     @IBOutlet weak var previewCollectionView: UICollectionView!
     @IBOutlet weak var allPhotoPreviewCollectionView: UICollectionView!
     
     var imageArr = ["sick_big", "happy_big", "mumu_big", "sad_big", "angry_big"]
     var getPhotoArray: [photoInfo] = []
     
+    var isHeart: Int = 0 {
+        didSet {
+            if getPhotoArray[isHeart].isLoved == true {
+                self.heartImage.setImage(UIImage(named: "gallery_heart_fill"), for: .normal)
+            } else {
+                self.heartImage.setImage(UIImage(named: "album_heart_empty"), for: .normal)
+            }
+        }
+    }
+    
     var passedIndexPath: IndexPath = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
+        
         
         
     }
@@ -71,6 +83,7 @@ extension PhotoPreViewViewController: UICollectionViewDelegate, UICollectionView
         if collectionView == self.previewCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoPreviewCollectionViewCell", for: indexPath) as! PhotoPreviewCollectionViewCell
             cell.image.image = self.getPhotoArray[indexPath.item].photoName
+            
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllPhotoPreviewCollectionViewCell", for: indexPath) as! AllPhotoPreviewCollectionViewCell
@@ -88,6 +101,19 @@ extension PhotoPreViewViewController: UICollectionViewDelegate, UICollectionView
             
         }
     }
+    
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let x = targetContentOffset.pointee.x
+        let currentPage = Int(x / previewCollectionView.frame.width)
+        print("currentpage = \(currentPage)")
+        self.isHeart = currentPage
+
+    }
+    
+    
+    
+    
 }
 
 extension PhotoPreViewViewController: UICollectionViewDelegateFlowLayout {

@@ -55,8 +55,20 @@ extension EmoticonBoxViewController: UICollectionViewDelegate, UICollectionViewD
     
     @objc func deleteImage(sender: UIButton) {
         print("\(sender.tag) 삭제")
-        emoticonBoxCollectionView.deleteItems(at: [IndexPath.init(row: sender.tag, section: 0)])
-        ChatViewController.emoticonArray.remove(at: sender.tag)
+        
+        
+        let alert = UIAlertController(title: "삭제", message: "해당 이모티콘을 삭제하시겠어요?", preferredStyle: .alert)
+        let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
+        let okButton = UIAlertAction(title: "확인", style: .default, handler: {[self] _ in
+            emoticonBoxCollectionView.deleteItems(at: [IndexPath.init(row: sender.tag, section: 0)])
+            ChatViewController.emoticonArray.remove(at: sender.tag)
+        })
+        alert.addAction(cancelButton)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+       
     }
 }
 
