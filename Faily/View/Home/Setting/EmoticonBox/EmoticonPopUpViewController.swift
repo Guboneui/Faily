@@ -40,6 +40,7 @@ class EmoticonPopUpViewController: UIViewController {
         let alert = UIAlertController(title: "저장", message: "만들어진 이모티콘을 저장하시겠어요?", preferredStyle: .alert)
         let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
         let okButton = UIAlertAction(title: "확인", style: .default, handler: { _ in
+            ChatViewController.emoticonArray.append(self.combinedImage!)
             self.dismiss(animated: false, completion: nil)
         })
         alert.addAction(cancelButton)

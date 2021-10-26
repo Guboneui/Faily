@@ -17,6 +17,12 @@ class EmoticonBoxViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.emoticonBoxCollectionView.reloadData()
+    }
+    
+    
     func setCollectionView() {
         emoticonBoxCollectionView.delegate = self
         emoticonBoxCollectionView.dataSource = self
@@ -35,13 +41,13 @@ class EmoticonBoxViewController: UIViewController {
 
 extension EmoticonBoxViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.imageArr.count
+        return ChatViewController.emoticonArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmoticonBoxCollectionViewCell", for: indexPath) as! EmoticonBoxCollectionViewCell
         cell.deleteButton.tag = indexPath.item
-        cell.emoticonImageView.image = UIImage(named: self.imageArr[indexPath.item])
+        cell.emoticonImageView.image = ChatViewController.emoticonArray[indexPath.item]
         cell.deleteButton.addTarget(self, action: #selector(deleteImage(sender:)), for: .touchUpInside)
         return cell
     }
@@ -50,7 +56,7 @@ extension EmoticonBoxViewController: UICollectionViewDelegate, UICollectionViewD
     @objc func deleteImage(sender: UIButton) {
         print("\(sender.tag) 삭제")
         emoticonBoxCollectionView.deleteItems(at: [IndexPath.init(row: sender.tag, section: 0)])
-        imageArr.remove(at: sender.tag)
+        ChatViewController.emoticonArray.remove(at: sender.tag)
     }
 }
 

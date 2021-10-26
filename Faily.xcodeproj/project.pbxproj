@@ -34,6 +34,8 @@
 		2C4695E72728418C0082A04D /* GalleryCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4695E62728418C0082A04D /* GalleryCategoryCollectionViewCell.xib */; };
 		2C4695EA272862340082A04D /* AllPhotoPreviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4695E9272862340082A04D /* AllPhotoPreviewCollectionViewCell.swift */; };
 		2C4695EC2728623D0082A04D /* AllPhotoPreviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4695EB2728623D0082A04D /* AllPhotoPreviewCollectionViewCell.xib */; };
+		2C4695EE27286D1A0082A04D /* AddAlbumCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4695ED27286D1A0082A04D /* AddAlbumCategoryCollectionViewCell.swift */; };
+		2C4695F027286D200082A04D /* AddAlbumCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4695EF27286D200082A04D /* AddAlbumCategoryCollectionViewCell.xib */; };
 		2C4B7BB126F2E0470083576A /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB026F2E0470083576A /* QuestionViewController.swift */; };
 		2C4B7BB526F2E0C30083576A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB426F2E0C30083576A /* HomeViewController.swift */; };
 		2C4B7BB726F2E0D90083576A /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */; };
@@ -241,6 +243,8 @@
 		2C4695E62728418C0082A04D /* GalleryCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C4695E9272862340082A04D /* AllPhotoPreviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPhotoPreviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C4695EB2728623D0082A04D /* AllPhotoPreviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllPhotoPreviewCollectionViewCell.xib; sourceTree = "<group>"; };
+		2C4695ED27286D1A0082A04D /* AddAlbumCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlbumCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C4695EF27286D200082A04D /* AddAlbumCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAlbumCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C4B7BB026F2E0470083576A /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		2C4B7BB426F2E0C30083576A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2C4B7BB626F2E0D90083576A /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -514,6 +518,8 @@
 				2C55207227270146001A11AE /* PhotoPreviewCollectionViewCell.xib */,
 				2C4695E9272862340082A04D /* AllPhotoPreviewCollectionViewCell.swift */,
 				2C4695EB2728623D0082A04D /* AllPhotoPreviewCollectionViewCell.xib */,
+				2C4695ED27286D1A0082A04D /* AddAlbumCategoryCollectionViewCell.swift */,
+				2C4695EF27286D200082A04D /* AddAlbumCategoryCollectionViewCell.xib */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -1121,6 +1127,7 @@
 				2CF3D3B926FB9BCE008C13F3 /* CalendarTableViewCell.xib in Resources */,
 				2C8AFC7A2714B6E500966309 /* MyMessageTableViewCell.xib in Resources */,
 				2CC9C38526E2A27600936BCD /* Login.storyboard in Resources */,
+				2C4695F027286D200082A04D /* AddAlbumCategoryCollectionViewCell.xib in Resources */,
 				2CC5AEC426F0F9120096D818 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1276,6 +1283,7 @@
 				2CF3D3D126FBE850008C13F3 /* RecommentCollectionViewCell.swift in Sources */,
 				2CF3D3C526FBD3D6008C13F3 /* UIImage.swift in Sources */,
 				2C715BC0270DA33F007D67C5 /* DeviceSettingViewController.swift in Sources */,
+				2C4695EE27286D1A0082A04D /* AddAlbumCategoryCollectionViewCell.swift in Sources */,
 				2CC5AEC626F0FA450096D818 /* OnBoardingViewController.swift in Sources */,
 				2CC5AEB426EFDC600096D818 /* AgreeAuthorityViewController.swift in Sources */,
 				2CBB71D52708E9DA008B3E56 /* TodayQuestionRepository.swift in Sources */,

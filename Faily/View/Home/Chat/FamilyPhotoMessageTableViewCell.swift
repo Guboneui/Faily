@@ -9,7 +9,9 @@ import UIKit
 
 class FamilyPhotoMessageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var familySendImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +20,7 @@ class FamilyPhotoMessageTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         layoutIfNeeded()
+        profileImage.layer.cornerRadius = profileImage.frame.height / 2
         familySendImage.layer.cornerRadius = 16
     }
 

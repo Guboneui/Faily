@@ -22,7 +22,7 @@ struct ChatMessage {
     let isSchedule: Bool
     let message: String
     let sendTime: String
-    let emoticon: String?
+    let emoticon: UIImage?
     let photo: UIImage?
     let scheduleDate: String?
     let scheduleTitle: String?
@@ -60,7 +60,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var schduleAllDaySwitch: UISwitch!
     
     
-    var selectedEmoticon: String = ""
+    var selectedEmoticon: UIImage? = nil
     var userSelectedImages: [UIImage] = []
     
     
@@ -72,7 +72,17 @@ class ChatViewController: UIViewController {
     
     var selectedAssets = [PHAsset]()
     
-    var imageArr = ["이모티콘1", "이모티콘2", "이모티콘3", "이모티콘4", "이모티콘5"]
+    static var emoticonArray = [
+        UIImage(named: "이모티콘1"),
+        UIImage(named: "이모티콘2"),
+        UIImage(named: "이모티콘3"),
+        UIImage(named: "이모티콘4"),
+        UIImage(named: "이모티콘5")
+        
+    ]
+   
+    
+    
     
     static var message: [ChatMessage] = [
         ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "우리 가족 단톡방을 생성했어요!!!!", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
@@ -260,8 +270,14 @@ class ChatViewController: UIViewController {
         
         imagePickerController.delegate = self
         
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.userEmoticonCollectionView.reloadData()
+    }
+    
+    
     
     func setTableView() {
         chatTableView.delegate = self
@@ -842,7 +858,7 @@ class ChatViewController: UIViewController {
     
     @IBAction func sendEmoticonButtonAction(_ sender: Any) {
         
-        if selectedEmoticon == "" {
+        if selectedEmoticon == nil {
             print("이모티콘을 선택해 주세요")
         } else {
             ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: self.messageTextView.text, sendTime: "오후 11시 37분", emoticon: self.selectedEmoticon, photo: nil, scheduleDate: nil, scheduleTitle: nil))
@@ -851,7 +867,7 @@ class ChatViewController: UIViewController {
                 self.view.layoutIfNeeded()
             }, completion: {(completed) in
                 let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
-                self.selectedEmoticon = ""
+                self.selectedEmoticon = nil
                 self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
             })
         }
@@ -881,7 +897,7 @@ class ChatViewController: UIViewController {
         }, completion: {(completed) in
             IQKeyboardManager.shared().isEnabled = false
             let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
-            self.selectedEmoticon = ""
+            self.selectedEmoticon = nil
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         })
     }
@@ -906,7 +922,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 if chatMessage.emoticon != nil {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "MyPhotoMessageTableViewCell", for: indexPath) as! MyPhotoMessageTableViewCell
                     cell.selectionStyle = .none
-                    cell.mySendImage.image = UIImage(named: chatMessage.emoticon!)
+                    cell.mySendImage.image = chatMessage.emoticon!
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
@@ -945,6 +961,9 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyPhotoMessageTableViewCell", for: indexPath) as! FamilyPhotoMessageTableViewCell
+                cell.familySendImage.image = chatMessage.photo
+                cell.nameLabel.text = chatMessage.userName
+                cell.profileImage.image = UIImage(named: chatMessage.userProfile)
                 cell.selectionStyle = .none
                 return cell
                 
@@ -1045,7 +1064,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
 
 extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.imageArr.count
+        return ChatViewController.emoticonArray.count
         //return 20
     }
     
@@ -1058,7 +1077,7 @@ extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         if indexPath == self.selectedIndexPath {
             borderColor = UIColor.FailyColor.mainPinkColor.cgColor
-            self.selectedEmoticon = self.imageArr[self.selectedIndexPath.item]
+            self.selectedEmoticon = ChatViewController.emoticonArray[self.selectedIndexPath.item]
             print(selectedEmoticon)
             borderWidth = 3
         } else {
@@ -1068,7 +1087,7 @@ extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         cell.emoticonImageView.layer.borderWidth = borderWidth
         cell.emoticonImageView.layer.borderColor = borderColor
-        cell.emoticonImageView.image = UIImage(named: self.imageArr[indexPath.item])
+        cell.emoticonImageView.image = ChatViewController.emoticonArray[indexPath.item]
         return cell
     }
     

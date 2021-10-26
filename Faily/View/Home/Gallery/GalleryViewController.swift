@@ -7,6 +7,7 @@
 
 import UIKit
 import Photos
+import Alamofire
 
 struct photoInfo {
     var photoName: UIImage
@@ -70,7 +71,7 @@ class GalleryViewController: UIViewController {
         galleryCategoryCollectionView.delegate = self
         galleryCategoryCollectionView.dataSource = self
         galleryCategoryCollectionView.register(UINib(nibName: "GalleryCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GalleryCategoryCollectionViewCell")
-        
+        galleryCategoryCollectionView.register(UINib(nibName: "AddAlbumCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AddAlbumCategoryCollectionViewCell")
     }
     
     
@@ -100,76 +101,104 @@ class GalleryViewController: UIViewController {
 
 
 extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    //    func numberOfSections(in collectionView: UICollectionView) -> Int {
-    //        <#code#>
-    //    }
+        func numberOfSections(in collectionView: UICollectionView) -> Int {
+            2
+        }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return GalleryViewController.totalAlbum.count
+        
+        if section == 0 {
+            return GalleryViewController.totalAlbum.count
+        } else {
+            return 1
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCategoryCollectionViewCell", for: indexPath) as! GalleryCategoryCollectionViewCell
-        cell.titleLabel.text = GalleryViewController.totalAlbum[indexPath.item].albumTitle
-        let photoArray = GalleryViewController.totalAlbum[indexPath.item].album
-        let lastArray = photoArray.last
-        cell.thumbnailImage.image = lastArray!.photoName
-        cell.countLabel.text = ("\(GalleryViewController.totalAlbum[indexPath.item].album.count)")
-        if GalleryViewController.totalAlbum[indexPath.item].isloved == true {
-            cell.heartImage.isHidden = false
+        
+        if indexPath.section == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCategoryCollectionViewCell", for: indexPath) as! GalleryCategoryCollectionViewCell
+            cell.titleLabel.text = GalleryViewController.totalAlbum[indexPath.item].albumTitle
+            let photoArray = GalleryViewController.totalAlbum[indexPath.item].album
+            let lastArray = photoArray.last
+            cell.thumbnailImage.image = lastArray!.photoName
+            cell.countLabel.text = ("\(GalleryViewController.totalAlbum[indexPath.item].album.count)")
+            if GalleryViewController.totalAlbum[indexPath.item].isloved == true {
+                cell.heartImage.isHidden = false
+            } else {
+                cell.heartImage.isHidden = true
+            }
+            
+            
+            return cell
         } else {
-            cell.heartImage.isHidden = true
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddAlbumCategoryCollectionViewCell", for: indexPath) as! AddAlbumCategoryCollectionViewCell
+            return cell
         }
         
-        
-        return cell
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let detailGalleryVC = storyBoard.instantiateViewController(withIdentifier: "DetailGalleryViewController") as! DetailGalleryViewController
-        detailGalleryVC.getPhoto = GalleryViewController.totalAlbum[indexPath.item].album
-        detailGalleryVC.getTitle = GalleryViewController.totalAlbum[indexPath.item].albumTitle
-        self.navigationController?.pushViewController(detailGalleryVC, animated: true)
+        
+        if indexPath.section == 0 {
+            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+            let detailGalleryVC = storyBoard.instantiateViewController(withIdentifier: "DetailGalleryViewController") as! DetailGalleryViewController
+            detailGalleryVC.getPhoto = GalleryViewController.totalAlbum[indexPath.item].album
+            detailGalleryVC.getTitle = GalleryViewController.totalAlbum[indexPath.item].albumTitle
+            self.navigationController?.pushViewController(detailGalleryVC, animated: true)
+        }
     }
-    
 }
 
 extension GalleryViewController: UICollectionViewDelegateFlowLayout {
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = self.galleryCategoryCollectionView.frame.width
-        let height = self.galleryCategoryCollectionView.frame.height
-        let itemsPerRow: CGFloat = 2
-        let widthPadding = sectionInsets.left * (3)
-        let itemsPerColumn: CGFloat = 2
-        let heightPadding = sectionInsets.top * (3)
-        let cellWidth = (width - widthPadding) / itemsPerRow
-        let cellHeight = (height - heightPadding) / itemsPerColumn
         
-        return CGSize(width: cellWidth, height: cellWidth * 1.34375)
-     
-        
-        
-        
-        
+        if indexPath.section == 0 {
+            let width = self.galleryCategoryCollectionView.frame.width
+            let height = self.galleryCategoryCollectionView.frame.height
+            let itemsPerRow: CGFloat = 2
+            let widthPadding = sectionInsets.left * (3)
+            let itemsPerColumn: CGFloat = 2
+            let heightPadding = sectionInsets.top * (3)
+            let cellWidth = (width - widthPadding) / itemsPerRow
+            let cellHeight = (height - heightPadding) / itemsPerColumn
+            
+            return CGSize(width: cellWidth, height: cellWidth * 1.34375)
+        } else {
+            return CGSize(width: self.galleryCategoryCollectionView.frame.width, height: 40)
+        }
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return self.sectionInsets
         
-        
+        if section == 0 {
+            return self.sectionInsets
+        } else {
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.bottom
+        if section == 0 {
+            return sectionInsets.bottom
+        } else {
+            return 0
+        }
+        
     }
     ////
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.bottom
+        if section == 0 {
+            return sectionInsets.bottom
+        } else {
+            return 0
+        }
+        
     }
     
     
