@@ -9,6 +9,7 @@ import UIKit
 
 class AnsweredFamilyCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var familyProfileImage: UIImageView!
+    @IBOutlet weak var familyNameLabel: UILabel!
     
     
        override func awakeFromNib() {

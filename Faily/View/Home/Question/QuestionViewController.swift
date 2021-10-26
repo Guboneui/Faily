@@ -137,6 +137,9 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                             let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
                             cell.answeredFamilyCount = data.answerInfo?.count ?? 0
                             print("data.question_index: \(data.question_index)")
+                            cell.answerInfoArray = data.answerInfo!
+                            
+                            
                             let imageName = "num\(data.answerInfo?.count ?? 1)"
                             cell.answeredFamilyCountImage.image = UIImage(named: imageName)
                             cell.answeredCollectionView.reloadData()
@@ -162,11 +165,20 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                         print("data.question_index: \(data.question_index)")
                         let imageName = "num\(data.answerInfo?.count ?? 1)"
                         cell.answeredFamilyCountImage.image = UIImage(named: imageName)
+                        cell.answerInfoArray = data.answerInfo!
                         cell.answeredCollectionView.reloadData()
                         cell.selectionStyle = .none
                         return cell
                     } else if indexPath.row == 1 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
+                        
+                        for i in 0..<data.answerInfo!.count {
+                            if data.answerInfo![i].user_name == "구본의" {
+                                cell.answerLabel.text = data.answerInfo![i].answer
+                            }
+                        }
+                        
+                        
                         cell.selectionStyle = .none
                         return cell
                     } else if indexPath.row == 2 {
@@ -183,6 +195,7 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                     if indexPath.row == 0 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "AnsweredFamilyTableViewCell", for: indexPath) as! AnsweredFamilyTableViewCell
                         cell.selectionStyle = .none
+                        cell.answerInfoArray = data.answerInfo!
                         cell.answeredFamilyCount = data.answerInfo?.count ?? 0
                         let imageName = "num\(data.answerInfo?.count ?? 1)"
                         cell.answeredFamilyCountImage.image = UIImage(named: imageName)
@@ -195,6 +208,26 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                     } else {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
                         cell.selectionStyle = .none
+                        
+                        for i in 0..<data.answerInfo!.count {
+                            if data.answerInfo![i].user_name == "원승빈" {
+                                cell.titleLabel.text = "승빈의 답변"
+                                cell.answerLabel.text = data.answerInfo![i].answer
+                            } else if data.answerInfo![i].user_name == "정수빈" {
+                                cell.titleLabel.text = "수빈의 답변"
+                                cell.answerLabel.text = data.answerInfo![i].answer
+                            } else if data.answerInfo![i].user_name == "장나연" {
+                                cell.titleLabel.text = "나연의 답변"
+                                cell.answerLabel.text = data.answerInfo![i].answer
+                            } else {
+                                cell.titleLabel.text = "나의 답변"
+                                cell.answerLabel.text = data.answerInfo![i].answer
+                            }
+                        }
+                        
+                        
+                        
+                        
                         return cell
                     }
                 }

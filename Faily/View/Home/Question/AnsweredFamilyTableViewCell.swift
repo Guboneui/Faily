@@ -13,6 +13,7 @@ class AnsweredFamilyTableViewCell: UITableViewCell {
     @IBOutlet weak var answeredCollectionView: UICollectionView!
     
     var answeredFamilyCount: Int = 0
+    var answerInfoArray: [AnswerInfo] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,6 +45,26 @@ extension AnsweredFamilyTableViewCell: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnsweredFamilyCollectionViewCell", for: indexPath) as! AnsweredFamilyCollectionViewCell
+        
+       
+        if answerInfoArray[indexPath.row].user_name == "원승빈" {
+            cell.familyProfileImage.image = UIImage(named: "승빈_프로필")
+            cell.familyNameLabel.text = "승빈"
+        } else if answerInfoArray[indexPath.row].user_name == "장나연" {
+            cell.familyProfileImage.image = UIImage(named: "나연_프로필")
+            cell.familyNameLabel.text = "나연"
+        } else if answerInfoArray[indexPath.row].user_name == "정수빈" {
+            cell.familyProfileImage.image = UIImage(named: "수빈_프로필")
+            cell.familyNameLabel.text = "수빈"
+        } else {
+            cell.familyProfileImage.image = UIImage(named: "본의_프로필")
+            cell.familyNameLabel.text = "본의"
+        }
+
+        
+//        
+//        
+//        
         
         return cell
     }

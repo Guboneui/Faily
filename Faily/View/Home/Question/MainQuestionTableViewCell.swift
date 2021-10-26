@@ -122,19 +122,25 @@ extension MainQuestionTableViewCell: UICollectionViewDelegate, UICollectionViewD
         
         cell.questionLabel.text = questionDeatil.question
         cell.dateLabel.text = questionDeatil.date
+   
         
-        if questionDeatil.date == current_date_string {
-            cell.questionBox.image = UIImage(named: "questionBox_BookMark")
+        if questionDeatil.isAnswered == false {
+            cell.questionBox.image = UIImage(named: "questionBox_noBookMark")
             cell.answerStackViewLabel.text = "답변하러 가기"
             cell.answerStackViewImage.image = UIImage(named: "pencil_gray")
             cell.answerStackView.isHidden = false
-            
+        } else {
+            cell.answerStackView.isHidden = true
+        }
+        
+        if questionDeatil.date == current_date_string {
+            cell.questionBox.image = UIImage(named: "questionBox_BookMark")
+           
+
         } else {
             cell.questionBox.image = UIImage(named: "questionBox_noBookMark")
-            cell.answerStackViewLabel.text = "답변보러 가기"
-            cell.answerStackViewImage.image = UIImage(named: "showAnswer")
-            cell.answerStackView.isHidden = true
-            
+           
+
         }
         
         return cell
