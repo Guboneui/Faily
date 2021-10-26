@@ -112,8 +112,8 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCategoryCollectionViewCell", for: indexPath) as! GalleryCategoryCollectionViewCell
         cell.titleLabel.text = GalleryViewController.totalAlbum[indexPath.item].albumTitle
         let photoArray = GalleryViewController.totalAlbum[indexPath.item].album
-        let firstArray = photoArray.first
-        cell.thumbnailImage.image = firstArray!.photoName
+        let lastArray = photoArray.last
+        cell.thumbnailImage.image = lastArray!.photoName
         cell.countLabel.text = ("\(GalleryViewController.totalAlbum[indexPath.item].album.count)")
         if GalleryViewController.totalAlbum[indexPath.item].isloved == true {
             cell.heartImage.isHidden = false

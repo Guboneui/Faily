@@ -675,9 +675,14 @@ class ChatViewController: UIViewController {
                 
                 self.userSelectedImages.append(newImage! as UIImage)
                 ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: true, isSchedule: false, message: self.messageTextView.text, sendTime: "오후 11시 37분", emoticon: nil, photo: newImage, scheduleDate: nil, scheduleTitle: nil))
+                
                 GalleryViewController.recentPhotoAlbum.append(photoInfo(photoName: newImage!, isLoved: false))
                 
             }
+            
+            GalleryViewController.totalAlbum[0] = totalAlbumInfo(album: GalleryViewController.recentPhotoAlbum, isloved: false, albumTitle: "최근 항목")
+           
+            
         }
         
         self.chatTableView.reloadData()
