@@ -16,6 +16,7 @@ struct Setting {
 class UserSettingViewController: UIViewController {
     
     
+    @IBOutlet weak var mainProfileImage: UIImageView!
     @IBOutlet weak var profileBaseView: UIView!
     @IBOutlet weak var profileBGView: UIImageView!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -47,6 +48,10 @@ class UserSettingViewController: UIViewController {
     }
     
     func configUI() {
+       
+        mainProfileImage.layer.cornerRadius = self.mainProfileImage.frame.height / 2
+        
+        
         self.profileBaseView.layer.cornerRadius = 20
         self.makeShadow(profileBaseView)
         self.profileBGView.layer.cornerRadius = 20

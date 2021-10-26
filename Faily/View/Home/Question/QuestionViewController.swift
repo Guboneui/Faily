@@ -11,6 +11,7 @@ import CollectionViewPagingLayout
 class QuestionViewController: UIViewController {
     
     @IBOutlet weak var questionMainTableView: UITableView!
+    @IBOutlet weak var mainProfileImage: UIImageView!
     
     lazy var viewModel: AllQuestionViewModel = AllQuestionViewModel()
     var keyWord: String = ""
@@ -19,6 +20,11 @@ class QuestionViewController: UIViewController {
         didSet{
             print("현재 페이지는: \(mainQuestionPage) ")
         }
+    }
+    
+    override func loadView() {
+        super.loadView()
+        mainProfileImage.layer.cornerRadius = self.mainProfileImage.frame.height / 2
     }
     
     override func viewDidLoad() {

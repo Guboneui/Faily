@@ -7,12 +7,20 @@
 
 import UIKit
 
+protocol PopMakeEmoticonViewDelegate: AnyObject {
+    func popNav()
+}
+
+
 class EmoticonPopUpViewController: UIViewController {
 
     @IBOutlet weak var popUpBaseView: UIView!
     @IBOutlet weak var resultImage: UIImageView!
     
     var combinedImage: UIImage?
+    
+    
+    weak var delegate: PopMakeEmoticonViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +49,7 @@ class EmoticonPopUpViewController: UIViewController {
         let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
         let okButton = UIAlertAction(title: "확인", style: .default, handler: { _ in
             ChatViewController.emoticonArray.append(self.combinedImage!)
+            self.delegate?.popNav()
             self.dismiss(animated: false, completion: nil)
         })
         alert.addAction(cancelButton)

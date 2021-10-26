@@ -945,7 +945,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_default" translatesAutoresizingMaskIntoConstraints="NO" id="txG-nr-jDa">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="본의_프로필" translatesAutoresizingMaskIntoConstraints="NO" id="txG-nr-jDa">
                                         <rect key="frame" x="333" y="1" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="akY-Gd-dCi"/>
@@ -986,7 +986,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="183.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_default" translatesAutoresizingMaskIntoConstraints="NO" id="8vQ-ZA-xta">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="본의_프로필" translatesAutoresizingMaskIntoConstraints="NO" id="8vQ-ZA-xta">
                                         <rect key="frame" x="13" y="13" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="YQE-Wf-YBw"/>
@@ -1132,6 +1132,7 @@
                         <outlet property="emoticonStackView" destination="hVD-xq-1zc" id="6R6-iQ-LC1"/>
                         <outlet property="goEditProfileButton" destination="Z3Y-rI-AYk" id="9WJ-Tf-392"/>
                         <outlet property="logoutButton" destination="zko-H8-weS" id="hTB-pr-yzD"/>
+                        <outlet property="mainProfileImage" destination="txG-nr-jDa" id="rzg-A1-MIp"/>
                         <outlet property="pointStackView" destination="O9w-XR-GZG" id="yhb-1N-hzE"/>
                         <outlet property="presentStackView" destination="Rb1-Ur-yt5" id="6hJ-XN-kXf"/>
                         <outlet property="profileBGView" destination="jI4-Ih-AWA" id="eCH-Ai-qX7"/>
@@ -1589,7 +1590,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_default" translatesAutoresizingMaskIntoConstraints="NO" id="UVc-2s-urA">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="본의_프로필" translatesAutoresizingMaskIntoConstraints="NO" id="UVc-2s-urA">
                                         <rect key="frame" x="333" y="1" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="4Cw-90-tBT"/>
@@ -1663,6 +1664,7 @@
                     <tabBarItem key="tabBarItem" title="" image="gallery_default" selectedImage="galley_selected" id="tjq-5B-cmL"/>
                     <connections>
                         <outlet property="galleryCategoryCollectionView" destination="G5t-f6-nab" id="8lV-1W-z9q"/>
+                        <outlet property="mainProfileImage" destination="UVc-2s-urA" id="zzg-Vj-NQI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u18-HX-qot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3822,7 +3824,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_default" translatesAutoresizingMaskIntoConstraints="NO" id="VG0-VD-tcv">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="본의_프로필" translatesAutoresizingMaskIntoConstraints="NO" id="VG0-VD-tcv">
                                         <rect key="frame" x="333" y="1" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="JCV-Co-SNc"/>
@@ -3881,6 +3883,7 @@
                     <tabBarItem key="tabBarItem" title="" image="question_default" selectedImage="question_selected" id="wTq-RD-fPz"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="mainProfileImage" destination="VG0-VD-tcv" id="5PO-V0-QWH"/>
                         <outlet property="questionMainTableView" destination="cGX-Me-0pu" id="1Pb-50-tW4"/>
                     </connections>
                 </viewController>
@@ -3908,7 +3911,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_default" translatesAutoresizingMaskIntoConstraints="NO" id="ICf-k3-bUB">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="본의_프로필" translatesAutoresizingMaskIntoConstraints="NO" id="ICf-k3-bUB">
                                         <rect key="frame" x="333" y="1" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="7pd-rI-6Vi"/>
@@ -3967,6 +3970,7 @@
                     <tabBarItem key="tabBarItem" title="" image="calendar_default" selectedImage="calendar_selected" id="L58-7j-20P"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="mainProfileImage" destination="ICf-k3-bUB" id="YHv-Up-CWk"/>
                         <outlet property="mainTableView" destination="J3D-C6-3Zu" id="zEe-mo-AFD"/>
                     </connections>
                 </viewController>
@@ -4124,7 +4128,6 @@
         <image name="pink_green_gradient" width="156" height="115"/>
         <image name="point" width="24" height="24"/>
         <image name="present" width="20" height="20"/>
-        <image name="profile_default" width="48" height="48"/>
         <image name="question_default" width="28" height="28"/>
         <image name="question_selected" width="28" height="28"/>
         <image name="rainbow_default" width="20" height="20"/>

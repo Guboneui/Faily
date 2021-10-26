@@ -94,7 +94,7 @@ class MakeEmoticonViewController: UIViewController {
                 //let combinedImage = userSelectedImage + UIImage(named: "TestPng")!
                 popUpVC.combinedImage = combinedImage
                 
-                
+                popUpVC.delegate = self
                 
                 self.present(popUpVC, animated: false, completion: nil)
             }
@@ -178,5 +178,12 @@ extension MakeEmoticonViewController: UIImagePickerControllerDelegate, UINavigat
         self.userSelectedState = true
         
         dismiss(animated: true, completion: nil)
+    }
+}
+
+
+extension MakeEmoticonViewController: PopMakeEmoticonViewDelegate {
+    func popNav() {
+        self.navigationController?.popViewController(animated: false)
     }
 }

@@ -13,10 +13,19 @@ class CalendarViewController: UIViewController {
     
     @IBOutlet weak var mainTableView: UITableView!
     
+    @IBOutlet weak var mainProfileImage: UIImageView!
     lazy var viewModel = GetAllScheduleViewModel()
     
     var seletedDate: String = ""
     var data: [ScheduleDetail] = []
+    
+    
+    override func loadView() {
+        super.loadView()
+        mainProfileImage.layer.cornerRadius = self.mainProfileImage.frame.height / 2
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

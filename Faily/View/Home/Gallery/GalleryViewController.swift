@@ -24,6 +24,7 @@ struct totalAlbumInfo {
 class GalleryViewController: UIViewController {
     
     
+    @IBOutlet weak var mainProfileImage: UIImageView!
     //@IBOutlet weak var galleryCategoryTableView: UITableView!
     
     static var totalAlbum: [totalAlbumInfo] = [
@@ -42,6 +43,16 @@ class GalleryViewController: UIViewController {
     
     @IBOutlet weak var galleryCategoryCollectionView: UICollectionView!
     let sectionInsets = UIEdgeInsets(top: 15, left: 32, bottom: 15, right: 32)
+    
+    
+    override func loadView() {
+        super.loadView()
+        mainProfileImage.layer.cornerRadius = self.mainProfileImage.frame.height / 2
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -133,11 +144,24 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddAlbumCategoryCollectionViewCell", for: indexPath) as! AddAlbumCategoryCollectionViewCell
+            cell.addAlbumButton.addTarget(self, action: #selector(addAlbumCategory), for: .touchUpInside)
             return cell
         }
         
-       
     }
+    
+    @objc func addAlbumCategory() {
+        let alert = UIAlertController(title: "갤러리", message: "추가할 카테고리 이름을 입력 해주세요.", preferredStyle: .alert)
+        alert.addTextField { textField in
+            textField.placeholder = "카테고리"
+        }
+        let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
+        let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alert.addAction(cancelButton)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
