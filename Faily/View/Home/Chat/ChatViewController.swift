@@ -85,45 +85,45 @@ class ChatViewController: UIViewController {
     
     
     static var message: [ChatMessage] = [
-        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "우리 가족 단톡방을 생성했어요!!!!", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "오오오오오오오 카톡보다 좋은거 같은데???", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "나도 들어왔댱", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "승빈이 언제 들어오는거야", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "하하하하하하하하하하하하하", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "ㅎㅇㅎㅇ", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "왤케 늦게 들어옴", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "호두 산책시키고 왔는데욤?", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "암튼 젤 늦어", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "내가 주인공이거든😎", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: ";;;;;;;;;;;;;;;;;;;;;;;;;", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "넝담~~", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "오늘 날씨가 좋아용", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: true, isSchedule: false, message: "", sendTime: "오전 8시 23분", emoticon: nil, photo: UIImage(named: "chat_image3"), scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "난 오늘 점심 차슈 덮밥 먹었어용~~", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: true, isSchedule: false, message: "", sendTime: "오전 8시 23분", emoticon: nil, photo: UIImage(named: "chat_image2"), scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "그래서 우리 여행은 어딜로 언제 가는게 좋을까???", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "나 바다 보고 싶은데", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "겨울바다 보러가자", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "아니면 캠핑장도 좋아", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "요런곳", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: true, isSchedule: false, message: "", sendTime: "오전 8시 23분", emoticon: nil, photo: UIImage(named: "chat_image1"), scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "오 좋아!!! 운전은 승빈이가 하면 되겠댜", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "저요.......?", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "승빈이 운전하면 진짜 꿀잠 계약", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "원래 승빈이가 운전 담당이긴 하지", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "못하겠으면 내가 하고~", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "나 여행 안갈래.....", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "키키키키키킼 난 좋아", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "어우우ㅜ우우우우", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "왜왜왜왜왜왜왜왜왜왱", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "아닙니댜~~~", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "그럼 언제가 좋을라나???", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "더 추워지기 전에 가는게 좋을 것 같은데", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "아무래도 그렇지..?", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "일단 졸프부터 끝내고??????", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "그래야지ㅠㅠㅠ", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: true, isSchedule: false, message: "", sendTime: "오전 8시 23분", emoticon: nil, photo: UIImage(named: "chat_image4"), scheduleDate: nil, scheduleTitle: nil),
-        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "우리 귀요미 호두도 데리고 가쟝", sendTime: "오전 8시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "우리 가족 단톡방을 생성했어요!!!!", sendTime: "오전 10시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "오오오오오오오 카톡보다 좋은거 같은데???", sendTime: "오전 10시 27분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "나도 들어왔댱", sendTime: "오전 10시 28분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "승빈이 언제 들어오는거야", sendTime: "오전 10시 28분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "하하하하하하하하하하하하하", sendTime: "오전 11시 5분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "ㅎㅇㅎㅇ", sendTime: "오전 11시 8분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "왤케 늦게 들어옴", sendTime: "오전 11시 15분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "호두 산책시키고 왔는데욤?", sendTime: "오전 11시 16분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "암튼 젤 늦어", sendTime: "오전 11시 16분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "내가 주인공이거든😎", sendTime: "오전 11시 16분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: ";;;;;;;;;;;;;;;;;;;;;;;;;", sendTime: "오전11시 18분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "넝담~~", sendTime: "오전 11시 18분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "오늘 날씨가 좋아용", sendTime: "오후 12시 2분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: true, isSchedule: false, message: "", sendTime: "오후 12시 03분", emoticon: nil, photo: UIImage(named: "chat_image3"), scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "난 오늘 점심 차슈 덮밥 먹었어용~~", sendTime: "오후 12시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: true, isSchedule: false, message: "", sendTime: "오후 12시 23분", emoticon: nil, photo: UIImage(named: "chat_image2"), scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "그래서 우리 여행은 어딜로 언제 가는게 좋을까???", sendTime: "오후 5시 17분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "나 바다 보고 싶은데", sendTime: "오후 5시 19분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "겨울바다 보러가자", sendTime: "오후 5시 19분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "아니면 캠핑장도 좋아", sendTime: "오후 5시 19분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "요런곳", sendTime: "오후 5시 19분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: true, isSchedule: false, message: "", sendTime: "오후 5시 20분", emoticon: nil, photo: UIImage(named: "chat_image1"), scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "오 좋아!!! 운전은 승빈이가 하면 되겠댜", sendTime: "오후 5시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "저요.......?", sendTime: "오후 5시 25분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "승빈이 운전하면 진짜 꿀잠 계약", sendTime: "오후 5시 39분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "원래 승빈이가 운전 담당이긴 하지", sendTime: "오후 5시 45분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "못하겠으면 내가 하고~", sendTime: "오후 5시 50분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "나 여행 안갈래.....", sendTime: "오후 5시 51분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "키키키키키킼 난 좋아", sendTime: "오후 6시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "어우우ㅜ우우우우", sendTime: "오후 6시 25분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "왜왜왜왜왜왜왜왜왜왱", sendTime: "오후 6시 26분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "아닙니댜~~~", sendTime: "오후 6시 26분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "그럼 언제가 좋을라나???", sendTime: "오후 7시 3분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "더 추워지기 전에 가는게 좋을 것 같은데", sendTime: "오후 7시 6분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "나연", userProfile: "나연_프로필", isPhoto: false, isSchedule: false, message: "아무래도 그렇지..?", sendTime: "오후 7시 10분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "일단 졸프부터 끝내고??????", sendTime: "오후 7시 11분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "그래야지ㅠㅠㅠ", sendTime: "오후 7시 13분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: true, isSchedule: false, message: "", sendTime: "오후 8시 21분", emoticon: nil, photo: UIImage(named: "chat_image4"), scheduleDate: nil, scheduleTitle: nil),
+        ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "우리 귀요미 호두도 데리고 가쟝", sendTime: "오후 8시 21분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
         
     ]
     
@@ -697,7 +697,15 @@ class ChatViewController: UIViewController {
                 let newImage = UIImage(data: data!)
                 
                 self.userSelectedImages.append(newImage! as UIImage)
-                ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: true, isSchedule: false, message: self.messageTextView.text, sendTime: "오후 11시 37분", emoticon: nil, photo: newImage, scheduleDate: nil, scheduleTitle: nil))
+                
+                
+                let myDateFormatter = DateFormatter()
+                myDateFormatter.dateFormat = "a h시 m분"
+                let time = myDateFormatter.string(from: Date())
+                
+                
+                
+                ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: true, isSchedule: false, message: self.messageTextView.text, sendTime: time, emoticon: nil, photo: newImage, scheduleDate: nil, scheduleTitle: nil))
                 
                 GalleryViewController.recentPhotoAlbum.append(photoInfo(photoName: newImage!, isLoved: false))
                 
@@ -828,7 +836,15 @@ class ChatViewController: UIViewController {
         }
         
         //message.append(ChatMessage(userName: "보니", message: self.messageTextView.text, profileImage: "boni", sendTime: "오후 11시 30분"))
-        ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: self.messageTextView.text, sendTime: "오후 11시 37분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil))
+        
+        
+        let myDateFormatter = DateFormatter()
+        myDateFormatter.dateFormat = "a h시 m분"
+        let time = myDateFormatter.string(from: Date())
+        
+        
+        
+        ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: self.messageTextView.text, sendTime: time, emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil))
         self.chatTableView.reloadData()
         self.messageTextView.text = nil
         UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
@@ -868,7 +884,15 @@ class ChatViewController: UIViewController {
         if selectedEmoticon == nil {
             print("이모티콘을 선택해 주세요")
         } else {
-            ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: self.messageTextView.text, sendTime: "오후 11시 37분", emoticon: self.selectedEmoticon, photo: nil, scheduleDate: nil, scheduleTitle: nil))
+            
+            
+            let myDateFormatter = DateFormatter()
+            myDateFormatter.dateFormat = "a h시 m분"
+            let time = myDateFormatter.string(from: Date())
+            
+            
+            
+            ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: self.messageTextView.text, sendTime: time, emoticon: self.selectedEmoticon, photo: nil, scheduleDate: nil, scheduleTitle: nil))
             self.chatTableView.reloadData()
             UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
                 self.view.layoutIfNeeded()
@@ -897,7 +921,14 @@ class ChatViewController: UIViewController {
         formatter.dateFormat = "MM월 dd일"
         let startDate = formatter.string(from: scheduleStartTimePicker.date)
         
-        ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: true, message: self.messageTextView.text, sendTime: "오후 11시 37분", emoticon: nil, photo: nil, scheduleDate: startDate, scheduleTitle: title))
+        
+        let myDateFormatter = DateFormatter()
+        myDateFormatter.dateFormat = "a h시 m분"
+        let time = myDateFormatter.string(from: Date())
+        
+        
+        
+        ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: true, message: self.messageTextView.text, sendTime: time, emoticon: nil, photo: nil, scheduleDate: startDate, scheduleTitle: title))
         self.chatTableView.reloadData()
         UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
@@ -930,10 +961,12 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "MyPhotoMessageTableViewCell", for: indexPath) as! MyPhotoMessageTableViewCell
                     cell.selectionStyle = .none
                     cell.mySendImage.image = chatMessage.emoticon!
+                    cell.timeLabel.text = chatMessage.sendTime
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
                     cell.myMessageLabel.text = chatMessage.message
+                    cell.timeLabel.text = chatMessage.sendTime
                     cell.selectionStyle = .none
                     return cell
                 }
@@ -943,6 +976,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 if chatMessage.emoticon != nil {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyPhotoMessageTableViewCell", for: indexPath) as! FamilyPhotoMessageTableViewCell
+                    cell.timeLabel.text = chatMessage.sendTime
                     cell.selectionStyle = .none
                     return cell
                 } else {
@@ -961,6 +995,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MyPhotoMessageTableViewCell", for: indexPath) as! MyPhotoMessageTableViewCell
                 cell.selectionStyle = .none
                 cell.mySendImage.image = chatMessage.photo
+                cell.timeLabel.text = chatMessage.sendTime
                 return cell
                 
                 
@@ -969,6 +1004,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyPhotoMessageTableViewCell", for: indexPath) as! FamilyPhotoMessageTableViewCell
                 cell.familySendImage.image = chatMessage.photo
+                cell.timeLabel.text = chatMessage.sendTime
                 cell.nameLabel.text = chatMessage.userName
                 cell.profileImage.image = UIImage(named: chatMessage.userProfile)
                 cell.selectionStyle = .none
@@ -995,6 +1031,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
             cell.myMessageLabel.text = chatMessage.message
+            cell.timeLabel.text = chatMessage.sendTime
             cell.selectionStyle = .none
             return cell
         }

@@ -14,17 +14,17 @@ import FSPagerView
 struct UserInfo {
     let profileImage: String
     let userName: String
-    let userFamiliar: Float
+    var userFamiliar: Float
     let userEmotion: String
 }
 
 class HomeViewController: UIViewController {
     
     static var userInfo: [UserInfo] = [
-        UserInfo(profileImage: "수빈_프로필", userName: "수빈", userFamiliar: 89.3, userEmotion: "sad_full"),
-        UserInfo(profileImage: "본의_프로필", userName: "본의", userFamiliar: 79.1, userEmotion: "happy_full"),
-        UserInfo(profileImage: "나연_프로필", userName: "나연", userFamiliar: 83.9, userEmotion: "mumu_full"),
-        UserInfo(profileImage: "승빈_프로필", userName: "승빈", userFamiliar: 65.9, userEmotion: "sick_full")
+        UserInfo(profileImage: "수빈_프로필", userName: "수빈", userFamiliar: 96.7, userEmotion: "sad_full"),
+        UserInfo(profileImage: "본의_프로필", userName: "본의", userFamiliar: 92.7, userEmotion: "happy_full"),
+        UserInfo(profileImage: "나연_프로필", userName: "나연", userFamiliar: 92.7, userEmotion: "mumu_full"),
+        UserInfo(profileImage: "승빈_프로필", userName: "승빈", userFamiliar: 96.7, userEmotion: "sick_full")
     ]
     
     let imageArr = ["sick_big", "happy_big", "mumu_big", "sad_big", "angry_big"]
@@ -53,6 +53,9 @@ class HomeViewController: UIViewController {
             self.emotionPagerView.itemSize = self.emotionPagerView.frame.size.applying(transform)
             self.emotionPagerView.decelerationDistance = 10
             self.emotionPagerView.isInfinite = true
+            
+            
+            
         }
     }
     
@@ -111,6 +114,26 @@ class HomeViewController: UIViewController {
         
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        var familyTotalProgress = 0.0
+        for i in 0..<HomeViewController.userInfo.count {
+            familyTotalProgress += Double(Float(HomeViewController.userInfo[i].userFamiliar))
+        }
+        
+        
+        familyTotalProgress = familyTotalProgress / Double(HomeViewController.userInfo.count)
+        
+        self.percentLabel.text = "\(String(format: "%.2f", familyTotalProgress))%"
+        
+        totalProgress.setProgress(progress: CGFloat(familyTotalProgress) * 0.01, animated: true)
+        
+        self.memberProfileCollectionView.reloadData()
+    }
+    
+    
     func setCollectionView() {
         
         emotionPagerView.delegate = self
@@ -137,18 +160,18 @@ class HomeViewController: UIViewController {
         
         totalProgressBaseImageView.layer.cornerRadius = 20
         
-        
-        var familyTotalProgress = 0
-        for i in 0..<HomeViewController.userInfo.count {
-            familyTotalProgress += Int(HomeViewController.userInfo[i].userFamiliar)
-        }
-        
-        
-        familyTotalProgress = familyTotalProgress / HomeViewController.userInfo.count
-        
-        self.percentLabel.text = "\(familyTotalProgress)%"
-        
-        totalProgress.setProgress(progress: CGFloat(familyTotalProgress) * 0.01, animated: true)
+//
+//        var familyTotalProgress = 0.0
+//        for i in 0..<HomeViewController.userInfo.count {
+//            familyTotalProgress += Double(Float(HomeViewController.userInfo[i].userFamiliar))
+//        }
+//
+//
+//        familyTotalProgress = familyTotalProgress / Double(HomeViewController.userInfo.count)
+//
+//        self.percentLabel.text = "\(String(format: "%.2f", familyTotalProgress))%"
+//
+//        totalProgress.setProgress(progress: CGFloat(familyTotalProgress) * 0.01, animated: true)
         totalProgress.progressShapeColor = .yellow
         totalProgress.backgroundShapeColor = .white
         totalProgress.lineWidth = 40

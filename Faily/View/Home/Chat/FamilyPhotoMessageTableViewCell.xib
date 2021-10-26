@@ -62,6 +62,7 @@
                 <outlet property="familySendImage" destination="acd-aH-ctS" id="7KD-Ty-Wj1"/>
                 <outlet property="nameLabel" destination="ARQ-wf-x07" id="4kf-Ce-3hR"/>
                 <outlet property="profileImage" destination="DoE-2I-Nxw" id="lTn-gP-3qR"/>
+                <outlet property="timeLabel" destination="kes-k0-MpR" id="nqQ-e1-uvD"/>
             </connections>
             <point key="canvasLocation" x="95.652173913043484" y="114.50892857142857"/>
         </tableViewCell>

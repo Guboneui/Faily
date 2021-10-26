@@ -11,6 +11,7 @@ class MyPhotoMessageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var mySendImage: UIImageView!
     
+    @IBOutlet weak var timeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

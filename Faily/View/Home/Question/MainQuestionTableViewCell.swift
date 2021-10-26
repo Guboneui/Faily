@@ -88,6 +88,7 @@ class MainQuestionTableViewCell: UITableViewCell{
     
     @objc func goAnswerView(_ recognizer: UITapGestureRecognizer) {
         
+        
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let allAnswerVC = storyBoard.instantiateViewController(withIdentifier: "AllAnswerViewController") as! AllAnswerViewController
         allAnswerVC.modalPresentationStyle = .overCurrentContext

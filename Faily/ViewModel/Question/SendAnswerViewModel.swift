@@ -20,6 +20,7 @@ class SendAnswerViewModel {
             
             if response.isSuccess == true {
                 print("답변을 성공적으로 전달했습니다.")
+                HomeViewController.userInfo[1].userFamiliar = 92.975
                 self.dismissView()
             } else {
                 print("\(code): \(message)")

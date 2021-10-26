@@ -9,6 +9,7 @@ import UIKit
 
 class FamilyPhotoMessageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var familySendImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
