@@ -10,6 +10,7 @@ import UIKit
 class DetailGalleryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var photo: UIImageView!
+    @IBOutlet weak var heart: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -17,5 +18,7 @@ class DetailGalleryCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         photo.frame = self.bounds
+        photo.layer.borderColor = UIColor.FailyColor.grayscale_5.cgColor
+        photo.layer.borderWidth = 0.2
     }
 }

@@ -71,12 +71,19 @@ class DetailGalleryViewController: UIViewController {
 
 extension DetailGalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageArr.count
+        return GalleryViewController.recentPhotoAlbum.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailGalleryCollectionViewCell", for: indexPath) as! DetailGalleryCollectionViewCell
-        cell.photo.image = UIImage(named: self.imageArr[indexPath.row])
+        cell.photo.image = UIImage(named: GalleryViewController.recentPhotoAlbum[indexPath.item].photoName)
+        
+        if GalleryViewController.recentPhotoAlbum[indexPath.item].isLoved == true {
+            cell.heart.isHidden = false
+        } else {
+            cell.heart.isHidden = true
+        }
+        
         return cell
     }
     

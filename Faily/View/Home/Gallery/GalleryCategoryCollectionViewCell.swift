@@ -15,10 +15,13 @@ class GalleryCategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var heartImage: UIImageView!
     
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layoutIfNeeded()
+        thumbnailImage.layer.cornerRadius = 20
     }
 }

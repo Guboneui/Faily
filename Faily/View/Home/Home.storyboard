@@ -1677,13 +1677,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_Main" translatesAutoresizingMaskIntoConstraints="NO" id="rEW-bL-bx4">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eCc-GV-Crx">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywJ-Qg-gWA">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
@@ -1718,7 +1711,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rGs-sK-Fod">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="23" y="93" width="368" height="803"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9ot-cl-Qe7">
                                     <size key="itemSize" width="128" height="128"/>
@@ -1741,21 +1734,13 @@
                         <viewLayoutGuide key="safeArea" id="C23-wH-40o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rEW-bL-bx4" firstAttribute="trailing" secondItem="C23-wH-40o" secondAttribute="trailing" id="03a-lN-T9k"/>
                             <constraint firstItem="ywJ-Qg-gWA" firstAttribute="top" secondItem="C23-wH-40o" secondAttribute="top" id="0SH-4S-2Ec"/>
-                            <constraint firstAttribute="bottom" secondItem="rEW-bL-bx4" secondAttribute="bottom" id="4Q4-W7-YDo"/>
-                            <constraint firstItem="C23-wH-40o" firstAttribute="trailing" secondItem="rGs-sK-Fod" secondAttribute="trailing" id="AoO-bh-fMf"/>
-                            <constraint firstItem="rEW-bL-bx4" firstAttribute="leading" secondItem="C23-wH-40o" secondAttribute="leading" id="B0U-lx-1uC"/>
-                            <constraint firstAttribute="bottom" secondItem="eCc-GV-Crx" secondAttribute="bottom" id="YIR-wl-kla"/>
-                            <constraint firstItem="eCc-GV-Crx" firstAttribute="top" secondItem="vwu-F9-28b" secondAttribute="top" id="Zn1-up-fdv"/>
-                            <constraint firstItem="rGs-sK-Fod" firstAttribute="leading" secondItem="C23-wH-40o" secondAttribute="leading" id="byd-AK-5fv"/>
+                            <constraint firstItem="C23-wH-40o" firstAttribute="trailing" secondItem="rGs-sK-Fod" secondAttribute="trailing" constant="23" id="AoO-bh-fMf"/>
+                            <constraint firstItem="rGs-sK-Fod" firstAttribute="leading" secondItem="C23-wH-40o" secondAttribute="leading" constant="23" id="byd-AK-5fv"/>
                             <constraint firstAttribute="bottom" secondItem="rGs-sK-Fod" secondAttribute="bottom" id="c1U-fn-60h"/>
                             <constraint firstAttribute="trailing" secondItem="ywJ-Qg-gWA" secondAttribute="trailing" id="jb0-QE-voy"/>
-                            <constraint firstItem="eCc-GV-Crx" firstAttribute="trailing" secondItem="C23-wH-40o" secondAttribute="trailing" id="o8q-CX-IGl"/>
-                            <constraint firstItem="rEW-bL-bx4" firstAttribute="top" secondItem="vwu-F9-28b" secondAttribute="top" id="tBS-iD-dO0"/>
-                            <constraint firstItem="eCc-GV-Crx" firstAttribute="leading" secondItem="C23-wH-40o" secondAttribute="leading" id="vOJ-jH-kr4"/>
                             <constraint firstItem="ywJ-Qg-gWA" firstAttribute="leading" secondItem="C23-wH-40o" secondAttribute="leading" id="yMk-ka-b2O"/>
-                            <constraint firstItem="rGs-sK-Fod" firstAttribute="top" secondItem="ywJ-Qg-gWA" secondAttribute="bottom" id="zBs-m1-6Q9"/>
+                            <constraint firstItem="rGs-sK-Fod" firstAttribute="top" secondItem="ywJ-Qg-gWA" secondAttribute="bottom" constant="5" id="zBs-m1-6Q9"/>
                         </constraints>
                     </view>
                     <connections>

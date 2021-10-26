@@ -8,10 +8,37 @@
 import UIKit
 import Photos
 
+struct photoInfo {
+    var photoName: String
+    var isLoved: Bool
+}
+
+struct totalAlbumInfo {
+    var album: [photoInfo]
+    var isloved: Bool
+    var albumTitle: String
+}
+
+
 class GalleryViewController: UIViewController {
     
     
     //@IBOutlet weak var galleryCategoryTableView: UITableView!
+    
+    static var totalAlbum: [totalAlbumInfo] = [
+        totalAlbumInfo(album: GalleryViewController.recentPhotoAlbum, isloved: false, albumTitle: "최근 항목"),
+        totalAlbumInfo(album: GalleryViewController.lovePhotoAlbum, isloved: true, albumTitle: "즐겨찾는 항목")
+    ]
+    
+    static var recentPhotoAlbum: [photoInfo] = [
+        photoInfo(photoName: "chat_image1", isLoved: false),
+        photoInfo(photoName: "chat_image2", isLoved: false),
+        photoInfo(photoName: "chat_image3", isLoved: false),
+        photoInfo(photoName: "chat_image4", isLoved: true)
+    ]
+    
+    static var lovePhotoAlbum: [photoInfo] = []
+    
     @IBOutlet weak var galleryCategoryCollectionView: UICollectionView!
     let sectionInsets = UIEdgeInsets(top: 15, left: 32, bottom: 15, right: 32)
     override func viewDidLoad() {
@@ -19,8 +46,20 @@ class GalleryViewController: UIViewController {
         
         
         setCollectionView()
+        
+        for i in 0..<GalleryViewController.recentPhotoAlbum.count {
+            if GalleryViewController.recentPhotoAlbum[i].isLoved == true {
+                GalleryViewController.lovePhotoAlbum.append(GalleryViewController.recentPhotoAlbum[i])
+            }
+        }
+        
+        print("❤️")
+        print(GalleryViewController.lovePhotoAlbum)
+        
+        
     }
-
+    
+    
     
     func setCollectionView() {
         galleryCategoryCollectionView.delegate = self
@@ -30,6 +69,7 @@ class GalleryViewController: UIViewController {
     }
     
     
+ 
     
     
     
@@ -53,20 +93,39 @@ class GalleryViewController: UIViewController {
 
 
 
+
 extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     //    func numberOfSections(in collectionView: UICollectionView) -> Int {
     //        <#code#>
     //    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return GalleryViewController.totalAlbum.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCategoryCollectionViewCell", for: indexPath) as! GalleryCategoryCollectionViewCell
+        cell.titleLabel.text = GalleryViewController.totalAlbum[indexPath.item].albumTitle
+        let photoArray = GalleryViewController.totalAlbum[indexPath.item].album
+        let firstArray = photoArray.first
+        cell.thumbnailImage.image = UIImage(named: firstArray!.photoName)
+        
+        if GalleryViewController.totalAlbum[indexPath.item].isloved == true {
+            cell.heartImage.isHidden = false
+        } else {
+            cell.heartImage.isHidden = true
+        }
+        
+        
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let detailGalleryVC = storyBoard.instantiateViewController(withIdentifier: "DetailGalleryViewController") as! DetailGalleryViewController
+
+        self.navigationController?.pushViewController(detailGalleryVC, animated: true)
+    }
     
 }
 
