@@ -13,6 +13,7 @@ import AVFoundation
 import AVKit
 import BSImagePicker
 import PanModal
+import RxSwift
 
 struct ChatMessage {
     let userName: String
@@ -282,7 +283,122 @@ class ChatViewController: UIViewController {
         self.userEmoticonCollectionView.delegate = self
         self.userEmoticonCollectionView.dataSource = self
         self.userEmoticonCollectionView.register(UINib(nibName: "EmoticonInChatCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "EmoticonInChatCollectionViewCell")
+        self.userEmoticonCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        
+        
+        self.userEmoticonCollectionView.collectionViewLayout = createComporitionalLayout()
+        
+        
     }
+    
+    
+    fileprivate func createComporitionalLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { [self](sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            //아이템 사이즈
+            
+            //
+            //            let width = self.userEmoticonCollectionView.frame.width
+            //            let height = self.userEmoticonCollectionView.frame.height
+            //            let itemsPerRow: CGFloat = 4
+            //            let widthPadding = sectionInsets.left * (4)
+            //            let itemsPerColumn: CGFloat = 2
+            //            let heightPadding = sectionInsets.top * (3)
+            //            let cellWidth = (width - widthPadding) / itemsPerRow
+            //            let cellHeight = (height - heightPadding) / itemsPerColumn
+            //
+            //
+            //            var size: CGFloat = 0
+            //
+            //            if cellWidth > cellHeight {
+            //                size = cellHeight
+            //
+            //            } else {
+            //                size = cellWidth
+            //            }
+            //
+            //            print("size::: \(size)")
+            //
+            //
+            //
+            //            let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(size), heightDimension: .absolute(size))
+            //            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            //            item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+            //
+            //
+            //
+            //            let groupHeight = NSCollectionLayoutDimension.fractionalWidth(1/4)
+            //            let groupSize = NSCollectionLayoutSize(widthDimension: itemSize.widthDimension, heightDimension: groupHeight)
+            //            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 4)
+            //
+            //            let section = NSCollectionLayoutSection(group: group)
+            //            section.orthogonalScrollingBehavior = .continuous
+            //            section.contentInsets = NSDirectionalEdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)
+            //            return section
+            
+            let fraction: CGFloat = 1 / 4
+            let inset: CGFloat = 2.5
+
+            // Item
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(fraction), heightDimension: .fractionalHeight(1))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            item.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
+
+            // Group
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(fraction))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+
+            // Section
+            let section = NSCollectionLayoutSection(group: group)
+            section.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
+            //section.orthogonalScrollingBehavior = .continuous
+            // Supplementary Item
+            //let headerItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(self.userEmoticonCollectionView.frame.height))
+//            let headerItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(self.userEmoticonCollectionView.frame.height / 4))
+//            let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerItemSize, elementKind: "header", alignment: .top)
+//            section.boundarySupplementaryItems = [headerItem]
+
+            return section
+
+
+    
+            
+        }
+        return layout
+    }
+    
+    
+    fileprivate func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
+        NSCollectionLayoutBoundarySupplementaryItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        
+    }
+    
+    fileprivate func supplementaryFooterSeparatorItem() -> NSCollectionLayoutBoundarySupplementaryItem {
+        NSCollectionLayoutBoundarySupplementaryItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(1)), elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
+        
+    }
+    
+//    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
+//
+//    let item = NSCollectionLayoutItem(layoutSize: itemSize)
+//    let group = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, subitems: [item])
+//
+//    let containerGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8),heightDimension: .estimated(1)), subitems: Array(repeating: group, count: 3))
+//    containerGroup.interItemSpacing = .fixed(16)
+//
+//    let section = NSCollectionLayoutSection(group: containerGroup)
+//    section.interGroupSpacing = 16
+//    section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16)
+//    section.supplementariesFollowContentInsets = false
+//    section.orthogonalScrollingBehavior = .groupPaging
+//    section.boundarySupplementaryItems = [supplementaryHeaderItem(), supplementaryFooterSeparatorItem()]
+//    return section
+    
+    
+    
+    
+    
+    
     
     func setGesture() {
         let emoticonStackViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(emoticonStackViewAction))
@@ -399,7 +515,7 @@ class ChatViewController: UIViewController {
             bottomMargin.constant = keyboardRectangle.height - 300
         }
         
-      
+        
     }
     
     @objc func handleKeyboardHideNotification(_ sender: Notification) {
@@ -743,7 +859,7 @@ class ChatViewController: UIViewController {
     
     @IBAction func sendScheduleButtonAction(_ sender: Any) {
         guard let title = scheduleTitleLabel.text?.trim, title.isExists else {return}
-                
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "MM월 dd일"
         let startDate = formatter.string(from: scheduleStartTimePicker.date)
@@ -760,7 +876,7 @@ class ChatViewController: UIViewController {
         })
     }
     
-
+    
     
 }
 
@@ -920,6 +1036,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
 extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.imageArr.count
+        //return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -953,48 +1070,48 @@ extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
 }
 
-
-extension ChatViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = self.userEmoticonCollectionView.frame.width
-        let height = self.userEmoticonCollectionView.frame.height
-        let itemsPerRow: CGFloat = 4
-        let widthPadding = sectionInsets.left * (4)
-        let itemsPerColumn: CGFloat = 2
-        let heightPadding = sectionInsets.top * (3)
-        let cellWidth = (width - widthPadding) / itemsPerRow
-        let cellHeight = (height - heightPadding) / itemsPerColumn
-        
-        
-        if cellWidth > cellHeight {
-            return CGSize(width: cellHeight, height: cellHeight)
-        } else if cellWidth == cellHeight {
-            return CGSize(width: cellWidth, height: cellHeight)
-        } else {
-            return CGSize(width: cellWidth, height: cellWidth)
-        }
-        
-        
-        
-        
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 0)
-        
-        
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
-    }
-    ////
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
-    }
-    
-    
-    
-}
+//
+//extension ChatViewController: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let width = self.userEmoticonCollectionView.frame.width
+//        let height = self.userEmoticonCollectionView.frame.height
+//        let itemsPerRow: CGFloat = 4
+//        let widthPadding = sectionInsets.left * (4)
+//        let itemsPerColumn: CGFloat = 2
+//        let heightPadding = sectionInsets.top * (3)
+//        let cellWidth = (width - widthPadding) / itemsPerRow
+//        let cellHeight = (height - heightPadding) / itemsPerColumn
+//
+//
+//        if cellWidth > cellHeight {
+//            return CGSize(width: cellHeight, height: cellHeight)
+//        } else if cellWidth == cellHeight {
+//            return CGSize(width: cellWidth, height: cellHeight)
+//        } else {
+//            return CGSize(width: cellWidth, height: cellWidth)
+//        }
+//
+//
+//
+//
+//
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 0)
+//
+//
+//
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return sectionInsets.left
+//    }
+//    ////
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return sectionInsets.left
+//    }
+//
+//
+//
+//}

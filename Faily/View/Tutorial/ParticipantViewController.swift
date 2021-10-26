@@ -103,8 +103,12 @@ class ParticipantViewController: UIViewController {
     }
     @IBAction func goMainHomeButtonAction(_ sender: Any) {
         
-        let param = EntryRequest(group_code: self.userInputAuthNum)
-        viewModel.postEntryChat(param)
+//        let param = EntryRequest(group_code: self.userInputAuthNum)
+//        viewModel.postEntryChat(param)
+        
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let homeNAV = storyBoard.instantiateViewController(identifier: "HomeNav")
+        self.changeRootViewController(homeNAV)
     }
     
 

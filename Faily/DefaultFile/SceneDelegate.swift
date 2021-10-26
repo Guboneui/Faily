@@ -13,25 +13,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
        
-//        if UserDefaults.standard.string(forKey: UserDefaultKey.jwtToken) != nil {
-//            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-//            let homeVC = storyBoard.instantiateViewController(identifier: "HomeNav")
-//            window?.rootViewController = homeVC
-//            window?.makeKeyAndVisible()
-//        }
+        if UserDefaults.standard.string(forKey: UserDefaultKey.jwtToken) != nil {
+            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+            let homeVC = storyBoard.instantiateViewController(identifier: "HomeNav")
+            window?.rootViewController = homeVC
+            window?.makeKeyAndVisible()
+        }
         
-//        if UserDefaults.standard.bool(forKey: UserDefaultKey.showOnBoarding) == true {
-//            let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-//            let loginVC = storyBoard.instantiateViewController(identifier: "LoginNav")
-//            window?.rootViewController = loginVC
-//            window?.makeKeyAndVisible()
-//        } else {
-//
-//            let storyBoard = UIStoryboard(name: "OnBoarding", bundle: nil)
-//            let onBoardingVC = storyBoard.instantiateViewController(withIdentifier: "OnBoardingViewController")
-//            window?.rootViewController = onBoardingVC
-//            window?.makeKeyAndVisible()
-//        }
+        if UserDefaults.standard.bool(forKey: UserDefaultKey.showOnBoarding) == true {
+            let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+            let loginVC = storyBoard.instantiateViewController(identifier: "LoginNav")
+            window?.rootViewController = loginVC
+            window?.makeKeyAndVisible()
+        } else {
+
+            let storyBoard = UIStoryboard(name: "OnBoarding", bundle: nil)
+            let onBoardingVC = storyBoard.instantiateViewController(withIdentifier: "OnBoardingViewController")
+            window?.rootViewController = onBoardingVC
+            window?.makeKeyAndVisible()
+        }
         
         guard let _ = (scene as? UIWindowScene) else { return }
     }
