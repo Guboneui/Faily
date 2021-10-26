@@ -156,7 +156,7 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                         }
                     }
                     
-                   
+                    
                 } else if data.isAnswered == true && data.allAnswered == false {
                     print("모두가 답변을 해야합니다")
                     if indexPath.row == 0 {
@@ -201,30 +201,32 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                         cell.answeredFamilyCountImage.image = UIImage(named: imageName)
                         cell.answeredCollectionView.reloadData()
                         return cell
-                    } else if indexPath.row == data.answerInfo!.count + 1 {
+                    }
+                    //
+                    else if indexPath.row == data.answerInfo!.count + 1 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "BottomWhiteLabelTableViewCell", for: indexPath) as! BottomWhiteLabelTableViewCell
                         cell.selectionStyle = .none
                         return cell
-                    } else {
+                    }
+                    
+                    else {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "EachAnswerTableViewCell", for: indexPath) as! EachAnswerTableViewCell
                         cell.selectionStyle = .none
                         
-                        for i in 0..<data.answerInfo!.count {
-                            if data.answerInfo![i].user_name == "원승빈" {
-                                cell.titleLabel.text = "승빈의 답변"
-                                cell.answerLabel.text = data.answerInfo![i].answer
-                            } else if data.answerInfo![i].user_name == "정수빈" {
-                                cell.titleLabel.text = "수빈의 답변"
-                                cell.answerLabel.text = data.answerInfo![i].answer
-                            } else if data.answerInfo![i].user_name == "장나연" {
-                                cell.titleLabel.text = "나연의 답변"
-                                cell.answerLabel.text = data.answerInfo![i].answer
-                            } else {
-                                cell.titleLabel.text = "나의 답변"
-                                cell.answerLabel.text = data.answerInfo![i].answer
-                            }
-                        }
                         
+                        if data.answerInfo![indexPath.row - 1].user_name == "원승빈" {
+                            cell.titleLabel.text = "승빈의 답변"
+                            cell.answerLabel.text = data.answerInfo![indexPath.row - 1].answer
+                        } else if data.answerInfo![indexPath.row - 1].user_name == "정수빈" {
+                            cell.titleLabel.text = "수빈의 답변"
+                            cell.answerLabel.text = data.answerInfo![indexPath.row - 1].answer
+                        } else if data.answerInfo![indexPath.row - 1].user_name == "장나연" {
+                            cell.titleLabel.text = "나연의 답변"
+                            cell.answerLabel.text = data.answerInfo![indexPath.row - 1].answer
+                        } else {
+                            cell.titleLabel.text = "나의 답변"
+                            cell.answerLabel.text = data.answerInfo![indexPath.row - 1].answer
+                        }
                         
                         
                         
@@ -247,15 +249,15 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             
             return UITableView.automaticDimension
             
-//            if indexPath.row == 0 {
-//                return self.view.frame.width + 7.5 + 20
-//            } else if indexPath.row == 1{
-//                return 105
-//            } else if indexPath.row == 2{
-//                return 75
-//            } else {
-//                return UITableView.automaticDimension
-//            }
+            //            if indexPath.row == 0 {
+            //                return self.view.frame.width + 7.5 + 20
+            //            } else if indexPath.row == 1{
+            //                return 105
+            //            } else if indexPath.row == 2{
+            //                return 75
+            //            } else {
+            //                return UITableView.automaticDimension
+            //            }
         }
     }
 }
