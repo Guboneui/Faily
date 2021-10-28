@@ -107,6 +107,7 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
             cell.questionCollectionView.isPagingEnabled = false
             let collectionBounds = cell.questionCollectionView.bounds
             let contentOffset = CGFloat(floor(cell.questionCollectionView.contentOffset.x + collectionBounds.size.width * CGFloat(viewModel.questionData.count - 1)))
+            
             DispatchQueue.main.async {
                 cell.moveCollectionToFrame(contentOffset: contentOffset)
             }
@@ -175,6 +176,7 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
                         for i in 0..<data.answerInfo!.count {
                             if data.answerInfo![i].user_name == "구본의" {
                                 cell.answerLabel.text = data.answerInfo![i].answer
+                                cell.titleLabel.text = "나의 답변"
                             }
                         }
                         
@@ -291,6 +293,7 @@ extension QuestionViewController: ReloadQuestionTableViewDelegate {
 
 extension QuestionViewController: ReloadMainQuestionTableViewDelegate {
     func reloadTableView() {
+        self.mainQuestionPage = 0
         viewModel.getAllQuestion()
     }
     

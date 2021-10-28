@@ -88,7 +88,7 @@ class MainQuestionTableViewCell: UITableViewCell{
     
     @objc func goAnswerView(_ recognizer: UITapGestureRecognizer) {
         
-        HomeViewController.scheduleArray.append("졸프 발표!")
+        
         
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let allAnswerVC = storyBoard.instantiateViewController(withIdentifier: "AllAnswerViewController") as! AllAnswerViewController

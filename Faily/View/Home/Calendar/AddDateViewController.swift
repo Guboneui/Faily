@@ -185,6 +185,7 @@ class AddDateViewController: UIViewController {
                 calendar_start_time: startDate,
                 calendar_end_time: endDate
             )
+            HomeViewController.scheduleArray.append(title)
             viewModel.postAddSchedule(param)
         }
     }

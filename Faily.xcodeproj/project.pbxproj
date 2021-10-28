@@ -118,6 +118,7 @@
 		2C9EB00727077A1A00F507A6 /* EntryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB00627077A1A00F507A6 /* EntryRepository.swift */; };
 		2C9EB00927077B2E00F507A6 /* EntryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB00827077B2E00F507A6 /* EntryService.swift */; };
 		2C9EB00B27077BB400F507A6 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB00A27077BB400F507A6 /* EntryViewModel.swift */; };
+		2CAA6A54272ABB55002EE899 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA6A53272ABB55002EE899 /* HomeResponse.swift */; };
 		2CAF2CE226F927C00044C594 /* HomeBusinessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF2CE026F927C00044C594 /* HomeBusinessCollectionViewCell.swift */; };
 		2CAF2CE326F927C00044C594 /* HomeBusinessCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF2CE126F927C00044C594 /* HomeBusinessCollectionViewCell.xib */; };
 		2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */; };
@@ -327,6 +328,7 @@
 		2C9EB00627077A1A00F507A6 /* EntryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRepository.swift; sourceTree = "<group>"; };
 		2C9EB00827077B2E00F507A6 /* EntryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryService.swift; sourceTree = "<group>"; };
 		2C9EB00A27077BB400F507A6 /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
+		2CAA6A53272ABB55002EE899 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
 		2CAF2CE026F927C00044C594 /* HomeBusinessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBusinessCollectionViewCell.swift; sourceTree = "<group>"; };
 		2CAF2CE126F927C00044C594 /* HomeBusinessCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBusinessCollectionViewCell.xib; sourceTree = "<group>"; };
 		2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -806,6 +808,7 @@
 		2CBB71CC2708E8F4008B3E56 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2CAA6A53272ABB55002EE899 /* HomeResponse.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1322,6 +1325,7 @@
 				2C715BC3270DA564007D67C5 /* TitleSettingTableViewCell.swift in Sources */,
 				2CF3D3B826FB9BCE008C13F3 /* CalendarTableViewCell.swift in Sources */,
 				2C8AFC802714C79500966309 /* CATransition.swift in Sources */,
+				2CAA6A54272ABB55002EE899 /* HomeResponse.swift in Sources */,
 				2CB928782702223700BF34DC /* QAViewController.swift in Sources */,
 				2CF3D3BD26FBC180008C13F3 /* AddDateNavigationController.swift in Sources */,
 				2CD6D151271C2DC900DC9DC7 /* EmoticonPopUpViewController.swift in Sources */,

@@ -33,7 +33,7 @@ class AllQuestionViewModel {
                 //self.questionCell?.allQuestionResult = response.result ?? []
                 self.questionData = response.result!
                 print(self.questionData)
-                
+                self.questionView?.questionMainTableView.reloadData()
             } else {
                 print("전체 질문을 불러오지 못했습니다.")
             }

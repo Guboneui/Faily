@@ -76,25 +76,25 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonAction(_ sender: Any) {
         
-//        guard let user_email = emailTextField.text?.trim, user_email.isExists else {
-//            self.presentAlert(title: "이메일을 입력 해주세요")
-//            return
-//        }
+        guard let user_email = emailTextField.text?.trim, user_email.isExists else {
+            self.presentAlert(title: "이메일을 입력 해주세요")
+            return
+        }
+
+        guard let user_pw = passwordTextField.text?.trim, user_pw.isExists else {
+            self.presentAlert(title: "비밀번호를 입력 해주세요")
+            return
+        }
+
+
+
+        let param = LoginRequest(user_email: user_email, user_pw: user_pw)
+        viewModel.postLogin(param)
 //
-//        guard let user_pw = passwordTextField.text?.trim, user_pw.isExists else {
-//            self.presentAlert(title: "비밀번호를 입력 해주세요")
-//            return
-//        }
-//
-//
-//
-//        let param = LoginRequest(user_email: user_email, user_pw: user_pw)
-//        viewModel.postLogin(param)
-//
-        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-        let agreeAuthorityVC = storyBoard.instantiateViewController(withIdentifier: "AgreeAuthorityViewController") as! AgreeAuthorityViewController
-        agreeAuthorityVC.modalPresentationStyle = .overCurrentContext
-        self.present(agreeAuthorityVC, animated: true, completion: nil)
+//        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+//        let agreeAuthorityVC = storyBoard.instantiateViewController(withIdentifier: "AgreeAuthorityViewController") as! AgreeAuthorityViewController
+//        agreeAuthorityVC.modalPresentationStyle = .overCurrentContext
+//        self.present(agreeAuthorityVC, animated: true, completion: nil)
     }
 }
 

@@ -14,6 +14,7 @@ protocol ReloadMainQuestionCollectionViewDelegate: AnyObject {
 
 class MainQuestionCollectionViewCell: UICollectionViewCell, ScaleTransformView {
     
+    
     @IBOutlet weak var questionBox: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
@@ -21,6 +22,7 @@ class MainQuestionCollectionViewCell: UICollectionViewCell, ScaleTransformView {
     @IBOutlet weak var answerStackViewLabel: UILabel!
     @IBOutlet weak var answerStackViewImage: UIImageView!
     
+    @IBOutlet weak var bgView: UIImageView!
     var getQuestionIndex = 0
     var question = ""
     
@@ -47,6 +49,8 @@ class MainQuestionCollectionViewCell: UICollectionViewCell, ScaleTransformView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        layoutIfNeeded()
+        self.bgView.layer.cornerRadius = 20
     }
     
     @objc func goAnswerView(_ recognizer: UITapGestureRecognizer) {

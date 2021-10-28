@@ -19,6 +19,7 @@ class AddScheduleViewModel {
             
             if response.isSuccess == true {
                 print("일정을 추가하였습니다.")
+                
                 self.successAddSchedule()
             } else {
                 print("일정 추가에 실패하였습니다.")

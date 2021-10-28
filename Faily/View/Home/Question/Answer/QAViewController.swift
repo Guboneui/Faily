@@ -125,7 +125,7 @@ extension QAViewController: UITextViewDelegate {
 extension QAViewController {
     func viewModelMethod() {
         viewModel.dismissView = {
-            let alert = UIAlertController(title: "답변", message: "답변이 작성되었습니다..", preferredStyle: .alert)
+            let alert = UIAlertController(title: "답변", message: "답변이 작성되었습니다.", preferredStyle: .alert)
             let okButton = UIAlertAction(title: "확인", style: .default, handler: {[self] _ in
                 delegate?.reloadCollectionView()
                 dismiss(animated: true, completion: nil)
