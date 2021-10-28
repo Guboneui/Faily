@@ -123,45 +123,45 @@ class HomeViewController: UIViewController {
         homeInfoViewModel.getHomeInfo()
         
         // 0
-        self.navTitleLabel.text = homeInfoViewModel.homeInfo[0].user_name
-        
-        // 1
-        totalProgress.setProgress(progress: CGFloat(homeInfoViewModel.homeInfo[0].group_bonding! * 0.01), animated: true)
-        
-        self.percentLabel.text = "\(String(format: "%.2f", homeInfoViewModel.homeInfo[0].group_bonding!))"
-        
-        // 2
-        print(homeInfoViewModel.homeInfo[0].user_mood!)
-        
-        // 3
-        print(homeInfoViewModel.homeInfo[0].today_anniversary ?? [])
-        
-        //4
-        print(homeInfoViewModel.homeInfo[0].familyList ?? [])
-        
-        
-        
-        var familyTotalProgress = 0.0
-        for i in 0..<HomeViewController.userInfo.count {
-            familyTotalProgress += Double(Float(HomeViewController.userInfo[i].userFamiliar))
-        }
-        
-        
-        familyTotalProgress = familyTotalProgress / Double(HomeViewController.userInfo.count)
-        
-        self.percentLabel.text = "\(String(format: "%.2f", familyTotalProgress))%"
-        
-        totalProgress.setProgress(progress: CGFloat(familyTotalProgress) * 0.01, animated: true)
-        
-        self.memberProfileCollectionView.reloadData()
-        
-        
-        if HomeViewController.scheduleArray.count == 0 {
-            self.scheduleTitleLabel.text = "특별한 날로\n만들어보세요!"
-        } else {
-            self.scheduleTitleLabel.text = HomeViewController.scheduleArray[0]
-        }
-        
+//        self.navTitleLabel.text = homeInfoViewModel.homeInfo[0].user_name
+//
+//        // 1
+//        totalProgress.setProgress(progress: CGFloat(homeInfoViewModel.homeInfo[0].group_bonding! * 0.01), animated: true)
+//
+//        self.percentLabel.text = "\(String(format: "%.2f", homeInfoViewModel.homeInfo[0].group_bonding!))"
+//
+//        // 2
+//        print(homeInfoViewModel.homeInfo[0].user_mood!)
+//
+//        // 3
+//        print(homeInfoViewModel.homeInfo[0].today_anniversary ?? [])
+//
+//        //4
+//        print(homeInfoViewModel.homeInfo[0].familyList ?? [])
+//
+//
+//
+//        var familyTotalProgress = 0.0
+//        for i in 0..<HomeViewController.userInfo.count {
+//            familyTotalProgress += Double(Float(HomeViewController.userInfo[i].userFamiliar))
+//        }
+//
+//
+//        familyTotalProgress = familyTotalProgress / Double(HomeViewController.userInfo.count)
+//
+//        self.percentLabel.text = "\(String(format: "%.2f", familyTotalProgress))%"
+//
+//        totalProgress.setProgress(progress: CGFloat(familyTotalProgress) * 0.01, animated: true)
+//
+//        self.memberProfileCollectionView.reloadData()
+//
+//
+//        if HomeViewController.scheduleArray.count == 0 {
+//            self.scheduleTitleLabel.text = "특별한 날로\n만들어보세요!"
+//        } else {
+//            self.scheduleTitleLabel.text = HomeViewController.scheduleArray[0]
+//        }
+//
     }
     
     
@@ -175,6 +175,7 @@ class HomeViewController: UIViewController {
         memberProfileCollectionView.delegate = self
         memberProfileCollectionView.dataSource = self
         memberProfileCollectionView.register(UINib(nibName: "FamilyMemberCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FamilyMemberCollectionViewCell")
+        memberProfileCollectionView.allowsSelection = false
         
         
         BusinessCollectionView.delegate = self
@@ -274,7 +275,16 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == memberProfileCollectionView {
-            return HomeViewController.userInfo.count
+            
+            var count = 0
+            
+            if homeInfoViewModel.homeInfo?.familyList?.count == 0 {
+                count = 0
+            } else {
+                count = homeInfoViewModel.homeInfo?.familyList?.count ?? 0
+            }
+            
+            return count
         } else if collectionView == BusinessCollectionView {
             return self.bmArr.count
         } else {
@@ -286,11 +296,25 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == memberProfileCollectionView {
+            
+            let data = homeInfoViewModel.homeInfo?.familyList![indexPath.item]
+            
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FamilyMemberCollectionViewCell", for: indexPath) as! FamilyMemberCollectionViewCell
             cell.profileImage.image = UIImage(named: HomeViewController.userInfo[indexPath.item].profileImage)
-            cell.memberNameLabel.text = HomeViewController.userInfo[indexPath.item].userName
-            cell.userProgress = CGFloat(HomeViewController.userInfo[indexPath.item].userFamiliar * 0.01)
-            cell.emotionImageView.image = UIImage(named: HomeViewController.userInfo[indexPath.item].userEmotion)
+            cell.memberNameLabel.text = "\(data?.user_name ?? "")"
+            cell.userProgress = CGFloat(data?.user_bonding ?? 50 * 0.01)
+            
+            let imageData = Data(base64Encoded: data?.user_image ?? "")
+            let image = UIImage(data: imageData!)
+            //cell.emotionImageView.image = image
+            cell.profileImage.image = image
+            
+            
+            
+            
+            
+            
             return cell
         } else if collectionView == BusinessCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBusinessCollectionViewCell", for: indexPath) as! HomeBusinessCollectionViewCell
