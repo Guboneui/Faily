@@ -16,7 +16,7 @@ struct HomeResponse: Decodable {
 }
 
 struct HomeInfo: Decodable {
-    let group_bonding: Float?
+    let group_bonding: Float
     let user_mood: String?
     let familyList: [FamilyListInfo]?
     let today_anniversary: [TodayAnniversaryInfo]?
@@ -26,7 +26,7 @@ struct HomeInfo: Decodable {
 
 struct FamilyListInfo: Decodable {
     let user_name: String?
-    let user_bonding: Float?
+    let user_bonding: Float
     let user_image: String?
     let user_mood: String?
 }

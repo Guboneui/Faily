@@ -40,7 +40,8 @@ class FamilyMemberCollectionViewCell: UICollectionViewCell {
         progressBar.progressShapeColor = borderColor!
         progressBar.backgroundShapeColor = .clear
         progressBar.orientation = .top
-        progressBar.setProgress(progress: userProgress)
+        
+        progressBar.setProgress(progress: userProgress, animated: true)
         
         
        

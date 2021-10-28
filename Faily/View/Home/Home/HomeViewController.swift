@@ -54,8 +54,6 @@ class HomeViewController: UIViewController {
             self.emotionPagerView.decelerationDistance = 10
             self.emotionPagerView.isInfinite = true
             
-            
-            
         }
     }
     
@@ -303,18 +301,33 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FamilyMemberCollectionViewCell", for: indexPath) as! FamilyMemberCollectionViewCell
             cell.profileImage.image = UIImage(named: HomeViewController.userInfo[indexPath.item].profileImage)
             cell.memberNameLabel.text = "\(data?.user_name ?? "")"
-            cell.userProgress = CGFloat(data?.user_bonding ?? 50 * 0.01)
+            cell.userProgress = CGFloat(data!.user_bonding * 0.01)
+
             
+
+            
+            //프로필 이미지 적용
             let imageData = Data(base64Encoded: data?.user_image ?? "")
             let image = UIImage(data: imageData!)
-            //cell.emotionImageView.image = image
             cell.profileImage.image = image
+
+            // 기분 이모티콘 적용
+            if data?.user_mood == "행복" {
+                cell.emotionImageView.image = UIImage(named: "happy_full")
+            } else if data?.user_mood == "무덤덤" {
+                cell.emotionImageView.image = UIImage(named: "mumu_full")
+            } else if data?.user_mood == "울음" {
+                cell.emotionImageView.image = UIImage(named: "sad_full")
+            } else if data?.user_mood == "아픔" {
+                cell.emotionImageView.image = UIImage(named: "sick_full")
+            } else if data?.user_mood == "화남" {
+                cell.emotionImageView.image = UIImage(named: "angry_full")
+            } else {
+                print("정확하지 않은 기분 정보입니다.")
+            }
             
-            
-            
-            
-            
-            
+       
+    
             return cell
         } else if collectionView == BusinessCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBusinessCollectionViewCell", for: indexPath) as! HomeBusinessCollectionViewCell
