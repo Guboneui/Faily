@@ -82,7 +82,7 @@ class HomeViewController: UIViewController {
     
     
     lazy var todayQuestionViewModel: TodayQuestionViewModel = TodayQuestionViewModel()
-    
+    lazy var homeInfoViewModel: HomeViewModel = HomeViewModel()
     
     
     func gradientLayer(bounds : CGRect,
@@ -112,12 +112,34 @@ class HomeViewController: UIViewController {
         setCollectionView()
         todayQuestionViewModel.mainHome = self
         todayQuestionViewModel.getTodayQuestion()
+        homeInfoViewModel.homeView = self
+        
         
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        homeInfoViewModel.getHomeInfo()
+        
+        // 0
+        self.navTitleLabel.text = homeInfoViewModel.homeInfo[0].user_name
+        
+        // 1
+        totalProgress.setProgress(progress: CGFloat(homeInfoViewModel.homeInfo[0].group_bonding! * 0.01), animated: true)
+        
+        self.percentLabel.text = "\(String(format: "%.2f", homeInfoViewModel.homeInfo[0].group_bonding!))"
+        
+        // 2
+        print(homeInfoViewModel.homeInfo[0].user_mood!)
+        
+        // 3
+        print(homeInfoViewModel.homeInfo[0].today_anniversary ?? [])
+        
+        //4
+        print(homeInfoViewModel.homeInfo[0].familyList ?? [])
+        
+        
         
         var familyTotalProgress = 0.0
         for i in 0..<HomeViewController.userInfo.count {

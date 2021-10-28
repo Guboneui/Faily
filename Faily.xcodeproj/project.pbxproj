@@ -119,6 +119,9 @@
 		2C9EB00927077B2E00F507A6 /* EntryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB00827077B2E00F507A6 /* EntryService.swift */; };
 		2C9EB00B27077BB400F507A6 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB00A27077BB400F507A6 /* EntryViewModel.swift */; };
 		2CAA6A54272ABB55002EE899 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA6A53272ABB55002EE899 /* HomeResponse.swift */; };
+		2CAA6A57272ABE75002EE899 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA6A56272ABE75002EE899 /* HomeRepository.swift */; };
+		2CAA6A5A272ABFD0002EE899 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA6A59272ABFD0002EE899 /* HomeService.swift */; };
+		2CAA6A5D272AC06F002EE899 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA6A5C272AC06F002EE899 /* HomeViewModel.swift */; };
 		2CAF2CE226F927C00044C594 /* HomeBusinessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF2CE026F927C00044C594 /* HomeBusinessCollectionViewCell.swift */; };
 		2CAF2CE326F927C00044C594 /* HomeBusinessCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF2CE126F927C00044C594 /* HomeBusinessCollectionViewCell.xib */; };
 		2CB0B50B26EE907F00F10964 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */; };
@@ -329,6 +332,9 @@
 		2C9EB00827077B2E00F507A6 /* EntryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryService.swift; sourceTree = "<group>"; };
 		2C9EB00A27077BB400F507A6 /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 		2CAA6A53272ABB55002EE899 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
+		2CAA6A56272ABE75002EE899 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		2CAA6A59272ABFD0002EE899 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		2CAA6A5C272AC06F002EE899 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2CAF2CE026F927C00044C594 /* HomeBusinessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBusinessCollectionViewCell.swift; sourceTree = "<group>"; };
 		2CAF2CE126F927C00044C594 /* HomeBusinessCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBusinessCollectionViewCell.xib; sourceTree = "<group>"; };
 		2CB0B50A26EE907F00F10964 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -744,6 +750,30 @@
 			path = Invite;
 			sourceTree = "<group>";
 		};
+		2CAA6A55272ABE63002EE899 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2CAA6A56272ABE75002EE899 /* HomeRepository.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2CAA6A58272ABFC0002EE899 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2CAA6A59272ABFD0002EE899 /* HomeService.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2CAA6A5B272AC063002EE899 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2CAA6A5C272AC06F002EE899 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		2CB0B50826EE906500F10964 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -847,6 +877,7 @@
 		2CC092B426F241E2009E69D0 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				2CAA6A55272ABE63002EE899 /* Home */,
 				2C9EAFED2706101B00F507A6 /* SignUp-Login */,
 				2C9EAFF32706141300F507A6 /* Invite */,
 				2CBB71D32708E9C4008B3E56 /* Question */,
@@ -858,6 +889,7 @@
 		2CC092B526F241EC009E69D0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2CAA6A58272ABFC0002EE899 /* Home */,
 				2C9EAFEE2706103E00F507A6 /* SignUp-Login */,
 				2C9EAFF8270615D000F507A6 /* Invite */,
 				2CBB71D62708EAAD008B3E56 /* Question */,
@@ -869,6 +901,7 @@
 		2CC092B626F241FA009E69D0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2CAA6A5B272AC063002EE899 /* Home */,
 				2C9EAFEF2706105B00F507A6 /* SignUp-Login */,
 				2C9EAFFB2706166100F507A6 /* Invite */,
 				2C1481FD270B36CD005C0597 /* Question */,
@@ -1209,6 +1242,7 @@
 				2CB9288227023BAE00BF34DC /* SignUpRepository.swift in Sources */,
 				2CB3851F271DDF7600BE438A /* MyScheduleTableViewCell.swift in Sources */,
 				2CC092BC26F26B84009E69D0 /* MainTabBarController.swift in Sources */,
+				2CAA6A57272ABE75002EE899 /* HomeRepository.swift in Sources */,
 				2C1481FF270B36E3005C0597 /* TodayQuestionViewModel.swift in Sources */,
 				2CC5AEBB26F0D8920096D818 /* BaseView.swift in Sources */,
 				2C80393627233F3B00B6DB7B /* SendAnswerViewModel.swift in Sources */,
@@ -1323,6 +1357,7 @@
 				2C8AFC7D2714B6F400966309 /* FamilyMessageTableViewCell.swift in Sources */,
 				2CD6D14F271BF8F900DC9DC7 /* ScheduleInChatDetailViewController.swift in Sources */,
 				2C715BC3270DA564007D67C5 /* TitleSettingTableViewCell.swift in Sources */,
+				2CAA6A5A272ABFD0002EE899 /* HomeService.swift in Sources */,
 				2CF3D3B826FB9BCE008C13F3 /* CalendarTableViewCell.swift in Sources */,
 				2C8AFC802714C79500966309 /* CATransition.swift in Sources */,
 				2CAA6A54272ABB55002EE899 /* HomeResponse.swift in Sources */,
@@ -1335,6 +1370,7 @@
 				2C5C288B26F4C2DD00217D00 /* ChatViewController.swift in Sources */,
 				2CD9D9C42704F32A0041A0DB /* LoginResponse.swift in Sources */,
 				2CF3D3C826FBDD20008C13F3 /* PresentMainViewController.swift in Sources */,
+				2CAA6A5D272AC06F002EE899 /* HomeViewModel.swift in Sources */,
 				2CD6D161271C885000DC9DC7 /* EmoticonBoxCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
