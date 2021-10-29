@@ -2321,12 +2321,12 @@
                                     <constraint firstAttribute="trailing" secondItem="4FX-hY-MZy" secondAttribute="trailing" id="0dy-19-aPk"/>
                                     <constraint firstItem="mdx-Rx-cQM" firstAttribute="leading" secondItem="Dh1-xa-18S" secondAttribute="leading" id="0vf-nh-qnN"/>
                                     <constraint firstItem="wIf-2X-3Ee" firstAttribute="top" secondItem="fvK-H6-ebQ" secondAttribute="bottom" constant="7.5" id="1qJ-0f-bFs"/>
-                                    <constraint firstItem="xWX-Ud-CxT" firstAttribute="top" secondItem="tRL-uu-6lD" secondAttribute="bottom" constant="13" id="6yf-Qg-6Xl"/>
                                     <constraint firstAttribute="trailing" secondItem="wy5-6N-ATn" secondAttribute="trailing" constant="32" id="7eV-yp-Uah"/>
                                     <constraint firstItem="fvK-H6-ebQ" firstAttribute="top" secondItem="xWX-Ud-CxT" secondAttribute="bottom" constant="14" id="D0d-rm-wTC"/>
                                     <constraint firstItem="vIZ-qU-2Mp" firstAttribute="leading" secondItem="Dh1-xa-18S" secondAttribute="leading" constant="31" id="FW2-OF-Otp"/>
                                     <constraint firstItem="rX4-QP-AQg" firstAttribute="top" secondItem="DUp-HY-sPD" secondAttribute="bottom" constant="7.5" id="FhJ-V0-Blu"/>
                                     <constraint firstAttribute="trailing" secondItem="gr2-hh-DVP" secondAttribute="trailing" constant="25" id="Fp5-MI-5gH"/>
+                                    <constraint firstItem="EMu-Tg-Ovp" firstAttribute="bottom" secondItem="xWX-Ud-CxT" secondAttribute="top" constant="-11" id="Ifo-bY-xzN"/>
                                     <constraint firstItem="E9Q-dU-Lwd" firstAttribute="leading" secondItem="Dh1-xa-18S" secondAttribute="leading" constant="31" id="KX7-0V-bhA"/>
                                     <constraint firstItem="EMu-Tg-Ovp" firstAttribute="top" secondItem="mdx-Rx-cQM" secondAttribute="bottom" constant="15" id="Ki7-Rx-Iew"/>
                                     <constraint firstItem="tRL-uu-6lD" firstAttribute="leading" secondItem="EMu-Tg-Ovp" secondAttribute="trailing" constant="15" id="NJx-fp-cUm"/>
@@ -2397,10 +2397,12 @@
                         <outlet property="scheduleBaseView" destination="Dh1-xa-18S" id="n5H-7F-8q7"/>
                         <outlet property="scheduleStartTimePicker" destination="DUp-HY-sPD" id="g0k-8t-pZM"/>
                         <outlet property="scheduleTitleLabel" destination="EMu-Tg-Ovp" id="PvE-qi-VoJ"/>
+                        <outlet property="scheduleViewBottomMargin" destination="IEY-ef-lgO" id="oMk-v0-xyo"/>
                         <outlet property="selectScheduleCategory" destination="tRL-uu-6lD" id="KZ8-7J-3bZ"/>
                         <outlet property="showMoreScheduleOption" destination="B8w-qx-s2S" id="KLS-4J-6eL"/>
                         <outlet property="tableViewBottomMargin" destination="yWl-FA-ezN" id="vh4-pB-yEt"/>
                         <outlet property="textViewHeight" destination="GQr-QX-GKx" id="uXe-al-niI"/>
+                        <outlet property="titleBottomMargin" destination="Ifo-bY-xzN" id="lqJ-G5-f9W"/>
                         <outlet property="typingBaseView" destination="RtJ-Gg-RYu" id="Rce-2i-aWf"/>
                         <outlet property="userEmoticonBaseView" destination="psL-kE-E1e" id="cOT-sg-YcE"/>
                         <outlet property="userEmoticonCollectionView" destination="tdr-c5-kXu" id="MQs-HQ-XtH"/>

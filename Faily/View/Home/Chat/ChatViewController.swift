@@ -32,6 +32,8 @@ struct ChatMessage {
 
 class ChatViewController: UIViewController {
     
+    @IBOutlet weak var scheduleViewBottomMargin: NSLayoutConstraint!
+    @IBOutlet weak var titleBottomMargin: NSLayoutConstraint!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var bottomBaseView: UIView!
     @IBOutlet weak var bottomBaseViewHeight: NSLayoutConstraint!
@@ -538,7 +540,8 @@ class ChatViewController: UIViewController {
                 bottomMargin.constant =  keyboardRectangle.height - 83
             }
         } else {
-            bottomMargin.constant = keyboardRectangle.height - 300
+            scheduleViewBottomMargin.constant = keyboardRectangle.height - 250
+            
         }
         
         
@@ -555,7 +558,7 @@ class ChatViewController: UIViewController {
         if isChat == true {
             bottomMargin.constant = 0
         } else {
-            bottomMargin.constant = 200
+            scheduleViewBottomMargin.constant = 0
         }
         
         
@@ -796,7 +799,8 @@ class ChatViewController: UIViewController {
         
         self.isChat = false
         self.scheduleBaseView.isHidden = false
-        self.bottomMargin.constant = self.bottomMargin.constant + (self.scheduleBaseView.frame.height - 125)
+        self.bottomMargin.constant = self.bottomMargin.constant + self.scheduleBaseView.frame.height - 125
+        
     }
     
     
@@ -910,7 +914,8 @@ class ChatViewController: UIViewController {
     @IBAction func dismissScheduleViewAction(_ sender: Any) {
         self.isChat = true
         self.scheduleBaseView.isHidden = true
-        self.bottomMargin.constant = self.bottomMargin.constant - (self.scheduleBaseView.frame.height - 125)
+        self.bottomMargin.constant = self.bottomMargin.constant - self.scheduleBaseView.frame.height + 125
+       
     }
     
     
