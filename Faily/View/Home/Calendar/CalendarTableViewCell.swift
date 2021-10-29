@@ -76,6 +76,7 @@ class CalendarTableViewCell: UITableViewCell {
 
 extension CalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource {
     func setCalendar() {
+        print("캘린더 세팅 리로드")
         dateFormatter.dateFormat = "YYYY년 M월"
         calendarView.delegate = self
         calendarView.dataSource = self
@@ -89,7 +90,6 @@ extension CalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource {
         //calendarView.appearance.todaySelectionColor = UIColor.FailyColor.secondaryPinkColor
         calendarView.appearance.titleSelectionColor = .white
         calendarTitleLabel.text = self.dateFormatter.string(from: calendarView.currentPage)
-        
         calendarView.appearance.eventDefaultColor = UIColor.FailyColor.secondaryPinkColor
         calendarView.appearance.eventSelectionColor = UIColor.FailyColor.secondaryPinkColor
         

@@ -30,10 +30,14 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.calendarView = self
-        viewModel.getAllSchedule()
+        
         viewModelMethod()
         setTableView()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.getAllSchedule()
     }
     
     
@@ -83,6 +87,7 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
             cell.mainCalendarView = self
             cell.calendarView.reloadData()
             cell.schedule = self.viewModel.detailSchedule
+            cell.calendarView.select(Date())
             cell.addDateButton.addTarget(self, action: #selector(addDate), for: .touchUpInside)
             return cell
         } else {
