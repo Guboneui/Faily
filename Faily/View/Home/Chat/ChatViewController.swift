@@ -560,14 +560,7 @@ class ChatViewController: UIViewController {
         } else {
             scheduleViewBottomMargin.constant = 0
         }
-        
-        
-        
     }
-    
-    
-    
-    
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -732,43 +725,43 @@ class ChatViewController: UIViewController {
     
     @objc func cameraStackViewAction(_ sender: UITapGestureRecognizer) {
         
-        //        switch PHPhotoLibrary.authorizationStatus() {
-        //        case .denied:
-        //            settingAlert()
-        //        case .restricted:
-        //            break
-        //        case .authorized:
-        //            self.imagePickerController.sourceType = .camera
-        //            self.imagePickerController.allowsEditing = true
-        //            self.present(self.imagePickerController, animated: true, completion: nil)
-        //        case .notDetermined:
-        //            PHPhotoLibrary.requestAuthorization({ state in
-        //                if state == .authorized {
-        //                    DispatchQueue.main.async {
-        //                        self.imagePickerController.sourceType = .camera
-        //                        self.imagePickerController.allowsEditing = true
-        //
-        //                        self.present(self.imagePickerController, animated: true, completion: nil)
-        //                    }
-        //
-        //                } else {
-        //                    self.dismiss(animated: true, completion: nil)
-        //                }
-        //            })
-        //        default:
-        //            break
-        //        }
-        //
+                switch PHPhotoLibrary.authorizationStatus() {
+                case .denied:
+                    settingAlert()
+                case .restricted:
+                    break
+                case .authorized:
+                    self.imagePickerController.sourceType = .camera
+                    self.imagePickerController.allowsEditing = true
+                    self.present(self.imagePickerController, animated: true, completion: nil)
+                case .notDetermined:
+                    PHPhotoLibrary.requestAuthorization({ state in
+                        if state == .authorized {
+                            DispatchQueue.main.async {
+                                self.imagePickerController.sourceType = .camera
+                                self.imagePickerController.allowsEditing = true
         
-        //        self.imagePickerController.sourceType = .camera
-        //        self.imagePickerController.allowsEditing = true
-        //        self.present(self.imagePickerController, animated: true, completion: nil)
+                                self.present(self.imagePickerController, animated: true, completion: nil)
+                            }
         
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "AllAnsweredPopUpInChatViewController") as! AllAnsweredPopUpInChatViewController
-        vc.modalPresentationStyle = .overCurrentContext
-        self.present(vc, animated: false, completion: nil)
+                        } else {
+                            self.dismiss(animated: true, completion: nil)
+                        }
+                    })
+                default:
+                    break
+                }
         
+//
+//                self.imagePickerController.sourceType = .camera
+//                self.imagePickerController.allowsEditing = true
+//                self.present(self.imagePickerController, animated: true, completion: nil)
+        
+//        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+//        let vc = storyBoard.instantiateViewController(withIdentifier: "AllAnsweredPopUpInChatViewController") as! AllAnsweredPopUpInChatViewController
+//        vc.modalPresentationStyle = .overCurrentContext
+//        self.present(vc, animated: false, completion: nil)
+//
         
     }
     
@@ -1101,9 +1094,35 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ChatViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             print("가져온 사진은 아래에 표시됩니다.")
             print(image)
+            
+            
+            
+            let myDateFormatter = DateFormatter()
+            myDateFormatter.dateFormat = "a h시 m분"
+            let time = myDateFormatter.string(from: Date())
+            
+             
+            
+            
+            ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: true, isSchedule: false, message: self.messageTextView.text, sendTime: time, emoticon: nil, photo: image, scheduleDate: nil, scheduleTitle: nil))
+            
+            GalleryViewController.recentPhotoAlbum.append(photoInfo(photoName: image, isLoved: false))
+            
+            
+            self.chatTableView.reloadData()
+            UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+                self.view.layoutIfNeeded()
+            }, completion: {(completed) in
+                let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
+                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+                self.selectedAssets = []
+            })
+            
+            
+            
         }
         
         self.dismiss(animated: true, completion: nil)
