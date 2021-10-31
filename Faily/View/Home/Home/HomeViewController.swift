@@ -276,10 +276,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
             var count = 0
             
-            if homeInfoViewModel.homeInfo?.familyList?.count == 0 {
+            if homeInfoViewModel.homeInfo?[0].familyList?.count == 0 {
                 count = 0
             } else {
-                count = homeInfoViewModel.homeInfo?.familyList?.count ?? 0
+                count = homeInfoViewModel.homeInfo?[0].familyList?.count ?? 0
             }
             
             return count
@@ -295,7 +295,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         if collectionView == memberProfileCollectionView {
             
-            let data = homeInfoViewModel.homeInfo?.familyList![indexPath.item]
+            let data = homeInfoViewModel.homeInfo?[0].familyList![indexPath.item]
             
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FamilyMemberCollectionViewCell", for: indexPath) as! FamilyMemberCollectionViewCell

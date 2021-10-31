@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,13 +20,23 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="JET-BY-EWT">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faily_splash_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Cu1-5b-gse">
+                                <rect key="frame" x="112.5" y="353.5" width="189" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Cu1-5b-gse" secondAttribute="height" id="WwY-KX-gpQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cu1-5b-gse" secondAttribute="trailing" constant="112.5" id="9eF-Tb-YsJ"/>
                             <constraint firstItem="JET-BY-EWT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Njh-TA-r0g"/>
                             <constraint firstAttribute="bottom" secondItem="JET-BY-EWT" secondAttribute="bottom" id="aEE-cJ-Sak"/>
+                            <constraint firstItem="Cu1-5b-gse" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="eU3-qH-jto"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JET-BY-EWT" secondAttribute="trailing" id="had-Ey-1rS"/>
+                            <constraint firstItem="Cu1-5b-gse" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wYD-Ue-Kbc"/>
+                            <constraint firstItem="Cu1-5b-gse" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112.5" id="yui-BE-UkV"/>
                             <constraint firstItem="JET-BY-EWT" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="zC7-io-SlH"/>
                         </constraints>
                     </view>
@@ -36,6 +47,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="faily_splash_logo" width="2000" height="2000"/>
         <image name="splash" width="375" height="812"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
