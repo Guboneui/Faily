@@ -11,9 +11,14 @@ class EmoticonBoxViewController: UIViewController {
 
     @IBOutlet weak var emoticonBoxCollectionView: UICollectionView!
     var imageArr = ["이모티콘1", "이모티콘2", "이모티콘3", "이모티콘4", "이모티콘5"]
+    
+    lazy var viewModel: GetAllEmoticonViewModel = GetAllEmoticonViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
+        viewModel.emoticonView = self
+        viewModel.getAllEmoticon()
         // Do any additional setup after loading the view.
     }
     
@@ -41,14 +46,22 @@ class EmoticonBoxViewController: UIViewController {
 
 extension EmoticonBoxViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ChatViewController.emoticonArray.count
+        //return ChatViewController.emoticonArray.count
+        return viewModel.emoticonBox.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmoticonBoxCollectionViewCell", for: indexPath) as! EmoticonBoxCollectionViewCell
-        cell.deleteButton.tag = indexPath.item
-        cell.emoticonImageView.image = ChatViewController.emoticonArray[indexPath.item]
-        cell.deleteButton.addTarget(self, action: #selector(deleteImage(sender:)), for: .touchUpInside)
+//        cell.deleteButton.tag = indexPath.item
+//        cell.emoticonImageView.image = ChatViewController.emoticonArray[indexPath.item]
+//        cell.deleteButton.addTarget(self, action: #selector(deleteImage(sender:)), for: .touchUpInside)
+        
+        let data = viewModel.emoticonBox[indexPath.item]
+        let imageData = Data(base64Encoded: data.emoji)
+        let image = UIImage(data: imageData!)
+        cell.emoticonImageView.image = image
+        
+        
         return cell
     }
 

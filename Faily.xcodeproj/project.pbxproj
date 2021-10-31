@@ -25,6 +25,10 @@
 		2C18E209272F1DD000EBB75B /* ChatInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18E208272F1DD000EBB75B /* ChatInfoResponse.swift */; };
 		2C18E20B272F1E3400EBB75B /* GetChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18E20A272F1E3400EBB75B /* GetChatRepository.swift */; };
 		2C18E20E272F1EEA00EBB75B /* GetChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18E20D272F1EEA00EBB75B /* GetChatService.swift */; };
+		2C18E213272F434B00EBB75B /* GetAllEmoticonReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18E212272F434B00EBB75B /* GetAllEmoticonReponse.swift */; };
+		2C18E216272F43E000EBB75B /* GetAllEmoticonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18E215272F43E000EBB75B /* GetAllEmoticonRepository.swift */; };
+		2C18E219272F44DD00EBB75B /* GetAllEmoticonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18E218272F44DD00EBB75B /* GetAllEmoticonService.swift */; };
+		2C18E21C272F459900EBB75B /* GetAllEmoticonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18E21B272F459900EBB75B /* GetAllEmoticonViewModel.swift */; };
 		2C22F40F270C0C5200580DCF /* DateScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C22F40D270C0C5200580DCF /* DateScheduleTableViewCell.swift */; };
 		2C22F410270C0C5200580DCF /* DateScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C22F40E270C0C5200580DCF /* DateScheduleTableViewCell.xib */; };
 		2C22F413270C297600580DCF /* BottomWhiteLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C22F411270C297600580DCF /* BottomWhiteLabelTableViewCell.swift */; };
@@ -247,6 +251,10 @@
 		2C18E208272F1DD000EBB75B /* ChatInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInfoResponse.swift; sourceTree = "<group>"; };
 		2C18E20A272F1E3400EBB75B /* GetChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChatRepository.swift; sourceTree = "<group>"; };
 		2C18E20D272F1EEA00EBB75B /* GetChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChatService.swift; sourceTree = "<group>"; };
+		2C18E212272F434B00EBB75B /* GetAllEmoticonReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllEmoticonReponse.swift; sourceTree = "<group>"; };
+		2C18E215272F43E000EBB75B /* GetAllEmoticonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllEmoticonRepository.swift; sourceTree = "<group>"; };
+		2C18E218272F44DD00EBB75B /* GetAllEmoticonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllEmoticonService.swift; sourceTree = "<group>"; };
+		2C18E21B272F459900EBB75B /* GetAllEmoticonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllEmoticonViewModel.swift; sourceTree = "<group>"; };
 		2C22F40D270C0C5200580DCF /* DateScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		2C22F40E270C0C5200580DCF /* DateScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		2C22F411270C297600580DCF /* BottomWhiteLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomWhiteLabelTableViewCell.swift; sourceTree = "<group>"; };
@@ -510,6 +518,38 @@
 				2C18E206272F12EF00EBB75B /* ChatViewModel.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		2C18E211272F433E00EBB75B /* Emoticon */ = {
+			isa = PBXGroup;
+			children = (
+				2C18E212272F434B00EBB75B /* GetAllEmoticonReponse.swift */,
+			);
+			path = Emoticon;
+			sourceTree = "<group>";
+		};
+		2C18E214272F438E00EBB75B /* Emoticon */ = {
+			isa = PBXGroup;
+			children = (
+				2C18E215272F43E000EBB75B /* GetAllEmoticonRepository.swift */,
+			);
+			path = Emoticon;
+			sourceTree = "<group>";
+		};
+		2C18E217272F44C700EBB75B /* Emoticon */ = {
+			isa = PBXGroup;
+			children = (
+				2C18E218272F44DD00EBB75B /* GetAllEmoticonService.swift */,
+			);
+			path = Emoticon;
+			sourceTree = "<group>";
+		};
+		2C18E21A272F458900EBB75B /* Emoticon */ = {
+			isa = PBXGroup;
+			children = (
+				2C18E21B272F459900EBB75B /* GetAllEmoticonViewModel.swift */,
+			);
+			path = Emoticon;
 			sourceTree = "<group>";
 		};
 		2C4B7BBA26F2E0F30083576A /* Question */ = {
@@ -866,8 +906,9 @@
 		2CB928792702373900BF34DC /* API_Model */ = {
 			isa = PBXGroup;
 			children = (
-				2C18E1FB272F10F300EBB75B /* Chat */,
+				2C18E211272F433E00EBB75B /* Emoticon */,
 				2CB9287A270238A500BF34DC /* ConstantURL.swift */,
+				2C18E1FB272F10F300EBB75B /* Chat */,
 				2CB9287C2702390000BF34DC /* SignUp-Login */,
 				2C9EAFF02706136800F507A6 /* Invite */,
 				2CBB71D02708E97A008B3E56 /* Question */,
@@ -932,6 +973,7 @@
 		2CC092B426F241E2009E69D0 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				2C18E214272F438E00EBB75B /* Emoticon */,
 				2C18E1FA272F10E900EBB75B /* Chat */,
 				2CAA6A55272ABE63002EE899 /* Home */,
 				2C9EAFED2706101B00F507A6 /* SignUp-Login */,
@@ -945,6 +987,7 @@
 		2CC092B526F241EC009E69D0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2C18E217272F44C700EBB75B /* Emoticon */,
 				2C18E202272F11D800EBB75B /* Chat */,
 				2CAA6A58272ABFC0002EE899 /* Home */,
 				2C9EAFEE2706103E00F507A6 /* SignUp-Login */,
@@ -958,6 +1001,7 @@
 		2CC092B626F241FA009E69D0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2C18E21A272F458900EBB75B /* Emoticon */,
 				2C18E205272F12E600EBB75B /* Chat */,
 				2CAA6A5B272AC063002EE899 /* Home */,
 				2C9EAFEF2706105B00F507A6 /* SignUp-Login */,
@@ -1351,6 +1395,7 @@
 				2C715BCB270DA67D007D67C5 /* PolicySettingTableViewCell.swift in Sources */,
 				2CC9C38226E2A27600936BCD /* IntroViewController.swift in Sources */,
 				2C18E201272F117700EBB75B /* SendChatRepository.swift in Sources */,
+				2C18E21C272F459900EBB75B /* GetAllEmoticonViewModel.swift in Sources */,
 				2CD9D9BA2704EAE40041A0DB /* AuthEmailResponse.swift in Sources */,
 				2CD6F7D727037DC000D1E04E /* AllAnswerViewController.swift in Sources */,
 				2C18E1FF272F113B00EBB75B /* SendChatResponse.swift in Sources */,
@@ -1384,6 +1429,7 @@
 				2C5520692725EEA1001A11AE /* PhotoPreViewViewController.swift in Sources */,
 				2C9EAFF22706138200F507A6 /* InviteResponse.swift in Sources */,
 				2CC092C726F2905B009E69D0 /* ParticipantViewController.swift in Sources */,
+				2C18E216272F43E000EBB75B /* GetAllEmoticonRepository.swift in Sources */,
 				2C18E1FD272F110000EBB75B /* SendChatRequest.swift in Sources */,
 				2CF3D3D126FBE850008C13F3 /* RecommentCollectionViewCell.swift in Sources */,
 				2CF3D3C526FBD3D6008C13F3 /* UIImage.swift in Sources */,
@@ -1408,6 +1454,7 @@
 				2CD9D9BC2704EC820041A0DB /* AuthEmailRepository.swift in Sources */,
 				2C148205270B908E005C0597 /* SettingFamilyCodeViewController.swift in Sources */,
 				2C4B7BC026F2E12E0083576A /* CalendarViewController.swift in Sources */,
+				2C18E219272F44DD00EBB75B /* GetAllEmoticonService.swift in Sources */,
 				2C9EAFF72706159E00F507A6 /* InviteRequest.swift in Sources */,
 				2CC092C326F286DE009E69D0 /* SignUpWithUserInfoViewController.swift in Sources */,
 				2CC5AED026F106920096D818 /* UserDefaultKey.swift in Sources */,
@@ -1434,6 +1481,7 @@
 				2CD6D151271C2DC900DC9DC7 /* EmoticonPopUpViewController.swift in Sources */,
 				2C80392827232B0700B6DB7B /* AddScheduleRepository.swift in Sources */,
 				2C4B7BB926F2E0EF0083576A /* UserSettingViewController.swift in Sources */,
+				2C18E213272F434B00EBB75B /* GetAllEmoticonReponse.swift in Sources */,
 				2C715BCF270DA6D0007D67C5 /* SettingGuideLineTableViewCell.swift in Sources */,
 				2C5C288B26F4C2DD00217D00 /* ChatViewController.swift in Sources */,
 				2CD9D9C42704F32A0041A0DB /* LoginResponse.swift in Sources */,
