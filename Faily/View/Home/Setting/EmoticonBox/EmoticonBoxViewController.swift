@@ -52,11 +52,13 @@ extension EmoticonBoxViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmoticonBoxCollectionViewCell", for: indexPath) as! EmoticonBoxCollectionViewCell
-//        cell.deleteButton.tag = indexPath.item
 //        cell.emoticonImageView.image = ChatViewController.emoticonArray[indexPath.item]
-//        cell.deleteButton.addTarget(self, action: #selector(deleteImage(sender:)), for: .touchUpInside)
+        
+        cell.deleteButton.addTarget(self, action: #selector(deleteImage(sender:)), for: .touchUpInside)
         
         let data = viewModel.emoticonBox[indexPath.item]
+        
+        cell.deleteButton.tag = data.emoji_id
         let imageData = Data(base64Encoded: data.emoji)
         let image = UIImage(data: imageData!)
         cell.emoticonImageView.image = image
@@ -73,8 +75,13 @@ extension EmoticonBoxViewController: UICollectionViewDelegate, UICollectionViewD
         let alert = UIAlertController(title: "삭제", message: "해당 이모티콘을 삭제하시겠어요?", preferredStyle: .alert)
         let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
         let okButton = UIAlertAction(title: "확인", style: .default, handler: {[self] _ in
-            emoticonBoxCollectionView.deleteItems(at: [IndexPath.init(row: sender.tag, section: 0)])
-            ChatViewController.emoticonArray.remove(at: sender.tag)
+            //emoticonBoxCollectionView.deleteItems(at: [IndexPath.init(row: sender.tag, section: 0)])
+            //ChatViewController.emoticonArray.remove(at: sender.tag)
+            
+            let param = PostDeleteEmoticonRequest(emoji_id: sender.tag)
+            viewModel.postDeleteEmoticon(param)
+            
+            
         })
         alert.addAction(cancelButton)
         alert.addAction(okButton)

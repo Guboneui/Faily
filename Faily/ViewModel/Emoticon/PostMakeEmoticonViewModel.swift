@@ -17,6 +17,8 @@ class PostMakeEmoticonViewModel {
             guard let self = self else {return}
             if response.isSuccess == true {
                 print("이모티콘 만들기 성공")
+                self.makeEmoticonView?.delegate?.popNav()
+                self.makeEmoticonView?.dismiss(animated: true, completion: nil)
             } else {
                 print("이모티콘 만들기 실패")
             }
