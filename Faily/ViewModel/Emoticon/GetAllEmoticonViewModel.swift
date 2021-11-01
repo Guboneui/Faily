@@ -11,6 +11,7 @@ class GetAllEmoticonViewModel {
     let useService: GetAllEmoticonService = GetAllEmoticonService()
     let deleteService: PostDeleteEmoticonService = PostDeleteEmoticonService()
     weak var emoticonView: EmoticonBoxViewController?
+    weak var chatView: ChatViewController?
     
     var emoticonBox: [EmoticonInfo] = [] {
         didSet{
@@ -19,12 +20,19 @@ class GetAllEmoticonViewModel {
         
     }
     
+    var chatEmoticonBox: [EmoticonInfo] = [] {
+        didSet{
+            self.chatView?.userEmoticonCollectionView.reloadData()
+        }
+    }
+    
     func getAllEmoticon(){
         useService.getAllEmoticon(onCompleted: {[weak self] response in
             guard let self = self else {return}
             if response.isSuccess == true {
                 print("이모티콘을 불러 왔습니다.")
                 self.emoticonBox = response.result!
+                self.chatEmoticonBox = response.result!
             } else {
                print("이모티콘을 불러오지 못했습니다.")
             }

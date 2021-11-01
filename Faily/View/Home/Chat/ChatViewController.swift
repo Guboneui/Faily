@@ -85,7 +85,7 @@ class ChatViewController: UIViewController {
    
     
     lazy var viewModel: ChatViewModel = ChatViewModel()
-    
+    lazy var emoticonViewModel: GetAllEmoticonViewModel = GetAllEmoticonViewModel()
     
     static var message: [ChatMessage] = [
         ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "우리 가족 단톡방을 생성했어요!!!!", sendTime: "오전 10시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
@@ -277,6 +277,9 @@ class ChatViewController: UIViewController {
         setTableView()
         setCollectionView()
         setKeyboardNotification()
+        
+        emoticonViewModel.chatView = self
+        emoticonViewModel.getAllEmoticon()
         
         imagePickerController.delegate = self
         
@@ -1137,7 +1140,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MyScheduleTableViewCell", for: indexPath) as! MyScheduleTableViewCell
                 cell.selectionStyle = .none
                 cell.scheduleTitleLabel.text = chatMessage.scheduleTitle
-                cell.startDateLabel.text = chatMessage.scheduleDate
+                cell.startDateLabel.text = chatMessage.sendTime
 
                 return cell
             } else {
@@ -1241,8 +1244,10 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
 
 extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ChatViewController.emoticonArray.count
+        //return ChatViewController.emoticonArray.count
         //return 20
+        
+        return emoticonViewModel.chatEmoticonBox.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -1254,8 +1259,12 @@ extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         if indexPath == self.selectedIndexPath {
             borderColor = UIColor.FailyColor.mainPinkColor.cgColor
-            self.selectedEmoticon = ChatViewController.emoticonArray[self.selectedIndexPath.item]
-            print(selectedEmoticon)
+            
+            let imageData = Data(base64Encoded: emoticonViewModel.chatEmoticonBox[self.selectedIndexPath.item].emoji)
+            let image = UIImage(data: imageData!)
+            
+            self.selectedEmoticon = image
+            
             borderWidth = 3
         } else {
             borderColor = UIColor.FailyColor.grayscale_5.cgColor
@@ -1264,7 +1273,12 @@ extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         cell.emoticonImageView.layer.borderWidth = borderWidth
         cell.emoticonImageView.layer.borderColor = borderColor
-        cell.emoticonImageView.image = ChatViewController.emoticonArray[indexPath.item]
+        
+        
+        let imageData = Data(base64Encoded: emoticonViewModel.chatEmoticonBox[indexPath.item].emoji)
+        let image = UIImage(data: imageData!)
+        
+        cell.emoticonImageView.image = image
         return cell
     }
     

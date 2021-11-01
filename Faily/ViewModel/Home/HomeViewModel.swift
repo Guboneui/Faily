@@ -16,10 +16,22 @@ class HomeViewModel {
     weak var homeView: HomeViewController?
     var homeInfo: [HomeInfo]? {
         didSet {
-            homeView?.navTitleLabel.text = "\(homeInfo![0].user_name ?? "")님의 가족"
-            homeView?.totalProgress.setProgress(progress: CGFloat(homeInfo![0].group_bonding * 0.01), animated: true)
+            //homeView?.navTitleLabel.text = "\(homeInfo![0].user_name ?? "")님의 가족"
+            
+            var totalBonding: Float = 0.0
+            
+            for i in 0..<(homeInfo?[0].familyList!.count)! {
+                totalBonding += (homeInfo?[0].familyList![i].user_bonding)!
+            }
+            
+            homeView?.totalProgress.setProgress(progress: CGFloat(totalBonding / 4 * 0.01), animated: true)
+            
+            
+            
+            
+            
             //homeView?.totalProgress.setProgress(progress: 1, animated: true)
-            homeView?.percentLabel.text = "\(String(format: "%.2f", homeInfo?[0].group_bonding ?? 50))%"
+            homeView?.percentLabel.text = "\(String(format: "%.2f", totalBonding / 4 ?? 50))%"
             if homeInfo?[0].today_anniversary!.count == 0 {
                 homeView?.scheduleTitleLabel.text = "특별한 추억을\n만들어 보세요."
             } else {
