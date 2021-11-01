@@ -20,7 +20,7 @@ class AllAnswerBaseTableViewCell: UITableViewCell {
     
     var getMemberCount: Int = 0
     
-    var data: [AllQuestionDetail] = []
+    var data: [AnswerInfo] = []
     var indexPathItem = -1
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -71,6 +71,24 @@ extension AllAnswerBaseTableViewCell: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllAnswerProfileCollectionViewCell", for: indexPath) as! AllAnswerProfileCollectionViewCell
+        
+        
+        
+        if self.data[indexPath.item].user_name == "원승빈" {
+            cell.familyProfileImage.image = UIImage(named: "승빈_프로필")
+           
+        } else if self.data[indexPath.item].user_name == "장나연" {
+            cell.familyProfileImage.image = UIImage(named: "나연_프로필")
+           
+        } else if self.data[indexPath.item].user_name == "정수빈" {
+            cell.familyProfileImage.image = UIImage(named: "수빈_프로필")
+           
+        } else {
+            cell.familyProfileImage.image = UIImage(named: "본의_프로필")
+           
+        }
+    
+        
         
         print("컬렉션뷰 생성")
         return cell

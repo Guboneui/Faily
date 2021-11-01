@@ -16,7 +16,7 @@ class MakeEmoticonViewController: UIViewController {
     @IBOutlet weak var designCollectionView: UICollectionView!
     @IBOutlet weak var selectPhotoStackView: UIStackView!
     
-    var imageArr = ["testBG1", "testBG2", "testBG3", "testBG4", "testBG5", "testBG6"]
+    var imageArr = ["emoticon_bg1", "emoticon_bg2", "emoticon_bg3", "emoticon_bg4", "emoticon_bg5", "emoticon_bg6"]
     
     
     var seletedImage: UIImage?
