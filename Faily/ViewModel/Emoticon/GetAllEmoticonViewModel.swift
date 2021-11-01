@@ -35,8 +35,11 @@ class GetAllEmoticonViewModel {
     
     func postDeleteEmoticon(_ parameter: PostDeleteEmoticonRequest) {
         deleteService.postDeleteEmoticon(parameter, onCompleted: {[weak self] response in
+            guard let self = self else {return}
             if response.isSuccess == true {
                 print("이모티콘 삭제 성공")
+                self.getAllEmoticon()
+                self.emoticonView?.emoticonBoxCollectionView.reloadData()
             } else {
                 print("이모티콘 삭제 실패")
             }

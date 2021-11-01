@@ -18,12 +18,13 @@ class EmoticonBoxViewController: UIViewController {
         super.viewDidLoad()
         setCollectionView()
         viewModel.emoticonView = self
-        viewModel.getAllEmoticon()
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        viewModel.getAllEmoticon()
         self.emoticonBoxCollectionView.reloadData()
     }
     
@@ -80,6 +81,7 @@ extension EmoticonBoxViewController: UICollectionViewDelegate, UICollectionViewD
             
             let param = PostDeleteEmoticonRequest(emoji_id: sender.tag)
             viewModel.postDeleteEmoticon(param)
+            
             
             
         })

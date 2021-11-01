@@ -893,9 +893,9 @@ class ChatViewController: UIViewController {
         
         self.messageTextView.becomeFirstResponder()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             
-            ChatViewController.message.append(ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "ㅇㅋㅇㅋㅇㅋ", sendTime: time, emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil))
+            ChatViewController.message.append(ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "저희는 가족만을 위한 서비스를 제공하는 페일리입니다", sendTime: time, emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil))
             self.chatTableView.reloadData()
             self.messageTextView.text = nil
             
@@ -911,10 +911,41 @@ class ChatViewController: UIViewController {
     //                let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
     //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
     //            }
+                
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    
+                    ChatViewController.message.append(ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "잘 부탁 드립니다🙏", sendTime: time, emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil))
+                    self.chatTableView.reloadData()
+                    self.messageTextView.text = nil
+                    
+                    UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+                        self.view.layoutIfNeeded()
+                    }, completion: { [self](completed) in
+                        let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
+                        self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            //            if viewModel.chatInfo.count == 0 {
+            //                let indexPath = IndexPath(row: 0, section: 0)
+            //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            //            } else {
+            //                let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
+            //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            //            }
+                    })
+                    
+                    self.messageTextView.becomeFirstResponder()
+                }
+                
+
+                
+                
+                
             })
             
             self.messageTextView.becomeFirstResponder()
         }
+        
+        
         
 
         
