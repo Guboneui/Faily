@@ -22,10 +22,13 @@ class EmoticonPopUpViewController: UIViewController {
     
     weak var delegate: PopMakeEmoticonViewDelegate?
     
+    lazy var viewModel: PostMakeEmoticonViewModel = PostMakeEmoticonViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configUI()
+        viewModel.makeEmoticonView = self
     }
     
     
@@ -48,9 +51,16 @@ class EmoticonPopUpViewController: UIViewController {
         let alert = UIAlertController(title: "저장", message: "만들어진 이모티콘을 저장하시겠어요?", preferredStyle: .alert)
         let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
         let okButton = UIAlertAction(title: "확인", style: .default, handler: { _ in
-            ChatViewController.emoticonArray.append(self.combinedImage!)
-            self.delegate?.popNav()
-            self.dismiss(animated: false, completion: nil)
+            //ChatViewController.emoticonArray.append(self.combinedImage!)
+            
+            let imageData = self.combinedImage?.jpegData(compressionQuality: 1)
+            let imageBase64String = imageData?.base64EncodedString()
+            
+            let param = PostMakeEmoticonRequest(emoji: imageBase64String ?? "")
+            self.viewModel.postMakeEmoticon(param)
+            
+            //self.delegate?.popNav()
+            //self.dismiss(animated: false, completion: nil)
         })
         alert.addAction(cancelButton)
         alert.addAction(okButton)

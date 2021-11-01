@@ -34,6 +34,8 @@ class MakeEmoticonViewController: UIViewController {
     var seletedIndexItem: Int = -1
     var userSelectedState: Bool = false
     
+    
+    
     override func loadView() {
         super.loadView()
         
@@ -42,6 +44,8 @@ class MakeEmoticonViewController: UIViewController {
             
         userSelectedImageView.layer.borderWidth = 1
         userSelectedImageView.layer.borderColor = UIColor.FailyColor.grayscale_5.cgColor
+        
+        
     }
     
     
