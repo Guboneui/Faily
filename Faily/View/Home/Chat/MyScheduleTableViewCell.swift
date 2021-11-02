@@ -13,6 +13,7 @@ class MyScheduleTableViewCell: UITableViewCell {
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var scheduleTitleLabel: UILabel!
     
+    @IBOutlet weak var sendTimeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

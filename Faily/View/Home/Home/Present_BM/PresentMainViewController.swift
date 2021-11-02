@@ -7,6 +7,12 @@
 
 import UIKit
 
+struct BM {
+    let image: String
+    let name: String
+    let price: String
+}
+
 class PresentMainViewController: UIViewController {
     
     
@@ -18,6 +24,18 @@ class PresentMainViewController: UIViewController {
     @IBOutlet weak var recommentCollectionView: UICollectionView!
     
     let category = ["전체", "남성", "여성", "청소년"]
+    
+    var bmArr: [BM] = [
+        BM(image: "bm1", name: "비타민", price: "32,000원"),
+        BM(image: "bm2", name: "니트", price: "27,000원"),
+        BM(image: "bm3", name: "홍삼 세트", price: "112,000원"),
+        BM(image: "bm4", name: "스타벅스 텀블러 세트", price: "27,500원"),
+        BM(image: "bm5", name: "나이키 ", price: "29,000원"),
+        BM(image: "bm6", name: "생로랑 장지갑", price: "732,000원"),
+        BM(image: "bm7", name: "구찌 스네이크 지갑", price: "529,900원"),
+    ]
+    
+    //let bmArr = ["bm1", "bm2", "bm3", "bm4", "bm5", "bm6", "bm7"]
     
     override func loadView() {
         super.loadView()
@@ -65,7 +83,7 @@ extension PresentMainViewController: UICollectionViewDelegate, UICollectionViewD
         if collectionView == categoryCollectionView {
             return category.count
         } else {
-            return 10
+            return self.bmArr.count
         }
         
     }
@@ -78,6 +96,11 @@ extension PresentMainViewController: UICollectionViewDelegate, UICollectionViewD
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommentCollectionViewCell", for: indexPath) as! RecommentCollectionViewCell
+            
+            cell.giftImage.image = UIImage(named: self.bmArr[indexPath.item].image) 
+            cell.giftTitle.text = self.bmArr[indexPath.item].name
+            cell.giftPrice.text = self.bmArr[indexPath.item].price
+            
             return cell
         }
         

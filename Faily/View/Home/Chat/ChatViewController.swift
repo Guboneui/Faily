@@ -896,7 +896,7 @@ class ChatViewController: UIViewController {
         
         self.messageTextView.becomeFirstResponder()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             
             ChatViewController.message.append(ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "저희는 가족만을 위한 서비스를 제공하는 페일리입니다", sendTime: time, emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil))
             self.chatTableView.reloadData()
@@ -916,7 +916,7 @@ class ChatViewController: UIViewController {
     //            }
                 
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                     
                     ChatViewController.message.append(ChatMessage(userName: "승빈", userProfile: "승빈_프로필", isPhoto: false, isSchedule: false, message: "잘 부탁 드립니다🙏", sendTime: time, emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil))
                     self.chatTableView.reloadData()
@@ -1140,7 +1140,8 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MyScheduleTableViewCell", for: indexPath) as! MyScheduleTableViewCell
                 cell.selectionStyle = .none
                 cell.scheduleTitleLabel.text = chatMessage.scheduleTitle
-                cell.startDateLabel.text = chatMessage.sendTime
+                cell.startDateLabel.text = chatMessage.scheduleDate
+                cell.sendTimeLabel.text = chatMessage.sendTime
 
                 return cell
             } else {
@@ -1224,7 +1225,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
             ChatViewController.message.append(ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: true, isSchedule: false, message: self.messageTextView.text, sendTime: time, emoticon: nil, photo: image, scheduleDate: nil, scheduleTitle: nil))
             
             GalleryViewController.recentPhotoAlbum.append(photoInfo(photoName: image, isLoved: false))
-            
+            GalleryViewController.totalAlbum[0] = totalAlbumInfo(album: GalleryViewController.recentPhotoAlbum, isloved: false, albumTitle: "최근 항목")
             
             self.chatTableView.reloadData()
             UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
