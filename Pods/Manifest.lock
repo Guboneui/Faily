@@ -9,6 +9,9 @@ PODS:
   - IQKeyboardManager (6.5.6)
   - MKColorPicker (1.2)
   - MKMagneticProgress (1.4)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - PanModal (1.2.7)
   - PryntTrimmerView (4.0.2)
   - RxCocoa (6.2.0):
@@ -38,6 +41,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - MKColorPicker
   - MKMagneticProgress
+  - NVActivityIndicatorView
   - PanModal
   - RxCocoa
   - RxRelay
@@ -59,6 +63,7 @@ SPEC REPOS:
     - IQKeyboardManager
     - MKColorPicker
     - MKMagneticProgress
+    - NVActivityIndicatorView
     - PanModal
     - PryntTrimmerView
     - RxCocoa
@@ -82,6 +87,7 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   MKColorPicker: 8998b2ab977e4f240fdf254db27a18b810da3cfc
   MKMagneticProgress: 006b8c763d62986661bcde03794a3dcf56cd084a
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
@@ -94,6 +100,6 @@ SPEC CHECKSUMS:
   SwiftyImage: 65c71a147f417fc0fe137d17b135aaa666279a09
   YPImagePicker: 1463a19a36244e209dcb03c30e63559c5afa9602
 
-PODFILE CHECKSUM: bbeef72612dc1bcc9e2a2aaaa2a8e2a52ec65812
+PODFILE CHECKSUM: ef7c1a7fc55ba8e0907d404116de531095d5ea91
 
 COCOAPODS: 1.11.2

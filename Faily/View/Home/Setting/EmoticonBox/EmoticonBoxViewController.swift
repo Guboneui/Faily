@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class EmoticonBoxViewController: UIViewController {
 

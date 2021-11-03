@@ -24,6 +24,7 @@ pod 'YPImagePicker'
 pod "BSImagePicker", "~> 3.1"
 pod "SwiftyImage"
 pod 'Socket.IO-Client-Swift'
+pod 'NVActivityIndicatorView'
 
 
 end
