@@ -86,7 +86,7 @@ class ChatViewController: UIViewController {
     
     lazy var viewModel: ChatViewModel = ChatViewModel()
     lazy var emoticonViewModel: GetAllEmoticonViewModel = GetAllEmoticonViewModel()
-    
+    lazy var scheduleViewModel: AddScheduleViewModel = AddScheduleViewModel()
     static var message: [ChatMessage] = [
         ChatMessage(userName: "본의", userProfile: "본의_프로필", isPhoto: false, isSchedule: false, message: "우리 가족 단톡방을 생성했어요!!!!", sendTime: "오전 10시 23분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
         ChatMessage(userName: "수빈", userProfile: "수빈_프로필", isPhoto: false, isSchedule: false, message: "오오오오오오오 카톡보다 좋은거 같은데???", sendTime: "오전 10시 27분", emoticon: nil, photo: nil, scheduleDate: nil, scheduleTitle: nil),
@@ -302,6 +302,8 @@ class ChatViewController: UIViewController {
 //                }
             })
         }
+        
+        scheduleViewModel.chatView = self
         
     }
     
@@ -1043,9 +1045,24 @@ class ChatViewController: UIViewController {
             self.selectedEmoticon = nil
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         })
+        
+        
+        let param = AddScheduleRequest(
+            calendar_category: "기념일",
+            calendar_name: "기념일",
+            calendar_place: "집",
+            calendar_memo: self.messageTextView.text,
+            calendar_start_time: "2021-11-05 12:55",
+            calendar_end_time: "2021-11-05 14:55"
+        )
+        scheduleViewModel.postAddSchedule(param)
+        
+        
+        
     }
     
     
+   
     
 }
 

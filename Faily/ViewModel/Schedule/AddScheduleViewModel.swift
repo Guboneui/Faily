@@ -9,6 +9,7 @@ import Foundation
 
 class AddScheduleViewModel {
     weak var addScheduleView: AddDateViewController?
+    weak var chatView: ChatViewController?
     let useService = AddscheduleService()
     var successAddSchedule: () -> Void = {}
     func postAddSchedule(_ parameters: AddScheduleRequest) {
