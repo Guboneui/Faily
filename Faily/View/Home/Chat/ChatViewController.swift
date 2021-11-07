@@ -82,7 +82,7 @@ class ChatViewController: UIViewController {
         UIImage(named: "이모티콘5")
         
     ]
-   
+    
     
     lazy var viewModel: ChatViewModel = ChatViewModel()
     lazy var emoticonViewModel: GetAllEmoticonViewModel = GetAllEmoticonViewModel()
@@ -293,13 +293,13 @@ class ChatViewController: UIViewController {
             }, completion: { [self](completed) in
                 let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
                 self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-//                if viewModel.chatInfo.count == 0 {
-//                    let indexPath = IndexPath(row: 0, section: 0)
-//                    self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-//                } else {
-//                    let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
-//                    self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-//                }
+                //                if viewModel.chatInfo.count == 0 {
+                //                    let indexPath = IndexPath(row: 0, section: 0)
+                //                    self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+                //                } else {
+                //                    let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
+                //                    self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+                //                }
             })
         }
         
@@ -331,15 +331,15 @@ class ChatViewController: UIViewController {
         }, completion: { [self](completed) in
             let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-//
-//            if viewModel.chatInfo.count == 0 {
-//                let indexPath = IndexPath(row: 0, section: 0)
-//                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-//            } else {
-//                let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
-//                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-//            }
-//
+            //
+            //            if viewModel.chatInfo.count == 0 {
+            //                let indexPath = IndexPath(row: 0, section: 0)
+            //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            //            } else {
+            //                let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
+            //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            //            }
+            //
             
             
         })
@@ -350,7 +350,7 @@ class ChatViewController: UIViewController {
         self.userEmoticonCollectionView.dataSource = self
         self.userEmoticonCollectionView.register(UINib(nibName: "EmoticonInChatCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "EmoticonInChatCollectionViewCell")
         self.userEmoticonCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-      
+        
         self.userEmoticonCollectionView.collectionViewLayout = createComporitionalLayout()
         
         
@@ -402,30 +402,30 @@ class ChatViewController: UIViewController {
             
             let fraction: CGFloat = 1 / 4
             let inset: CGFloat = 2.5
-
+            
             // Item
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(fraction), heightDimension: .fractionalHeight(1))
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
             item.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
-
+            
             // Group
             let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(fraction))
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-
+            
             // Section
             let section = NSCollectionLayoutSection(group: group)
             section.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
             //section.orthogonalScrollingBehavior = .continuous
             // Supplementary Item
             //let headerItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(self.userEmoticonCollectionView.frame.height))
-//            let headerItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(self.userEmoticonCollectionView.frame.height / 4))
-//            let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerItemSize, elementKind: "header", alignment: .top)
-//            section.boundarySupplementaryItems = [headerItem]
-
+            //            let headerItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(self.userEmoticonCollectionView.frame.height / 4))
+            //            let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerItemSize, elementKind: "header", alignment: .top)
+            //            section.boundarySupplementaryItems = [headerItem]
+            
             return section
-
-
-    
+            
+            
+            
             
         }
         return layout
@@ -442,21 +442,21 @@ class ChatViewController: UIViewController {
         
     }
     
-//    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
-//
-//    let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//    let group = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, subitems: [item])
-//
-//    let containerGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8),heightDimension: .estimated(1)), subitems: Array(repeating: group, count: 3))
-//    containerGroup.interItemSpacing = .fixed(16)
-//
-//    let section = NSCollectionLayoutSection(group: containerGroup)
-//    section.interGroupSpacing = 16
-//    section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16)
-//    section.supplementariesFollowContentInsets = false
-//    section.orthogonalScrollingBehavior = .groupPaging
-//    section.boundarySupplementaryItems = [supplementaryHeaderItem(), supplementaryFooterSeparatorItem()]
-//    return section
+    //    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
+    //
+    //    let item = NSCollectionLayoutItem(layoutSize: itemSize)
+    //    let group = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, subitems: [item])
+    //
+    //    let containerGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8),heightDimension: .estimated(1)), subitems: Array(repeating: group, count: 3))
+    //    containerGroup.interItemSpacing = .fixed(16)
+    //
+    //    let section = NSCollectionLayoutSection(group: containerGroup)
+    //    section.interGroupSpacing = 16
+    //    section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16)
+    //    section.supplementariesFollowContentInsets = false
+    //    section.orthogonalScrollingBehavior = .groupPaging
+    //    section.boundarySupplementaryItems = [supplementaryHeaderItem(), supplementaryFooterSeparatorItem()]
+    //    return section
     
     
     
@@ -744,7 +744,7 @@ class ChatViewController: UIViewController {
             }
             
             GalleryViewController.totalAlbum[0] = totalAlbumInfo(album: GalleryViewController.recentPhotoAlbum, isloved: false, albumTitle: "최근 항목")
-           
+            
             
         }
         
@@ -753,7 +753,7 @@ class ChatViewController: UIViewController {
             self.view.layoutIfNeeded()
         }, completion: {(completed) in
             let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
-//            let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
+            //            let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
             self.selectedAssets = []
         })
@@ -762,43 +762,43 @@ class ChatViewController: UIViewController {
     
     @objc func cameraStackViewAction(_ sender: UITapGestureRecognizer) {
         
-                switch PHPhotoLibrary.authorizationStatus() {
-                case .denied:
-                    settingAlert()
-                case .restricted:
-                    break
-                case .authorized:
-                    self.imagePickerController.sourceType = .camera
-                    self.imagePickerController.allowsEditing = true
-                    self.present(self.imagePickerController, animated: true, completion: nil)
-                case .notDetermined:
-                    PHPhotoLibrary.requestAuthorization({ state in
-                        if state == .authorized {
-                            DispatchQueue.main.async {
-                                self.imagePickerController.sourceType = .camera
-                                self.imagePickerController.allowsEditing = true
-        
-                                self.present(self.imagePickerController, animated: true, completion: nil)
-                            }
-        
-                        } else {
-                            self.dismiss(animated: true, completion: nil)
-                        }
-                    })
-                default:
-                    break
+        switch PHPhotoLibrary.authorizationStatus() {
+        case .denied:
+            settingAlert()
+        case .restricted:
+            break
+        case .authorized:
+            self.imagePickerController.sourceType = .camera
+            self.imagePickerController.allowsEditing = true
+            self.present(self.imagePickerController, animated: true, completion: nil)
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization({ state in
+                if state == .authorized {
+                    DispatchQueue.main.async {
+                        self.imagePickerController.sourceType = .camera
+                        self.imagePickerController.allowsEditing = true
+                        
+                        self.present(self.imagePickerController, animated: true, completion: nil)
+                    }
+                    
+                } else {
+                    self.dismiss(animated: true, completion: nil)
                 }
+            })
+        default:
+            break
+        }
         
-//
-//                self.imagePickerController.sourceType = .camera
-//                self.imagePickerController.allowsEditing = true
-//                self.present(self.imagePickerController, animated: true, completion: nil)
+        //
+        //                self.imagePickerController.sourceType = .camera
+        //                self.imagePickerController.allowsEditing = true
+        //                self.present(self.imagePickerController, animated: true, completion: nil)
         
-//        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-//        let vc = storyBoard.instantiateViewController(withIdentifier: "AllAnsweredPopUpInChatViewController") as! AllAnsweredPopUpInChatViewController
-//        vc.modalPresentationStyle = .overCurrentContext
-//        self.present(vc, animated: false, completion: nil)
-//
+        //        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        //        let vc = storyBoard.instantiateViewController(withIdentifier: "AllAnsweredPopUpInChatViewController") as! AllAnsweredPopUpInChatViewController
+        //        vc.modalPresentationStyle = .overCurrentContext
+        //        self.present(vc, animated: false, completion: nil)
+        //
         
     }
     
@@ -887,13 +887,13 @@ class ChatViewController: UIViewController {
         }, completion: { [self](completed) in
             let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-//            if viewModel.chatInfo.count == 0 {
-//                let indexPath = IndexPath(row: 0, section: 0)
-//                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-//            } else {
-//                let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
-//                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-//            }
+            //            if viewModel.chatInfo.count == 0 {
+            //                let indexPath = IndexPath(row: 0, section: 0)
+            //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            //            } else {
+            //                let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
+            //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            //            }
         })
         
         self.messageTextView.becomeFirstResponder()
@@ -909,13 +909,13 @@ class ChatViewController: UIViewController {
             }, completion: { [self](completed) in
                 let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
                 self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-    //            if viewModel.chatInfo.count == 0 {
-    //                let indexPath = IndexPath(row: 0, section: 0)
-    //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-    //            } else {
-    //                let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
-    //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-    //            }
+                //            if viewModel.chatInfo.count == 0 {
+                //                let indexPath = IndexPath(row: 0, section: 0)
+                //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+                //            } else {
+                //                let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
+                //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+                //            }
                 
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
@@ -929,19 +929,19 @@ class ChatViewController: UIViewController {
                     }, completion: { [self](completed) in
                         let indexPath = IndexPath(row: ChatViewController.message.count - 1, section: 0)
                         self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-            //            if viewModel.chatInfo.count == 0 {
-            //                let indexPath = IndexPath(row: 0, section: 0)
-            //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-            //            } else {
-            //                let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
-            //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-            //            }
+                        //            if viewModel.chatInfo.count == 0 {
+                        //                let indexPath = IndexPath(row: 0, section: 0)
+                        //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+                        //            } else {
+                        //                let indexPath = IndexPath(row: self.viewModel.chatInfo.count - 1, section: 0)
+                        //                self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+                        //            }
                     })
                     
                     self.messageTextView.becomeFirstResponder()
                 }
                 
-
+                
                 
                 
                 
@@ -952,7 +952,7 @@ class ChatViewController: UIViewController {
         
         
         
-
+        
         
         
         
@@ -971,7 +971,7 @@ class ChatViewController: UIViewController {
         
         //SoketIOManager.shared.sendMessage(message: "aaa", nickname: "구본의")
         
-       //let param = SendChatRequest(file: "", content: "123123123", emoji: false, photo: false, calendar: false, text: true)
+        //let param = SendChatRequest(file: "", content: "123123123", emoji: false, photo: false, calendar: false, text: true)
         //viewModel.postSendChat(param)
         
     }
@@ -1016,7 +1016,7 @@ class ChatViewController: UIViewController {
         self.isChat = true
         self.scheduleBaseView.isHidden = true
         self.bottomMargin.constant = self.bottomMargin.constant - self.scheduleBaseView.frame.height + 125
-       
+        
     }
     
     
@@ -1057,13 +1057,7 @@ class ChatViewController: UIViewController {
         )
         scheduleViewModel.postAddSchedule(param)
         
-        
-        
     }
-    
-    
-   
-    
 }
 
 
@@ -1076,27 +1070,11 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        let chatMessage = viewModel.chatInfo[indexPath.row]
-//        if chatMessage.sender_name == "구본의" {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
-//            cell.myMessageLabel.text = chatMessage.content
-//            //cell.timeLabel.text = chatMessage.sendTime
-//            cell.selectionStyle = .none
-//            return cell
-//        } else {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMessageTableViewCell", for: indexPath) as! FamilyMessageTableViewCell
-//            cell.nameLabel.text = chatMessage.sender_name
-//            cell.messageLabel.text = chatMessage.content
-//            //cell.profileImage.image = UIImage(named: chatMessage.userProfile)
-//            //cell.timeLabel.text = chatMessage.sendTime
-//            cell.selectionStyle = .none
-//            return cell
-//        }
-//
+
         
         let chatMessage = ChatViewController.message[indexPath.row]
         if chatMessage.isPhoto == false && chatMessage.isSchedule == false {
-
+            
             if chatMessage.userName == "본의" {
                 if chatMessage.emoticon != nil {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "MyPhotoMessageTableViewCell", for: indexPath) as! MyPhotoMessageTableViewCell
@@ -1111,17 +1089,17 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                     cell.selectionStyle = .none
                     return cell
                 }
-
-
+                
+                
             } else {
-
+                
                 if chatMessage.emoticon != nil {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyPhotoMessageTableViewCell", for: indexPath) as! FamilyPhotoMessageTableViewCell
                     cell.timeLabel.text = chatMessage.sendTime
                     cell.selectionStyle = .none
                     return cell
                 } else {
-
+                    
                     let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMessageTableViewCell", for: indexPath) as! FamilyMessageTableViewCell
                     cell.nameLabel.text = chatMessage.userName
                     cell.messageLabel.text = chatMessage.message
@@ -1138,11 +1116,11 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.mySendImage.image = chatMessage.photo
                 cell.timeLabel.text = chatMessage.sendTime
                 return cell
-
-
+                
+                
             } else {
-
-
+                
+                
                 let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyPhotoMessageTableViewCell", for: indexPath) as! FamilyPhotoMessageTableViewCell
                 cell.familySendImage.image = chatMessage.photo
                 cell.timeLabel.text = chatMessage.sendTime
@@ -1150,7 +1128,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.profileImage.image = UIImage(named: chatMessage.userProfile)
                 cell.selectionStyle = .none
                 return cell
-
+                
             }
         } else if chatMessage.isSchedule == true {
             if chatMessage.userName == "본의" {
@@ -1159,7 +1137,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.scheduleTitleLabel.text = chatMessage.scheduleTitle
                 cell.startDateLabel.text = chatMessage.scheduleDate
                 cell.sendTimeLabel.text = chatMessage.sendTime
-
+                
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyScheduleTableViewCell", for: indexPath) as! FamilyScheduleTableViewCell
@@ -1167,9 +1145,9 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 return cell
             }
         }
-
-
-
+        
+        
+        
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
             cell.myMessageLabel.text = chatMessage.message
@@ -1177,53 +1155,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         }
-//        //-----------------
-//
-        
-        
-        //        if indexPath.row < 12 {
-        //            let chatMessage = ChatViewController.message[indexPath.row]
-        //            if chatMessage.userName == "본의"{
-        //                let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageTableViewCell", for: indexPath) as! MyMessageTableViewCell
-        //                cell.myMessageLabel.text = chatMessage.message
-        //                cell.selectionStyle = .none
-        //                return cell
-        //            } else {
-        //
-        //
-        //                let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMessageTableViewCell", for: indexPath) as! FamilyMessageTableViewCell
-        //                cell.nameLabel.text = chatMessage.userName
-        //                cell.messageLabel.text = chatMessage.message
-        //                cell.profileImage.image = UIImage(named: chatMessage.userProfile)
-        //                cell.timeLabel.text = chatMessage.sendTime
-        //                cell.selectionStyle = .none
-        //                return cell
-        //
-        //
-        //
-        //            }
-        //
-        //
-        //
-        //        } else {
-        //            if indexPath.row == 12 {
-        //                let cell = tableView.dequeueReusableCell(withIdentifier: "MyPhotoMessageTableViewCell", for: indexPath) as! MyPhotoMessageTableViewCell
-        //                cell.selectionStyle = .none
-        //                return cell
-        //            } else if indexPath.row == 13{
-        //                let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyPhotoMessageTableViewCell", for: indexPath) as! FamilyPhotoMessageTableViewCell
-        //                cell.selectionStyle = .none
-        //                return cell
-        //            } else if indexPath.row == 14{
-        //                let cell = tableView.dequeueReusableCell(withIdentifier: "MyScheduleTableViewCell", for: indexPath) as! MyScheduleTableViewCell
-        //                cell.selectionStyle = .none
-        //                return cell
-        //            } else {
-        //                let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyScheduleTableViewCell", for: indexPath) as! FamilyScheduleTableViewCell
-        //                cell.selectionStyle = .none
-        //                return cell
-        //            }
-        //        }
+
         
     }
     
@@ -1234,7 +1166,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 extension ChatViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-
+            
             let myDateFormatter = DateFormatter()
             myDateFormatter.dateFormat = "a h시 m분"
             let time = myDateFormatter.string(from: Date())
