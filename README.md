@@ -33,7 +33,7 @@
 ### Calendar
 <img src="https://user-images.githubusercontent.com/73548875/147417926-5949e5a8-56b6-4d99-9583-0ec9f3667473.jpg" width="200" height="400"/>                                                                                                                                          
 ### Schedule
-<img src="https://user-images.githubusercontent.com/73548875/146412962-49cf46ab-7e14-4444-ba96-ef4a0cff2b9b.jpg" width="200" height="400"/>
+<img src="https://user-images.githubusercontent.com/73548875/147417926-5949e5a8-56b6-4d99-9583-0ec9f3667473.jpg" width="200" height="400"/>
 
 ### Gallery
 <img src="https://user-images.githubusercontent.com/73548875/147417927-4f03e6b4-a16f-4580-bc3b-dbff9ad3d97d.jpg" width="200" height="400"/>  
