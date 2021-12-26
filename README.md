@@ -21,6 +21,7 @@
 <img src="https://user-images.githubusercontent.com/73548875/147417916-27a94921-29a1-45b6-ad72-1b81f780b862.jpg" width="200" height="400"/>  
 
 ### Chat
+<img src="https://user-images.githubusercontent.com/73548875/147418022-11045a27-89d6-4bad-b783-873558f67efd.gif" width="200" height="400"/>  
 <img src="https://user-images.githubusercontent.com/73548875/147417923-99f03b90-0b12-4aaf-b24c-28bd8c188123.jpg" width="200" height="400"/>  
 
 ### Emoticon
